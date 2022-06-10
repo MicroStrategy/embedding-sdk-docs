@@ -1,7 +1,6 @@
 ---
 title: Retrieve and Apply Filters
 date: Last Modified
-permalink: /add-functionality/filters.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Retrieve and Apply Filters
@@ -11,7 +10,7 @@ You can apply filters both when an embedded dossier is being executed and after 
 
 - **Apply filters during execution**
 
-  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./set-properties.html) property. Currently, only attribute selection filters and attribute search filters are supported; attribute slider, calendar, and metric filters are not supported in this release.
+  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./set-properties) property. Currently, only attribute selection filters and attribute search filters are supported; attribute slider, calendar, and metric filters are not supported in this release.
 
 - **Apply and retrieve filters after execution**
 

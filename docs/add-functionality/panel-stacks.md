@@ -1,7 +1,6 @@
 ---
 title: Interact with Panel Stacks
 date: Last Modified
-permalink: /add-functionality/panel-stacks.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Interact with Panel Stacks

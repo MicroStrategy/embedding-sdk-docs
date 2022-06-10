@@ -1,7 +1,6 @@
 ---
 title: Use Guest Authentication with Multiple Authentication Modes Enabled
 date: Last Modified
-permalink: /support-for-different-authentication-environments/multiple-modes.html
 eleventyNavigation:
   parent: Support for Different Authentication Environments
   key: Use Guest Authentication with Multiple Authentication Modes Enabled
@@ -79,7 +78,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
    </html>
    ```
 
-1. Make the following changes to the code:
+2. Make the following changes to the code:
 
    1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibrary2` with your Library Server URL.
 
@@ -89,7 +88,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
       The `embeddinglib.js` file, which contains the Embedding SDK, is included in the `MicroStrategyLibrary` web application.
 
-   1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
+   2. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
 
       - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library installation. If necessary, replace `https://demo.microstrategy.com/MicroStrategyLibrary2` with your Library Server URL.
 
@@ -113,7 +112,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
         You can obtain the value by running a dossier in MicroStrategy Library and copying the URL.
 
-1. Once you have configured the code, save your HTML file and open it in a browser. The embedded dossier is seamlessly displayed in the browser.
+3. Once you have configured the code, save your HTML file and open it in a browser. The embedded dossier is seamlessly displayed in the browser.
 
 ::: callout-green
 

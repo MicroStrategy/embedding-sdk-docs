@@ -1,7 +1,7 @@
 ---
 title: Upgrade to a Newer Version of MicroStrategy
 date: Last Modified
-permalink: /upgrade.html
+permalink: /upgrade
 has_toc: false
 eleventyNavigation:
   key: Upgrade to a Newer Version of MicroStrategy
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 The JavaScript library for embedding dossiers is included in the MicroStrategy installation so it is automatically updated when you upgrade to a newer version of MicroStrategy. However, you need to follow certain practices to preserve settings you have made and customizations you have created in the current version.
 
-In addition, you should always check [What's New](./whats-new-in-the-embedding-sdk.html) to see whether any new functionality is available for customizations in the version you are upgrading to.
+In addition, you should always check [What's New](./whats-new-in-the-embedding-sdk) to see whether any new functionality is available for customizations in the version you are upgrading to.
 
 ## CORS Configuration
 

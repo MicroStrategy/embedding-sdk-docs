@@ -1,7 +1,6 @@
 ---
 title: Use SAML or OIDC Authentication
 date: Last Modified
-permalink: /support-for-different-authentication-environments/authentication-saml.html
 eleventyNavigation:
   parent: Support for Different Authentication Environments
   key: Use SAML or OIDC Authentication
@@ -27,7 +26,7 @@ This example requires MicroStrategy's REST API.
 
 If you plan to use Embedding SDK on a Web page on a different domain from your MicroStrategy environment, please also meet the following requirements. More information in
 
-1. [Enable Cross-Origin Resource Sharing (CORS)](../config.html)
-1. [Allow Cross-Origin Cookies](../config.html#allow-cross-origin-cookies)
+1. [Enable Cross-Origin Resource Sharing (CORS)](../config)
+1. [Allow Cross-Origin Cookies](../config#allow-cross-origin-cookies)
 
 If we plan to use Embedding SDK on the same domain as your MicroStrategy, the above changes are not required.

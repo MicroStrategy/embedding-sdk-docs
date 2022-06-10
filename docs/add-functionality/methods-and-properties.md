@@ -1,7 +1,6 @@
 ---
 title: Methods and Properties for an Embedded Dossier
 date: Last Modified
-permalink: /add-functionality/methods-and-properties.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Methods and Properties for an Embedded Dossier

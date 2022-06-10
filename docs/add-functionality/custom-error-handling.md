@@ -1,7 +1,6 @@
 ---
 title: Custom Error Handling
 date: Last Modified
-permalink: /add-functionality/custom-error-handling.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Custom Error Handling

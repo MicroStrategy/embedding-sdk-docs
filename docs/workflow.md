@@ -1,7 +1,6 @@
 ---
 title: Workflow to Use REST APIs and the Embedding SDK
 date: Last Modified
-permalink: /workflow.html
 eleventyNavigation:
   key: Workflow to Use REST APIs and the Embedding SDK
 ---

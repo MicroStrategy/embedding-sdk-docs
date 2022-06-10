@@ -1,7 +1,6 @@
 ---
 title: Embed a Single Visualization
 date: Last Modified
-permalink: /add-functionality/embedvis.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Embed a Single Visualization
@@ -39,7 +38,7 @@ When initializing a dossier page, you must specify which visualization will be m
 
 `Dossier.changeVisualizationSize(props)`
 
-> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties.html) for more information.
+> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
 
 #### Input Parameters
 
@@ -88,7 +87,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Input Parameters
 
-The `props` parameter contains several fields. See [Methods and Properties for an Embedded Dossier](./methods-and-properties.html) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
+The `props` parameter contains several fields. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
 
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
@@ -142,7 +141,7 @@ When a user manually clicks the resize button for a visualization, an event is r
 
 `Dossier.onVisualizationResized`
 
-> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties.html) for more information.
+> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
 
 #### Callback Format
 

@@ -1,7 +1,6 @@
 ---
 title: Configuring Library Server for Embedding
 date: Last Modified
-permalink: /config.html
 eleventyNavigation:
   key: Configuring Library Server for Embedding
 ---

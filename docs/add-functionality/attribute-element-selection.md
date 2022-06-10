@@ -1,7 +1,6 @@
 ---
 title: Enable the Selection of Attribute Elements
 date: Last Modified
-permalink: /add-functionality/attribute-element-selection.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Enable the Selection of Attribute Elements

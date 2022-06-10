@@ -1,13 +1,12 @@
 ---
 title: Deploy a Sample Application to Set Dossier Properties
 date: Last Modified
-permalink: /add-functionality/set-properties.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Deploy a Sample Application to Set Dossier Properties
 ---
 
-When you embed a dossier, you can [set properties](./methods-and-properties.html) to customize the user interface, the features that are available or visible, and authentication.
+When you embed a dossier, you can [set properties](./methods-and-properties) to customize the user interface, the features that are available or visible, and authentication.
 
 To help you get started, we have provided a [sample application](#sample-application) that sets properties on an embedded dossier. Use the `create(props)` method under the `microstrategy.dossier` namespace to set properties. The props parameter contains optional key:value pairs to customize the UI, features, and authentication, in addition to the required key:value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created.
 
@@ -19,7 +18,7 @@ The following sample shows how to leverage the Embedding SDK to add properties t
 
 To deploy this sample in your environment, either:
 
-1. Save the [code sample](#code-for-the-sample-application) below to an HTML file hosted on the same web application server as the MicroStrategy Library application. If the application server is different from the server running the `MicroStrategyLibrary` application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config.html).
+1. Save the [code sample](#code-for-the-sample-application) below to an HTML file hosted on the same web application server as the MicroStrategy Library application. If the application server is different from the server running the `MicroStrategyLibrary` application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
 
    OR
 

@@ -1,7 +1,6 @@
 ---
 title: Use Custom Authentication
 date: Last Modified
-permalink: /support-for-different-authentication-environments/authentication-custom.html
 eleventyNavigation:
   parent: Support for Different Authentication Environments
   key: Use Custom Authentication
@@ -15,11 +14,11 @@ To embed a dossier that uses custom authentication, do the following:
 
    To support custom authentication, you provide a servlet on the web server that can receive a POST request with the payload `{dossierContextPath}`, where `dossierContextPath` is a RESTful dossier server URL. This POST request should get the identity token and return it in the response header as 'X-MSTR-IdentityToken'.
 
-1. [Edit the web.xml file](#web-xml)
+2. [Edit the web.xml file](#web-xml)
 
    You modify the `web.xml` file to configure and map the custom authentication servlet.
 
-1. [Embed a dossier in a web page, with custom authentication enabled](#Embed)
+3. [Embed a dossier in a web page, with custom authentication enabled](#Embed)
 
    You embed the dossier in a web page with the `enableCustomAuthentication` property of the `dossier.create()` method set to "true".
 

@@ -1,7 +1,6 @@
 ---
 title: Add Event Handling
 date: Last Modified
-permalink: /add-functionality/add-event.html
 eleventyNavigation:
   parent: Add Functionality to an Embedded Dossier
   key: Add Event Handling
@@ -21,7 +20,7 @@ To deploy this sample in your environment, either:
 
 1. Save the [code sample](#Code_sample) below to an HTML file hosted on the same web application server as the MicroStrategy Library application.
 
-   If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config.html).
+   If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
 
    or
 
