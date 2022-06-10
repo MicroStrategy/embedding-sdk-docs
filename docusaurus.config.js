@@ -37,7 +37,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.microstrategy.com/Tech/embedding-sdk-docs",
+          editUrl:
+            "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -61,7 +62,7 @@ const config = {
             dropdownActiveClassDisabled: true,
           },
           {
-            href: "https://github.microstrategy.com/Tech/embedding-sdk-docs",
+            href: "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus",
             label: "GitHub",
             position: "right",
           },
