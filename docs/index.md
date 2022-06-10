@@ -6,7 +6,7 @@ eleventyNavigation:
   key: Introduction to the Embedding SDK
 ---
 
-This messages means that this is version 1.1.0.
+This messages means that this is version 1.2.0.
 
 The Embedding SDK allows you to quickly integrate a MicroStrategy dossier into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 
