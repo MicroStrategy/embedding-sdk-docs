@@ -23,9 +23,12 @@ const sidebars = {
     "upgrade",
     {
       type: "category",
+      link: {
+        type: "doc",
+        id: "support-for-different-authentication-environments",
+      },
       label: "Support for Different Authentication Environments",
       items: [
-        "support-for-different-authentication-environments/index",
         "support-for-different-authentication-environments/guest-authentication-mode-only",
         "support-for-different-authentication-environments/multiple-modes",
         "support-for-different-authentication-environments/authentication-saml",
@@ -34,9 +37,12 @@ const sidebars = {
     },
     {
       type: "category",
+      link: {
+        type: "doc",
+        id: "add-functionality",
+      },
       label: "Add Functionality to an Embedded Dossier",
       items: [
-        "add-functionality/index",
         "add-functionality/add-nav",
         "add-functionality/add-event",
         "add-functionality/filters",
