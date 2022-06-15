@@ -19,13 +19,13 @@ There are three basic steps for embedding a dossier.
 
    Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
 
-2. Create a `<div>` as the placeholder where you want to embed the dossier.
+1. Create a `<div>` as the placeholder where you want to embed the dossier.
 
    ```html
    <div id="dossierContainer"></div>
    ```
 
-3. Call the `microstrategy.dossier.create(props)` method when the application has finished loading.
+1. Call the `microstrategy.dossier.create(props)` method when the application has finished loading.
 
    ```js
    var placeholderDiv = document.getElementById("dossierContainer");

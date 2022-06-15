@@ -16,7 +16,8 @@
     "eslint": "eslint --fix . --quiet",
     "prettify": "yarn prettier --write docs/ --loglevel warn --config ./.prettiermarkdownrc",
     "markdownlint": "markdownlint --fix docs/",
-    "lint": "yarn eslint && yarn prettify && yarn markdownlint"
+    "lint": "yarn eslint && yarn prettify && yarn markdownlint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
