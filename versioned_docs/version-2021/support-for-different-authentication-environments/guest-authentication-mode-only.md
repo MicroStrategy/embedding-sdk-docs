@@ -61,7 +61,8 @@ Open the page in a browser to view the embedded dossier. You should see the dos
    - Set the value for url to reference a dossier in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F` with your Project ID and Dossier ID.
 
      ```js
-     url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
+     url =
+       "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
      ```
 
      > You can obtain the value of your Project ID and Dossier ID by running a dossier in MicroStrategy Library and copying the URL.

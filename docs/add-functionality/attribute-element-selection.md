@@ -220,10 +220,10 @@ myDossier
 
 The callback parameters for this promise object are shown below.
 
-| Parameter Name    | Data Type    | Example                                                                                                                                                                                                             | Comments                                                                                                                                 |
-| ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameter Name    | Data Type    | Example                                                                                                                                                                                                                      | Comments                                                                                                                                 |
+| ----------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | availableElements | Object       | <pre>[{<br/> "attribute":{<br/> "id":"8D679D3611D3E4981000E787EC6DE8A4", <br/> "name":"Category" <br/> },<br/> "elements":[{<br/> "id":"h6;8D679D3611D3E4981000E787EC6DE8A4",<br/> "name":"Spring 2012"<br/> }]<br/>}]</pre> | The data is returned in an array, since there may be instances in which the data in several visualizations are changed at the same time. |
-| error             | Error Object | new Error(“invalid operation!“)                                                                                                                                                                                     |
+| error             | Error Object | new Error(“invalid operation!“)                                                                                                                                                                                              |
 
 #### Errors
 
