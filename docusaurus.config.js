@@ -54,6 +54,7 @@ const config = {
         logo: {
           alt: "My Site Logo",
           src: "img/dev-docs-logo.png",
+          href: "https://developer.microstrategy.com/",
         },
         items: [
           {
