@@ -1,8 +1,6 @@
 ---
+sidebar_position: 6
 title: Workflow to Use REST APIs and the Embedding SDK
-date: Last Modified
-eleventyNavigation:
-  key: Workflow to Use REST APIs and the Embedding SDK
 ---
 
 You can create a workflow that combines REST APIs and the JavaScript Embedding SDK. We have provided a sample that illustrates how to use REST APIs to authenticate and search for documents in a specific folder, and then use the JavaScript Embedding SDK to embed a document selected from the search results, as a MicroStrategy dossier, in a web application.

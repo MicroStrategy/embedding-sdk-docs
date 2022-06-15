@@ -1,9 +1,6 @@
 ---
+sidebar_position: 2
 title: Add Event Handling
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Add Event Handling
 ---
 
 Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding API to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.

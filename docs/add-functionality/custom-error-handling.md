@@ -1,9 +1,6 @@
 ---
+sidebar_position: 6
 title: Custom Error Handling
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Custom Error Handling
 ---
 
 By default, Library displays a pop-up dialog when an error occurs, such as when a dataset is not found.

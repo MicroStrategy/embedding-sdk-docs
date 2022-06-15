@@ -1,9 +1,6 @@
 ---
+sidebar_position: 4
 title: Use Custom Authentication
-date: Last Modified
-eleventyNavigation:
-  parent: Support for Different Authentication Environments
-  key: Use Custom Authentication
 ---
 
 You can use custom authentication to allow users to view an embedded dossier without logging in with their user name and password.

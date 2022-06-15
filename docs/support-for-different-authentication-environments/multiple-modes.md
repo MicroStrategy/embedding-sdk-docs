@@ -1,9 +1,6 @@
 ---
+sidebar_position: 2
 title: Use Guest Authentication with Multiple Authentication Modes Enabled
-date: Last Modified
-eleventyNavigation:
-  parent: Support for Different Authentication Environments
-  key: Use Guest Authentication with Multiple Authentication Modes Enabled
 ---
 
 The JavaScript Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dossier to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dossier is hosted. The sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.

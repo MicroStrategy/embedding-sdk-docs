@@ -1,4 +1,5 @@
 ---
+sidebar_position: 9
 title: Enable the Selection of Attribute Elements
 date: Last Modified
 eleventyNavigation:

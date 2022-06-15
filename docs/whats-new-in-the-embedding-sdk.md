@@ -1,9 +1,6 @@
 ---
+sidebar_position: 2
 title: What's New in the Embedding SDK
-date: Last Modified
-permalink: /whats-new-in-the-embedding-sdk
-eleventyNavigation:
-  key: What's New in the Embedding SDK
 ---
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
