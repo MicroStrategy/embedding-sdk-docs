@@ -1,9 +1,6 @@
 ---
+sidebar_position: 5
 title: Methods and Properties for an Embedded Dossier
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Methods and Properties for an Embedded Dossier
 ---
 
 ## Method and Properties for Embedding a Dossier

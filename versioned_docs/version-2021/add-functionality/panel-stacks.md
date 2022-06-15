@@ -1,9 +1,6 @@
 ---
+sidebar_position: 7
 title: Interact with Panel Stacks
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Interact with Panel Stacks
 ---
 
 The MicroStrategy 2021 Update 1 release exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm) within dossiers. This provides end users with the ability to conveniently reuse segments of space within a dossier to represent data in multiple ways. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new Embedding SDK functions.

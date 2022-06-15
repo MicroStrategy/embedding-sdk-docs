@@ -1,9 +1,6 @@
 ---
+sidebar_position: 4
 title: Deploy a Sample Application to Set Dossier Properties
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Deploy a Sample Application to Set Dossier Properties
 ---
 
 When you embed a dossier, you can [set properties](./methods-and-properties) to customize the user interface, the features that are available or visible, and authentication.

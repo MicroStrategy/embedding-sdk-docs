@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 title: Retrieve and Apply Filters
 date: Last Modified
 eleventyNavigation:

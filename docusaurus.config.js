@@ -39,6 +39,16 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus/blob/main/",
+          includeCurrentVersion: true,
+          // lastVersion: "2021",
+          // versions: {
+          //   2021: {
+          //     label: "Version 2021",
+          //     path: "",
+          //   },
+          // },
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -52,15 +62,21 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: "My Site Logo",
+          alt: "MicroStrategy Developer",
           src: "img/dev-docs-logo.png",
           href: "https://developer.microstrategy.com/",
         },
         items: [
           {
-            type: "docsVersionDropdown",
+            type: "dropdown",
+            label: "Version 2021",
             position: "right",
-            dropdownActiveClassDisabled: true,
+            items: [
+              {
+                label: "Version 2020",
+                href: "https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/Intro_to_the_Embedding_SDK.htm",
+              },
+            ],
           },
           {
             href: "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus",

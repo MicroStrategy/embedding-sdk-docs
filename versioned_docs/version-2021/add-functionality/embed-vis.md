@@ -1,9 +1,6 @@
 ---
+sidebar_position: 8
 title: Embed a Single Visualization
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Embed a Single Visualization
 ---
 
 You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.

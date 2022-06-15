@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 title: Upgrade to a Newer Version of MicroStrategy
 date: Last Modified
 permalink: /upgrade

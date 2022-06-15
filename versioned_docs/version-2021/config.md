@@ -1,8 +1,6 @@
 ---
+sidebar_position: 7
 title: Configuring Library Server for Embedding
-date: Last Modified
-eleventyNavigation:
-  key: Configuring Library Server for Embedding
 ---
 
 If you plan to use Embedding SDK on a Web page on a different domain from your MicroStrategy environment, please also meet the following requirements.
