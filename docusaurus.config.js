@@ -72,6 +72,11 @@ const config = {
         },
         items: [
           {
+            href: "https://playground.microstrategy.com/",
+            label: "Playground",
+            position: "left",
+          },
+          {
             type: "dropdown",
             label: "Version 2021",
             position: "right",
@@ -81,6 +86,11 @@ const config = {
                 href: "https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/Intro_to_the_Embedding_SDK.htm",
               },
             ],
+          },
+          {
+            href: "https://www.microstrategy.com/en/support?now=expert",
+            label: "Talk to an Expert",
+            position: "right",
           },
           {
             href: "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus",
