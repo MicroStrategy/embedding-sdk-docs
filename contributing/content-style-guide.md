@@ -117,54 +117,56 @@ The list below shows the usage of emojis in our Docs site:
 
   For the HTML table below,
 
-  ![original table example](../images/original_table_example.png)
+  ![original table example](../docs/images/original_table_example.png)
 
  You need to add “information” cell multiple times manually because the converter cannot handle this correctly. It will omit the “information” cell for the following rows to make the table not correct.
 
-  ![markdown table example](../images/markdown_table_example.png)
+  ![markdown table example](../docs/images/markdown_table_example.png)
 
 - Use `:heavy_check_mark:` instead of `X` to display the checkmarks.
 
 - Don't use code blocks in markdown table. It is recommended to have the code block in a separate paragraph to span the whole page width.
 
-## Callouts
+## Admonitions
 
-We use `callout-green` to replace the green information sections, `callout-blue` to replace the blue (check) sections, and `warning` to replace the read warning sections.
+We use `:::tip` to replace the green information sections, `:::info` to replace the blue (check) sections, and `:::danger` to replace the read warning sections.
 
 Examples:
 
 ```text/1-2
-::: warning
 
-:warning: Warning
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
 ```
 
 should be rendered as
 
-![warning callout](../images/callout-warning-example.png)
-
-```text/1-2
-::: callout-green
-
-:information_source: Information
-
-:::
-```
-
-should be rendered as
-
-![callout information](../images/callout-green-info-example.png)
-
-```text/1-2
-::: callout-blue
-
-:white_check_mark: Action
-
-:::
-```
-
-should be rendered as
-
-![callout action](../images/callout-blue-action-example.png)
+![Admonitions](../docs/images/admonitions.png)
