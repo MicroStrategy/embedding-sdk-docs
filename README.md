@@ -7,7 +7,7 @@ Documentation for Embedding SDK
 ### Step one
 
 ```
-git clone https://github.microstrategy.com/Tech/embedding-sdk-docs.git
+git clone https://github.microstrategy.com/Tech/embedding-sdk-docs-v2.git
 ```
 
 ### Step two
