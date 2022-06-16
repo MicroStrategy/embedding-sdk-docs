@@ -48,7 +48,7 @@ Open the page in a browser to view the embedded dossier. You should see the dos
 
 1. Decide where you want to have the HTML page. If the domain is different from your MicroStrategy Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
 
-2. In an IDE or text editor, open the HTML file and configure it to reflect the values in your environment:
+1. In an IDE or text editor, open the HTML file and configure it to reflect the values in your environment:
 
    - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStratetgy Library installation. Replace `demo.microstrategy.com` with your server path.
 
@@ -61,19 +61,18 @@ Open the page in a browser to view the embedded dossier. You should see the dos
    - Set the value for url to reference a dossier in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F` with your Project ID and Dossier ID.
 
      ```js
-     url =
-       "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
+     url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
      ```
 
      > You can obtain the value of your Project ID and Dossier ID by running a dossier in MicroStrategy Library and copying the URL.
 
-3. Once you have customized the code for your environment, save your HTML file. This file is a simple application with an embedded dossier.
+1. Once you have customized the code for your environment, save your HTML file. This file is a simple application with an embedded dossier.
 
-4. Configure your environment so that only guest authentication is enabled.
+1. Configure your environment so that only guest authentication is enabled.
 
    If guest authentication is the only authentication mode that is enabled, the application will open and the dossier will be displayed without asking for credentials. However, if multiple authentication modes are enabled, the dossier will not be displayed seamlessly. You need to add additional code that enables guest authentication. [Using guest authentication when there are multiple authentication modes](./multiple-modes) provides a simple sample and an explanation of how to add the necessary code.
 
-5. Open the page URL in a browser. The embedded dossier should be displayed in the application.
+1. Open the page URL in a browser. The embedded dossier should be displayed in the application.
 
 :::tip
 
