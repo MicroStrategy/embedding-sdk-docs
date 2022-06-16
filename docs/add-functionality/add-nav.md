@@ -1,10 +1,6 @@
 ---
 sidebar_position: 1
 title: Add Navigation
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Add Navigation
 ---
 
 The JavaScript Embedding API allows you to quickly integrate dossiers into a web application in a responsive manner. Once you have embedded a dossier, you can use helper methods in the Embedding API to let users navigate within the dossier. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.

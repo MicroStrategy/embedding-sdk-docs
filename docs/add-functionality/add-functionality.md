@@ -1,10 +1,6 @@
 ---
 sidebar_position: 5
 title: Add Functionality to an Embedded Dossier
-date: Last Modified
-permalink:
-eleventyNavigation:
-  key: Add Functionality to an Embedded Dossier
 ---
 
 Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionality, with code samples, descriptions of parameters, and sample applications.

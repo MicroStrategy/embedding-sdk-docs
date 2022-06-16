@@ -1,10 +1,6 @@
 ---
 sidebar_position: 3
 title: Retrieve and Apply Filters
-date: Last Modified
-eleventyNavigation:
-  parent: Add Functionality to an Embedded Dossier
-  key: Retrieve and Apply Filters
 ---
 
 You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
