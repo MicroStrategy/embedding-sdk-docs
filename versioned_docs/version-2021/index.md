@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Introduction to the Embedding SDK
+slug: /
 ---
 
 The Embedding SDK allows you to quickly integrate a MicroStrategy dossier into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
@@ -15,13 +16,13 @@ There are three basic steps for embedding a dossier.
 
    Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
 
-2. Create a `<div>` as the placeholder where you want to embed the dossier.
+1. Create a `<div>` as the placeholder where you want to embed the dossier.
 
    ```html
    <div id="dossierContainer"></div>
    ```
 
-3. Call the `microstrategy.dossier.create(props)` method when the application has finished loading.
+1. Call the `microstrategy.dossier.create(props)` method when the application has finished loading.
 
    ```js
    var placeholderDiv = document.getElementById("dossierContainer");

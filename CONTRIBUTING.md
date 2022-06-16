@@ -4,19 +4,19 @@
 
 Before you begin:
 
-- This site is powered by Eleventy. Check to see if you're on the [version of node we support](contributing/development.md).
+- This site is powered by Docusaurus. Check to see if you're on the [version of node we support](contributing/development.md).
 - Have you read the [code of conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) & see if we [accept contributions](#types-of-contributions-memo) for your type of issue.
+- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues) & see if we [accept contributions](#types-of-contributions-memo) for your type of issue.
 
 ### Use the 'Edit' button
 
 Navigating a new codebase can be challenging, so we're making that a little easier. As you're using this MicroStrategy Embedding SDK Docs, you may come across an article that you want to make an update to. You can find and click the **Edit** button on the top right corner on that article, which will take you to the file in this repo where you'll make your changes.
 
-Before you make your changes, check to see if an [issue exists](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) already for the change you want to make.
+Before you make your changes, check to see if an [issue exists](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues) already for the change you want to make.
 
 ### Don't see your issue? Open one
 
-If you spot something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you spot something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### Ready to make a change? Fork the repo
 
@@ -49,7 +49,7 @@ When you're done making changes and you'd like to propose them for review, use t
 
 Congratulations! The whole MicroStrategy community thanks you. :sparkles:
 
-Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.microstrategy.com/Tech/embedding-sdk-docs/graphs/contributors) and at the bottom of the page you contributed to.
+Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/graphs/contributors) and at the bottom of the page you contributed to.
 
 ### Keep contributing as you use MicroStrategy Docs
 
@@ -88,7 +88,7 @@ You can contribute to the MicroStrategy Embedding SDK Docs content and site in s
 
 ### :beetle: Issues
 
-If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### :hammer_and_wrench: Pull requests
 
@@ -122,16 +122,6 @@ Here's some information that might be helpful while working on a Docs PR:
 
 - [Content style guide for MicroStrategy Docs](contributing/content-style-guide.md) - This guide covers information about how we style our content and images. It also links to the resources we use for general style guidelines.
 
-<!-- - [Reusables](data/reusables/README.md) - We use reusables to help us keep content up to date. Instead of writing the same long string of information in several articles, we create a reusable, then call it from the individual articles.
-
-- [Variables](data/variables/README.md) - We use variables the same way we use reusables. Variables are for short strings of reusable text. -->
-
-- [Liquid](contributing/liquid-helpers.md) - We use liquid helpers to create different versions of our content.
-
-- [Scripts](scripts/README.md) - The scripts directory is the home for all of the scripts you can run locally.
-
-<!-- - [Tests](tests/README.md) - We use tests to ensure content will render correctly on the site. Tests run automatically in your PR, and sometimes it's also helpful to run them locally. -->
-
 ## Reviewing
 
 We (usually the docs team, but sometimes MicroStrategy product managers, engineers, or supportocats too!) review every single PR. The purpose of reviews is to create the best content we can for people who use MicroStrategy.
@@ -150,7 +140,7 @@ For content changes, make sure that you:
 - [ ] Compare your pull request's source changes to staging to confirm that the output matches the source and that everything is rendering as expected. This helps spot issues like typos, content that doesn't follow the style guide, or content that isn't rendering due to versioning problems. Remember that lists and tables can be tricky.
 - [ ] Review the content for technical accuracy.
 - [ ] Review the entire pull request using the [localization checklist](contributing/localization-checklist.md).
-- [ ] Copy-edit the changes for grammar, spelling, and adherence to the [style guide](https://github.microstrategy.com/Tech/embedding-sdk-docs/tree/master/contributing/content-style-guide.md).
+- [ ] Copy-edit the changes for grammar, spelling, and adherence to the [style guide](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/tree/master/contributing/content-style-guide.md).
 - [ ] Check new or updated Liquid statements to confirm that versioning is correct.
 - [ ] If there are any failing checks in your PR, troubleshoot them until they're all passing.
 
@@ -158,13 +148,7 @@ For content changes, make sure that you:
 
 You should always test your changes locally if the changes are more than just fixing some wording.
 
-Start the site locally, by running `yarn start` in the root folder of the project. The site will be started locally with URL `http://localhost:8080`. Visit the site to make sure it is displayed well.
-
-Test your local site for broken links. You can use this [broken link checker](https://www.npmjs.com/package/broken-link-checker).
-
-To install, run `npm install broken-link-checker -g`.
-
-To test, run `blc -ro http://localhost:8080` (-r means recursive and -o maintains the order of links as they appear in their HTML document.).
+Start the site locally, by running `yarn start` in the root folder of the project. The site will be started locally with URL `http://localhost:3000`. Visit the site to make sure it is displayed well.
 
 ### Pull request template
 
