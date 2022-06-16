@@ -9,7 +9,7 @@ const config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
   url: "https://github.microstrategy.com/",
-  baseUrl: "/pages/jliang/embedding-sdk-docs-docusaurus/",
+  baseUrl: "/pages/Tech/embedding-sdk-docs-v2/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -42,7 +42,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus/blob/main/",
+            "https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/tree/main",
           includeCurrentVersion: true,
           // lastVersion: "2021",
           // versions: {
@@ -93,7 +93,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.microstrategy.com/jliang/embedding-sdk-docs-docusaurus",
+            href: "https://github.microstrategy.com/Tech/embedding-sdk-docs-v2",
             label: "GitHub",
             position: "right",
           },
