@@ -5,6 +5,8 @@ date: Last Modified
 slug: /
 ---
 
+test
+
 The Embedding SDK allows you to quickly integrate a MicroStrategy dossier into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 
 There are three basic steps for embedding a dossier.
