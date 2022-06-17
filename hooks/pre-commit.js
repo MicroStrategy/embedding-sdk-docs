@@ -28,7 +28,7 @@ const isMarkdownLinted = exec("yarn markdownlint").code === 0;
 if (!isMarkdownLinted) {
   console.log(
     chalk.bgRed.white.bold(
-      "`markdownlint content --fix` failed. Please fix the errors above before committing:"
+      "`yarn markdownlint` failed. Please fix the errors above before committing:"
     )
   );
   exit(1);
