@@ -1,5 +1,10 @@
 # Development Guidelines
 
+## Requirements
+
+- [Node.js](https://nodejs.org/en/download/) version 16.14 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed.
+  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+
 ## Getting Started
 
 1. Fork the repo.
