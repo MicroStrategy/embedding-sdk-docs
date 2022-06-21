@@ -1,7 +1,5 @@
 ---
-sidebar_position: 1
 title: Introduction to the Embedding SDK
-date: Last Modified
 slug: /
 ---
 

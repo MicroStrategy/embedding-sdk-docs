@@ -19,23 +19,21 @@ We want to keep our documentation consistent in styling. More details could be f
 ## Adding new content
 
 - All documentation markdown files are located within `./docs/`.
-- Every documentation markdown file should have the frontmatter. You should have `sidebar_position` and `title`. Please see the example below:
+- Every documentation markdown file should have the frontmatter. You should have required `title` and optional `sidebar_label`. Please see the example below:
 
   ```text/1-2
   ---
-  sidebar_position: 1
-  sidebar_label: Authentication
   title: Workflow Sample - Authentication
+  sidebar_label: Authentication
   ---
   ```
 
-  - `sidebar_position` is used by ordering the pages. The number is folder level based only. If you want to place your page in between two pages, you just need to make sure your `sidebar_position` value is in between. For example, if you want to add a new page between two exisiting pages which have `sidebar_position` values as `1` and `2`, you can use float number `1.1`, `1.5` or even `1.05` as the value.
-  - `sidebar_label` is the title you want to show in the sidebar navigation.
   - `title` is the `h1` heading that shows on the HTML page.
+  - `sidebar_label` is the title you want to show in the sidebar navigation.
 
 ### Pages ordering on the navigation sidebar and pagination buttons
 
-This is all based on the `sidebar_position` values and folder structure. The `sidebar_position` value comparision is only folder level based.
+This is all based on the ordering in `sidebar.js` file.
 
 ## Testing your changes
 

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 title: Deploy a Sample Application to Set Dossier Properties
 ---
 

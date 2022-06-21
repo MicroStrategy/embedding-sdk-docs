@@ -1,5 +1,4 @@
 ---
-sidebar_position: 6
 title: Workflow to Use REST APIs and the Embedding SDK
 ---
 

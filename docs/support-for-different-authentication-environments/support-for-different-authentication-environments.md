@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 title: Support for Different Authentication Environments
 ---
 

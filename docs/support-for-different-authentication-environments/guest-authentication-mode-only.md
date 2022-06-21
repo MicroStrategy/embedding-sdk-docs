@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Use Guest Authentication When It is the Only Authentication Mode Enabled
 ---
 
