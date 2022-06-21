@@ -35,6 +35,8 @@ We want to keep our documentation consistent in styling. More details could be f
 
 This is all based on the ordering in `sidebar.js` file.
 
+More infomation could be found in `sidebar.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
+
 ## Testing your changes
 
 You can run `yarn start` to test your local changes. Make sure everything looks okay before creating a Pull Request.
