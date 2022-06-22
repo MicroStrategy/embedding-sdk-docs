@@ -103,14 +103,14 @@ Since the target state is specified in the API parameters, the callback paramete
 
 When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                                | Error Category | Handling Module |
-| --------------------------------------------------------------------------------------------------------- | -------------- | --------------- |
-| The attribute or element ID in elements is missing.                                                       | Invalid input  | Embedding SDK   |
-| The attribute ID in elements isn't a GUID.                                                                | Invalid input  | Embedding SDK   |
-| The action isn't a valid value.                                                                           | Invalid input  | Embedding SDK   |
-| A required parameter is missed or it is not in the correct format.                                        | Invalid input  | Web Dossier     |
-| The action is not "replace" and the current visualization selection mode is metric cell selection.        | Invalid input  | Web Dossier     |
-| The visualization is a filter and the target visualization is loading, so elements could not be selected. | Other          | Web Dossier     |
+| Error Case                                                                                                | Error Category | Handling Module | Error Handling                               |
+| --------------------------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
+| The attribute or element ID in elements is missing.                                                       | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object. |
+| The attribute ID in elements isn't string.                                                                | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object. |
+| The action isn't a valid value.                                                                           | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object. |
+| A required parameter is missed or it is not in the correct format.                                        | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
+| The action is not "replace" and the current visualization selection mode is metric cell selection.        | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
+| The visualization is a filter and the target visualization is loading, so elements could not be selected. | Other          | Web Dossier     | Caught by the catch() of the promise object. |
 
 ### API for selecting attribute elements in multiple visualizations on initial dossier load
 
@@ -181,10 +181,10 @@ microstrategy.dossier
 
 When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                 | Error Category | Handling Module |
-| ------------------------------------------------------------------------------------------ | -------------- | --------------- |
-| A required parameter is missed or it is not in the correct format.                         | Invalid input  | Embedding SDK   |
-| The visKey isn't a valid visualization key or it is not in the current page or panelstack. | Invalid input  | Web Dossier     |
+| Error Case                                                                                 | Error Category | Handling Module | Error Handling                                |
+| ------------------------------------------------------------------------------------------ | -------------- | --------------- | --------------------------------------------- |
+| A required parameter is missed or it is not in the correct format.                         | Invalid input  | Embedding SDK   | Display an error message and an alert dialog. |
+| The visKey isn't a valid visualization key or it is not in the current page or panelstack. | Invalid input  | Web Dossier     | Caught by the catch() of the promise object.  |
 
 ### API for getting available elements
 
@@ -215,19 +215,18 @@ myDossier
 
 The callback parameters for this promise object are shown below.
 
-| Parameter Name    | Data Type    | Example                                                                                                                                                                                                                      | Comments                                                                                                                                 |
-| ----------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| availableElements | Object       | <pre>[{<br/> "attribute":{<br/> "id":"8D679D3611D3E4981000E787EC6DE8A4", <br/> "name":"Category" <br/> },<br/> "elements":[{<br/> "id":"h6;8D679D3611D3E4981000E787EC6DE8A4",<br/> "name":"Spring 2012"<br/> }]<br/>}]</pre> | The data is returned in an array, since there may be instances in which the data in several visualizations are changed at the same time. |
-| error             | Error Object | new Error(“invalid operation!“)                                                                                                                                                                                              |
+| Parameter Name    | Data Type    | Example                                                                                                                                                                                                             | Comments                                                                                                                                 |
+| ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| availableElements | Object       | <pre>[{<br> "attribute":{<br> "id":"8D679D3611D3E4981000E787EC6DE8A4", <br> "name":"Category" <br> },<br> "elements":[{<br> "id":"h6;8D679D3611D3E4981000E787EC6DE8A4",<br> "name":"Spring 2012"<br> }]<br>}]</pre> | The data is returned in an array, since there may be instances in which the data in several visualizations are changed at the same time. |
+| error             | Error Object | new Error(“invalid operation!“)                                                                                                                                                                                     |
 
 #### Errors
 
 When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                | Error Category | Handling Module |
-| ----------------------------------------------------------------------------------------- | -------------- | --------------- |
-| A required parameter is missed or it is not in the correct format.                        | Invalid input  | Embedding SDK   |
-| The visKey isn't a valid visualization key or it is not in the current page or panelstack | Invalid input  | Web Dossier     |
+| Error Case                                                                                | Error Category | Handling Module | Error Handling                               |
+| ----------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
+| The visKey isn't a valid visualization key or it is not in the current page or panelstack | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
 
 ### Callback for monitoring the changing of visualization elements
 
