@@ -145,12 +145,9 @@ In the example below, `registerEventHandler` is an existing API:
 
 ```js
 myDossier &&
-  myDossier.registerEventHandler(
-    "onVisualizationResized",
-    function (resizedVisualization) {
-      // ... The handling logic after resizing the visualization
-    }
-  );
+  myDossier.registerEventHandler("onVisualizationResized", function (resizedVisualization) {
+    // ... The handling logic after resizing the visualization
+  });
 ```
 
 in which the `resizedVisualization` callback parameter uses the following format:
