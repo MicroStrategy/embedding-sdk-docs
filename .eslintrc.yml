@@ -1,7 +1,7 @@
 env:
   browser: true
   commonjs: true
-  es2021: true
+  es2022: true
 extends:
   - 'eslint:recommended'
   - 'plugin:markdown/recommended'
@@ -10,7 +10,8 @@ plugins:
   - markdown
   - prettier
 parserOptions:
-  ecmaVersion: 12
+  sourceType: module
+  ecmaVersion: 13
 overrides:
   - files:
     - "**/*.md"
