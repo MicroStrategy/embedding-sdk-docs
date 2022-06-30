@@ -35,7 +35,51 @@ We want to keep our documentation consistent in styling. More details could be f
 
 This is all based on the ordering in `sidebar.js` file.
 
+There are three main ways to add your new doc into the sidebar:
+
+1. If you don't mind the `title` and `sidebar_label` are the same, you can directly add `id` of your doc in `sidebar.js`. The `id` is the file path from `/docs` folder. For example, `add-functionality/add-nav`.
+
+1. If you only want to modify the `sidebar_label` value, you can use the code snippet below:
+
+  ```javascript
+  {
+    type: "doc",
+    id: "whats-new",
+    label: "What's New",
+  }
+  ```
+
+1. If the doc is the index of the section, you can use the code snippet below:
+
+  ```javascript
+  {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "support-for-different-authentication-environments/support-for-different-authentication-environments",
+      },
+      label: "Support for Different Authentication Environments",
+      items: [
+        "support-for-different-authentication-environments/guest-authentication-mode-only",
+        "support-for-different-authentication-environments/multiple-modes",
+        "support-for-different-authentication-environments/authentication-saml",
+        "support-for-different-authentication-environments/authentication-custom",
+      ],
+    },
+  ```
+
+1. If you want to update an existing doc, the versioned docs locate in `/versioned_doc`, the current docs locate in `/docs`.
+
+1. If you want to delete an existing version, you need to perform three steps:
+   1. Remove the version from `versions.json`.
+   1. Delete the versioned docs directoty. Example: `versioned_docs/version-1.0.0`.
+   1. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`
+
 More infomation could be found in `sidebar.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
+
+## How to do versioning
+
+Detailed information can be found on [Docusaurus Docs](https://docusaurus.io/docs/versioning#tutorials).
 
 ## Testing your changes
 
