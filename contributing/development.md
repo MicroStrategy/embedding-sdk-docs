@@ -33,11 +33,11 @@ We want to keep our documentation consistent in styling. More details could be f
 
 ### Pages ordering on the navigation sidebar and pagination buttons
 
-This is all based on the ordering in `sidebar.js` file.
+This is all based on the ordering in `sidebars.js` file.
 
 There are three main ways to add your new doc into the sidebar:
 
-1. If you don't mind the `title` and `sidebar_label` are the same, you can directly add `id` of your doc in `sidebar.js`. The `id` is the file path from `/docs` folder. For example, `add-functionality/add-nav`.
+1. If you don't mind the `title` and `sidebar_label` are the same, you can directly add `id` of your doc in `sidebars.js`. The `id` is the file path from `/docs` folder. For example, `add-functionality/add-nav`.
 
 1. If you only want to modify the `sidebar_label` value, you can use the code snippet below:
 
@@ -75,7 +75,7 @@ There are three main ways to add your new doc into the sidebar:
    1. Delete the versioned docs directoty. Example: `versioned_docs/version-1.0.0`.
    1. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`
 
-More infomation could be found in `sidebar.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
+More infomation could be found in `sidebars.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
 
 ## How to do versioning
 
