@@ -72,10 +72,10 @@ There are three main ways to add your new doc into the sidebar:
 
 1. If you want to delete an existing version, you need to perform three steps:
    1. Remove the version from `versions.json`.
-   1. Delete the versioned docs directoty. Example: `versioned_docs/version-1.0.0`.
+   1. Delete the versioned docs directory. Example: `versioned_docs/version-1.0.0`.
    1. Delete the versioned sidebars file. Example: `versioned_sidebars/version-1.8.0-sidebars.json`
 
-More infomation could be found in `sidebars.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
+More information could be found in `sidebars.js` or in the ["Sidebar" section](https://docusaurus.io/docs/sidebar) of the Docusaurus official documentation.
 
 ## How to do versioning
 
