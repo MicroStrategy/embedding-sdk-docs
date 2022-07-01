@@ -79,6 +79,8 @@ More infomation could be found in `sidebars.js` or in the ["Sidebar" section](ht
 
 ## How to do versioning
 
+Run `yarn run docusaurus docs:version VERSION_NAME` to tag a new version.
+
 Detailed information can be found on [Docusaurus Docs](https://docusaurus.io/docs/versioning#tutorials).
 
 ## Testing your changes
