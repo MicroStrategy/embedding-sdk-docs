@@ -27,7 +27,7 @@ There are three basic steps for embedding a dossier.
    var placeholderDiv = document.getElementById("dossierContainer");
    microstrategy.dossier.create({
      placeholder: placeholderDiv,
-     url: { YOUR_LIBRARY_SERVER_URL } / app / { PROJECT_ID } / { DOSSIER_ID },
+     url: "{YOUR_LIBRARY_SERVER_URL}/app/{PROJECT_ID}/{DOSSIER_ID}",
    });
    ```
 
@@ -41,20 +41,18 @@ To help you get started, we have provided a number of simple applications with s
 
   Samples that add functionality, such as controlling navigation, retrieving and applying filters, setting properties, and managing events like page changes
 
-- [Workflow to Use REST APIs and the Embedding SDK](./workflow)
-
-  Sample workflow using REST APIs to authenticate and search for documents in a specific folder, and then use the JavaScript Embedding SDK to embed a document selected from the search results
-
 - [More Embedding SDK Samples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
 
   A collection of samples highlighting functionality and workflows of the Embedding SDK. You can play with the samples with no setup.
 
-> If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
+- [Embedding SDK Playground](https://microstrategy.github.io/playground/)
+
+  A playground for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
+
+:::note
+
+ If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
+
+:::
 
 To see changes to the Embedding SDK in the current release, refer to [What's New](./whats-new-in-the-embedding-sdk).
-
-To maintain your current customizations and take advantage of new features, refer to [Upgrading to a newer version of MicroStrategy](./upgrade).
-
-For earlier versions of the Embedding SDK, refer to [Previous Releases.](https://lw.microstrategy.com/msdz/MSDL/GARelease_Current/docs/previousReleases.html)
-
-To see examples and explore functionalities of Embedding SDK, visit [Embedding SDK Playground](https://microstrategy.github.io/playground/)

@@ -18,18 +18,15 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
    <!DOCTYPE html>
    <html lang="en">
      <head>
-         
        <meta charset="UTF-8" />
-         
        <title>GuestLoginExample</title>
-         
-       <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary2/javascript/embeddinglib.js"></script>
+       <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"></script>
      </head>
      <body>
        <div id="mydossier"></div>
 
        <script type="text/javascript">
-         var baseURL = "https://demo.microstrategy.com/MicroStrategyLibrary2";
+         var baseURL = "https://demo.microstrategy.com/MicroStrategyLibraryDev";
          var projectId = "EC70648611E7A2F962E90080EFD58751";
          var dossierId = "837B57D711E941BF000000806FA1298F";
          function login() {
@@ -76,20 +73,20 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
 1. Make the following changes to the code:
 
-   1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibrary2` with your Library Server URL.
+   1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
       ```html
-      <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary2/javascript/embeddinglib.js"></script>
+      <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"></script>
       ```
 
       The `embeddinglib.js` file, which contains the Embedding SDK, is included in the `MicroStrategyLibrary` web application.
 
    1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
 
-      - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library installation. If necessary, replace `https://demo.microstrategy.com/MicroStrategyLibrary2` with your Library Server URL.
+      - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library installation. If necessary, replace `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
         ```js
-        var baseURL = "https://demo.microstrategy.com/MicroStrategyLibrary2";
+        var baseURL = "https://demo.microstrategy.com/MicroStrategyLibraryDev";
         ```
 
       - Set the value of the `projectId` variable to the GUID for the project containing the dossier you want to embed.
