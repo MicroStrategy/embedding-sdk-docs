@@ -2,7 +2,7 @@
 title: Add Functionality to an Embedded Dossier
 ---
 
-Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionality, with code samples, descriptions of parameters, and sample applications.
+Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code samples.
 
 - [Add Navigation to an Embedded Dossier](./add-nav)
 
@@ -23,5 +23,3 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 - [Methods and Properties for an Embedded Dossier](./methods-and-properties)
 
   Describes the properties that can be set for an embedded dossier.
-
-|The sample applications are provided as HTML files. These files must be hosted on a web server and cannot be run as standalone files. Without the web server, the host returns null which causes an error based on the security measures of the Embedding SDK. The server does not need to be publicly accessible; for example, it could be a local host deployment.

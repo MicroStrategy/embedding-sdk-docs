@@ -2,7 +2,7 @@
 title: Add Event Handling
 ---
 
-Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding API to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
+Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
 
 To help you get started, we have provided a [sample application](#Sample_application) that embeds a dossier and adds event handling, as well as a description of [events](#Events), [event handlers](#Event_handlers), and [wrapper functions](#Wrapper_functions) you can use to handle additional events.
 
@@ -10,7 +10,7 @@ This sample is provided as an HTML file, which must be hosted on a web server. 
 
 ## Sample Application
 
-The following sample shows how to leverage the Embedding API to embed a dossier and capture selection events from one dossier and apply them as a filter to a second dossier. You use the sample application that is provided for you and configure the code for your environment.
+The following sample shows how to leverage the Embedding SDK to embed a dossier and capture selection events from one dossier and apply them as a filter to a second dossier. You use the sample application that is provided for you and configure the code for your environment.
 
 To deploy this sample in your environment, either:
 
@@ -53,35 +53,20 @@ To deploy this sample in your environment, either:
 ```html
 <html>
   <!-- Latest compiled and minified CSS -->
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-   
   <body>
-      
     <div class="container">
-          
       <div class="page-header">
-              
         <h1>Simple Embedding Sample With Event Handling</h1>
-            
       </div>
-        
     </div>
-      
     <div style="width: 20%; background-color: white; float:left;">
-          
       <div id="nav1" style="width: 100%; height: 50%;"></div>
-          
       <div id="nav2" style="width: 100%; height: 50%;"></div>
-        
     </div>
-      
     <div style="width: 80%; background-color: white; float:right;">
-          
       <div id="dossierContainer1" style="width: 100%; height: 50%;"></div>
-          
       <div id="dossierContainer2" style="width: 100%; height: 50%;"></div>
-        
     </div>
   </body>
    

@@ -20,7 +20,8 @@ const sidebars = {
   tutorialSidebar: [
     "index",
     "whats-new-in-the-embedding-sdk",
-    "upgrade",
+    "config",
+    "playground",
     {
       type: "category",
       link: {
@@ -32,7 +33,6 @@ const sidebars = {
         "support-for-different-authentication-environments/guest-authentication-mode-only",
         "support-for-different-authentication-environments/multiple-modes",
         "support-for-different-authentication-environments/authentication-saml",
-        "support-for-different-authentication-environments/authentication-custom",
       ],
     },
     {
@@ -55,8 +55,7 @@ const sidebars = {
         "add-functionality/authoring-library",
       ],
     },
-    "workflow",
-    "config",
+    "samples",
   ],
 };
 
