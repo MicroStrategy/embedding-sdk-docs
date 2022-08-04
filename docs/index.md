@@ -51,7 +51,7 @@ To help you get started, we have provided a number of simple applications with s
 
 :::note
 
- If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
+If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
 
 :::
 

@@ -28,39 +28,39 @@ Return the structure of the embedded dossier in the following format:
 
 ```json
 {
-  "chapters": [
-    {
-      "name": "Chapter01",
-      "nodeKey": "K36",
-      "pages": [
-        {
-          "name": "Page1",
-          "nodeKey": "K53--K46"
-        },
-        {
-          "name": "Page2",
-          "nodeKey": "K53--K48"
-        }
-      ]
-    },
-    {
-      "name": "Chapter01",
-      "nodeKey": "K36",
-      "pages": [
-        {
-          "name": "Page1",
-          "nodeKey": "K53--K46"
-        }
-      ]
-    }
-  ]
+  "chapters": [
+    {
+      "name": "Chapter01",
+      "nodeKey": "K36",
+      "pages": [
+        {
+          "name": "Page1",
+          "nodeKey": "K53--K46"
+        },
+        {
+          "name": "Page2",
+          "nodeKey": "K53--K48"
+        }
+      ]
+    },
+    {
+      "name": "Chapter01",
+      "nodeKey": "K36",
+      "pages": [
+        {
+          "name": "Page1",
+          "nodeKey": "K53--K46"
+        }
+      ]
+    }
+  ]
 }
 ```
 
 #### Example
 
 ```javascript
-embedDossier.getTableContent()
+embedDossier.getTableContent();
 ```
 
 ### goToPrevPage()
@@ -93,7 +93,7 @@ Rejected with an error when navigation fails.
 #### Example
 
 ```javascript
-embedDossier.goToPrevPage()
+embedDossier.goToPrevPage();
 ```
 
 ### goToNextPage()
@@ -126,7 +126,7 @@ Rejected with an error when navigation fails.
 #### Example
 
 ```javascript
-embedDossier.goToNextPage()
+embedDossier.goToNextPage();
 ```
 
 ### navigateToPage(page:Page)
@@ -159,7 +159,7 @@ Rejected with an error when navigation fails.
 #### Example
 
 ```javascript
-embedDossier.navigateToPage(page)
+embedDossier.navigateToPage(page);
 ```
 
 ### getCurrentChapter()
@@ -179,7 +179,7 @@ Return the current chapter of the embedded dossier.
 #### Example
 
 ```javascript
-embedDossier.getCurrentChapter()
+embedDossier.getCurrentChapter();
 ```
 
 ### getCurrentPage()
@@ -199,7 +199,7 @@ Return the current page of the embedded dossier.
 #### Example
 
 ```javascript
-embedDossier.getCurrentPage()
+embedDossier.getCurrentPage();
 ```
 
 ### getPageByNodeKey(nodeKey)
@@ -221,7 +221,7 @@ You can get the `nodeKey` from the return value of `getTableContent()`, or You c
 #### Example
 
 ```javascript
-embedDossier.getPageByNodeKey("K52")
+embedDossier.getPageByNodeKey("K52");
 ```
 
 ### getChapterList()
@@ -241,7 +241,7 @@ Return a list of all chapters in the embedded dossier.
 #### Example
 
 ```javascript
-embedDossier.getChapterList()
+embedDossier.getChapterList();
 ```
 
 ### getCurrentPageVisualizationList()
@@ -261,7 +261,7 @@ Return an array of all the visualizations in the current page of the embedded do
 #### Example
 
 ```javascript
-embedDossier.getCurrentPageVisualizationList()
+embedDossier.getCurrentPageVisualizationList();
 ```
 
 ### openFilterSummaryBar()
@@ -281,7 +281,7 @@ Open the filter summary bar.
 #### Example
 
 ```javascript
-embedDossier.openFilterSummaryBar()
+embedDossier.openFilterSummaryBar();
 ```
 
 ### closeFilterSummaryBar()
@@ -301,7 +301,7 @@ Close the filter summary bar.
 #### Example
 
 ```javascript
-embedDossier.closeFilterSummaryBar()
+embedDossier.closeFilterSummaryBar();
 ```
 
 ### getPageList()
@@ -321,5 +321,5 @@ Return an array of all the pages in this chapter of the embedded dossier.
 #### Example
 
 ```javascript
-chapter.getPageList()
+chapter.getPageList();
 ```
