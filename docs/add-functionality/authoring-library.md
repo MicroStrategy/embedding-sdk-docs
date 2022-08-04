@@ -45,7 +45,7 @@ The other APIs are disabled in authoring mode. If a disabled API is called in au
 
 ### Events
 
-To avoid unexpected events, except the newly added events (see the callback event API and example), you cannot receive embedding SDK events in authoring mode as they are designed for consumption mode.
+To avoid unexpected events, except the newly added events (see the callback event API and example), you cannot receive Embedding SDK events in authoring mode as they are designed for consumption mode.
 
 ### Initial Parameters
 
@@ -116,7 +116,7 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                                                                                                                                             | Error Category                        | Handling Module | Error Handling                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------- | --------------------------------------------- |
@@ -156,7 +156,7 @@ myDossier
 
 Since additional feedback information is not required, the callback parameters for the resolve case are not necessary.
 
-Similar to the behavior of the existing `goToPage` embedding API, the user's callback should be invoked when the editing page completes loading.
+Similar to the behavior of the existing `goToPage` API, the user's callback should be invoked when the editing page completes loading.
 
 | Parameter Name | Data Type    | Example                         | Comments                         |
 | -------------- | ------------ | ------------------------------- | -------------------------------- |
@@ -164,7 +164,7 @@ Similar to the behavior of the existing `goToPage` embedding API, the user's cal
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                       | Error Category   | Handling Module | Error Handling                               |
 | -------------------------------- | ---------------- | --------------- | -------------------------------------------- |
@@ -187,11 +187,13 @@ The following code example includes `registerEventHandler`, which is an existing
 
 ```js
 myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_SAVED, function () {
-  // ...      // The handling logic receiving the save event
+  // The handling logic receiving the save event
+  // ...
 });
 
 myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_CLOSED, function () {
-  // ...      // The handling logic receiving the close event
+  // The handling logic receiving the close event
+  // ...
 });
 ```
 
@@ -288,7 +290,7 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                        | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
@@ -338,7 +340,7 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                           | Error Category | Handling Module | Error Handling                                |
 | ---------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |

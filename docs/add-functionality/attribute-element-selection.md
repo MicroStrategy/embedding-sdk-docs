@@ -101,7 +101,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                                                                                | Error Category | Handling Module | Error Handling                               |
 | --------------------------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
@@ -161,7 +161,7 @@ If you do not enter a value for visualizationSelectedElements, the dossier runs 
 
 #### Response
 
-This API returns a dossier promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a dossier promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
 
 ```js
 var placeholderDiv = document.getElementById("dossierContainer");
@@ -179,7 +179,7 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                                                                 | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------------------------------------------------ | -------------- | --------------- | --------------------------------------------- |
@@ -222,7 +222,7 @@ The callback parameters for this promise object are shown below.
 
 #### Errors
 
-When an error occurs, the embedding API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
 | Error Case                                                                                | Error Category | Handling Module | Error Handling                               |
 | ----------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
@@ -273,7 +273,7 @@ The callback parameter's availableElements are shown below.
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
 
 ```js
 var placeholderDiv = document.getElementById("dossierContainer");

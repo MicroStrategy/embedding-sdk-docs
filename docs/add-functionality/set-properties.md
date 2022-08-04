@@ -6,7 +6,11 @@ When you embed a dossier, you can [set properties](./methods-and-properties) t
 
 To help you get started, we have provided a [sample application](#sample-application) that sets properties on an embedded dossier. Use the `create(props)` method under the `microstrategy.dossier` namespace to set properties. The props parameter contains optional key:value pairs to customize the UI, features, and authentication, in addition to the required key:value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created.
 
-|This sample is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
+:::note
+
+This sample is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
+
+:::
 
 ## Sample Application
 
@@ -55,13 +59,9 @@ var filterList = [
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      
     <meta charset="UTF-8" />
-      
     <title>Simple Sample for Setting Properties</title>
-      
     <!-- Replace path to point to the embeddingLib in your environment -->
-      
     <script type="text/javascript" src="https://<YOUR_SERVER>/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
   </head>
   <body onload="showDossier()">
