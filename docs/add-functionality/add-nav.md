@@ -10,32 +10,316 @@ To help you get started, we have provided an example in [Embedding SDK Playgroun
 
 You can use the methods described below to navigate within the dossier. You can get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
-- [getTableContent()](#getTableContent)
-- [goToPrevPage()](#goToPrevPage)
-- [goToNextPage()](#goToNextPage)
-- [navigateToPage(page:Page)](#navigateToPage)
-- [getCurrentChapter()](#getCurrentChapter)
-- [getCurrentPage()](#getCurrentPage)
-- [getPageByNodeKey(nodeKey)](#getPageByNodeKey)
-- [getChapterList()](#getChapterList)
-- [getCurrentPageVisualizationList()](#getCurrentPageVisualizationList)
-- [openFilterSummaryBar()](#openFilterSummaryBar)
-- [closeFilterSummaryBar()](#closeFilterSummaryBar)
-- [getPageList()](#getPageList)
-
 Most of the navigation is performed using methods of the Dossier class, but there is one method for navigation in the Chapter class.
 
-| Class   | Method                            | Return Type                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Example                                        |
-| ------- | --------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
-| Dossier | getTableContent()                 | Object                                 | Return the structure of the embedded dossier in the following format:<br/><br/>{ <br/>  "chapters": [<br/><br/>    {<br/><br/>      "name": "Chapter01",<br/><br/>      "nodeKey": "K36",<br/><br/>      "pages": [<br/><br/>        {<br/><br/>          "name": "Page1",<br/><br/>          "nodeKey": "K53--K46"<br/><br/>        },<br/><br/>        {<br/><br/>          "name": "Page2",<br/><br/>          "nodeKey": "K53--K48"<br/><br/>        }<br/><br/>      ]<br/><br/>    },<br/><br/>    {<br/><br/>      "name": "Chapter01",<br/><br/>      "nodeKey": "K36",<br/><br/>      "pages": [<br/><br/>        {<br/><br/>          "name": "Page1",<br/><br/>          "nodeKey": "K53--K46"<br/><br/>        }<br/><br/>      ]<br/><br/>    }<br/><br/>  ]<br/><br/>} | embedDossier.getTableContent()                 |
-| Dossier | goToPrevPage()                    | Promise                                | Go to the previous page of the embedded dossier <br/> <br/>Return a promise, resolved with {valid: true, message: "page loading success!"} when navigation is successful; rejected with an error when navigation fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | embedDossier.goToPrevPage()                    |
-| Dossier | goToNextPage()                    | Promise                                | Go to the next page of the embedded dossier <br/> <br/>Return a promise, resolved with {valid: true, message: "page loading success!"} when navigation is successful; rejected with an error when navigation fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | embedDossier.goToNextPage()                    |
-| Dossier | navigateToPage(page:Page)         | Promise                                | Switch to the specified page of the embedded dossier <br/> <br/>Return a promise, resolved with {valid: true, message: "page loading success!"} when navigation is successful; rejected with an error when navigation fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | embedDossier.navigateToPage(page)              |
-| Dossier | getCurrentChapter()               | Chapter                                | Return the current chapter of the embedded dossier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | embedDossier.getCurrentChapter()               |
-| Dossier | getCurrentPage()                  | Page                                   | Return the current page of the embedded dossier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | embedDossier.getCurrentPage()                  |
-| Dossier | getPageByNodeKey(nodeKey)         | Page                                   | Return the page of the embedded dossier with the specified nodeKey.<br/><br/>_You can get the nodeKey from the return value of getTableContent, or<br/>_ You can get the nodeKey from the nodeKey property of the Page object (Page.nodeKey)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | embedDossier.getPageByNodeKey("K52")           |
-| Dossier | getChapterList()                  | Chapter                                | Return a list of all chapters in the embedded dossier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | embedDossier.getChapterList()                  |
-| Dossier | getCurrentPageVisualizationList() | Promise([{key:vizKey, name: vizName}]) | Return an array of all the visualizations in the current page of the embedded dossier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | embedDossier.getCurrentPageVisualizationList() |
-| Dossier | openFilterSummaryBar()            | null                                   | Open the filter summary bar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | embedDossier.openFilterSummaryBar()            |
-| Dossier | closeFilterSummaryBar()           | null                                   | Close the filter summary bar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | embedDossier.closeFilterSummaryBar()           |
-| Chapter | getPageList()                     | Page[]                                 | Return an array of all the pages in this chapter of the embedded dossier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | chapter.getPageList()                          |
+### getTableContent()
+
+#### Class
+
+Dossier
+
+#### Return Type
+
+Object
+
+#### Description
+
+Return the structure of the embedded dossier in the following format:
+
+```json
+{
+  "chapters": [
+    {
+      "name": "Chapter01",
+      "nodeKey": "K36",
+      "pages": [
+        {
+          "name": "Page1",
+          "nodeKey": "K53--K46"
+        },
+        {
+          "name": "Page2",
+          "nodeKey": "K53--K48"
+        }
+      ]
+    },
+    {
+      "name": "Chapter01",
+      "nodeKey": "K36",
+      "pages": [
+        {
+          "name": "Page1",
+          "nodeKey": "K53--K46"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### Example
+
+```javascript
+embedDossier.getTableContent()
+```
+
+### goToPrevPage()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Promise`
+
+#### Description
+
+Go to the previous page of the embedded dossier.
+
+Return a promise, resolved with
+
+```javascript
+{
+  valid: true,
+  message: "page loading success!"
+}
+```
+
+when navigation is successful.
+
+Rejected with an error when navigation fails.
+
+#### Example
+
+```javascript
+embedDossier.goToPrevPage()
+```
+
+### goToNextPage()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Promise`
+
+#### Description
+
+Go to the next page of the embedded dossier.
+
+Return a promise, resolved with
+
+```javascript
+{
+  valid: true,
+  message: "page loading success!"
+}
+```
+
+when navigation is successful.
+
+Rejected with an error when navigation fails.
+
+#### Example
+
+```javascript
+embedDossier.goToNextPage()
+```
+
+### navigateToPage(page:Page)
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Promise`
+
+#### Description
+
+Switch to the specified page of the embedded dossier.
+
+Return a promise, resolved with
+
+```javascript
+{
+  valid: true,
+  message: "page loading success!"
+}
+```
+
+when navigation is successful.
+
+Rejected with an error when navigation fails.
+
+#### Example
+
+```javascript
+embedDossier.navigateToPage(page)
+```
+
+### getCurrentChapter()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Chapter`
+
+#### Description
+
+Return the current chapter of the embedded dossier.
+
+#### Example
+
+```javascript
+embedDossier.getCurrentChapter()
+```
+
+### getCurrentPage()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Page`
+
+#### Description
+
+Return the current page of the embedded dossier.
+
+#### Example
+
+```javascript
+embedDossier.getCurrentPage()
+```
+
+### getPageByNodeKey(nodeKey)
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Page`
+
+#### Description
+
+Return the page of the embedded dossier with the specified `nodeKey`.
+
+You can get the `nodeKey` from the return value of `getTableContent()`, or You can get the `nodeKey` from the `nodeKey` property of the Page object (`Page.nodeKey`).
+
+#### Example
+
+```javascript
+embedDossier.getPageByNodeKey("K52")
+```
+
+### getChapterList()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Chapter[]`
+
+#### Description
+
+Return a list of all chapters in the embedded dossier.
+
+#### Example
+
+```javascript
+embedDossier.getChapterList()
+```
+
+### getCurrentPageVisualizationList()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`Promise([{key:vizKey, name: vizName}])`
+
+#### Description
+
+Return an array of all the visualizations in the current page of the embedded dossier.
+
+#### Example
+
+```javascript
+embedDossier.getCurrentPageVisualizationList()
+```
+
+### openFilterSummaryBar()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`null`
+
+#### Description
+
+Open the filter summary bar.
+
+#### Example
+
+```javascript
+embedDossier.openFilterSummaryBar()
+```
+
+### closeFilterSummaryBar()
+
+#### Class
+
+`Dossier`
+
+#### Return Type
+
+`null`
+
+#### Description
+
+Close the filter summary bar.
+
+#### Example
+
+```javascript
+embedDossier.closeFilterSummaryBar()
+```
+
+### getPageList()
+
+#### Class
+
+`Chapter`
+
+#### Return Type
+
+`Page[]`
+
+#### Description
+
+Return an array of all the pages in this chapter of the embedded dossier.
+
+#### Example
+
+```javascript
+chapter.getPageList()
+```
