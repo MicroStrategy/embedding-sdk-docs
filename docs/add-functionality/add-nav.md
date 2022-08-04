@@ -16,11 +16,11 @@ Most of the navigation is performed using methods of the Dossier class, but ther
 
 #### Class
 
-Dossier
+`Dossier`
 
 #### Return Type
 
-Object
+`Object`
 
 #### Description
 
