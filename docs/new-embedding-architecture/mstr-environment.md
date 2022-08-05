@@ -16,7 +16,7 @@ async loadDossier(props)
 
 | Parameter Name   | Data Type | Description                                                                                                  | Is Required |
 | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
-| props.projectId  | String    | The project id. Should be a GUID                                                                             | true        |
+| props.projectId  | String    | The project ID. Should be a GUID                                                                             | true        |
 | props.objectId   | String    | The dossier id. Should be a valid dossier ID. If the ID is a document id or report ID, would report an error | true        |
 | props.instanceId | String    | The dossier instance id, if it already exists.                                                               | false       |
 
