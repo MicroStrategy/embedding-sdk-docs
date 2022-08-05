@@ -12,7 +12,7 @@ Documentation for Embedding SDK
 ### Step one
 
 ```
-git clone https://github.microstrategy.com/Tech/embedding-sdk-docs-v2.git
+git clone https://github.microstrategy.com/Tech/embedding-sdk-docs.git
 ```
 
 ### Step two
@@ -20,7 +20,7 @@ git clone https://github.microstrategy.com/Tech/embedding-sdk-docs-v2.git
 Install the site and run an initial build command:
 
 ```
-cd embedding-sdk-docs-v2
+cd embedding-sdk-docs
 
 yarn
 
@@ -43,7 +43,7 @@ As you're using Embedding SDK Docs, you may find something in an article that yo
 
 #### Open an issue
 
-If you've found a problem, you can open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues).
+If you've found a problem, you can open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues).
 
 #### Solve an issue
 

@@ -6,17 +6,17 @@ Before you begin:
 
 - This site is powered by Docusaurus. Check to see if you're on the [version of node we support](contributing/development.md).
 - Have you read the [code of conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues) & see if we [accept contributions](#types-of-contributions-memo) for your type of issue.
+- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) & see if we [accept contributions](#types-of-contributions-memo) for your type of issue.
 
 ### Use the 'Edit' button
 
 Navigating a new codebase can be challenging, so we're making that a little easier. As you're using this MicroStrategy Embedding SDK Docs, you may come across an article that you want to make an update to. You can find and click the **Edit** button on the top right corner on that article, which will take you to the file in this repo where you'll make your changes.
 
-Before you make your changes, check to see if an [issue exists](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues) already for the change you want to make.
+Before you make your changes, check to see if an [issue exists](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) already for the change you want to make.
 
 ### Don't see your issue? Open one
 
-If you spot something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you spot something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### Ready to make a change? Fork the repo
 
@@ -49,7 +49,7 @@ When you're done making changes and you'd like to propose them for review, use t
 
 Congratulations! The whole MicroStrategy community thanks you. :sparkles:
 
-Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/graphs/contributors) and at the bottom of the page you contributed to.
+Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.microstrategy.com/Tech/embedding-sdk-docs/graphs/contributors) and at the bottom of the page you contributed to.
 
 ### Keep contributing as you use MicroStrategy Docs
 
@@ -88,7 +88,7 @@ You can contribute to the MicroStrategy Embedding SDK Docs content and site in s
 
 ### :beetle: Issues
 
-If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### :hammer_and_wrench: Pull requests
 
@@ -140,7 +140,7 @@ For content changes, make sure that you:
 - [ ] Compare your pull request's source changes to staging to confirm that the output matches the source and that everything is rendering as expected. This helps spot issues like typos, content that doesn't follow the style guide, or content that isn't rendering due to versioning problems. Remember that lists and tables can be tricky.
 - [ ] Review the content for technical accuracy.
 - [ ] Review the entire pull request using the [localization checklist](contributing/localization-checklist.md).
-- [ ] Copy-edit the changes for grammar, spelling, and adherence to the [style guide](https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/tree/master/contributing/content-style-guide.md).
+- [ ] Copy-edit the changes for grammar, spelling, and adherence to the [style guide](https://github.microstrategy.com/Tech/embedding-sdk-docs/tree/master/contributing/content-style-guide.md).
 - [ ] Check new or updated Liquid statements to confirm that versioning is correct.
 - [ ] If there are any failing checks in your PR, troubleshoot them until they're all passing.
 

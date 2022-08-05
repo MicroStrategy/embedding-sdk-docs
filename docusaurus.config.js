@@ -9,7 +9,7 @@ const config = {
   title: "Embedding SDK Docs",
   tagline: "Embedding SDK Docs",
   url: "https://github.microstrategy.com/",
-  baseUrl: "/pages/Tech/embedding-sdk-docs-v2/",
+  baseUrl: "/pages/Tech/embedding-sdk-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "MicroStrategy", // Usually your GitHub org/user name.
-  projectName: "embedding-sdk-docs-v2", // Usually your repo name.
+  projectName: "embedding-sdk-docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -42,7 +42,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.microstrategy.com/Tech/embedding-sdk-docs-v2/tree/main",
+            "https://github.microstrategy.com/Tech/embedding-sdk-docs/tree/main",
           // includeCurrentVersion: true,
           // lastVersion: "2021",
           // versions: {
@@ -93,7 +93,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.microstrategy.com/Tech/embedding-sdk-docs-v2",
+            href: "https://github.microstrategy.com/Tech/embedding-sdk-docs",
             label: "GitHub",
             position: "right",
           },
