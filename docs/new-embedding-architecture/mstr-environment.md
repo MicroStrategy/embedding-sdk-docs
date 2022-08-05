@@ -6,7 +6,7 @@ This instance of this class is the object returned from `microstrategy.embedding
 
 ## APIs
 
-### 1. The Load Dossier API
+### The Load Dossier API
 
 #### Function
 
