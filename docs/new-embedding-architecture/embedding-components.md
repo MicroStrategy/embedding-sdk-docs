@@ -50,7 +50,7 @@ The errors could be caught in this function include:
 | Invalid authentication info or incorrect CORS setting | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 | The other REST API errors                             | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 
-### 2. The Destroy Environment API
+### The Destroy Environment API
 
 #### Function
 
