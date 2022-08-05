@@ -30,7 +30,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as getLoginToken existing Embedding SDK, but only support standard authentication now
+      // The similar logic as getLoginToken Embedding SDK
     },
   });
   // Your own code
