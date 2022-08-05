@@ -4,7 +4,7 @@ title: Embed Multiple Visualizations in a page
 
 ## Purpose
 
-You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar as loading one OOTB Library dossier page.
+You can use the new Embedding SDK API to embed multiple visualizations in a webpage, with high performance that is similar to loading one MicroStrategy Dossier page.
 
 ## Requirements
 
