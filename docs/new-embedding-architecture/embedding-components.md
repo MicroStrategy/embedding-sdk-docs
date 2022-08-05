@@ -6,7 +6,7 @@ This is the entry point of the new multiple visualizations SDK.
 
 ## APIs
 
-### 1. The Create Environment API
+### The Create Environment API
 
 #### Function
 
