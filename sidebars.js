@@ -55,6 +55,21 @@ const sidebars = {
         "add-functionality/authoring-library",
       ],
     },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "new-embedding-architecture/new-embedding-architecture",
+      },
+      label: "The New Embedding Architecture",
+      items: [
+        "new-embedding-architecture/embed-multiple-viz",
+        "new-embedding-architecture/destroy-multiple-viz",
+        "new-embedding-architecture/embedding-components",
+        "new-embedding-architecture/mstr-environment",
+        "new-embedding-architecture/mstr-dossier",
+      ],
+    },
     "samples",
   ],
 };
