@@ -54,14 +54,14 @@ try {
 
 This piece of code contains the function from 3 different namespace or classes:
 
-- [microstrategy.embeddingComponent.environments](./embedding-components.html) Namespace
+- [microstrategy.embeddingComponent.environments](./embedding-components) Namespace
 
   This namespace is responsible for creating and destroying MstrEnvironment objects.
 
-- [MstrEnvironment](./mstr-environment.html) Class
+- [MstrEnvironment](./mstr-environment) Class
 
   This class is responsible for creating and destroying MstrDossier objects.
 
-- [MstrDossier](./mstr-dossier.html) Class
+- [MstrDossier](./mstr-dossier) Class
 
   This class is responsible for showing visualizations in containers.

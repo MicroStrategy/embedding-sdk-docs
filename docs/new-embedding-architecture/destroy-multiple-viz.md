@@ -4,7 +4,7 @@ title: Destroy Visualizations in a Page
 
 ## Purpose
 
-After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you also can destroy them to clear your page, or embed the visualizations from another dossier.
+After using [new Embedding SDK API](./embed-multiple-viz) to embed multiple visualizations in a client's webpage, you also can destroy them to clear your page, or embed the visualizations from another dossier.
 
 ## Example Code
 
@@ -59,10 +59,10 @@ try {
 
 This piece of code contains the function from 2 different namespace or classes:
 
-- [microstrategy.embeddingComponent.environments](./embedding-components.html) Namespace
+- [microstrategy.embeddingComponent.environments](./embedding-components) Namespace
 
   This namespace is responsible for creating and destroying MstrEnvironment objects.
 
-- [MstrEnvironment](./mstr-environment.html) Class
+- [MstrEnvironment](./mstr-environment) Class
 
   This class is responsible for creating and destroying MstrDossier objects.
