@@ -18,7 +18,7 @@ async loadDossier(props)
 | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
 | props.projectId  | String    | The project ID. Should be a GUID                                                                             | true        |
 | props.objectId   | String    | The dossier ID. Should be a valid dossier ID. If the ID is a document ID or report ID, would report an error | true        |
-| props.instanceId | String    | The dossier instance id, if it already exists.                                                               | false       |
+| props.instanceId | String    | The dossier instance ID, if it already exists.                                                               | false       |
 
 The `projectId` + `objectId` would be used as the identifier of the dossier. If the function is called 2 times with the same parameter, in their callback, the same MstrDossier object would be returned.
 
