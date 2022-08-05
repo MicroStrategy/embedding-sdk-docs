@@ -57,7 +57,7 @@ try {
 
 ## References
 
-This piece of code contains the function from 3 different namespace or classes:
+This piece of code contains the function from 2 different namespace or classes:
 
 - [microstrategy.embeddingComponent.environments](./embedding-components.html) Namespace
 
