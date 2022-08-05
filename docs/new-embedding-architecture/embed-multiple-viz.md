@@ -1,5 +1,5 @@
 ---
-title: Embed Multiple Visualizations in a page
+title: Embed Multiple Visualizations in a Page
 ---
 
 ## Purpose
