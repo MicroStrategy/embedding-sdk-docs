@@ -14,7 +14,7 @@ If you want to gain better performance when embedding multiple separate visualiz
 
 The new set of APIs are still in a pre-release early version(**alpha version**), and might have significant changes in the future. Currently, it has the constraints below:
 
-- All the interaction widgets, like action buttons, RMC menus and scroll to the next page, would be disabled temporarily. Our product could only show readonly visualizations now.
+- All the interaction widgets, like action buttons, right-mouse-click menus, and scroll to the next page are disabled temporarily. Our product could only show read-only visualizations now.
 - It doesn't support the custom visualizations and maps.
 - It doesn't support the visualizations in panels.
 - It doesn't support showing the visualizations from different dossiers or servers.
