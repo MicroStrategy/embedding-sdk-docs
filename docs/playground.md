@@ -20,7 +20,7 @@ Here are some examples in the gallery so far.
 | :------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Simple Dossier Example     | How to embed a dossier.                                                                                                                                                       |
 | Minimal Template           | A template for the least amount code.                                                                                                                                         |
-| Responsive height          | JavaScript code to make the height responsive.                                                                                                                                |
+| Responsive Height          | JavaScript code to make the height responsive.                                                                                                                                |
 | Dossier in Full Screen     | How to show embedded dossier in full screen.                                                                                                                                  |
 | Inter-dossier interaction  | Interaction between embedded dossier. One dossier filters another.                                                                                                            |
 | Filters                    | Various examples to show how to use filter-related API. It covers attribute selector filter, attribute search, attribute slider, calendar, metric qualification filters, etc. |
