@@ -54,7 +54,7 @@ try {
 | The user wants to load more than 1 dossier in 1 environment | Unsupported case | Embedding SDK   | Caught by the catch() of the promise object |
 | The REST API errors                                         | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 
-### 2. The Destroy Dossier API
+### The Destroy Dossier API
 
 #### Function
 
