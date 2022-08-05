@@ -4,7 +4,7 @@ title: Add Event Handling
 
 Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
 
-To help you get started, we have provided a [sample application](#Sample_application) that embeds a dossier and adds event handling, as well as a description of [events](#Events), [event handlers](#Event_handlers), and [wrapper functions](#Wrapper_functions) you can use to handle additional events.
+To help you get started, we have provided a [sample application](#sample-application) that embeds a dossier and adds event handling, as well as a description of [events](#events), [event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle additional events.
 
 This sample is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
 
@@ -14,13 +14,13 @@ The following sample shows how to leverage the Embedding SDK to embed a dossier 
 
 To deploy this sample in your environment, either:
 
-1. Save the [code sample](#Code_sample) below to an HTML file hosted on the same web application server as the MicroStrategy Library application.
+1. Save the [code sample](#code-for-the-sample-application) below to an HTML file hosted on the same web application server as the MicroStrategy Library application.
 
    If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
 
    or
 
-   [Download](https://www2.microstrategy.com/producthelp/2021/downloads/EmbeddingSDK/EmbeddingSample_EventHandling.zip) the HTML file provided for you. This file contains the [sample code shown below](#Code_sample).
+   [Download](https://www2.microstrategy.com/producthelp/2021/downloads/EmbeddingSDK/EmbeddingSample_EventHandling.zip) the HTML file provided for you. This file contains the [sample code shown below](#code-for-the-sample-application).
 
 1. Configure the HTML file for your environment.
 
@@ -222,7 +222,7 @@ To deploy this sample in your environment, either:
 </html>
 ```
 
-## Events, event handlers, and wrapper functions
+## Events, Event Handlers, and Wrapper Functions
 
 Once you have used the dossier.create(props) method to embed a dossier into a third-party web page, you can use the methods described below to communicate between the dossier and the container page. You can register [event handlers](#Event_handlers) for the [events](#Events) that are automatically raised when a visualization is selected or when a page or filter is changed. [Wrapper functions](#Wrapper_functions) are provided to make it easy to register event handlers for specific events.
 
@@ -230,32 +230,164 @@ Once you have used the dossier.create(props) method to embed a dossier into a th
 
 Each supported event is described in the table below. You get the EventType from mstr.dossier.EventType.
 
-| Event enumeration              | Event name         | Description                                                                                                                                | Data                                             |                                                                                                                | Event content example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| EventType.ON_GRAPHICS+SELECTED | onGraphicsSelected | Raised when a graphic in the visualization is selected <br/> <br/>This event is raised only if the visualization supports "use as filter". | Attribute element list for each selected graphic | embedDossier.registerEventHandler(<br/><br/>EventType.ON_GRAPHICS_SELECTED,<br/><br/>graphicsSelectedHandler ) | {<br/><br/>  name: "onGraphicsSelected",<br/><br/>  value: {<br/><br/>    vizKey: 'K52',<br/><br/>    graphics: [//an array containing all the selected graphics info, each item is one graphic<br/><br/>      [// an array containing the attribute combination for one graphic<br/><br/>        //n: attribute name, v: attribute value<br/><br/>        {n: "Category", v: "Electronics"},<br/><br/>        {n: "Quarter", v: "2009 Q4"}<br/><br/>      ],[<br/><br/>        {n: "Category", v: "Electronics"},<br/><br/>        {n: "Quarter", v: "2009 Q3"}<br/><br/>      ]<br/><br/>    ]<br/><br/>  }<br/><br/>} |
-| EventType.ON_PAGE_SWITCHED     | onPageSwitched     | Raised when the page is switched                                                                                                           | Current page path                                | embedDossier.registerEventHandler(<br/><br/>EventType.ON_PAGE_SWITCHED,<br/><br/>pageSwitchedHandler)          | {key: 'K52'}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| EventType.ON_FILTER_UPDATED    | onFilterUpdated    | Raised when a filter is changed                                                                                                            | Changed filter information                       | embedDossier.registerEventHandler(<br/><br/>EventType.ON_FILTER_UPDATED,<br/><br/>filterUpdatedHandler)        | getFilterList                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+#### onGraphicsSelected
 
-### Event handlers
+##### Event Enumeration
+
+`EventType.ON_GRAPHICS+SELECTED`
+
+##### Description
+
+Raised when a graphic in the visualization is selected <br/> <br/>This event is raised only if the visualization supports "use as filter".
+
+##### Data
+
+Attribute element list for each selected graphic.
+
+##### Code Example
+
+```javascript
+embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
+```
+
+##### Content Example
+
+```javascript
+{
+  name: "onGraphicsSelected",
+  value: {
+    vizKey: 'K52',
+    graphics: [//an array containing all the selected graphics info, each item is one graphic
+      [// an array containing the attribute combination for one graphic
+        //n: attribute name, v: attribute value
+        {n: "Category", v: "Electronics"},
+        {n: "Quarter", v: "2009 Q4"}
+      ],[
+        {n: "Category", v: "Electronics"},
+        {n: "Quarter", v: "2009 Q3"}
+      ]
+    ]
+  }
+}
+```
+
+#### onPageSwitched
+
+##### Event Enumeration
+
+`EventType.ON_PAGE_SWITCHED`
+
+##### Description
+
+Raised when the page is switched.
+
+##### Data
+
+Current page path.
+
+##### Code Example
+
+```javascript
+embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
+```
+
+##### Content Example
+
+```javascript
+{
+  key: "K52";
+}
+```
+
+#### onFilterUpdated
+
+##### Event Enumeration
+
+`EventType.ON_FILTER_UPDATED`
+
+##### Description
+
+Raised when a filter is changed.
+
+##### Data
+
+Changed filter information.
+
+##### Code Example
+
+```javascript
+embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
+```
+
+##### Content Example
+
+```javascript
+getFilterList;
+```
+
+### Event Handlers
 
 There are two methods for registering and removing an event handler.
 
-| Class   | Method                                 | Description                                       |
-| ------- | -------------------------------------- | ------------------------------------------------- |
-| Dossier | registerEventHandler(evtName, handler) | Register the event handler 'handler' on 'evtName' |
-| Dossier | removeEventHandler(evtName, handler)   | Remove the event handler 'handler' on 'evtName'   |
+#### registerEventHandler(evtName, handler)
 
-### Wrapper functions
+##### Class
+
+`Dossier`
+
+##### Description
+
+Register the event handler `handler` on `evtName`.
+
+#### removeEventHandler(evtName, handler)
+
+##### Class
+
+`Dossier`
+
+##### Description
+
+Remove the event handler `handler` on `evtName`.
+
+### Wrapper Functions
 
 The following wrapper functions make it easy to register event handlers for specific events.
 
-| Class   | Method                                                   | Description                                                                                                                                                            |
-| ------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dossier | registerGraphicsSelectEventHandlerToViz(vizKey, handler) | Wrapper function for registerEventHandler for EventType.ON_GRAPHICS_SELECTED on certain visualizations (whose node key is equal to vizKey)                             |
-| Dossier | registerFilterUpdateHandler(handler)                     | Wrapper function for registerEventHandler for EventType.ON_FILTER_UPDATED. <br/> <br/>Equal to registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler) |
-| Dossier | registerPageSwitchHandler(handler)                       | Wrapper function for registerEventHandler for EventType.ON_PAGE_SWITCHED<br/><br/>Equal to registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler        |
+#### registerGraphicsSelectEventHandlerToViz(vizKey, handler)
 
-Because the Map visualization can have multiple map layers, the selected graphics can come from different map layers. As a result, the event raised for EventType.ON_GRAPHICS_SELECTED for the Map visualization is different from the event raised for other visualizations. See the following example.
+##### Class
+
+`Dossier`
+
+##### Description
+
+Wrapper function for `registerEventHandler` for `EventType.ON_GRAPHICS_SELECTED` on certain visualizations (whose node key is equal to `vizKey`).
+
+#### registerFilterUpdateHandler(handler)
+
+##### Class
+
+`Dossier`
+
+##### Description
+
+Wrapper function for `registerEventHandler` for `EventType.ON_FILTER_UPDATED`.
+
+Equal to `registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler)`.
+
+#### registerPageSwitchHandler(handler)
+
+##### Class
+
+`Dossier`
+
+##### Description
+
+Wrapper function for `registerEventHandler` for `EventType.ON_PAGE_SWITCHED`.
+
+Equal to `registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler)`.
+
+Because the Map visualization can have multiple map layers, the selected graphics can come from different map layers. As a result, the event raised for `EventType.ON_GRAPHICS_SELECTED` for the Map visualization is different from the event raised for other visualizations. See the following example.
 
 ```javascript
 {
