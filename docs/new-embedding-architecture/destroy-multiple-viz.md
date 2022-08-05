@@ -1,5 +1,5 @@
 ---
-title: Destroy Visualizations in a page
+title: Destroy Visualizations in a Page
 ---
 
 ## Purpose
