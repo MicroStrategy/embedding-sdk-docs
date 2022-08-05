@@ -6,7 +6,7 @@ The object returned from `MstrEnvironment.loadDossier()` function, which allows 
 
 ## APIs
 
-### 1. The Show Visualizations API
+### The Show Visualizations API
 
 #### Function
 
