@@ -1,5 +1,5 @@
 ---
-title: Embedding Components namespace
+title: Embedding Components Namespace
 ---
 
 This is the entry point of the new multiple visualizations SDK.
