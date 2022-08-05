@@ -6,7 +6,7 @@ If you want to gain better performance when embedding multiple separate visualiz
 
 - [Embed Multiple Visualizations in a page](./embed-multiple-viz.html)
 
-  This introductory sample embeds multiple single visualizations in a simple application. This sample can be used as is. These APIs could only support to embed readonly visualizations now.
+  This introductory sample embeds multiple single visualizations in a simple application. This sample can be used as is. These APIs could only support embedding read-only visualizations now.
 
 - [Destroy Visualizations in a page](./destroy-multiple-viz.html)
 
