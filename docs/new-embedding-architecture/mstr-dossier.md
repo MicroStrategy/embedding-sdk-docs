@@ -2,7 +2,7 @@
 title: MstrDossier class
 ---
 
-The object returned from `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dossier object.
+An instance of this class is returned from `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy Dossier object.
 
 ## APIs
 
