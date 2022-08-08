@@ -42,7 +42,7 @@ When initializing a dossier page, you must specify which visualization will be m
 | ----------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------- | --------- |
 | `props.visualizationKey`                                                | The visualization node key entered by you or from             |                                         |           |
 | the result of `getCurrentPageVisualizationList`.                        | String                                                        | Yes                                     |           |
-| `props.size`                                                            | The visualization sizing of "`normal`" or "`maximized`". If a |                                         |           |
+| `props.size`                                                            | The visualization sizing of `normal` or "`maximized`". If a |                                         |           |
 | string is not provided, the visualization size remains the same.        | String                                                        | No                                      |           |
 |                                                                         | `props.resizeButtonVisible`                                   | Determines whether the resize button is |           |
 | visible. If a Boolean is not provided, the visibility remains the same. |                                                               |                                         |           |
