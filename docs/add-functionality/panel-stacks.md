@@ -53,11 +53,65 @@ myDossier &&
 
 In which the callback parameters are:
 
-| Parameter Name           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Data Type    | Sample                                                                                                                                                                                                |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `currentPagePanelStacks` | The panel stack definitions on the current page. Its format is similar to the example shown below. <pre>[<br/> {<br/> "key": "{panel stack key}",<br/> "name": "{panel stack name}",<br/> "currentPanel": "{current panel key}",<br/> "panels": [<br/> {<br/> "key": "{panel key}",<br/> "name": "{panel name}",<br/> "panelStacks": [<br/> {<br/> "key": "{nested panel stack key}",<br/> "name": "{nested panel stack name}",<br/> "currentPanel": "{current panel key}",<br/> "panels": [<br/> {<br/> "key": "{panel key}",<br/> "name": "{panel name}"<br/> }<br/> ]<br/> }<br/> ]<br/> }<br/> ]<br/> }<br/>]</pre> | Object       | <pre>{ panelStackKey: W61, currentPanel: W63 }</pre>                                                                                                                                                  |
-| `error`                  | Error information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Error Object | Error Message(error.message):<br/><br/> “You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.” |
-|                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |              |                                                                                                                                                                                                       |
+- `currentPagePanelStacks`
+
+  The panel stack definitions on the current page. Its format is similar to the example shown below.
+
+  ```json
+  [
+    {
+      "key": "{panel stack key}",
+      "name": "{panel stack name}",
+      "currentPanel": "{current panel key}",
+      "panels": [
+        {
+          "key": "{panel key}",
+          "name": "{panel name}",
+          "panelStacks": [
+            {
+              "key": "{nested panel stack key}",
+              "name": "{nested panel stack name}",
+              "currentPanel": "{current panel key}",
+              "panels": [
+                {
+                  "key": "{panel key}",
+                  "name": "{panel name}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  ```
+
+  **Data Type**
+
+  `Object`
+
+  **Sample**
+
+  ```javascript
+  {
+    panelStackKey: W61,
+    currentPanel: W63
+  }
+  ```
+
+- `error`
+
+  Error information
+
+  **Data Type**
+
+  `Error Object`
+
+  **Sample**
+
+  Error Message(`error.message`):
+
+  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again."
 
 ### 2. Switch panels on the current page
 
@@ -69,10 +123,21 @@ In which the callback parameters are:
 
 #### Input Parameters
 
-| Property Name | Description                                                   | Data Type | Required? | Sample |
-| ------------- | ------------------------------------------------------------- | --------- | --------- | ------ |
-| `panelKey`    | The panel key from the result of `getCurrentPagePanelStacks`. | String    | Yes       | "W63"  |
-|               |                                                               |           |           |        |
+- `panelKey`
+
+  The panel key from the result of `getCurrentPagePanelStacks`.
+
+  **Data Type**
+
+  `String`
+
+  **Required?**
+
+  Yes
+
+  **Sample**
+
+  "W63"
 
 #### Response
 
@@ -92,10 +157,36 @@ myDossier &&
 
 in which the callback parameters are:
 
-| Parameter Name  | Description                                                                                                                                                 | Data Type    | Sample                                                                                                                                                                                                |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `switchedPanel` | The switched panel information, in the format shown below. <pre>{<br/> panelStackKey: {panel stack key},<br/> currentPanel: {current panel key}<br/>}</pre> | Object       | <pre>{<br/> panelStackKey: W61,<br/> currentPanel: W63<br/>}</pre>                                                                                                                                    |
-| `error`         | Error information                                                                                                                                           | error object | Error Message(error.message): <br/><br/>“You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.” |
+- `switchedPanel`
+
+  The switched panel information, in the format shown below. <pre>{<br/> panelStackKey: {panel stack key},<br/> currentPanel: {current panel key}<br/>}</pre>
+
+  **Data Type**
+
+  `Object`
+
+  **Sample**
+
+  ```javascript
+  {
+    panelStackKey: W61,
+    currentPanel: W63
+  }
+  ```
+
+- `error`
+
+  Error information
+
+  **Data Type**
+
+  `Error Object`
+
+  **Sample**
+
+  Error Message(`error.message`):
+
+  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again."
 
 ### 3. Raise a switch panel event
 
@@ -157,11 +248,56 @@ in which the data format of selectedVis is similar to:
 
 Since you cannot set the callback parameters, it's impossible for these parameters to produce errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in turn returns an error object in rejected cases. The possible errors are shown below.
 
-| Related APIs                          | Error Case                                                                                                       | Error Handler Callback Parameter | Error Message                                                                                                                                                           |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Dossier.getCurrentPagePanelStacks()` | The API was called while the page was still loading.                                                             | Error Object                     | You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.             |
-| `Dossier.switchPanel(panelKey)`       | The panelKey is missing.                                                                                         |                                  | The panel key can not be empty!                                                                                                                                         |
-|                                       | The panelKey is invalid. It does not exist or it is not in the current page.                                     |                                  | There isn’t a panel whose key is '${panelKey}' in the current page and selected panels. Please check whether your input parameter of 'switchPanel' function is correct. |
-|                                       | The API was called while the page was still loading and users cannot switch panels by manually clicking on them. |                                  | You couldn’t switch a panel when the dossier is busy for loading data. Please wait for a while...                                                                       |
-|                                       | REST API error                                                                                                   |                                  | The manipulation API has encountered an error when switching to panel ${panelKey}. Please try again later.                                                              |
-|                                       |                                                                                                                  |                                  |                                                                                                                                                                         |
+### Dossier.getCurrentPagePanelStacks()
+
+#### Error Case: The API was called while the page was still loading
+
+##### Error Handler Callback Parameter
+
+`Error Object`
+
+##### Error Message
+
+You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.
+
+### Dossier.switchPanel(panelKey)
+
+#### Error Case: The panelKey is missing
+
+##### Error Handler Callback Parameter
+
+N/A
+
+##### Error Message
+
+The panel key can not be empty!
+
+#### Error Case: The panelKey is invalid. It does not exist or it is not in the current page
+
+##### Error Handler Callback Parameter
+
+N/A
+
+##### Error Message
+
+There isn’t a panel whose key is `${panelKey}` in the current page and selected panels. Please check whether your input parameter of `switchPanel` function is correct.
+
+#### Error Case: The API was called while the page was still loading and users cannot switch panels by manually clicking on them
+
+##### Error Handler Callback Parameter
+
+N/A
+
+##### Error Message
+
+You couldn’t switch a panel when the dossier is busy for loading data. Please wait for a while...
+
+#### Error Case: REST API error
+
+##### Error Handler Callback Parameter
+
+N/A
+
+##### Error Message
+
+The manipulation API has encountered an error when switching to panel `${panelKey}`. Please try again later.
