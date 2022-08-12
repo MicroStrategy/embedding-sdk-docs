@@ -1,5 +1,6 @@
 ---
 title: MstrDossier Class
+description: An instance of `MstrDossier` class is returned from `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy Dossier object.
 ---
 
 An instance of this class is returned from `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy Dossier object.

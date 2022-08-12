@@ -1,5 +1,6 @@
 ---
 title: What's New in the Embedding SDK
+description: In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 ---
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.

@@ -1,5 +1,6 @@
 ---
 title: Embedding SDK Playground
+description: MicroStrategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
 ---
 
 MicroStrategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.

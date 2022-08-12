@@ -1,5 +1,6 @@
 ---
 title: The New Embedding Architecture
+description: If you want to gain better performance when embedding multiple separate visualizations, we recommend you use the new set of APIs.
 ---
 
 If you want to gain better performance when embedding multiple separate visualizations, we recommend you use the new set of APIs. To know how to use it, view the pages below:

@@ -1,5 +1,6 @@
 ---
 title: Support for Different Authentication Environments
+description: When you embed a dossier in an application, you want it to display as easily and quickly as possible. This can mean seamlessly, without requiring that the user enter credentials at all, or simply scanning a QR code by integrating with Badge. The code you write to achieve this depends on how authentication is configured for the environment where the embedded dossier is hosted. Samples or sample code are provided for different authentication environments.
 ---
 
 When you embed a dossier in an application, you want it to display as easily and quickly as possible. This can mean seamlessly, without requiring that the user enter credentials at all, or simply scanning a QR code by integrating with Badge. The code you write to achieve this depends on how authentication is configured for the environment where the embedded dossier is hosted. Samples or sample code are provided for different authentication environments.
@@ -21,9 +22,5 @@ The sample applications are provided as HTML files. These files must be hosted 
 - [Embed a dossier using SAML authentication](./authentication-saml)
 
   This sample illustrates how to display an embedded dossier by simply scanning a QR code. This is how embedding works when the application is integrated with Badge.
-
-- [Embed a dossier using custom authentication](./authentication-custom)
-
-  You can use custom authentication to display an embedded dossier without requiring that users enter their credentials. Sample code shows how to create a servlet that supports custom authentication, modify `web.xml` to configure and map the servlet, and enable custom authentication for the embedded dossier.
 
 > If the application server where the sample is installed is different from the server running the `MicroStrategyLibrary` application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).

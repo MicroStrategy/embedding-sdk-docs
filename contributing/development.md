@@ -25,11 +25,13 @@ We want to keep our documentation consistent in styling. More details could be f
   ---
   title: Workflow Sample - Authentication
   sidebar_label: Authentication
+  description: a summary of the page to provide better text snippet in the search result. This is for SEO purpose.
   ---
   ```
 
   - `title` is the `h1` heading that shows on the HTML page.
   - `sidebar_label` is the title you want to show in the sidebar navigation.
+  - `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
 
 ### Pages ordering on the navigation sidebar and pagination buttons
 

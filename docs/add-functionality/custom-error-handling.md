@@ -1,5 +1,6 @@
 ---
 title: Custom Error Handling
+description: MicroStrategy provides custom error handling for these kinds of pop-up errors in two stages, during dossier creation and after dossier creation.
 ---
 
 By default, Library displays a pop-up dialog when an error occurs, such as when a dataset is not found.

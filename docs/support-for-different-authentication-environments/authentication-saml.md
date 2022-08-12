@@ -1,5 +1,6 @@
 ---
 title: Use SAML or OIDC Authentication
+description: The sample in this topic illustrates how to display an embedded dossier using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
 ---
 
 The JavaScript Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The authentication required to display a dossier depends on your environment. The sample in this topic illustrates how to display an embedded dossier using SAML authentication. The same code works for OIDC except the `loginMode` parameter.

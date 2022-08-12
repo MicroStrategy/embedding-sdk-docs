@@ -1,5 +1,6 @@
 ---
 title: Embedding Components Namespace
+description: The embedding components namespace, which contains the APIs to create environment and destroy environment.
 ---
 
 This is the entry point of the new multiple visualizations SDK.

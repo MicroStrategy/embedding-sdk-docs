@@ -1,5 +1,6 @@
 ---
 title: Use Custom Authentication
+description: You can use custom authentication to allow users to view an embedded dossier without logging in with their user name and password.
 ---
 
 You can use custom authentication to allow users to view an embedded dossier without logging in with their user name and password.

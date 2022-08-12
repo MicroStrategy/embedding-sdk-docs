@@ -1,5 +1,6 @@
 ---
 title: Embed a Single Visualization
+description: You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
 ---
 
 You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
@@ -38,15 +39,15 @@ When initializing a dossier page, you must specify which visualization will be m
 
 #### Input Parameters
 
-| Parameter Name                                                          | Description                                                   | Data Type                               | Required? |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------- | --------- |
-| `props.visualizationKey`                                                | The visualization node key entered by you or from             |                                         |           |
-| the result of `getCurrentPageVisualizationList`.                        | String                                                        | Yes                                     |           |
-| `props.size`                                                            | The visualization sizing of `normal` or "`maximized`". If a |                                         |           |
-| string is not provided, the visualization size remains the same.        | String                                                        | No                                      |           |
-|                                                                         | `props.resizeButtonVisible`                                   | Determines whether the resize button is |           |
-| visible. If a Boolean is not provided, the visibility remains the same. |                                                               |                                         |           |
-| Boolean                                                                 | No                                                            |                                         |           |
+| Parameter Name                                                          | Description                                               | Data Type                               | Required? |
+| ----------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------- | --------- |
+| `props.visualizationKey`                                                | The visualization node key entered by you or from         |                                         |           |
+| the result of `getCurrentPageVisualizationList`.                        | String                                                    | Yes                                     |           |
+| `props.size`                                                            | The visualization sizing of `normal` or `maximized`. If a |                                         |           |
+| string is not provided, the visualization size remains the same.        | String                                                    | No                                      |           |
+|                                                                         | `props.resizeButtonVisible`                               | Determines whether the resize button is |           |
+| visible. If a Boolean is not provided, the visibility remains the same. |                                                           |                                         |           |
+| Boolean                                                                 | No                                                        |                                         |           |
 
 #### Response
 
@@ -88,7 +89,7 @@ The `props` parameter contains several fields. See [Methods and Properties fo
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
 | `props.visualizationAppearances[i].visualizationKey`    | The visualization node key input by you.                                                                        | String    | Yes       | N/A           |
-| `props.visualizationAppearances[i].size`                | Set to "`normal`" or "`maximized`".                                                                             | String    | No        | N/A           |
+| `props.visualizationAppearances[i].size`                | Set to `normal` or `maximized`.                                                                                 | String    | No        | N/A           |
 | `props.visualizationAppearances[i].resizeButtonVisible` | Determines whether the resize button is visible. If a Boolean is not provided, the visibility remains the same. | Boolean   | No        | N/A           |
 |                                                         |                                                                                                                 |           |           |               |
 
@@ -152,10 +153,10 @@ myDossier &&
 
 in which the `resizedVisualization` callback parameter uses the following format:
 
-| Parameter Name         | Description                                                                                                                                                               | Data Type | Sample                                                                       |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------- |
-| `resizedVisualization` | The resized visualization information, similar to:<pre>{<br/> visualizationKey: "string",<br/> size: "maximized" <br/>}<br/></pre> `size` is "`normal`" or "`maximized`". | Object    | <br/><pre>{<br/> visualizationKey: "K52",<br/> size: "maximized"<br/>}</pre> |
-|                        |                                                                                                                                                                           |           |                                                                              |
+| Parameter Name         | Description                                                                                                                                                           | Data Type | Sample                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------- |
+| `resizedVisualization` | The resized visualization information, similar to:<pre>{<br/> visualizationKey: "string",<br/> size: "maximized" <br/>}<br/></pre> `size` is `normal` or `maximized`. | Object    | <br/><pre>{<br/> visualizationKey: "K52",<br/> size: "maximized"<br/>}</pre> |
+|                        |                                                                                                                                                                       |           |                                                                              |
 
 ## API Errors
 

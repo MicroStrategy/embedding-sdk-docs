@@ -1,5 +1,6 @@
 ---
 title: Destroy Visualizations in a Page
+description: After embedding multiple visualizations in a page, you also can destroy them to clear your page, or embed the visualizations from another dossier.
 ---
 
 ## Purpose

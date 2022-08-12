@@ -1,5 +1,6 @@
 ---
 title: MstrEnvironment Namespace
+description: This instance of `MstrEnvironment` class is the object returned from `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application.
 ---
 
 This instance of this class is the object returned from `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application.

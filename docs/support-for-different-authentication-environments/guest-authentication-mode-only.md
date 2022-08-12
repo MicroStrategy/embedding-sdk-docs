@@ -1,5 +1,6 @@
 ---
 title: Use Guest Authentication When It is the Only Authentication Mode Enabled
+description: he sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
 ---
 
 The JavaScript Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dossier to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dossier is hosted. The sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.

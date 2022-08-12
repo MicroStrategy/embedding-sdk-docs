@@ -1,8 +1,9 @@
 ---
 title: Author an Embedded Dossier
+description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
 ---
 
-Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dossier development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, the MicroStrategy 2021 Update 3 release exposes the authoring mode, whether it is during the initial load or in the view mode of the dossier.
+Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dossier development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
 
 ## Embedding SDK Functionalities
 

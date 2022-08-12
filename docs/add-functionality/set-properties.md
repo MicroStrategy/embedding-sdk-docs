@@ -1,5 +1,6 @@
 ---
 title: Deploy a Sample Application to Set Dossier Properties
+description: When you embed a dossier, you can set properties to customize the user interface, the features that are available or visible, and authentication.
 ---
 
 When you embed a dossier, you can [set properties](./methods-and-properties) to customize the user interface, the features that are available or visible, and authentication.

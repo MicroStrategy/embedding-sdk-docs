@@ -1,5 +1,6 @@
 ---
 title: Retrieve and Apply Filters
+description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
 ---
 
 You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.

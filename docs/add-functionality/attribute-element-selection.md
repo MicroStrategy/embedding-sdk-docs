@@ -1,5 +1,6 @@
 ---
 title: Enable the Selection of Attribute Elements
+description: Attribute element selection within dossiers provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.
 ---
 
 The MicroStrategy 2021 Update 3 release exposes attribute element selection within dossiers. This provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.

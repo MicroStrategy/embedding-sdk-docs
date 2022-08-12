@@ -1,5 +1,6 @@
 ---
 title: Configuring Library Server for Embedding
+description: If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please enable Cross-Origin Resource Sharing (CORS) and allow Cross-Origin Cookies.
 ---
 
 If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please also meet the following requirements.

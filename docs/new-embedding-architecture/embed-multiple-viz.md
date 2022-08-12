@@ -1,5 +1,6 @@
 ---
 title: Embed Multiple Visualizations in a Page
+description: You can use the new Embedding SDK API to embed multiple visualizations in a webpage, with high performance that is similar to loading one MicroStrategy Dossier page.
 ---
 
 ## Purpose

@@ -1,5 +1,6 @@
 ---
 title: Upgrade to a Newer Version of MicroStrategy
+description: The JavaScript library for embedding dossiers is included in the MicroStrategy installation so it is automatically updated when you upgrade to a newer version of MicroStrategy. However, you need to follow certain practices to preserve settings you have made and customizations you have created in the current version.
 ---
 
 The JavaScript library for embedding dossiers is included in the MicroStrategy installation so it is automatically updated when you upgrade to a newer version of MicroStrategy. However, you need to follow certain practices to preserve settings you have made and customizations you have created in the current version.

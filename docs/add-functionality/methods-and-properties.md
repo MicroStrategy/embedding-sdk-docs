@@ -1,5 +1,6 @@
 ---
 title: Methods and Properties for an Embedded Dossier
+description: When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 ---
 
 When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
