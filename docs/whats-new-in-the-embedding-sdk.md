@@ -25,7 +25,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 3
 
-[Custom error handling.](./add-functionality/custom-error-handling)
+[Error handling.](./add-functionality/error-handling)
 
 ## 2020 Update 2
 

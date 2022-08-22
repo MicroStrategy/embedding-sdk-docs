@@ -48,7 +48,7 @@ const sidebars = {
         "add-functionality/filters",
         "add-functionality/set-properties",
         "add-functionality/methods-and-properties",
-        "add-functionality/custom-error-handling",
+        "add-functionality/error-handling",
         "add-functionality/panel-stacks",
         "add-functionality/embed-vis",
         "add-functionality/attribute-element-selection",

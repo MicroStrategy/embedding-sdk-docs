@@ -1,6 +1,6 @@
 ---
-title: Custom Error Handling
-description: MicroStrategy provides custom error handling for these kinds of pop-up errors in two stages, during dossier creation and after dossier creation.
+title: Error Handling
+description: MicroStrategy provides custom error handling in two stages, during dossier creation and after dossier creation.
 ---
 
 By default, Library displays a pop-up dialog when an error occurs, such as when a dataset is not found.
@@ -9,7 +9,11 @@ By default, Library displays a pop-up dialog when an error occurs, such as when 
 
 MicroStrategy provides custom error handling for these kinds of pop-up errors in two stages.
 
-## Error Handling During Dossier Creation
+MicroStrategy also provides session error handling for session errors in two stages. Because the handling method of the session error is different from other errors, we don't use the custom error handling in this case.
+
+## Custom Error Handling
+
+### Custom Error Handling During Dossier Creation
 
 The error handler used during dossier creation in microstrategy.dossier.create is implemented by default. The error handler is executed when the error occurs and you can get details of the error in the customErrorHandler parameter.
 
@@ -31,7 +35,7 @@ microstrategy.dossier.create({
 });
 ```
 
-## Error Handling After Dossier Creation
+### Custom Error Handling After Dossier Creation
 
 You can also provide error handling after the dossier is created. The error handler is executed when the error occurs and you can get details of the error in the `customErrorHandler` parameter.
 
@@ -59,6 +63,64 @@ microstrategy.dossier
     dossier.addCustomErrorHandler(function (error) {
       console.log("catch error: " + error.message);
       //Do something to handle the error
+    });
+  });
+```
+
+## Session Error Handling
+
+When the session expiration error occurs:
+
+- If there is no `sessionErrorHandler` defined, the page will show the Library's logout page.
+- If you define a `sessionErrorHandler`, the function will be executed. After 1 second, the page will forcefully log out.
+
+The differences from custom error handling:
+
+The `sessionErrorHandler` created during dossier creation will not be deleted after dossier creation. It will continue to exist.
+
+There can be only one `sessionErrorHandler` function at the same time, whether during dossier creation or after dossier creation. So if you want to add a new `sessionErrorHandler`, you should use `removeSessionErrorhandler()` to remove the existing `sessionErrorHandler` first.
+
+### Session Error Handling During Dossier Creation
+
+The session error handler is executed when the error occurs and you can get details of the error in the `sessionErrorHandler` parameter.
+
+```js
+microstrategy.dossier.create({
+  url: url,
+  placeholder: container,
+  sessionErrorHandler: (errorObject) => {
+    // The handling logic of the user
+  },
+});
+```
+
+### Session Error Handling After Dossier Creation
+
+You can also provide a session error handler after the dossier is created. The session error handler is executed when the session expiration error occurs and you can get details of the error in the `sessionErrorHandler` parameter.
+
+If you do not configure this error handler and an error is encountered, the default pop-up mentioned at the beginning of this topic appears.
+
+| Class   | Method                            | Description                                                                                                                                                                                                                                                             |
+| ------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dossier | `addSessionErrorHandler(handler)` | addSessionErrorHandler(error): The session error handler that executes when the session expiration error occurs. It contains one parameter, error. The error object includes `title`, `message`, `desc`, `errorCode`, `iServerErrorCode`, `statusCode`, and `ticketId`. |
+|         | `removeSessionErrorhandler()`     | Removes the session error handler.                                                                                                                                                                                                                                      |
+
+Here is an example of how to set up error handling:
+
+```js
+microstrategy.dossier
+  .create({
+    placeholder: placeholderDiv,
+    url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
+    sessionErrorHandler: function (error) {
+      console.log("catch session expiration error during creation: " + error.message);
+      //Do something to handle the session expiration error
+    },
+  })
+  .then(function (dossier) {
+    dossier.addSessionErrorHandler(function (error) {
+      console.log("catch session expiration error: " + error.message);
+      //Do something to handle the session expiration error
     });
   });
 ```
