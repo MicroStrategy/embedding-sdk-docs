@@ -21,7 +21,11 @@ Check out the video below to see how it's done!
   allowfullscreen>
 </iframe>
 
-A full code sample is also provided [below](#full-code-sample).
+:::note
+
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15) that will embed a dossier with a single visualization maximized with options to switch between `Max Size` and `Normal Size`.
+
+:::
 
 ## Embedding Workflow
 
@@ -178,95 +182,3 @@ Since you cannot set the callback parameters, it's impossible for these paramete
 |                                                                                | `resizeButtonVisible` isn’t a valid value.                                                                                                                  |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].resizeButtonVisible should be boolean                                                               |
 |                                                                                | The value of `visualizationKey` is not a valid visualization key or it is not in the current page or panel stack .                                          |                                  | There isn’t a visualization whose key is '${vizAppearance.visualizationKey}' in the current page. Please check whether your input 'visualizationkey' is correct.                                  |
 |                                                                                |                                                                                                                                                             |                                  |                                                                                                                                                                                                   |
-
-Full Code Sample
-
-Here is a full code sample containing the necessary HTML and JavaScript. Variables enclosed in < > must be replaced.
-
-```html
-<html>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-
-  <body>
-    <div class="container">
-      <div class="page-header">
-        <h1>Simple Embedding Sample with Single Vizualization</h1>
-      </div>
-    </div>
-    <div>
-      <div id="dossierContainer1" style="width: 100%;"></div>
-    </div>
-  </body>
-
-  <!-- Replace path to point to the embeddingLib in your environment -->
-
-  <script src="https://env-XXXXXX.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
-  <script>
-    //BEGIN CONFIG PARAMETERS -------------------------------------------------------------------------
-    baseRestURL = "https://env-XXXXXX.customer.cloud.microstrategy.com/MicroStrategyLibrary";
-    username = "<username>";
-    password = "<password>";
-    projectID = "<projectID>";
-    dossierID = "<dossierID>";
-    //END CONFIG PARAMETERS -------------------------------------------------------------------------
-    //Form PostData for login REST request
-    var postData = {};
-    postData.username = username;
-    postData.password = password;
-    postData.loginMode = 1;
-    var projectUrl = baseRestURL + '/app/' + projectID;
-    var dossierUrl = projectUrl + '/' + dossierID;
-    console.log("DossierURL: " + dossierUrl);
-    //populate div with dossier
-    microstrategy.dossier.create({
-      placeholder: document.getElementById("dossierContainer1"),
-      url: dossierUrl,
-      enableCustomAuthentication: true,
-      enableResponsive: true,
-      customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-      visualizationAppearances: [{
-        visualizationKey: "<viz key>",
-        // you can get the visualizationKey from this endpoint /api/dossiers/{dossierId}/definition
-        size: "maximized",
-        resizeButtonVisible: false
-      }],
-      getLoginToken: function() {
-        return getXHRRequestPromise(
-          baseRestURL + '/api/auth/login',
-          postData, 'POST', 'application/json',
-          'x-mstr-authToken'
-        ).then(function(authToken) {
-          return authToken;
-        })
-      }
-    }).then(function(dossier) {
-    dossierContainer1 = dossier;
-      //add any code you want to run after dossier loads
-    });
-    function getXHRRequestPromise(
-      url, body, method, contentType, desiredHeader
-    ) {
-      return new Promise(function(resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.withCredentials=true;
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.send(JSON.stringify(body));
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 2) {
-            resolve(xhr.getResponseHeader(desiredHeader));
-          } else {
-            reject({
-              status: this.status,
-              statusText: xhr.statusText
-            });
-          }
-        };
-      });
-    };
-    ​
-  </script>
-</html>
-```

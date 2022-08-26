@@ -25,6 +25,12 @@ You can apply filters both when an embedded dossier is being executed and after 
 
     This section introduces how you can cache the results of several filters and apply them together.
 
+:::note
+
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g6) that will embed a dossier with `attributeSelector` filters.
+
+:::
+
 ## Retrieve Filters After a Dossier is Rendered
 
 After an embedded dossier has been rendered, you can use the `getFilterList()` method of the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to chapters in the dossier.

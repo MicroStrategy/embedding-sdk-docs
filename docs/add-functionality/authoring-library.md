@@ -5,6 +5,12 @@ description: To allow users to conveniently edit a dossier, Embedding SDK allows
 
 Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dossier development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
 
+:::note
+
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g16) that will embed a dossier in authoring mode along with an edit button that you can use to switch to authoring mode. You need to modify the environment url and dossier url to use your dossier and environment. See the steps to do this in [Introduction to Embedding SDK](../).
+
+:::
+
 ## Embedding SDK Functionalities
 
 With the Authoring Library feature, the Embedding SDK could enable the users to the things below:
