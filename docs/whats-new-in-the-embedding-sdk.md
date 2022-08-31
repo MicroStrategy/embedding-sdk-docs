@@ -7,11 +7,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 4
 
-[Enhancements to authoring an embedded dossier](./add-functionality/panel-stacks), including:
-
-- Controlling display of items in authoring toolbar
-- Controlling display of authoring panels
-- Support for creating a new dossier [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#method-and-properties-for-embedding-a-dossier)
+- [Enhancements to authoring an embedded dossier](./add-functionality/panel-stacks), including:
+  - Controlling display of items in authoring toolbar
+  - Controlling display of authoring panels
+  - Support for creating a new dossier
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#method-and-properties-for-embedding-a-dossier)
 
 ## 2021 Update 3
 
@@ -22,6 +22,12 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 - [Interact with panel stacks in dossiers.](./add-functionality/panel-stacks)
 - [Embed a single visualization.](./add-functionality/embed-vis)
+
+## 2021
+
+- [More updates in Error handling.](./add-functionality/error-handling)
+- [Apply multiple filters after a dossier is rendered.](./add-functionality/filters#apply-multiple-filters-after-the-dossier-is-rendered)
+- [Show or hide the shareDossier function.](./add-functionality/methods-and-properties#sharefeature)
 
 ## 2020 Update 3
 
