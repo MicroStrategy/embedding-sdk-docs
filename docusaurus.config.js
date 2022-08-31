@@ -83,7 +83,7 @@ const config = {
             items: [
               {
                 label: "Version 2020",
-                href: "https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/Intro_to_the_Embedding_SDK.htm",
+                href: "https://www2.microstrategy.com/producthelp/2020/EmbeddingSDK/Content/topics/Intro_to_the_Embedding_SDK.htm",
               },
             ],
           },
