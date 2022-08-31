@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node ./hooks/pre-commit.js
+yarn lint-staged
