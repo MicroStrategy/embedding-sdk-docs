@@ -8,16 +8,19 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Embedding SDK Docs",
   tagline: "Embedding SDK Docs",
-  url: "https://github.microstrategy.com/",
-  baseUrl: "/pages/Tech/embedding-sdk-docs/",
+  url: process.env.URL || "https://github.microstrategy.com/",
+  baseUrl: process.env.BASE_URL || "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  // we will use `undefined` to be intuitive for our case
+  trailingSlash: undefined,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "MicroStrategy", // Usually your GitHub org/user name.
+  organizationName: process.env.ORGANIZATION_NAME, // Usually your GitHub org/user name.
   projectName: "embedding-sdk-docs", // Usually your repo name.
+  deploymentBranch: "gh-pages",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want

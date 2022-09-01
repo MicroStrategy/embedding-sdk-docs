@@ -56,7 +56,7 @@ To avoid unexpected events, except the newly added events (see the callback even
 
 ### Initial Parameters
 
-The props parameter contains many fields. See [Methods and Properties](./add-functionality/methods-and-properties) for an Embedded Dossier for more information.
+The props parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
 The existing parameters can be roughly divided into three categories and their behaviors can be set with `dossierRenderingMode = authoring`.
 
@@ -89,7 +89,7 @@ The fields ["instance", "filters", "visualizationAppearances", "visualizationSel
 
 #### Input Parameters
 
-An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and Properties](./add-functionality/methods-and-properties) for an Embedded Dossier for more information.
+An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
 | Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                    | Required? |
 | -------------------------- | --------- | ------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -212,7 +212,7 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 
 #### Input Parameters
 
-An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and Properties](./add-functionality/methods-and-properties) for an Embedded Dossier for more information.
+An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
 | Parameter Name           | Data Type | Default Value | Description                                                                                                                                                                          | Required? |
 | ------------------------ | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
