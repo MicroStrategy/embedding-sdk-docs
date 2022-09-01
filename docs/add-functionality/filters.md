@@ -63,7 +63,7 @@ The sections below show the filter details for each filter type.
 
   If the filter operator is 'between' or 'notBetween', the `filterDetail` will be:
 
-  ```javascript
+  ```json
   {
     operatorId:
     from:
@@ -73,7 +73,7 @@ The sections below show the filter details for each filter type.
 
   If the filter operator is not 'isNull' or 'isNoNull', the `filterDetail` will only have `operatorId`:
 
-  ```javascript
+  ```json
   {
     operatorId:
   }
@@ -81,7 +81,7 @@ The sections below show the filter details for each filter type.
 
   For the remaining filter operators, the `filterDetail` will be:
 
-  ```javascript
+  ```json
   {
     operatorId:
     value:
@@ -150,7 +150,7 @@ The sections below show the filter details for each filter type.
 
   Array of attribute items, containing names, IDs and selection status of all attribute items
 
-  ```javascript
+  ```json
   {
     name: item name to show
     value: item ID used to do filter
@@ -506,7 +506,7 @@ Select all the attributes for the filter with `key` and apply the change immedia
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -534,7 +534,7 @@ Since `holdSubmit` is set to true, this change is applied and rendered together 
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -564,7 +564,7 @@ Use either `name` or `value` to do the selection. `value` is the attribute eleme
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
   key: string,
@@ -615,7 +615,7 @@ Use either `name` or `value` to do the selection. `value` is the attribute eleme
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -680,7 +680,7 @@ Use this API for filters that support single selection.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -726,7 +726,7 @@ Use this API for filters that support multiple selection.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -770,7 +770,7 @@ Use this API for filters that support single selection.
 
 #### Parameters
 
-```javascript
+```json
 {
  filterInfo: {
   key: string,
@@ -800,7 +800,7 @@ Use this API for filters that support multiple selection.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -837,7 +837,7 @@ The from and to strings should a format recognized by the `Date.parse()` method.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -879,7 +879,7 @@ Apply a metric qualify by value filter.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -921,7 +921,7 @@ Apply metric qualify by rank filter.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -967,7 +967,7 @@ You enter a metric range of [13, 26], which is converted to the index of step it
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -1007,7 +1007,7 @@ Since a slider has fixed steps, the metric range you enter is converted to an in
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string,
@@ -1053,7 +1053,7 @@ Clear filter with `key`.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -1079,7 +1079,7 @@ Set filter as include.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -1105,7 +1105,7 @@ Set filter as exclude.
 
 #### Parameters
 
-```javascript
+```json
 {
   filterInfo: {
     key: string
@@ -1189,7 +1189,7 @@ Attribute element list for each selected graphic.
 
 ##### Usage Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
@@ -1211,13 +1211,13 @@ Current page path.
 
 ##### Usage Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
 ##### Event Content Example
 
-```javascript
+```json
 {
   key: "K52";
 }
@@ -1237,7 +1237,7 @@ Changed filter into.
 
 ##### Usage Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
@@ -1247,24 +1247,25 @@ same as `getFilterList`.
 
 ### Event Content Example for `EventType.ON_GRAPHICS_SELECTED`
 
-```javascript
+```json
 {
-   name: "onGraphicsSelected",
-   value: {
-      vizKey: 'K52',
-      //an array containing all the selected graphics info, each item is one graphic
-      graphics: [
+  "name": "onGraphicsSelected",
+  "value": {
+    "vizKey": "K52",
+    //an array containing all the selected graphics info, each item is one graphic
+    "graphics": [
       // an array containing the attribute combination for one graphic
-         [
-            //n: attribute name, v: attribute value
-            {n: "Category", v: "Electronics"},
-            {n: "Quarter", v: "2009 Q4"}
-         ],[
-            {n: "Category", v: "Electronics"},
-            {n: "Quarter", v: "2009 Q3"}
-         ]
+      [
+        //n: attribute name, v: attribute value
+        { "n": "Category", "v": "Electronics" },
+        { "n": "Quarter", "v": "2009 Q4" }
+      ],
+      [
+        { "n": "Category", "v": "Electronics" },
+        { "n": "Quarter", "v": "2009 Q3" }
       ]
-   }
+    ]
+  }
 }
 ```
 
@@ -1288,44 +1289,45 @@ The following wrapper functions make it easy to register event handlers for cert
 
 In map visualizations with multiple map layers, the selected graphics may come from a different map layer, so the event raised for `EventType.ON_GRAPHICS_SELECTED` is different with other visualizations. See the following example:
 
-```javascript
+```json
 {
- name: "graphicsSelected",
- value: {
-  //primary key for the map visualization
-  vizKey: 'W99',
-  graphics: [
-   //each object represent the selected graphics info for one layer
-   {
-    //layer key
-    key: "W99",
-    //layer name
-    name: "Layer 1",
-    graphics: [
-     [
-      {n: "Category", v: "Electronics"},
-      {n: "Quarter", v: "2009 Q4"}
-     ],[
-      {n: "Category", v: "Electronics"},
-       {n: "Quarter", v: "2009 Q3"}
-     ]
+  "name": "graphicsSelected",
+  "value": {
+    //primary key for the map visualization
+    "vizKey": "W99",
+    "graphics": [
+      //each object represent the selected graphics info for one layer
+      {
+        //layer key
+        "key": "W99",
+        //layer name
+        "name": "Layer 1",
+        "graphics": [
+          [
+            { "n": "Category", "v": "Electronics" },
+            { "n": "Quarter", "v": "2009 Q4" }
+          ],
+          [
+            { "n": "Category", "v": "Electronics" },
+            { "n": "Quarter", "v": "2009 Q3" }
+          ]
+        ]
+      },
+      {
+        "key": "W100",
+        "name": "Layer 2",
+        "graphics": [
+          [
+            { "n": "Category", "v": "Books" },
+            { "n": "Year", "v": "2009" }
+          ],
+          [
+            { "n": "Category", "v": "Movies" },
+            { "n": "Year", "v": "2008" }
+          ]
+        ]
+      }
     ]
-   },{
-    key: "W100",
-    name: "Layer 2",
-    graphics: [
-     [
-      {n: "Category", v: "Books"},
-      {n: "Year", v: "2009"}
-     ],[
-      {n: "Category", v: "Movies"},
-       {n: "Year", v: "2008"}
-     ]
-    ]
-
-   }
-
-  ]
- }
+  }
 }
 ```

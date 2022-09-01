@@ -37,25 +37,28 @@ Attribute element list for each selected graphic.
 
 ##### Code Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
 ##### Content Example
 
-```javascript
+```json
 {
-  name: "onGraphicsSelected",
-  value: {
-    vizKey: 'K52',
-    graphics: [//an array containing all the selected graphics info, each item is one graphic
-      [// an array containing the attribute combination for one graphic
+  "name": "onGraphicsSelected",
+  "value": {
+    "vizKey": "K52",
+    "graphics": [
+      //an array containing all the selected graphics info, each item is one graphic
+      [
+        // an array containing the attribute combination for one graphic
         //n: attribute name, v: attribute value
-        {n: "Category", v: "Electronics"},
-        {n: "Quarter", v: "2009 Q4"}
-      ],[
-        {n: "Category", v: "Electronics"},
-        {n: "Quarter", v: "2009 Q3"}
+        { "n": "Category", "v": "Electronics" },
+        { "n": "Quarter", "v": "2009 Q4" }
+      ],
+      [
+        { "n": "Category", "v": "Electronics" },
+        { "n": "Quarter", "v": "2009 Q3" }
       ]
     ]
   }
@@ -78,15 +81,15 @@ Current page path.
 
 ##### Code Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
 ##### Content Example
 
-```javascript
+```json
 {
-  key: "K52";
+  "key": "K52"
 }
 ```
 
@@ -106,13 +109,13 @@ Changed filter information.
 
 ##### Code Example
 
-```javascript
+```js
 embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
 ##### Content Example
 
-```javascript
+```js
 getFilterList;
 ```
 
@@ -180,38 +183,41 @@ Equal to `registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler)`
 
 Because the Map visualization can have multiple map layers, the selected graphics can come from different map layers. As a result, the event raised for `EventType.ON_GRAPHICS_SELECTED` for the Map visualization is different from the event raised for other visualizations. See the following example.
 
-```javascript
+```json
 {
-  name: "graphicsSelected",
-  value: {
+  "name": "graphicsSelected",
+  "value": {
     //primary key for the map visualization
-    vizKey: 'W99',
-    graphics: [
-    //each object represent the selected graphics info for one layer
-    {
-    //layer key
-    key: "W99",
-    //layer name
-    name: "Layer 1",
-    graphics: [
-      [
-        {n: "Category", v: "Electronics"},
-        {n: "Quarter", v: "2009 Q4"}
-      ],[
-        {n: "Category", v: "Electronics"},
-        {n: "Quarter", v: "2009 Q3"}
-      ]
-    ]
-      },{
-        key: "W100",
-        name: "Layer 2",
-        graphics: [
+    "vizKey": "W99",
+    "graphics": [
+      //each object represent the selected graphics info for one layer
+      {
+        //layer key
+        "key": "W99",
+        //layer name
+        "name": "Layer 1",
+        "graphics": [
           [
-            {n: "Category", v: "Books"},
-            {n: "Year", v: "2009"}
-          ],[
-            {n: "Category", v: "Movies"},
-            {n: "Year", v: "2008"}
+            { "n": "Category", "v": "Electronics" },
+            { "n": "Quarter", "v": "2009 Q4" }
+          ],
+          [
+            { "n": "Category", "v": "Electronics" },
+            { "n": "Quarter", "v": "2009 Q3" }
+          ]
+        ]
+      },
+      {
+        "key": "W100",
+        "name": "Layer 2",
+        "graphics": [
+          [
+            { "n": "Category", "v": "Books" },
+            { "n": "Year", "v": "2009" }
+          ],
+          [
+            { "n": "Category", "v": "Movies" },
+            { "n": "Year", "v": "2008" }
           ]
         ]
       }

@@ -13,9 +13,7 @@ MD001: true
 # We use 2 instead of default heading 1 because heading 1 is automatically
 # generated, which is not included in the markdown files.
 # MD002/first-heading-h1/first-header-h1 - First heading should be a top-level heading
-MD002:
-  # Heading level
-  level: 2
+MD002: false
 
 # MD003/heading-style/header-style - Heading style
 MD003:
@@ -203,7 +201,7 @@ MD040: true
 # MD041/first-line-heading/first-line-h1 - First line in a file should be a top-level heading
 MD041:
   # Heading level
-  level: 1
+  level: 2
   # RegExp for matching title in front matter
   front_matter_title: "^\\s*title\\s*[:=]"
 

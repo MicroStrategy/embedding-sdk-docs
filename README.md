@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD041 -->
+
 # Embedding SDK Docs
 
 Documentation for Embedding SDK
@@ -11,7 +13,7 @@ Documentation for Embedding SDK
 
 ### Step one
 
-```
+```bash
 git clone https://github.microstrategy.com/Tech/embedding-sdk-docs.git
 ```
 
@@ -19,7 +21,7 @@ git clone https://github.microstrategy.com/Tech/embedding-sdk-docs.git
 
 Install the site and run an initial build command:
 
-```
+```bash
 cd embedding-sdk-docs
 
 yarn

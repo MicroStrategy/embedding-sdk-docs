@@ -64,7 +64,7 @@ Return the structure of the embedded dossier in the following format:
 
 #### Example
 
-```javascript
+```js
 embedDossier.getTableContent();
 ```
 
@@ -84,10 +84,10 @@ Go to the previous page of the embedded dossier.
 
 Return a promise, resolved with
 
-```javascript
+```json
 {
-  valid: true,
-  message: "page loading success!"
+  "valid": true,
+  "message": "page loading success!"
 }
 ```
 
@@ -97,7 +97,7 @@ Rejected with an error when navigation fails.
 
 #### Example
 
-```javascript
+```js
 embedDossier.goToPrevPage();
 ```
 
@@ -117,10 +117,10 @@ Go to the next page of the embedded dossier.
 
 Return a promise, resolved with
 
-```javascript
+```json
 {
-  valid: true,
-  message: "page loading success!"
+  "valid": true,
+  "message": "page loading success!"
 }
 ```
 
@@ -130,7 +130,7 @@ Rejected with an error when navigation fails.
 
 #### Example
 
-```javascript
+```js
 embedDossier.goToNextPage();
 ```
 
@@ -150,10 +150,10 @@ Switch to the specified page of the embedded dossier.
 
 Return a promise, resolved with
 
-```javascript
+```json
 {
-  valid: true,
-  message: "page loading success!"
+  "valid": true,
+  "message": "page loading success!"
 }
 ```
 
@@ -163,7 +163,7 @@ Rejected with an error when navigation fails.
 
 #### Example
 
-```javascript
+```js
 embedDossier.navigateToPage(page);
 ```
 
@@ -183,7 +183,7 @@ Return the current chapter of the embedded dossier.
 
 #### Example
 
-```javascript
+```js
 embedDossier.getCurrentChapter();
 ```
 
@@ -203,7 +203,7 @@ Return the current page of the embedded dossier.
 
 #### Example
 
-```javascript
+```js
 embedDossier.getCurrentPage();
 ```
 
@@ -225,7 +225,7 @@ You can get the `nodeKey` from the return value of `getTableContent()`, or You c
 
 #### Example
 
-```javascript
+```js
 embedDossier.getPageByNodeKey("K52");
 ```
 
@@ -245,7 +245,7 @@ Return a list of all chapters in the embedded dossier.
 
 #### Example
 
-```javascript
+```js
 embedDossier.getChapterList();
 ```
 
@@ -265,7 +265,7 @@ Return an array of all the visualizations in the current page of the embedded do
 
 #### Example
 
-```javascript
+```js
 embedDossier.getCurrentPageVisualizationList();
 ```
 
@@ -285,7 +285,7 @@ Open the filter summary bar.
 
 #### Example
 
-```javascript
+```js
 embedDossier.openFilterSummaryBar();
 ```
 
@@ -305,7 +305,7 @@ Close the filter summary bar.
 
 #### Example
 
-```javascript
+```js
 embedDossier.closeFilterSummaryBar();
 ```
 
@@ -325,6 +325,6 @@ Return an array of all the pages in this chapter of the embedded dossier.
 
 #### Example
 
-```javascript
+```js
 chapter.getPageList();
 ```

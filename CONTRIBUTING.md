@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD041 -->
+
 # Contributing to this repository
 
 ## Getting started
@@ -6,7 +8,7 @@ Before you begin:
 
 - This site is powered by Docusaurus. Check to see if you're on the [version of node we support](contributing/development.md).
 - Have you read the [code of conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) & see if we [accept contributions](#types-of-contributions-memo) for your type of issue.
+- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) & see if we [accept contributions](#memo-types-of-contributions) for your type of issue.
 
 ### Use the 'Edit' button
 
@@ -31,7 +33,7 @@ Fork using GitHub Desktop:
 
 ### Make your update
 
-Make your changes to the file(s) you'd like to update. Here are some tips and tricks for [using the docs codebase](#working-in-the-MicroStrategyembedding-sdk-docs-repository).
+Make your changes to the file(s) you'd like to update. Here are some tips and tricks for [using the docs codebase](#working-in-the-microstrategyembedding-sdk-docs-repository).
 
 - Are you making changes to the application code? You'll need **Node.js v16** to run the site locally. See [contributing/development.md](contributing/development.md).
 - Are you contributing to markdown? We use [Markdown](https://www.markdownguide.org/basic-syntax/).
@@ -127,7 +129,9 @@ Here's some information that might be helpful while working on a Docs PR:
 We (usually the docs team, but sometimes MicroStrategy product managers, engineers, or supportocats too!) review every single PR. The purpose of reviews is to create the best content we can for people who use MicroStrategy.
 
 :yellow_heart: Reviews are always respectful, acknowledging that everyone did the best possible job with the knowledge they had at the time.
+
 :yellow_heart: Reviews discuss content, not the person who created it.
+
 :yellow_heart: Reviews are constructive and start conversation around feedback.
 
 ### Self review

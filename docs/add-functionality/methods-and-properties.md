@@ -57,7 +57,7 @@ N/A
 
 #### Sample
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -168,7 +168,7 @@ The default status is used on the dossier.
 
 Docked Comment:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -207,7 +207,7 @@ The default status is used on the dossier.
 
 Docked Filter:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -215,9 +215,9 @@ microstrategy.dossier.create({
     dockedPosition: "left",
     canClose: false,
     dockChangeable: false,
-    isDocked: true
-  }
-}
+    isDocked: true,
+  },
+});
 ```
 
 ### dockedTOC
@@ -246,7 +246,7 @@ The default status is used on the dossier.
 
 Docked TOC:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -280,7 +280,7 @@ The default status is used on the dossier.
 
 dossierFeature:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -308,7 +308,7 @@ The default status is used on the dossier.
 
 enableCollaboration:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -376,7 +376,7 @@ The default status is used on the dossier.
 
 Filter Feature:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -406,7 +406,7 @@ No filters are applied during execution.
 
 Filter Key with Element ID:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library>}/app/{ProjectID}/{DossierID}",
@@ -442,7 +442,7 @@ microstrategy.dossier.create({
 
 Filter Name with Element Name:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -481,32 +481,31 @@ See the sample code in the next column for the default implementation of this fu
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library>}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
-  customAuthenticationType: microstrategy.dossier.Custom
-  AuthenticationType.AUTH_TOKEN,
+  customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function() {
-    return fetch('http://{host}:{port}/{Library}/api/auth/login', {
-      method: 'POST',
-      credentials: 'include', //including cookie
-      mode: 'cors', //setting as CORS mode for cross origin
-      headers: {'Content-Type': 'application/json'},
+  getLoginToken: function () {
+    return fetch("http://{host}:{port}/{Library}/api/auth/login", {
+      method: "POST",
+      credentials: "include", //including cookie
+      mode: "cors", //setting as CORS mode for cross origin
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        loginMode: 1 ,// Standard mode
-        username: 'input your username',
-        password: 'input your password'
-      })
-      }).then(function(response){
-        if(response&&response.ok){
-          return response.headers.get("X-MSTR-authToken");
-        }
-      });
-  }
-})
+        loginMode: 1, // Standard mode
+        username: "input your username",
+        password: "input your password",
+      }),
+    }).then(function (response) {
+      if (response && response.ok) {
+        return response.headers.get("X-MSTR-authToken");
+      }
+    });
+  },
+});
 ```
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to add a component to your web server. Refer to Use Custom Authentication for more information.
@@ -535,15 +534,15 @@ No
 
 Pass existing instance:
 
-```javascript
+```js
 microstrategy.dossier.create({
-  placeholder: placeholderDiv,
-  url: <http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>},
+  placeholder: "placeholderDiv",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
   instance: {
-    mid: ’CC9F19A411EA1084548F0080EF05D751’,
-    status: 1
-  }
-})
+    mid: "CC9F19A411EA1084548F0080EF05D751",
+    status: 1,
+  },
+});
 ```
 
 ### navigationBar
@@ -590,7 +589,7 @@ The navigation bar is hidden by default.
 
 Navigation Bar Configuration:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -640,7 +639,7 @@ The default status is used on the dossier.
 
 Options Feature:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -688,7 +687,7 @@ The default status is used on the dossier.
 
 Share Feature:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -723,7 +722,7 @@ The smart banner does not appear by default.
 
 Smart Banner:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -751,7 +750,7 @@ The default status is used on the dossier.
 
 TOC Feature:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
@@ -783,15 +782,15 @@ Depends on the default status of the dossier and the value in the disableNotific
 
 UI Message:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: <http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>},
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
   uiMessage: {
     enabled: true,
-    addToLibrary: false
-  }
-})
+    addToLibrary: false,
+  },
+});
 ```
 
 ### visibleTutorials
@@ -822,7 +821,7 @@ The default status is used on the dossier.
 
 Visible Tutorials:
 
-```javascript
+```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",

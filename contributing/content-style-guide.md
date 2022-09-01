@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD041 -->
+
 # Content Styling Guidelines
 
 We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to write our documents. Markdown is a lightweight markup language for creating formatted text. We try to keep our styling consistent throughout the documentation. Please follow the guidelines to help us provide better documentation.
@@ -24,11 +26,11 @@ At the top of each document, there is a metadata section that begins and ends wi
 
 ## Headers
 
-Use two hashes (##) for the headers to begin, and continue moving down the line (###,  ####, etc.) for subsections.
+Use two hashes (##) for the headers to begin, and continue moving down the line (###, ####, etc.) for subsections.
 
 For headers that need an ordered list, e.g., "1. Do something in this step", it is recommended to write it like ### 1. Do something here instead of 1. ### Do something here because this would cause the Table of Contents plugin to show the wrong order.
 
-The "In this article" section is automatically generated from the headers. There is no need to create this  or "table of contents" section in markdown file. We currently only show "h2" (##) and "h3" (###) in this section.  The content of the markdown file will be added below "In this article" section automatically.
+The "In this article" section is automatically generated from the headers. There is no need to create this or "table of contents" section in markdown file. We currently only show "h2" (##) and "h3" (###) in this section. The content of the markdown file will be added below "In this article" section automatically.
 
 Don't use inline code block in headers.
 
@@ -36,35 +38,35 @@ Don't use inline code block in headers.
 
 - Code blocks (not inline code) should be surrounded by three backticks on either side. The language should also be specified after the first three backticks, like so:
 
-  ```text/1-2
-      ```bash
-      code used in the terminal such as curl
-      ```
-
-      ```json
-      JSON code
-      ```
-
-      ```js
-      JavaScript code
-      ```
-
-      ```xml
-      XML code
-      ```
-
-      ```java
-      Java code
-      ```
-
-      ```html
-      HTML code
-      ```
-
-      ```text/1-2
-      any other code that is not language-specific
-      ```
+  ````text/1-2
+  ```bash
+  code used in the terminal such as curl
   ```
+
+  ```json
+  JSON code
+  ```
+
+  ```js
+  JavaScript code
+  ```
+
+  ```xml
+  XML code
+  ```
+
+  ```java
+  Java code
+  ```
+
+  ```html
+  HTML code
+  ```
+
+  ```text/1-2
+  any other code that is not language-specific
+  ```
+  ````
 
 Supported languages are listed [here](https://prismjs.com/#languages-list).
 
@@ -119,9 +121,9 @@ The list below shows the usage of emojis in our Docs site:
 
   ![original table example](../docs/images/original_table_example.png)
 
- You need to add “information” cell multiple times manually because the converter cannot handle this correctly. It will omit the “information” cell for the following rows to make the table not correct.
+You need to add “information” cell multiple times manually because the converter cannot handle this correctly. It will omit the “information” cell for the following rows to make the table not correct.
 
-  ![markdown table example](../docs/images/markdown_table_example.png)
+![markdown table example](../docs/images/markdown_table_example.png)
 
 - Use `:heavy_check_mark:` instead of `X` to display the checkmarks.
 

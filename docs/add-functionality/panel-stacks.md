@@ -99,10 +99,10 @@ In which the callback parameters are:
 
   **Sample**
 
-  ```javascript
+  ```json
   {
-    panelStackKey: W61,
-    currentPanel: W63
+    "panelStackKey": "W61",
+    "currentPanel": "W63"
   }
   ```
 
@@ -174,10 +174,10 @@ in which the callback parameters are:
 
   **Sample**
 
-  ```javascript
+  ```json
   {
-    panelStackKey: W61,
-    currentPanel: W63
+    "panelStackKey": "W61",
+    "currentPanel": "W63"
   }
   ```
 
@@ -199,12 +199,12 @@ in which the callback parameters are:
 
 If the panel is switched in an inner or outer window, it raises a switch panel event that enables you to listen for it. The event detail is shown below.
 
-```javascript
+```json
 // event: onPanelSwitched
 // event payload:
 {
   "panelStackKey": "{panel stack key}",
-  "currentPanel":"{current panel key}"
+  "currentPanel": "{current panel key}"
 }
 ```
 
@@ -212,9 +212,10 @@ If the panel is switched in an inner or outer window, it raises a switch panel e
 
 You must also change the callback data of the existing ON_VIZ_SELECTION_CHANGED event. Before any changes, the data returned from the event is similar to that shown below.
 
-```javascript
+```json
 {
-  "K32": {  // Chapter key
+  "K32": {
+    // Chapter key
     "K62": true // Visualization key
   }
 }
@@ -234,20 +235,20 @@ myDossier &&
 
 in which the data format of selectedVis is similar to:
 
-```javascript
+```json
 {
-    "K32": {
-        "K62": true
-        "visualizationLocation": {
-        "K62": {
-            "pageKey": "K53",
-            // If the visualization is not in a panel, it is undefined.
-            "panelStackKey": "W110",
-            // If the visualization is not in a panel, it is undefined.
-            "panelKey": "W113"
-        }
-        }
+  "K32": {
+    "K62": true,
+    "visualizationLocation": {
+      "K62": {
+        "pageKey": "K53",
+        // If the visualization is not in a panel, it is undefined.
+        "panelStackKey": "W110",
+        // If the visualization is not in a panel, it is undefined.
+        "panelKey": "W113"
+      }
     }
+  }
 }
 ```
 
