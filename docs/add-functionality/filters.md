@@ -7,7 +7,7 @@ You can apply filters both when an embedded dossier is being executed and after 
 
 - **Apply filters during execution**
 
-  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./set-properties) property. Currently, only attribute selection filters and attribute search filters are supported; attribute slider, calendar, and metric filters are not supported in this release.
+  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties#filters) property.
 
 - **Apply and retrieve filters after execution**
 
@@ -25,9 +25,18 @@ You can apply filters both when an embedded dossier is being executed and after 
 
     This section introduces how you can cache the results of several filters and apply them together.
 
-:::note
+:::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g6) that will embed a dossier with `attributeSelector` filters.
+To help you get started, we have provided a set of filter examples in the Embedding SDK Playground.
+
+- [Attribute Selector Filter Example](https://microstrategy.github.io/playground/?example=g6)
+- [Attribute Search Filter Example](https://microstrategy.github.io/playground/?example=g7)
+- [Attribute Slider Filter Example](https://microstrategy.github.io/playground/?example=g8)
+- [Calendar Example](https://microstrategy.github.io/playground/?example=g9)
+- [Metric Qualification by Rank Example](https://microstrategy.github.io/playground/?example=g10)
+- [Metric Qualification by Value Example](https://microstrategy.github.io/playground/?example=g11)
+- [Metric Slider by Rank Example](https://microstrategy.github.io/playground/?example=g12)
+- [Metric Slider by Value Example](https://microstrategy.github.io/playground/?example=g13)
 
 :::
 
@@ -51,7 +60,6 @@ After an embedded dossier has been rendered, you can use the `getFilterList()`�
 | `filterType`   | String representing the filter type, in an easy-to-read format                              |
 | `filterDetail` | The expressions and values that define the filter. They are different for each filter type. |
 | `isExclude`    | Specify whether to include or exclude the selections for the filter                         |
-|                |                                                                                             |
 
 ### Filter types and filter details
 
@@ -152,9 +160,9 @@ The sections below show the filter details for each filter type.
 
   ```json
   {
-    name: item name to show
-    value: item ID used to do filter
-    selected: if this item is selected
+    name: "item name to show",
+    value: "item ID used to do filter",
+    selected: true // if this item is selected
   }
   ```
 
@@ -170,7 +178,15 @@ The sections below show the filter details for each filter type.
 
 - `items`
 
-  Array of attribute items, containing names, IDs and selection status of all attribute items <pre>{<br/><br/> name: item name to show<br/><br/> value: item ID used to do filter<br/><br/> selected: if this item is selected<br/><br/>}</pre>
+  Array of attribute items, containing names, IDs and selection status of all attribute items
+
+  ```json
+  {
+    name: "item name to show",
+    value: "item ID used to do filter",
+    selected: true // if this item is selected
+  }
+  ```
 
 #### calendar
 
@@ -1141,7 +1157,11 @@ No Example
 
 This section introduces how you can cache the results of several filters and apply them together. Let's say you have the following filters:
 
-> The items in bold are selected.
+:::note
+
+The items in bold are selected.
+
+:::
 
 - A multi-selection filter that binds checkboxes:
 

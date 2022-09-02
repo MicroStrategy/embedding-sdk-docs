@@ -5,11 +5,9 @@ description: Events allow an embedded dossier to communicate with the container 
 
 Events allow an embedded dossier to communicate with the container page. You can listen to these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handlers. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
 
-:::note
+:::tip
 
 To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g5) that embeds a dossier and adds event handling, as well as a description of [events](#events), [event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle additional events.
-
-This example is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
 
 :::
 

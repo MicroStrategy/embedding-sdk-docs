@@ -19,8 +19,17 @@ The sample applications are provided as HTML files. These files must be hosted 
 
   This sample illustrates how to seamlessly display an embedded dossier in a simple application using Guest authentication, in an environment with multiple authentication modes enabled. The application includes code that specifically enables Guest authentication for the embedded dossier.
 
-- [Embed a dossier using SAML authentication](./authentication-saml)
+- [Use SAML or OIDC Authentication](./authentication-saml)
 
   This sample illustrates how to display an embedded dossier by simply scanning a QR code. This is how embedding works when the application is integrated with Badge.
 
-> If the application server where the sample is installed is different from the server running the `MicroStrategyLibrary` application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
+:::tip
+
+If you plan to use Embedding SDK on a web page on a different domain from your MicroStrategy environment, please also meet the following requirements. More information in
+
+1. [Enable Cross-Origin Resource Sharing (CORS)](../config)
+1. [Allow Cross-Origin Cookies](../config#allow-cross-origin-cookies)
+
+If we plan to use Embedding SDK on the same domain as your MicroStrategy, the above changes are not required.
+
+:::

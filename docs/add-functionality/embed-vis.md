@@ -21,7 +21,7 @@ Check out the video below to see how it's done!
   allowfullscreen>
 </iframe>
 
-:::note
+:::tip
 
 To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15) that will embed a dossier with a single visualization maximized with options to switch between `Max Size` and `Normal Size`.
 

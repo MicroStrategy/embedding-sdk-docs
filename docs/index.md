@@ -16,7 +16,7 @@ There are three basic steps for embedding a dossier.
 
    Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
 
-   :::note
+   :::tip
 
    If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
 
@@ -48,18 +48,18 @@ To help you get started, we have provided a number of simple applications with s
 
 - [Support for Different Authentication Environments](./support-for-different-authentication-environments)
 
-  Samples that display an embedded dossier in different authentication environments
+  Examples that display an embedded dossier in different authentication environments
 
 - [Add Functionality](./add-functionality)
 
-  Samples that add functionality, such as controlling navigation, retrieving and applying filters, setting properties, and managing events like page changes
-
-- [More Embedding SDK Samples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
-
-  A collection of samples highlighting functionality and workflows of the Embedding SDK. You can play with the samples with no setup.
+  Examples that add functionality, such as controlling navigation, retrieving and applying filters, setting properties, and managing events like page changes
 
 - [Embedding SDK Playground](https://microstrategy.github.io/playground/)
 
   A playground for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
+
+- [More Embedding SDK Examples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
+
+  A collection of examples highlighting functionality and workflows of the Embedding SDK. You can play with the examples with no setup.
 
 To see changes to the Embedding SDK in the current release, refer to [What's New](./whats-new-in-the-embedding-sdk).

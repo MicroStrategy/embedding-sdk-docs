@@ -1,54 +1,64 @@
 ---
-title: Use Guest Authentication When It is the Only Authentication Mode Enabled
-description: he sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
+title: Use Guest Authentication
+description: The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
 ---
 
-The JavaScript Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dossier to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dossier is hosted. The sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
+The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dossier to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dossier is hosted. The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
 
-To help you get started, we have provided a downloadable sample with the required code. By design, the code in this sample only shows how to embed a dossier and nothing else, and it embeds an existing dossier from the MicroStrategy Library demo site, which has only Guest authentication enabled.
+To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g2) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dossier and nothing else, and it embeds an existing dossier from the MicroStrategy Library demo site, which has only Guest authentication enabled.
 
-You can use this sample "as is", without making any changes, or you can customize it. We have provided simple instructions and code snippets to help you configure the sample for your environment---using your web server and a dossier from your environment. If you customize the sample, however, you must configure your environment to support only Guest authentication in order for the dossier to display seamlessly.
+We have provided simple instructions and code snippets to help you configure the example to use a dossier from your MicroStrategy Library Server. If you customize the example, however, you must configure your Library Server to support only Guest authentication.
 
-A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/1_No_Authentication.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
+Please also check out the examples in [Embedding SDK Playground](https://microstrategy.github.io/playground/) from the "Start over" button and <https://microstrategy.github.io/embedding-sdk-samples>.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title></title>
+    <meta charset="utf-8" />
     <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
   </head>
-  <body onload="load()">
-    <div id="mydossier"></div>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        var container = document.getElementById("mydossier");
-        var url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
-
-        microstrategy.dossier.create({
+  <body>
+    <div id="embedding-dossier-container"></div>
+    <script>
+      let url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0"; // https://{env-url}/{libraryName}/app/{projectId}/{dossierId}
+      let dossier; // Variable to store the dossier created. Used by Event Handler do not remove!
+      let config; // Variable to store the configuration settings for dossier.
+      async function runCode() {
+        // For more details on configuration properties, see https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/dossier_properties.htm
+        config = {
           url: url,
-          enableResponsive: true,
-          placeholder: container,
-          containerHeight: "800px",
-        });
-      });
+          placeholder: document.getElementById("embedding-dossier-container"),
+        };
+
+        // Embed the dossier with the configuration settings
+        try {
+          dossier = await window.microstrategy.dossier.create(config);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      runCode();
     </script>
   </body>
 </html>
 ```
 
-Open the page in a browser to view the embedded dossier. You should see the dossier shown below.
+Run the code in browser or in the Playground. You should see the dossier shown below.
 
 ![Embedded Dossier](../images/EmbeddedDossier.png)
 
-> Because this simple embedding sample uses a dossier on the demo server, you are not prompted for credentials. However, when you use a dossier in your environment, you will be prompted for credentials unless you enable single sign-on. In the other topics, you will learn how to enable single sign-on.
+:::tip
 
-**To customize the sample to use your MicroStrategy Library Server**:
+Because this simple embedding example uses a dossier on the demo server, you are not prompted for credentials. However, when you use a dossier in your environment, you will be prompted for credentials unless you enable single sign-on. In the other topics, you will learn how to enable single sign-on.
+
+:::tip
+
+**To customize the example to use your MicroStrategy Library Server**:
 
 1. Decide where you want to have the HTML page. If the domain is different from your MicroStrategy Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
 
-1. In an IDE or text editor, open the HTML file and configure it to reflect the values in your environment:
+1. In an IDE, text editor or [Embedding SDK Playground](https://microstrategy.github.io/playground/), open the HTML file and configure it to reflect the values in your environment:
 
    - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStratetgy Library installation. Replace `demo.microstrategy.com` with your server path.
 
@@ -58,21 +68,25 @@ Open the page in a browser to view the embedded dossier. You should see the dos
 
      The `embeddinglib.js` file, which contains the Embedding SDK, is included in the MicroStrategyLibrary web application.
 
-   - Set the value for url to reference a dossier in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F` with your Project ID and Dossier ID.
+   - Set the value for url to reference a dossier in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `B7CA92F04B9FAE8D941C3E9B7E0CD754` and `27D332AC6D43352E0928B9A1FCAF4AB0` with your Project ID and Dossier ID.
 
      ```js
-     url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
+     url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0";
      ```
 
-     > You can obtain the value of your Project ID and Dossier ID by running a dossier in MicroStrategy Library and copying the URL.
+   :::tip
 
-1. Once you have customized the code for your environment, save your HTML file. This file is a simple application with an embedded dossier.
+   You can obtain the value of your Project ID and Dossier ID by running a dossier in MicroStrategy Library and copying the URL.
+
+   :::
+
+1. Once you have customized the code for your environment, save your HTML file.
 
 1. Configure your environment so that only guest authentication is enabled.
 
-   If guest authentication is the only authentication mode that is enabled, the application will open and the dossier will be displayed without asking for credentials. However, if multiple authentication modes are enabled, the dossier will not be displayed seamlessly. You need to add additional code that enables guest authentication. [Using guest authentication when there are multiple authentication modes](./multiple-modes) provides a simple sample and an explanation of how to add the necessary code.
+   If guest authentication is the only authentication mode that is enabled, the application will open and the dossier will be displayed without asking for credentials. However, if multiple authentication modes are enabled, the dossier will not be displayed seamlessly. You need to add additional code that enables guest authentication. [Using guest authentication when there are multiple authentication modes](./multiple-modes) provides a simple example and an explanation of how to add the necessary code.
 
-1. Open the page URL in a browser. The embedded dossier should be displayed in the application.
+1. Open the page URL in a browser or run it in [Embedding SDK Playground](https://microstrategy.github.io/playground/). The embedded dossier should be displayed in the application.
 
 :::tip
 

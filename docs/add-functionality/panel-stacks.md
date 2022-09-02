@@ -11,7 +11,7 @@ MicroStrategy supports one level of nesting within panel stacks. You can switch 
 
 Similar to providing navigation capabilities through provided embedded SDK functions, an application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
 
-:::note
+:::tip
 
 To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g23) that will embed a dossier with a panel stack and the option to switch between panels.
 

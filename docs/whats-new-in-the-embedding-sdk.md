@@ -45,13 +45,6 @@ A new property, [dossierFeature](./Add-Functionality/Set-Properties#sample-appli
 
 - A new property allows you to [pass filters during dossier execution](./add-functionality/set-properties).
 - New properties allow you to [customize features and the UI](./add-functionality/set-properties) for an embedded dossier.
-- New samples or sample code were added:
-  - [Using Guest authentication when it is the only authentication mode enabled](./support-for-different-authentication-environments/guest-authentication-mode-only)
-  - [Using Guest authentication with multiple authentication modes enabled](./support-for-different-authentication-environments/multiple-modes)
-  - [Using SAML authentication](./support-for-different-authentication-environments/authentication-saml)
-  - [Using custom authentication](./support-for-different-authentication-environments/authentication-custom)
-  - [Adding navigation to an embedded dossier](./add-functionality/add-nav)
-  - [Adding event handling to an embedded dossier](./add-functionality/add-event)
 
 ## 10.11
 
@@ -66,5 +59,3 @@ There were no significant changes from the previous version.
 The Embedding SDK was introduced in 10.9.
 
 - This new SDK was added to the MicroStrategy Developer Library to support embedding MicroStrategy content in third-party web applications or portals.
-- To help you get started, a [Quick Start Guide](./support-for-different-authentication-environments/guest-authentication-mode-only) provides a simple sample that embeds a MicroStrategy dossier into an HTML page.
-- Explanations and code samples are provided for [setting properties](./add-functionality/set-properties), [navigating](./add-functionality/add-nav), [filtering](./add-functionality/filters), and [raising events](./add-functionality/add-event).

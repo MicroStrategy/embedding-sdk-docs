@@ -1,17 +1,17 @@
 ---
 title: Use Guest Authentication with Multiple Authentication Modes Enabled
-description: The sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
+description: The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
 ---
 
-The JavaScript Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dossier to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dossier is hosted. The sample in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
+The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
 
-**Set up Library Server**:
+## Set up Library Server
 
 Enable Guest and other authentications in MicroStrategy Library Admin.
 
 ![MSTR Library Admin Guest Auth](../images/MstrLibraryAdmin_GuestAuth.png)
 
-**Configure the sample**:
+## Configure the example
 
 1. A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/1_2_Guest_With_MultiAuth.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
 
@@ -72,7 +72,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
    </html>
    ```
 
-1. Make the following changes to the code:
+1. To use a dossier from your Library Server, make the following changes to the code:
 
    1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
@@ -84,27 +84,29 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
    1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
 
-      - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library installation. If necessary, replace `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
+      - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library by replace `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
         ```js
         var baseURL = "https://demo.microstrategy.com/MicroStrategyLibraryDev";
         ```
 
-      - Set the value of the `projectId` variable to the GUID for the project containing the dossier you want to embed.
+      - Set the value of the `projectId` variable to the ID for the project containing the dossier you want to embed.
 
         ```js
         var projectId = "EC70648611E7A2F962E90080EFD58751";
         ```
 
-        You can obtain the value by running a dossier in MicroStrategy Library and copying the URL.
-
-      - Set the value of the `dossierId` variable to the GUID of the dossier you want to embed.
+      - Set the value of the `dossierId` variable to the ID of the dossier you want to embed.
 
         ```js
         var dossierId = "837B57D711E941BF000000806FA1298F";
         ```
 
-        You can obtain the value by running a dossier in MicroStrategy Library and copying the URL.
+      :::tip
+
+      You can obtain the project ID and dossier ID by running the dossier in MicroStrategy Library and copying the URL.
+
+      :::
 
 1. Once you have configured the code, save your HTML file and open it in a browser. The embedded dossier is seamlessly displayed in the browser.
 
