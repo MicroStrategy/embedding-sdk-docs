@@ -5,6 +5,14 @@ description: When you embed a MicroStrategy dossier into a web page, you use the
 
 When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 
+:::tip
+
+To help you get started, we have provided an [example on playground](https://microstrategy.github.io/playground/?example=g1) that sets properties on an embedded dossier. Use the `create(props)` method under the `microstrategy.dossier` namespace to set properties. The props parameter contains optional key-value pairs to customize the UI, features, and authentication, in addition to the required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created.
+
+This example is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
+
+:::
+
 ## Method
 
 ### microstrategy.dossier.create(props)
@@ -15,15 +23,15 @@ This method creates an iFrame on the web page (in the location specified by the 
 
 This method returns a promise, which is resolved when the dossier instance is created.
 
-The `props` parameter contains required key:value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key:value pairs to customize the UI, features, and authentication.
+The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
-The `props` parameter can contain the following key:value pairs:
+The `props` parameter is explained in [Properties](#properties).
 
 ## Properties
 
 ### placeholder
 
-Reference for the container `<div>`.
+The `placeholder` property refers to the DOM object of the container `<div>`.
 
 #### Required?
 
@@ -31,50 +39,54 @@ Yes
 
 #### Default Value
 
-N/A
+No
 
-#### Sample
+### url, serverURL, applicationID, objectID, and pageKey
 
-N/A
+The `url` property refers to the full URL of the dossier to be embedded. There are two ways to configure the URL to embed a dossier:
 
-### url or serverURL, application ID, objectID, and pageKey
-
-url refers to the full URL of the dossier to embed. There are two ways to configure the URL to embed the dossier in Library:
-
-1. Use the full URL
-
-1. Build the URL using: serverURL + '/app/' + applicationID + '/' + objectID + '/' + pageKey
+1. Use the `url` property to specify a full URL.
+1. Use `serverURL`, `applicationID`, `objectID`, and `pageKey` properties. Embedding SDK will build the URL using: `serverURL` + '/app/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
 
 #### Required?
 
-- `url` is required
+One of the following is required:
 
-- `serverURL`, `application ID`, and `objectID` are required, while `pageKey` is optional.
+- `url` is required.
+- `serverURL`, `applicationID`, and `objectID` are required, while `pageKey` is optional.
 
 #### Default Value
 
-N/A
+No
 
 #### Sample
 
 ```js
 microstrategy.dossier.create({
-  placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+  placeholder: document.getElementById("embedding-dossier-container"),
+});
+```
+
+or
+
+```js
+microstrategy.dossier.create({
+  serverURL: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  applicationID: "B7CA92F04B9FAE8D941C3E9B7E0CD754",
+  objectID: "27D332AC6D43352E0928B9A1FCAF4AB0",
+  placeholder: document.getElementById("embedding-dossier-container"),
 });
 ```
 
 ### containerHeight
 
-Sets the height of the placeholder.
+The `containerHeight` property sets the height of the placeholder.
 
-If the style of the placeholder has a height value, the containerHeight property is ignored.
-
-If the enableResponsive property is set to true, the containerWidth property is ignored and the containerHeight property takes effect.
-
-The containerHeight property is applied as a style: style="height: $(containerHeight)".
-
-You should not set the containerHeight property to 100% if the `<div>` container has no parent container, but is attached directly to the `<body>`.
+- If the style of the placeholder has a height value, the `containerHeight` property is ignored.
+- If the `enableResponsive` property is set to true, the `containerWidth` property is ignored and the `containerHeight` property takes effect.
+- The `containerHeight` property is applied as a style: `style="height: $(containerHeight)"`.
+- You should not set the `containerHeight` property to `100%` if the `<div>` container has no parent container, but is attached directly to the `<body>`.
 
 #### Required?
 
@@ -82,19 +94,14 @@ No
 
 #### Default Value
 
-600px
-
-#### Sample
-
-N/A
+`600px`
 
 ### containerWidth
 
-Sets the width of the placeholder.
+The `containerWidth` property sets the width of the placeholder.
 
-If the style of the placeholder has a width value, the containerWidth property is ignored.
-
-If the enableResponsive property is set to true, the containerWidth property is ignored and the width is adjusted to fit the viewport.
+- If the style of the placeholder has a width value, the `containerWidth` property is ignored.
+- If the `enableResponsive` property is set to true, the `containerWidth` property is ignored and the width is adjusted to fit the viewport.
 
 #### Required?
 
@@ -102,15 +109,14 @@ No
 
 #### Default Value
 
-800px
-
-#### Sample
-
-N/A
+`800px`
 
 ### customAuthenticationType
 
-Specifies the token type returned by the getLoginToken function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
+The `customAuthenticationType` property specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the `CustomAuthenticationType` enumeration.
+
+- `CustomAuthenticationType.IDENTITY_TOKEN`
+- `CustomAuthenticationType.AUTH_TOKEN`
 
 #### Required?
 
@@ -118,15 +124,11 @@ No
 
 #### Default Value
 
-Custom Authentication Type.IDENTITY_TOKEN
-
-#### Sample
-
-N/A
+`CustomAuthenticationType.IDENTITY_TOKEN`
 
 ### disableNotification
 
-Specifies whether to display messages, such as Add to library in the notification bar. If this property is set to true, message do not appear in the notification bar.
+The `disableNotification` property specifies whether to display messages, such as "Add to Library" in the notification bar. If this property is set to true, message does not appear in the notification bar.
 
 Manipulations are not affected by this property. They persist in the same way as the default dossier status.
 
@@ -138,21 +140,14 @@ No
 
 `true`
 
-#### Sample
-
-N/A
-
 ### dockedComment
 
-Use this property to configure the Comment panel on the UI.
+The `dockedComment` object is used to configure the comments panel on the Dossier page.
 
-`dockedPosition` - Only "left" or "right" is accepted as the position of the docked panel.
-
-`canClose` - `Boolean`. If set to false, the panel is forced to appear.
-
-`dockChangeable` - `Boolean`. If set to false, the dock/pin button is hidden. The docked status of this panel is controlled by `isDocked`.
-
-`isDocked` - `Boolean`. This configures whether the panel is docked.
+- `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
+- `canClose` - `Boolean`. If set to `false`, the panel is forced to appear.
+- `dockChangeable` - `Boolean`. If set to `false`, the dock pin button is hidden. The docked status of this panel is controlled by `isDocked`.
+- `isDocked` - `Boolean`. This configures whether the panel is docked.
 
 #### Required?
 
@@ -162,16 +157,16 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If `dockedComment` is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
 
-Docked Comment:
+The following code will dock the comments panel to the left.
 
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
   dockedComment: {
     dockedPosition: "left",
     canClose: false,
@@ -183,15 +178,12 @@ microstrategy.dossier.create({
 
 ### dockedFilter
 
-Use this property to configure the Comment panel on the UI.
+The `dockedFilter` object is used to configure the filter panel on the Dossier page.
 
-`dockedPosition` - Only "left" or "right" is accepted as the position of the docked panel.
-
-`canClose` - `Boolean`. If set to false, the panel is forced to appear.
-
-`dockChangeable` - `Boolean`. If set to false, the dock/pin button is hidden. The docked status of this panel is controlled by `isDocked`.
-
-`isDocked` - Boolean. This configures whether the panel is docked.
+- `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
+- `canClose` - `Boolean`. If set to `false`, the panel is forced to appear.
+- `dockChangeable` - `Boolean`. If set to `false`, the dock pin button is hidden. The docked status of this panel is controlled by `isDocked`.
+- `isDocked` - `Boolean`. This configures whether the panel is docked.
 
 #### Required?
 
@@ -201,16 +193,16 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
 
-Docked Filter:
+The following code will dock the filter panel to the left.
 
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
   dockedFilter: {
     dockedPosition: "left",
     canClose: false,
@@ -222,15 +214,13 @@ microstrategy.dossier.create({
 
 ### dockedTOC
 
-Use this property to configure the Comment panel on the UI.
+The `dockedTOC` object is used to configure the Table of Contents (TOC) panel on the Dossier page.
 
-`dockedPosition` - Only "left" or "right" is accepted as the position of the docked panel.
-
-`canClose` - `Boolean`. If set to false, the panel is forced to appear.
-
-`dockChangeable` - `Boolean`. If set to false, the dock/pin button is hidden. The docked status of this panel is controlled by `isDocked`.
-
-`isDocked` - `Boolean`. This configures whether the panel is docked.
+- `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
+- `theme` - The color theme of the page. Only `"light"` or `"dark"` is accepted. The default is `"light"`.
+- `canClose` - `Boolean`. If set to `false`, the panel is forced to appear.
+- `dockChangeable` - `Boolean`. If set to `false`, the dock/pin button is hidden. The docked status of this panel is controlled by `isDocked`.
+- `isDocked` - `Boolean`. This configures whether the panel is docked.
 
 #### Required?
 
@@ -240,16 +230,14 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
-
-Docked TOC:
 
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
   dockedTOC: {
     dockedPosition: "left",
     theme: "light",
@@ -262,9 +250,9 @@ microstrategy.dossier.create({
 
 ### dossierFeature
 
-Use this property to customize the dossier feature on the UI.
+The `dossierFeature` object is used to customize the dossier feature on the Dossier page.
 
-`readonly` - Enable or disable context menus. If this property is set to true, all context menus are disabled. This includes the visualization right-mouse click context menu and the context menu at the top right of the visualization, that contains such options as Export.
+- `readonly` - Enable or disable context menus. If this property is set to `true`, all context menus are disabled. This includes the visualization right-mouse-click context menu and the context menu at the top right of the visualization that contains options such as Export.
 
 #### Required?
 
@@ -272,9 +260,7 @@ No
 
 #### Default Value
 
-`null`
-
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
 
@@ -283,7 +269,7 @@ dossierFeature:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
   dossierFeature: {
     readonly: true,
   },
@@ -292,7 +278,7 @@ microstrategy.dossier.create({
 
 ### enableCollaboration
 
-Use this Boolean property to enable or disable collaboration-related controls of Library.
+Use `enableCollaboration` property to enable or disable collaboration-related controls of the embedded page.
 
 #### Required?
 
@@ -300,9 +286,7 @@ No
 
 #### Default Value
 
-`null`
-
-The default status is used on the dossier.
+`true`
 
 #### Sample
 
@@ -311,14 +295,14 @@ enableCollaboration:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
-  enableCollaboration: true,
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+  enableCollaboration: false,
 });
 ```
 
 ### enableCustomAuthentication
 
-Specifies whether custom authentication is enabled.
+The `enableCustomAuthentication` property specifies whether custom authentication is used.
 
 #### Required?
 
@@ -330,15 +314,11 @@ No
 
 User needs to log in from the default login page.
 
-#### Sample
-
-N/A
-
 ### enableResponsive
 
 Specifies whether to enable responsive design.
 
-When this is set to true, the placeholder is adjusted to fit the width of the viiewpoint and the existing width/height ratio is used to provide the height.
+When this is set to `true`, the placeholder is adjusted to fit the width of the viiewpoint and the existing width to height ratio is used to provide the height.
 
 #### Required?
 
@@ -348,19 +328,13 @@ No
 
 `false`
 
-#### Sample
-
-N/A
-
 ### filterFeature
 
-Use this property to customize the filter functionality on the UI. All detailed properties below are Boolean.
+Use this property to customize the filter functionality on the page. All types of the properties below are `Boolean`.
 
-`enabled` - Enable or disable filter features.
-
-`edit` - Show or hide the filter edit function. Enable or disable editing on the filter panel.
-
-`summary` - Show or hide the filter summary bar.
+- `enabled` - Enable or disable filter features. The default is `true`.
+- `edit` - Show or hide the filter edit function. Enable or disable editing on the filter panel. The default is `true`.
+- `summary` - Show or hide the filter summary bar. The default is `true`.
 
 #### Required?
 
@@ -370,16 +344,14 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
-
-Filter Feature:
 
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
   filterFeature: {
     enabled: true,
     edit: false,
@@ -390,7 +362,27 @@ microstrategy.dossier.create({
 
 ### filters
 
-Use this property to apply attribute selection or attribute search filters during the execution of a dossier. It supports passing multiple filter definitions with multiple selectors. <br/><br/>Filter Format: <pre>[{ "key": "string", <br/> "name": "string", <br/> "selections": [{ <br/> "id": "string", <br/> "name": "string" <br/> }] <br/>}]</pre> Filter Key/Filter Name Identifies the filter. At least one of the two is required.<br/><br/>Element ID/Element Name Identifies the filter. At least one of the two is required. <br/><br/>Only attribute selection filters and attribute search filters are supported. Attribute slider, calendar, and metric filters are not supported.
+Use the `filters` object to apply attribute selection or attribute search filters during the execution of a dossier. It supports passing multiple filter definitions with multiple selectors.
+
+Filter Format:
+
+```json
+[
+  {
+    "key": "string",
+    "name": "string",
+    "selections": [
+      {
+        "id": "string",
+        "name": "string"
+      }
+    ]
+  }
+]
+```
+
+- The Filter `key` or `name` identifies the filter. At least one of the two is required.
+- The Element `id` or `name` identifies the selector. At least one of the two is required.
 
 #### Required?
 
@@ -409,7 +401,7 @@ Filter Key with Element ID:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library>}/app/{ProjectID}/{DossierID}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   filters: [
     {
       key: "WC8587FF21995453CBE5F0B66702BF56F",
@@ -445,7 +437,7 @@ Filter Name with Element Name:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   filters: [
     {
       name: "Income Bracket",
@@ -467,7 +459,7 @@ microstrategy.dossier.create({
 
 ### getLoginToken
 
-Specifies a function that returns a promise, which is resolved with either authorization token (`authToken`) or the identity token (`identityToken`) The token type is specified by the customAuthenticationType property.
+The `getLoginToken` property specifies a function that returns a promise, which is resolved with either the authorization token (`authToken`) or the identity token (`identityToken`) The token type is specified by the `customAuthenticationType` property.
 
 #### Required?
 
@@ -484,7 +476,7 @@ When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`,
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library>}/app/{ProjectID}/{DossierID}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   //The following function is the default implementation. User can provide custom implementation.
@@ -508,19 +500,16 @@ microstrategy.dossier.create({
 });
 ```
 
-When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to add a component to your web server. Refer to Use Custom Authentication for more information.
+When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to provide an identity token with `getLoginToken` function.
 
 ### instance
 
-Use this property to specify the instance information for the embedded dossier.
+Use this `instance` object to specify a dossier instance for the embedded dossier. If you would like to make some manipulation to the dossier before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a dossier instance.
 
-`mid` - This instance ID.
-
-`id` - Instance ID for a report-based in-memory dossier
-
-`partialManipulation` - `Boolean` that indicates the personal view partial execution status. If this is set to true, a personal view is in partial execution.
-
-`status` - The personal view partial execution status. If this is true, it indicates a personal view is in partial execution.
+- `mid` - This instance ID.
+- `id` - Instance ID for a report-based in-memory dossier.
+- `partialManipulation` - `Boolean` that indicates the personal view's partial execution status. If this is set to `true`, a personal view is in partial execution.
+- `status` - The personal view's partial execution status. If this is true, it indicates a personal view is in partial execution.
 
 #### Required?
 
@@ -532,12 +521,12 @@ No
 
 #### Sample
 
-Pass existing instance:
+Passing existing instance:
 
 ```js
 microstrategy.dossier.create({
   placeholder: "placeholderDiv",
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   instance: {
     mid: "CC9F19A411EA1084548F0080EF05D751",
     status: 1,
@@ -547,33 +536,21 @@ microstrategy.dossier.create({
 
 ### navigationBar
 
-Use this property to customize the navigation bar on the UI. All detailed properties below are Boolean.
+Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
 
-`enabled` - Enable or disable the navigation bar.
-
-`gotoLibrary` - Show or hide the gotoLibrary icon.
-
-`title` - Show or hide the dossier title.
-
-`toc` - Show or hide the TOC icon.
-
-`reset` - Show or hide the reset icon.
-
-`reprompt` - Show or hide the reprompt icon.
-
-`share` - Show or hide the share icon.
-
-`comment` - Show or hide the comment icon.
-
-`notification` - Show or hide the notification icon.
-
-`filter` - Show or hide the filter icon.
-
-`options` - Show or hide the options icon.
-
-`search` - Show or hide the search icon.
-
-`bookmark` - Show or hide the bookmark icon.
+- `enabled` - Enable or disable the navigation bar. The default is `false`.
+- `gotoLibrary` - Show or hide the gotoLibrary icon. The default is `true`.
+- `title` - Show or hide the dossier title. The default is `true`.
+- `toc` - Show or hide the TOC icon. The default is `true`.
+- `reset` - Show or hide the reset icon. The default is `true`.
+- `reprompt` - Show or hide the reprompt icon. The default is `true`.
+- `share` - Show or hide the share icon. The default is `true`.
+- `comment` - Show or hide the comment icon. The default is `true`.
+- `notification` - Show or hide the notification icon. The default is `true`.
+- `filter` - Show or hide the filter icon. The default is `true`.
+- `options` - Show or hide the options icon. The default is `true`.
+- `search` - Show or hide the search icon. The default is `true`.
+- `bookmark` - Show or hide the bookmark icon. The default is `true`.
 
 #### Required?
 
@@ -581,9 +558,8 @@ No
 
 #### Default Value
 
-`null`
-
-The navigation bar is hidden by default.
+- If `navigationBar` is `null`, the navigation bar is hidden by default.
+- If `navigationBar` is not `null`, the default values of its properties take effect.
 
 #### Sample
 
@@ -592,7 +568,7 @@ Navigation Bar Configuration:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   navigationBar: {
     enabled: true,
     gotoLibrary: false,
@@ -613,17 +589,13 @@ microstrategy.dossier.create({
 
 ### optionsFeature
 
-Use this property to customize the Options feature on the UI. All detailed properties below are Boolean.
+Use the `optionsFeature` object to customize the Options feature on the page. All detailed properties below are `Boolean`, with `true` as the default value.
 
-`enabled` - Enable or disable the options features.
-
-`help` - Show or hide help functionality.
-
-`logout` - Show or hide the logout functionality.
-
-`manage` - Show or hide manage functionality.
-
-`showTutorials` - Show or hide tutorial functionality.
+- `enabled` - Enable or disable the options feature.
+- `help` - Show or hide help functionality.
+- `logout` - Show or hide the logout functionality.
+- `manage` - Show or hide manage functionality.
+- `showTutorials` - Show or hide tutorial functionality.
 
 #### Required?
 
@@ -633,7 +605,7 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If `optionsFeature` is `null`, the Options features are enabled. Whether you will see the interface is based on the `navigationBar` object.
 
 #### Sample
 
@@ -642,7 +614,7 @@ Options Feature:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   optionsFeature: {
     enabled: true,
     help: false,
@@ -655,23 +627,16 @@ microstrategy.dossier.create({
 
 ### shareFeature
 
-Use this property to customize the Share feature on the UI. All detailed properties below are Boolean.
+Use the `shareFeature` object to customize the Share features on the page. All detailed properties below are Boolean, with `true` as the default value.
 
-`enabled` - Enable or disable share features.
-
-`invite` - Show or hide invite functionality.
-
-`link` - Show or hide link functionality.
-
-`email` - Show or hide email functionality.
-
-`export` - Show or hide export functionality.
-
-`download` - Show or hide download functionality.
-
-`shareDossier` - Show or hide the shareDossier function.
-
-`subscribe` - Show or hide all entries for a subscription.
+- `enabled` - Enable or disable share features.
+- `invite` - Show or hide invite functionality.
+- `link` - Show or hide link functionality.
+- `email` - Show or hide email functionality.
+- `export` - Show or hide export functionality.
+- `download` - Show or hide download functionality.
+- `shareDossier` - Show or hide the shareDossier function.
+- `subscribe` - Show or hide all entries for a subscription.
 
 #### Required?
 
@@ -681,7 +646,7 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If `optionsFeature` is `null`, the Share features are enabled. Whether you will see the interface is based on the `navigationBar` object.
 
 #### Sample
 
@@ -690,7 +655,7 @@ Share Feature:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   shareFeature: {
     enabled: true,
     invite: false,
@@ -704,7 +669,7 @@ microstrategy.dossier.create({
 
 ### smartBanner
 
-Use this property to enable or disable the smart banner feature when a user opens an embedded dossier in a mobile browser.
+Use the `smartBanner` property to enable or disable the smart banner feature when a user opens an embedded dossier in a mobile browser.
 
 This property is supported on the dossier and login pages, but not the Library page. If credentials are not provided, the user is redirected to the login page and the property setting in the original URL remains in effect.
 
@@ -725,14 +690,14 @@ Smart Banner:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   smartBanner: false,
 });
 ```
 
 ### tocFeature
 
-Use this property to customize the TOC feature on the UI.
+Use this property to customize the Table of Contents (TOC) feature on the page.
 
 `enabled` - Use a Boolean to enable or disable TOC features.
 
@@ -744,7 +709,7 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
 
@@ -753,7 +718,7 @@ TOC Feature:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   tocFeature: {
     enabled: true,
   },
@@ -762,11 +727,10 @@ microstrategy.dossier.create({
 
 ### uiMessage
 
-Use this property to customize the message features on the UI. If disableNotification is set to true, this property is ignored and all messages are hidden. All detailed properties below are Boolean.
+Use this property to customize the message features on the UI. If `disableNotification` is set to `true`, this property is ignored and all messages are hidden. All detailed properties below are `Boolean`.
 
-`enabled` - Enable or disable all messages.
-
-`addToLibrary` - Show or hide the addToLibrary message.
+- `enabled` - Enable or disable all messages.
+- `addToLibrary` - Show or hide the addToLibrary message.
 
 #### Required?
 
@@ -776,7 +740,7 @@ No
 
 `null`
 
-Depends on the default status of the dossier and the value in the disableNotification property.
+Depends on the default status of the dossier and the value in the `disableNotification` property.
 
 #### Sample
 
@@ -785,7 +749,7 @@ UI Message:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   uiMessage: {
     enabled: true,
     addToLibrary: false,
@@ -795,15 +759,12 @@ microstrategy.dossier.create({
 
 ### visibleTutorials
 
-Use this property to customize the visibility of tutorials. All detailed properties below are Boolean.
+Use this property to customize the visibility of tutorials. All detailed properties below are `Boolean`.
 
-`welcome` - Enable or disable the welcome tutorial.
-
-`library` - Enable or disable the Library tutorial.
-
-`dossier` - Enable or disable the dossier tutorial.
-
-`notification` - Enable or disable the notification tutorial.
+- `welcome` - Enable or disable the welcome tutorial.
+- `library` - Enable or disable the Library tutorial.
+- `dossier` - Enable or disable the dossier tutorial.
+- `notification` - Enable or disable the notification tutorial.
 
 If the welcome tutorial is enabled, the Library tutorial is also automatically enabled.
 
@@ -815,7 +776,7 @@ No
 
 `null`
 
-The default status is used on the dossier.
+If this object is not specified, the MicroStrategy Library default behavior is used.
 
 #### Sample
 
@@ -824,7 +785,7 @@ Visible Tutorials:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID>}",
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   visibleTutorials: {
     library: true,
     welcome: false,
@@ -836,7 +797,7 @@ microstrategy.dossier.create({
 
 ### visualizationAppearances
 
-Use this property to assign which visualization needs to be resized in the initial loading process, and whether the user could see the resize button of the visualization. See Embed a Single Visualization for more information.
+If you want to show just one visualization on the dossier page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a Single Visualization](./embed-vis) for more information about the feature.
 
 Format:
 
@@ -850,11 +811,9 @@ Format:
 ]
 ```
 
-`visualizationKey` - The visualization node key input by you.
-
-`size` - Set to "normal" or "maximized", to restore or maximize this visualization.
-
-`resizeButtonVisible` - Determines whether the resize button is visible. If a Boolean is not provided, the visibility remains the same.
+- `visualizationKey` - The key for the visualization.
+- `size` - Set to `"normal"` or `"maximized"`, to restore or maximize this visualization. The default value is `"normal"`.
+- `resizeButtonVisible` - Determines whether the resize button is visible. The default value is `true`.
 
 #### Required?
 
@@ -864,18 +823,28 @@ No
 
 `null`
 
-No visualization needs to be maximized or restored during initial loading
-
-#### Sample
-
-N/A
+No visualization needs to be maximized or restored during initial loading.
 
 ## Method for Removing an Embedded Dossier
 
-### microstrategy.dossier.destroy({placeholder: placeholderDiv})
+### microstrategy.dossier.destroy(config)
 
-Destroy the embedded dossier in the same placeholder you used when calling `microstrategy.dossier.create.`.
+The config parameter:
+
+```json
+  {"placeholder": placeholderDiv}
+```
+
+This method removes the embedded dossier in the same placeholder you used when calling `microstrategy.dossier.create`. The `placeholder` refers to the DOM object of the container `<div>`.
 
 #### Return Value
 
 `null`
+
+#### Sample
+
+```js
+microstrategy.dossier.destroy({
+  placeholder: document.getElementById("embedding-dossier-container"),
+});
+```

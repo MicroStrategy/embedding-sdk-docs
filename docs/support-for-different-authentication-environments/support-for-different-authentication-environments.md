@@ -30,6 +30,6 @@ If you plan to use Embedding SDK on a web page on a different domain from your M
 1. [Enable Cross-Origin Resource Sharing (CORS)](../config)
 1. [Allow Cross-Origin Cookies](../config#allow-cross-origin-cookies)
 
-If we plan to use Embedding SDK on the same domain as your MicroStrategy, the above changes are not required.
+If you plan to use Embedding SDK on the same domain as your MicroStrategy, the above changes are not required.
 
 :::

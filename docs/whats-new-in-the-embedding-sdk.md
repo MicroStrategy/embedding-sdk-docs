@@ -43,8 +43,8 @@ A new property, [dossierFeature](./Add-Functionality/Set-Properties#sample-appli
 
 ## 11.0
 
-- A new property allows you to [pass filters during dossier execution](./add-functionality/set-properties).
-- New properties allow you to [customize features and the UI](./add-functionality/set-properties) for an embedded dossier.
+- A new property allows you to [pass filters during dossier execution](./add-functionality/methods-and-properties).
+- New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties) for an embedded dossier.
 
 ## 10.11
 

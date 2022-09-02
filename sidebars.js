@@ -43,11 +43,10 @@ const sidebars = {
       },
       label: "Add Functionality to an Embedded Dossier",
       items: [
+        "add-functionality/methods-and-properties",
         "add-functionality/add-nav",
         "add-functionality/add-event",
         "add-functionality/filters",
-        "add-functionality/set-properties",
-        "add-functionality/methods-and-properties",
         "add-functionality/error-handling",
         "add-functionality/panel-stacks",
         "add-functionality/embed-vis",
