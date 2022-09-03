@@ -57,19 +57,14 @@ There are three main ways to add your new doc into the sidebar:
 
 ```json
 {
-    "type": "category",
-    "link": {
-      "type": "doc",
-      "id": "support-for-different-authentication-environments/support-for-different-authentication-environments",
-    },
-    "label": "Support for Different Authentication Environments",
-    "items": [
-      "support-for-different-authentication-environments/guest-authentication-mode-only",
-      "support-for-different-authentication-environments/multiple-modes",
-      "support-for-different-authentication-environments/authentication-saml",
-      "support-for-different-authentication-environments/authentication-custom",
-    ],
+  "type": "category",
+  "link": {
+    "type": "doc",
+    "id": "support-for-different-authentication-environments/support-for-different-authentication-environments"
   },
+  "label": "Support for Different Authentication Environments",
+  "items": ["support-for-different-authentication-environments/guest-authentication-mode-only", "support-for-different-authentication-environments/multiple-modes", "support-for-different-authentication-environments/authentication-saml", "support-for-different-authentication-environments/authentication-custom"]
+}
 ```
 
 1. If you want to update an existing doc, the versioned docs locate in `/versioned_doc`, the current docs locate in `/docs`.

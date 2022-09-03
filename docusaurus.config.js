@@ -36,7 +36,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         gtag: {
-          trackingID: "G-R0GZ7BXB1S",
+          trackingID: process.env.GTAG_TRACKING_ID,
           anonymizeIP: true,
         },
         docs: {
@@ -44,8 +44,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.microstrategy.com/Tech/embedding-sdk-docs/tree/main",
+          editUrl: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/embedding-sdk-docs/tree/main`,
           // includeCurrentVersion: true,
           // lastVersion: "2021",
           // versions: {
