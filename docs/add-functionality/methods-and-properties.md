@@ -551,6 +551,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `options` - Show or hide the options icon. The default is `true`.
 - `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
+- `edit` - Show or hide the edit icon. The default is `true`.
 
 #### Required?
 
@@ -583,6 +584,7 @@ microstrategy.dossier.create({
     options: true,
     search: false,
     bookmark: true,
+    edit: false,
   },
 });
 ```
@@ -824,6 +826,10 @@ No
 `null`
 
 No visualization needs to be maximized or restored during initial loading.
+
+### authoring
+
+The `authoring` object controls the dossier interface in authoring mode. See [Author a Embedded Dossier](./authoring-library#api-for-controlling-the-authoring-ui) for details.
 
 ## Method for Removing an Embedded Dossier
 

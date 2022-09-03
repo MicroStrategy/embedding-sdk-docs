@@ -7,11 +7,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 4
 
-- [Enhancements to authoring an embedded dossier](./add-functionality/panel-stacks), including:
-  - Controlling display of items in authoring toolbar
-  - Controlling display of authoring panels
+- [Enhancements to authoring an embedded dossier](./add-functionality/authoring-library), including:
+  - Controlling the display of items in the authoring toolbar
+  - Controlling the display of authoring panels
   - Support for creating a new dossier
-- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#method-and-properties-for-embedding-a-dossier)
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#methods-and-properties#sharefeature)
 
 ## 2021 Update 3
 
@@ -35,24 +35,16 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 2
 
-A new method to [remove an embedded dossier](./add-functionality/methods-and-properties).
+A new method to [remove an embedded dossier](./add-functionality/methods-and-properties#method-for-removing-an-embedded-dossier).
 
 ## 2019
 
-A new property, [dossierFeature](./Add-Functionality/Set-Properties#sample-application), allows you customize dossier features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
+A new property, [dossierFeature](./add-functionality/methods-and-properties#dossierfeature), allows you to customize dossier features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
 
 ## 11.0
 
-- A new property allows you to [pass filters during dossier execution](./add-functionality/methods-and-properties).
+- A new property allows you to [pass filters during dossier execution](./add-functionality/methods-and-properties#filters).
 - New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties) for an embedded dossier.
-
-## 10.11
-
-There were no significant changes from the previous version.
-
-## 10.10
-
-There were no significant changes from the previous version.
 
 ## 10.9
 
