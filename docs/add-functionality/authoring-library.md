@@ -91,9 +91,9 @@ The fields ["instance", "filters", "visualizationAppearances", "visualizationSel
 
 An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
-| Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                    | Required? |
-| -------------------------- | --------- | ------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| props.dossierRenderingMode | String    | consumption   | ["consumption", "authoring"] | The value is either `consumption` or `authoring`. <br/> If it is `authoring` and the configuration `feaure.dossier.authoring` isn't set, or its value isn't `true`, then an error is returned. | No        |
+| Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
+| -------------------------- | --------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| props.dossierRenderingMode | String    | consumption   | ["consumption", "authoring"] | The value is either `consumption` or `authoring`. <br/> If it is `authoring` and the configuration `feature.dossier.authoring` isn't set, or its value isn't `true`, then an error is returned. | No        |
 
 Example:
 

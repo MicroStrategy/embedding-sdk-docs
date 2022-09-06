@@ -318,7 +318,7 @@ User needs to log in from the default login page.
 
 Specifies whether to enable responsive design.
 
-When this is set to `true`, the placeholder is adjusted to fit the width of the viiewpoint and the existing width to height ratio is used to provide the height.
+When this is set to `true`, the placeholder is adjusted to fit the width of the viewpoint and the existing width to height ratio is used to provide the height.
 
 #### Required?
 

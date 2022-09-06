@@ -214,20 +214,32 @@ myDossier
   });
 ```
 
-The callback parameters for this promise object are shown below.
+The `availableElements` is an array representing all the available elements. Here is an example.
 
-| Parameter Name    | Data Type    | Example                                                                                                                                                                                                                      | Comments                                                                                                                                 |
-| ----------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| availableElements | Object       | <pre>[{<br/> "attribute":{<br/> "id":"8D679D3611D3E4981000E787EC6DE8A4", <br/> "name":"Category" <br/> },<br/> "elements":[{<br/> "id":"h6;8D679D3611D3E4981000E787EC6DE8A4",<br/> "name":"Spring 2012"<br/> }]<br/>}]</pre> | The data is returned in an array, since there may be instances in which the data in several visualizations are changed at the same time. |
-| error             | Error Object | new Error(“invalid operation!“)                                                                                                                                                                                              |
+```json
+[
+  {
+    "attribute": {
+      "id": "8D679D3611D3E4981000E787EC6DE8A4",
+      "name": "Category"
+    },
+    "elements": [
+      {
+        "id": "h6;8D679D3611D3E4981000E787EC6DE8A4",
+        "name": "Spring 2012"
+      }
+    ]
+  }
+]
+```
 
 #### Errors
 
 When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                | Error Category | Handling Module | Error Handling                               |
-| ----------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
-| The visKey isn't a valid visualization key or it is not in the current page or panelstack | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
+| Error Case                                                                                 | Error Category | Handling Module | Error Handling                               |
+| ------------------------------------------------------------------------------------------ | -------------- | --------------- | -------------------------------------------- |
+| The visKey isn't a valid visualization key or it is not in the current page or panel stack | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
 
 ### Callback for monitoring the changing of visualization elements
 

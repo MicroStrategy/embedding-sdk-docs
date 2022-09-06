@@ -126,7 +126,11 @@ In which the callback parameters are:
 
 `Dossier.switchPanel(panelKey)`
 
-> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/dossier_properties.htm) for more information.
+:::tip
+
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/dossier_properties.htm) for more information.
+
+:::
 
 #### Input Parameters
 
@@ -166,7 +170,14 @@ in which the callback parameters are:
 
 - `switchedPanel`
 
-  The switched panel information, in the format shown below. <pre>{<br/> panelStackKey: {panel stack key},<br/> currentPanel: {current panel key}<br/>}</pre>
+  The switched panel information, in the format shown below.
+
+  ```json
+  {
+    "panelStackKey": "panel stack key",
+    "currentPanel": "current panel key"
+  }
+  ```
 
   **Data Type**
 
@@ -203,14 +214,14 @@ If the panel is switched in an inner or outer window, it raises a switch panel e
 // event: onPanelSwitched
 // event payload:
 {
-  "panelStackKey": "{panel stack key}",
-  "currentPanel": "{current panel key}"
+  "panelStackKey": "panel stack key",
+  "currentPanel": "current panel key"
 }
 ```
 
 ### 4. Modify the select visualization callback data
 
-You must also change the callback data of the existing ON_VIZ_SELECTION_CHANGED event. Before any changes, the data returned from the event is similar to that shown below.
+You must also change the callback data of the existing `ON_VIZ_SELECTION_CHANGED` event. Before any changes, the data returned from the event is similar to that shown below.
 
 ```json
 {

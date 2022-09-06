@@ -27,7 +27,7 @@ Each supported event is described in the table below. You get the EventType from
 
 ##### Description
 
-Raised when a graphic in the visualization is selected <br/> <br/>This event is raised only if the visualization supports "use as filter".
+Raised when a graphic in the visualization is selected. This event is raised only if the visualization supports "use as filter".
 
 ##### Data
 

@@ -777,7 +777,7 @@ Use this API for filters that support multiple selection.
   "filterInfo": {
     "key": "IGK228" // String. The filter key.
   },
-  "selections": [2, 8], // [from: Number, to: Number]. The index of starting and ending positons in items array of the selection.
+  "selections": [2, 8], // [from: Number, to: Number]. The index of starting and ending positions in items array of the selection.
   "holdSubmit": false // Boolean. Determines whether or not to hold off applying the filter until Dossier.filterApplyAll() is called.
 }
 ```
