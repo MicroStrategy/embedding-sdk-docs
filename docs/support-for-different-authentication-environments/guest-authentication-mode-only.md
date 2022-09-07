@@ -60,7 +60,7 @@ Because this simple embedding example uses a dossier on the demo server, you are
 
 1. In an IDE, text editor or [Embedding SDK Playground](https://microstrategy.github.io/playground/), open the HTML file and configure it to reflect the values in your environment:
 
-   - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStratetgy Library installation. Replace `demo.microstrategy.com` with your server path.
+   - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStrategy Library installation. Replace `demo.microstrategy.com` with your server path.
 
      ```html
      <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>

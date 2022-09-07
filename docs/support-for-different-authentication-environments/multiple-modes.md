@@ -84,7 +84,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
    1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
 
-      - Set the value of the `baseURL` variable to the path to your MicroStratetgy Library by replace `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
+      - Set the value of the `baseURL` variable to the path to your MicroStrategy Library by replace `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
         ```js
         var baseURL = "https://demo.microstrategy.com/MicroStrategyLibraryDev";

@@ -50,7 +50,7 @@ This API returns a promise object, similar to:
 myDossier &&
   myDossier
     .getCurrentPagePanelStacks()
-    .then((curentPagePanelStacks) => {
+    .then((currentPagePanelStacks) => {
       // ...
     })
     .catch((error) => {

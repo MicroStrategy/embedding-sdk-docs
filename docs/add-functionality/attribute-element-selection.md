@@ -182,10 +182,10 @@ microstrategy.dossier
 
 When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                 | Error Category | Handling Module | Error Handling                                |
-| ------------------------------------------------------------------------------------------ | -------------- | --------------- | --------------------------------------------- |
-| A required parameter is missed or it is not in the correct format.                         | Invalid input  | Embedding SDK   | Display an error message and an alert dialog. |
-| The visKey isn't a valid visualization key or it is not in the current page or panelstack. | Invalid input  | Web Dossier     | Caught by the catch() of the promise object.  |
+| Error Case                                                                                  | Error Category | Handling Module | Error Handling                                |
+| ------------------------------------------------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
+| A required parameter is missed or it is not in the correct format.                          | Invalid input  | Embedding SDK   | Display an error message and an alert dialog. |
+| The visKey isn't a valid visualization key or it is not in the current page or panel stack. | Invalid input  | Web Dossier     | Caught by the catch() of the promise object.  |
 
 ### API for getting available elements
 
