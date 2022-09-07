@@ -95,7 +95,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.microstrategy.com/Tech/embedding-sdk-docs",
+            href: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/embedding-sdk-docs/`,
             label: "GitHub",
             position: "right",
           },
