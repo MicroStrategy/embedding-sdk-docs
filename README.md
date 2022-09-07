@@ -14,7 +14,7 @@ Documentation for Embedding SDK
 ### Step one
 
 ```bash
-git clone https://github.microstrategy.com/Tech/embedding-sdk-docs.git
+git clone https://github.com/MicroStrategy/embedding-sdk-docs.git
 ```
 
 ### Step two
@@ -45,7 +45,7 @@ As you're using Embedding SDK Docs, you may find something in an article that yo
 
 #### Open an issue
 
-If you've found a problem, you can open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues).
+If you've found a problem, you can open an issue [here](https://github.com/MicroStrategy/embedding-sdk-docs/issues).
 
 #### Solve an issue
 

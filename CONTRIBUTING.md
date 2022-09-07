@@ -2,25 +2,36 @@
 
 # Contributing to this repository
 
+- [Getting started](#getting-started)
+  - [Use the 'Edit' button](#use-the-edit-button)
+  - [Don't see your issue? Open one](#dont-see-your-issue-open-one)
+  - [Ready to make a change? Fork the repo](#ready-to-make-a-change-fork-the-repo)
+  - [Make your update](#make-your-update)
+  - [Open a pull request](#open-a-pull-request)
+  - [Submit your PR & get it reviewed](#submit-your-pr--get-it-reviewed)
+  - [Your PR is merged](#your-pr-is-merged)
+  - [Keep contributing as you use MicroStrategy Docs](#keep-contributing-as-you-use-microstrategy-docs)
+
 ## Getting started
 
 Before you begin:
 
-- This site is powered by Docusaurus. Check to see if you're on the [version of node we support](contributing/development.md).
 - Have you read the [code of conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) & see if we [accept contributions](#memo-types-of-contributions) for your type of issue.
+- Check out the [existing issues](https://github.com/MicroStrategy/embedding-sdk-docs/issues) & see if we [accept contributions](#memo-types-of-contributions) for your type of issue.
 
 ### Use the 'Edit' button
 
 Navigating a new codebase can be challenging, so we're making that a little easier. As you're using this MicroStrategy Embedding SDK Docs, you may come across an article that you want to make an update to. You can find and click the **Edit** button on the top right corner on that article, which will take you to the file in this repo where you'll make your changes.
 
-Before you make your changes, check to see if an [issue exists](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues) already for the change you want to make.
+Before you make your changes, check to see if an [issue exists](https://github.com/MicroStrategy/embedding-sdk-docs/issues) already for the change you want to make.
 
 ### Don't see your issue? Open one
 
-If you spot something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you spot something new, open an issue [here](https://github.com/MicroStrategy/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### Ready to make a change? Fork the repo
+
+:warning: Please do not use the "Add file" or directly edit the file and create PR on GitHub. It is recommended to clone the forked repo to local and then modify. In this way, you can leverage the linters provided by us to fix some styling issues or typos.
 
 Fork using the command line:
 
@@ -51,7 +62,7 @@ When you're done making changes and you'd like to propose them for review, use t
 
 Congratulations! The whole MicroStrategy community thanks you. :sparkles:
 
-Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.microstrategy.com/Tech/embedding-sdk-docs/graphs/contributors) and at the bottom of the page you contributed to.
+Once your PR is merged, you will be proudly listed as a contributor in the [contributor chart](https://github.com/MicroStrategy/embedding-sdk-docs/graphs/contributors) and at the bottom of the page you contributed to.
 
 ### Keep contributing as you use MicroStrategy Docs
 
@@ -59,23 +70,13 @@ Now that you're a part of the MicroStrategy Docs community, you can keep partici
 
 **Learn more about contributing:**
 
-- [Contributing to this repository](#contributing-to-this-repository)
-  - [Getting started](#getting-started)
-    - [Use the 'Edit' button](#use-the-edit-button)
-    - [Don't see your issue? Open one](#dont-see-your-issue-open-one)
-    - [Ready to make a change? Fork the repo](#ready-to-make-a-change-fork-the-repo)
-    - [Make your update](#make-your-update)
-    - [Open a pull request](#open-a-pull-request)
-    - [Submit your PR & get it reviewed](#submit-your-pr--get-it-reviewed)
-    - [Your PR is merged](#your-pr-is-merged)
-    - [Keep contributing as you use MicroStrategy Docs](#keep-contributing-as-you-use-microstrategy-docs)
-  - [:memo: Types of contributions](#memo-types-of-contributions)
-    - [:beetle: Issues](#beetle-issues)
-    - [:hammer_and_wrench: Pull requests](#hammer_and_wrench-pull-requests)
-    - [:question: Support](#question-support)
-    - [:earth_asia: Translations](#earth_asia-translations)
-  - [Starting with an issue](#starting-with-an-issue)
-  - [Opening a pull request](#opening-a-pull-request)
+- [:memo: Types of contributions](#memo-types-of-contributions)
+  - [:beetle: Issues](#beetle-issues)
+  - [:hammer_and_wrench: Pull requests](#hammer_and_wrench-pull-requests)
+  - [:question: Support](#question-support)
+  - [:earth_asia: Translations](#earth_asia-translations)
+- [Starting with an issue](#starting-with-an-issue)
+- [Opening a pull request](#opening-a-pull-request)
   - [Working in the MicroStrategy/embedding-sdk-docs repository](#working-in-the-microstrategyembedding-sdk-docs-repository)
   - [Reviewing](#reviewing)
     - [Self review](#self-review)
@@ -90,7 +91,7 @@ You can contribute to the MicroStrategy Embedding SDK Docs content and site in s
 
 ### :beetle: Issues
 
-If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.microstrategy.com/Tech/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
+If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue [here](https://github.com/MicroStrategy/embedding-sdk-docs/issues). We'll use the issue to have a conversation about the problem you want to fix.
 
 ### :hammer_and_wrench: Pull requests
 
@@ -121,7 +122,6 @@ You can use the GitHub user interface :pencil2: for some small changes, like fix
 Here's some information that might be helpful while working on a Docs PR:
 
 - [Development](contributing/development.md) - This short guide describes how to get this app running on your local machine.
-
 - [Content style guide for MicroStrategy Docs](contributing/content-style-guide.md) - This guide covers information about how we style our content and images. It also links to the resources we use for general style guidelines.
 
 ## Reviewing
@@ -140,13 +140,10 @@ You should always review your own PR first.
 
 For content changes, make sure that you:
 
-- [ ] Confirm that the changes meet the user experience and goals outlined in the content design plan (if there is one).
-- [ ] Compare your pull request's source changes to staging to confirm that the output matches the source and that everything is rendering as expected. This helps spot issues like typos, content that doesn't follow the style guide, or content that isn't rendering due to versioning problems. Remember that lists and tables can be tricky.
+- [ ] Confirm the changes pass linter checks by running `yarn lint`.
+- [ ] Make sure your content is rendered as expected by running `yarn start`.
 - [ ] Review the content for technical accuracy.
-- [ ] Review the entire pull request using the [localization checklist](contributing/localization-checklist.md).
-- [ ] Copy-edit the changes for grammar, spelling, and adherence to the [style guide](https://github.microstrategy.com/Tech/embedding-sdk-docs/tree/master/contributing/content-style-guide.md).
-- [ ] Check new or updated Liquid statements to confirm that versioning is correct.
-- [ ] If there are any failing checks in your PR, troubleshoot them until they're all passing.
+- [ ] Confirm your changes follow the [style guide](https://github.com/MicroStrategy/embedding-sdk-docs/blob/main/contributing/content-style-guide.md).
 
 ### Test it locally
 
@@ -156,7 +153,7 @@ Start the site locally, by running `yarn start` in the root folder of the projec
 
 ### Pull request template
 
-When you open a pull request, you must fill out the "Ready for review" template before we can review your PR. This template helps reviewers understand your changes and the purpose of your pull request.
+When you open a pull request, you must fill out the ["Ready for review" template](./.github/pull_request_template.md) before we can review your PR. This template helps reviewers understand your changes and the purpose of your pull request.
 
 ### Suggested changes
 

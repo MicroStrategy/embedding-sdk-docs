@@ -23,7 +23,7 @@ We want to keep our documentation consistent in styling. More details could be f
 - All documentation markdown files are located within `./docs/`.
 - Every documentation markdown file should have the frontmatter. You should have required `title` and optional `sidebar_label`. Please see the example below:
 
-  ```text/1-2
+  ```text
   ---
   title: Workflow Sample - Authentication
   sidebar_label: Authentication
@@ -86,11 +86,11 @@ Detailed information can be found on [Docusaurus Docs](https://docusaurus.io/doc
 
 You can run `yarn start` to test your local changes. Make sure everything looks okay before creating a Pull Request.
 
+You can also run `yarn lint` before committing to make sure no errors exist.
+
 ## Committing your changes
 
-When you try to commit your changes, `yarn eslint`, `yarn prettify`, and `yarn markdownlint` will be run in sequence. If any error is detected, the commit will fail. You need to follow the error messages and suggestions of changes to fix all the errors before committing them.
-
-You can also run `yarn lint` before committing to make sure no errors exist.
+When you try to commit your changes, `yarn lint:eslint`, `yarn lint:prettier`, and `yarn lint:markdownlint` will be run in sequence. If any error is detected, the commit will fail. You need to follow the error messages and suggestions of changes to fix all the errors before committing them.
 
 ## Creating Pull Request
 

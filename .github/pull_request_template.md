@@ -1,26 +1,27 @@
-# Description
+## Description
+
 <!-- Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change. -->
 
-## Type of change
-<!-- Please delete options that are not relevant. -->
+## Type of Changes
+
+<!-- Please mark the relevant options with 'X' like [X] -->
+
 - [ ] New content for the documentation
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
-# How Has This Been Tested?
-<!-- Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration -->
-- [ ] yarn start
-- [ ] Other tests
+## Checklist
 
-# Checklist
+<!-- Please mark the relevant options with 'X' like [X] -->
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] My changes pass linter checks by running `yarn lint`.
+- [ ] My changes is rendered as expected by running `yarn start`.
+- [ ] My changes is technically accurate.
+- [ ] My changes follow the [style guide](https://github.com/MicroStrategy/embedding-sdk-docs/blob/main/contributing/content-style-guide.md).
+- [ ] My changes include the relevant documentation update If it is needed.
+
+## Helpful Info
+
+<!-- (Optional) Please provide helpful info related to this PR. For example, the screenshot of before and after changes. -->

@@ -2,7 +2,7 @@
 
 # Content Styling Guidelines
 
-We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to write our documents. Markdown is a lightweight markup language for creating formatted text. We try to keep our styling consistent throughout the documentation. Please follow the guidelines to help us provide better documentation.
+We try to keep our styling consistent throughout the documentation. Please follow the guidelines to help us provide better documentation.
 
 ## Markdownlint
 
@@ -12,7 +12,7 @@ You can download the [markdownlint linter](https://marketplace.visualstudio.com/
 
 To automatically fix these violations when saving a Markdown document, configure Visual Studio Code's [`editor.codeActionsOnSave` setting](https://code.visualstudio.com/docs/getstarted/settings) like so:
 
-```text/1-2
+```text
 "editor.codeActionsOnSave": {
     "source.fixAll.markdownlint": true
 }
@@ -20,25 +20,17 @@ To automatically fix these violations when saving a Markdown document, configure
 
 More information about `markdownlint` could be found [here](https://github.com/DavidAnson/markdownlint#rules--aliases).
 
-## Metadata
-
-At the top of each document, there is a metadata section that begins and ends with '---'. The metadata is used by Docusaurus to generate document site. If you want to write a new page, you can look into the [Development Guidelines](./development.md).
-
 ## Headers
 
 Use two hashes (##) for the headers to begin, and continue moving down the line (###, ####, etc.) for subsections.
 
 For headers that need an ordered list, e.g., "1. Do something in this step", it is recommended to write it like ### 1. Do something here instead of 1. ### Do something here because this would cause the Table of Contents plugin to show the wrong order.
 
-The "In this article" section is automatically generated from the headers. There is no need to create this or "table of contents" section in markdown file. We currently only show "h2" (##) and "h3" (###) in this section. The content of the markdown file will be added below "In this article" section automatically.
-
-Don't use inline code block in headers.
-
 ## Code blocks
 
 - Code blocks (not inline code) should be surrounded by three backticks on either side. The language should also be specified after the first three backticks, like so:
 
-  ````text/1-2
+  ````text
   ```bash
   code used in the terminal such as curl
   ```
@@ -63,7 +55,7 @@ Don't use inline code block in headers.
   HTML code
   ```
 
-  ```text/1-2
+  ```text
   any other code that is not language-specific
   ```
   ````
@@ -72,13 +64,13 @@ Supported languages are listed [here](https://prismjs.com/#languages-list).
 
 - Inline code blocks only need one backtick in front and behind, like so:
 
-  ```text/1-2
+  ```text
   `INLINE CODE BLOCK`
   ```
 
 - Inline code that is also a link should not have a backtick so that it still appears blue. Like the following:
 
-  ```text/1-2
+  ```text
   [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/#!/Authentication/postLogin)
   ```
 
@@ -111,8 +103,6 @@ The list below shows the usage of emojis in our Docs site:
 
 ## Tables
 
-- To make sure tables show well on all screen sizes, we do not recommend using tables that are too wide or have more than 3 columns.
-
 - The recommended converter could convert the basic HTML table to a Markdown table. However, Markdown doesn’t support merged cells (1 cell in 1 row covers multiple smaller rows). You need to add duplicated entries for the wider row manually).
 
   For example:
@@ -121,21 +111,19 @@ The list below shows the usage of emojis in our Docs site:
 
   ![original table example](../docs/images/original_table_example.png)
 
-You need to add “information” cell multiple times manually because the converter cannot handle this correctly. It will omit the “information” cell for the following rows to make the table not correct.
+You need to add "information" cell multiple times manually because the converter cannot handle this correctly. It will omit the "information" cell for the following rows to make the table not correct.
 
 ![markdown table example](../docs/images/markdown_table_example.png)
 
 - Use `:heavy_check_mark:` instead of `X` to display the checkmarks.
 
-- Don't use code blocks in markdown table. It is recommended to have the code block in a separate paragraph to span the whole page width.
-
 ## Admonitions
 
-We use `:::tip` to replace the green information sections, `:::info` to replace the blue (check) sections, and `:::danger` to replace the read warning sections.
+We use `:::tip` to to provide some tips, `:::info` to provide some extra information, and `:::danger` to let readers to pay more attention in this section.
 
 Examples:
 
-```text/1-2
+```text
 
 :::note
 
