@@ -60,7 +60,7 @@ If you are using MicroStrategy 2021 Update 5 or before, make the following chang
 
    ```xml
    <Context>
-      <CookieProcessor sameSiteCookies="none"/>
+      <CookieProcessor sameSiteCookies="None"/>
    </Context>
    ```
 

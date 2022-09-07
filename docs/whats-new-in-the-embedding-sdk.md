@@ -8,9 +8,9 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 ## 2021 Update 4
 
 - [Enhancements to authoring an embedded dossier](./add-functionality/authoring-library), including:
-  - Controlling the display of items in the authoring toolbar
-  - Controlling the display of authoring panels
-  - Support for creating a new dossier
+  - controlling the display of items in the authoring toolbar.
+  - controlling the display of authoring panels.
+  - support for creating a new dossier.
 - [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#methods-and-properties#sharefeature)
 
 ## 2021 Update 3

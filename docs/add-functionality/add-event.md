@@ -17,7 +17,7 @@ Once you have used the `dossier.create(props)` method to embed a dossier into a 
 
 ### Events
 
-Each supported event is described in the table below. You get the EventType from mstr.dossier.EventType.
+Each supported event is described in the table below. You get the EventType from `microstrategy.dossier.EventType`.
 
 #### onGraphicsSelected
 

@@ -9,7 +9,7 @@ The sample applications are provided as HTML files. These files must be hosted 
 
 - [Use Guest Authentication](./guest-authentication-mode-only)
 
-  This introductory sample embeds an existing dossier on the MicroStrategy demo server in a simple application. This sample can be used as is. Because only Guest authentication is enabled on the demo server, no credentials are required and the embedded dossier is displayed seamlessly in the application. The code in the application has only the three basic requirements.
+  This introductory sample embeds an existing dossier on the MicroStrategy demo server in a simple application. This sample can be used as is. Because only Guest authentication is enabled on the demo server, no credentials are required and the embedded dossier is displayed seamlessly in the application.
 
   There are also instructions for customizing the sample to use a different server and dossier. In order for the embedded dossier to be displayed seamlessly in that environment, the server you use must be configured to have only Guest authentication. The next sample illustrates how to do that.
 
@@ -21,7 +21,7 @@ The sample applications are provided as HTML files. These files must be hosted 
 
 - [Use SAML or OIDC Authentication](./authentication-saml)
 
-  This sample illustrates how to display an embedded dossier by simply scanning a QR code. This is how embedding works when the application is integrated with Badge.
+  This sample illustrates how to display an embedded dossier through SAML and OIDC authentication.
 
 :::tip
 

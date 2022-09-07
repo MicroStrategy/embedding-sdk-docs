@@ -225,9 +225,10 @@ You must also change the callback data of the existing `ON_VIZ_SELECTION_CHANGED
 
 ```json
 {
+  // Chapter key
   "K32": {
-    // Chapter key
-    "K62": true // Visualization key
+    // Visualization key
+    "K62": true
   }
 }
 ```

@@ -1014,7 +1014,7 @@ We use events to communicate with the container page. You can listen on these ev
 
 ### Event Name and Event Context
 
-You can get the `EventType` from `mstr.dossier.EventType`.
+You can get the `EventType` from `microstrategy.dossier.EventType`.
 
 #### onGraphicsSelected
 

@@ -70,7 +70,7 @@ MD013:
   heading_line_length: 100000
   # Number of characters for code blocks
   code_block_line_length: 100000
-  # We will not enforce the rule on code blocks, becuase JSON is easy to exceed
+  # We will not enforce the rule on code blocks, because JSON is easy to exceed
   # the 80 characters limit and we have no way to bypass the warning if it
   # exceed 80 characters.
   # Include code blocks

@@ -7,7 +7,7 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
 - [Methods and Properties for an Embedded Dossier](./methods-and-properties)
 
-  Describes the properties that can be set for an embedded dossier.
+  Describes the properties that can be set for an embedded dossier. Provides an example that modifies UI elements like the navigation bar and size of the embedded dossier through properties.
 
 - [Add Navigation](./add-nav)
 
@@ -19,7 +19,7 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
 - [Retrieve and Apply Filters](./filters)
 
-  Describes how to retrieve and apply filters for an embedded dossier and shows the filter details for each filter type, with code examples. For example, you can apply different kinds of filters to a chapter in a dossier, either during execution or after a dossier has been rendered.
+  Describes how to retrieve and apply filters for an embedded dossier and shows the filter details for each filter type, with code examples. For example, you can apply different kinds of filters to a chapter in a dossier, either during execution or after a dossier has been rendered. Provides examples on how to retrieve filters and apply each different type of filter.
 
 - [Error Handling](./error-handling)
 
@@ -27,19 +27,19 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
 - [Interact with Panel Stacks](./panel-stacks)
 
-  Describes how to interact with panel stacks within dossier.
+  Describes how to interact with panel stacks within dossier. Provides an example on panel-related APIs.
 
 - [Embed a Single Visualization](./embed-vis)
 
-  Embedding SDK allows you to embed a single visualization from the dossier and set it to be maximized. You can also toggle the size of the visualization.
+  Describes how to embed a single visualization and set it to be maximized. Provides an example that shows embedding a dossier with a single visualization maximized and options to change which visualization to be maximized.
 
 - [Enable the Selection of Attribute Elements](./attribute-element-selection)
 
-  You can make selections by calling functions in the SDK. You can set initial selections when the dossier is loaded.
+  Describes how to programmatically make attribute element selections on an embedded dossier and capture the selection events.
 
 - [Author an Embedded Dossier](./authoring-library)
 
-  Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier. You can also switch modes by calling functions in the SDK.
+  Describes how to embed a dossier in authoring or edit mode during the initial dossier load and after the dossier is loaded.
 
 :::tip
 

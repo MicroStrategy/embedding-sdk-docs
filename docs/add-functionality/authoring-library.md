@@ -37,7 +37,7 @@ In authoring mode, most dossier-related APIs are disabled as they are designed f
 | microstrategy.dossier.destroy                   | Creates or destroys the embedded dossier view.                                                                    |
 | Dossier.switchToMode                            | The API added in this feature used in authoring mode.                                                             |
 | Dossier.registerEventHandler                    | Adds an event handler.                                                                                            |
-| Dossier.removeEventhandler                      | Removes an event handler.                                                                                         |
+| Dossier.removeEventHandler                      | Removes an event handler.                                                                                         |
 | Dossier.registerFilterUpdateHandler             | Calls the same dossier functions in Web with Dossier.registerEventHandler so all could be used in authoring mode. |
 | Dossier.registerPageSwitchHandler               | Calls the same dossier functions in Web with Dossier.registerEventHandler so all could be used in authoring mode. |
 | Dossier.registerDossierInstanceIDChangeHandler  | Calls the same dossier functions in Web with Dossier.registerEventHandler so all could be used in authoring mode. |
