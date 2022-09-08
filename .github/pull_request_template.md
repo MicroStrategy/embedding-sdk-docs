@@ -17,8 +17,8 @@
 <!-- Please mark the relevant options with 'X' like [X] -->
 
 - [ ] My changes pass linter checks by running `yarn lint`.
-- [ ] My changes is rendered as expected by running `yarn start`.
-- [ ] My changes is technically accurate.
+- [ ] My changes are rendered as expected by running `yarn start`.
+- [ ] My changes are technically accurate.
 - [ ] My changes follow the [style guide](https://github.com/MicroStrategy/embedding-sdk-docs/blob/main/contributing/content-style-guide.md).
 - [ ] My changes include the relevant documentation update If it is needed.
 

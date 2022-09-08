@@ -33,6 +33,7 @@ const sidebars = {
         "support-for-different-authentication-environments/guest-authentication-mode-only",
         "support-for-different-authentication-environments/multiple-modes",
         "support-for-different-authentication-environments/authentication-saml",
+        "support-for-different-authentication-environments/seamless-login",
       ],
     },
     {
