@@ -164,7 +164,8 @@ Rejected with an error when navigation fails.
 #### Example
 
 ```js
-embedDossier.navigateToPage(page);
+const lastPageOfChapter = embedDossier.getCurrentChapter().getLastPage();
+embedDossier.navigateToPage(lastPageOfChapter);
 ```
 
 ### getCurrentChapter()

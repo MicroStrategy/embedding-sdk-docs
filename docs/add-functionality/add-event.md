@@ -11,79 +11,74 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 
 :::
 
-## Events, Event Handlers, and Wrapper Functions
-
 Once you have used the `dossier.create(props)` method to embed a dossier into a third-party web page, you can use the methods described below to communicate between the dossier and the container page. You can register [event handlers](#event-handlers) for the [events](#events) that are automatically raised when a visualization is selected or when a page or filter is changed. [Wrapper functions](#wrapper-functions) are provided to make it easy to register event handlers for specific events.
 
-### Events
+## Events
 
 Each supported event is described in the table below. You get the EventType from `microstrategy.dossier.EventType`.
 
-#### onGraphicsSelected
+### onGraphicsSelected
 
-##### Event Enumeration
+#### Event Enumeration
 
-`EventType.ON_GRAPHICS+SELECTED`
+`EventType.ON_GRAPHICS_SELECTED`
 
-##### Description
+#### Description
 
 Raised when a graphic in the visualization is selected. This event is raised only if the visualization supports "use as filter".
 
-##### Data
+#### Content
 
 Attribute element list for each selected graphic.
 
-##### Code Example
+#### Code Example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
-##### Content Example
+#### Content Example
 
 ```json
 {
-  "name": "onGraphicsSelected",
-  "value": {
-    "vizKey": "K52",
-    "graphics": [
-      //an array containing all the selected graphics info, each item is one graphic
-      [
-        // an array containing the attribute combination for one graphic
-        //n: attribute name, v: attribute value
-        { "n": "Category", "v": "Electronics" },
-        { "n": "Quarter", "v": "2009 Q4" }
-      ],
-      [
-        { "n": "Category", "v": "Electronics" },
-        { "n": "Quarter", "v": "2009 Q3" }
-      ]
+  "vizKey": "K52",
+  "graphics": [
+    //an array containing all the selected graphics info, each item is one graphic
+    [
+      // an array containing the attribute combination for one graphic
+      //n: attribute name, v: attribute value
+      { "n": "Category", "v": "Electronics" },
+      { "n": "Quarter", "v": "2009 Q4" }
+    ],
+    [
+      { "n": "Category", "v": "Electronics" },
+      { "n": "Quarter", "v": "2009 Q3" }
     ]
-  }
+  ]
 }
 ```
 
-#### onPageSwitched
+### onPageSwitched
 
-##### Event Enumeration
+#### Event Enumeration
 
 `EventType.ON_PAGE_SWITCHED`
 
-##### Description
+#### Description
 
 Raised when the page is switched.
 
-##### Data
+#### Content
 
-Current page path.
+Object containing the key of the page you switched to.
 
-##### Code Example
+#### Code Example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
-##### Content Example
+#### Content Example
 
 ```json
 {
@@ -91,89 +86,490 @@ embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandle
 }
 ```
 
-#### onFilterUpdated
+### onFilterUpdated
 
-##### Event Enumeration
+#### Event Enumeration
 
 `EventType.ON_FILTER_UPDATED`
 
-##### Description
+#### Description
 
 Raised when a filter is changed.
 
-##### Data
+#### Content
 
-Changed filter information.
+Object containing changed filter information.
 
-##### Code Example
+#### Code Example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
-##### Content Example
+#### Content Example
 
-```js
-getFilterList;
+```json
+{
+  "filterInfo": [
+    {
+      "filterKey": "W132",
+      "filterName": "Year",
+      "isExclude": false,
+      "filterType": "attributeSelector",
+      "filterDetail": {
+        "items": [
+          {
+            "name": "2014",
+            "value": "h2014;8D679D5111D3E4981000E787EC6DE8A4",
+            "selected": false
+          },
+          {
+            "name": "2015",
+            "value": "h2015;8D679D5111D3E4981000E787EC6DE8A4",
+            "selected": true
+          },
+          {
+            "name": "2016",
+            "value": "h2016;8D679D5111D3E4981000E787EC6DE8A4",
+            "selected": false
+          }
+        ],
+        "supportMultiple": false
+      }
+    }
+  ]
+}
 ```
 
-### Event Handlers
+### onError
+
+#### Event Enumeration
+
+`EventType.ON_ERROR`
+
+#### Description
+
+Raised when an error occurs.
+
+#### Content
+
+Error object.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_ERROR, errorHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "title": "Existing Live Session",
+  "message": "Invalid access token",
+  "desc": "You're logged in from another tab or window. Please refresh your session to see the latest updates.",
+  "errorCode": "ERR003_2",
+  "iServerErrorCode": "",
+  "statusCode": 401,
+  "ticketId": "e71565e0c8434133a4a4a53a56d92efb"
+}
+```
+
+### onSessionError
+
+#### Event Enumeration
+
+`EventType.ON_SESSION_ERROR`
+
+#### Description
+
+Raised when a session error occurs.
+
+#### Content
+
+Error object.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "title": "Existing Live Session",
+  "message": "Invalid access token",
+  "desc": "You're logged in from another tab or window. Please refresh your session to see the latest updates.",
+  "errorCode": "ERR003_2",
+  "iServerErrorCode": "",
+  "statusCode": 401,
+  "ticketId": "e71565e0c8434133a4a4a53a56d92efb"
+}
+```
+
+### onPageLoaded
+
+#### Event Enumeration
+
+`EventType.ON_PAGE_LOADED`
+
+#### Description
+
+Raised when the page is loaded for the first time.
+
+#### Content
+
+None
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_PAGE_LOADED, onPageLoadedHandler);
+```
+
+### onLayoutChanged
+
+#### Event Enumeration
+
+`EventType.ON_LAYOUT_CHANGED`
+
+#### Description
+
+Raised when the layout changes.
+
+#### Content
+
+Object containing layout changed information.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_LAYOUT_CHANGED, layoutChangedHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "layoutMode": 2,
+  "dimension": {
+    "height": 600,
+    "width": 716,
+    "offsetTop": 0
+  }
+}
+```
+
+### onPromptAnswered
+
+#### Event Enumeration
+
+`EventType.ON_PROMPT_ANSWERED`
+
+#### Description
+
+Raised when a prompt is answered.
+
+#### Content
+
+Object containing prompt answers information.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_PROMPT_ANSWERED, promptAnsweredHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "messageName": "Sales Dossier (w/ Attribute Element Prompt)",
+  "answers": [
+    {
+      "key": "3ECF2592C947B909B01624BCF690D6EA@0@10",
+      "values": ["8D679D4F11D3E4981000E787EC6DE8A4:14~1048576~Books - Miscellaneous"],
+      "useDefault": false
+    }
+  ]
+}
+```
+
+### onPromptLoaded
+
+#### Event Enumeration
+
+`EventType.ON_PROMPT_LOADED`
+
+#### Description
+
+Raised when a prompt is loaded.
+
+#### Content
+
+None
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_PROMPT_LOADED, promptLoadedHandler);
+```
+
+### onVizSelectionChanged
+
+#### Event Enumeration
+
+`EventType.ON_VIZ_SELECTION_CHANGED`
+
+#### Description
+
+Raised when a visualization selection is changed. Need visualization selection to be enabled.
+
+#### Content
+
+Object containing visualization selection information.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_VIZ_SELECTION_CHANGED, vizSelectionChangedHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "K36": {
+    "K52": true,
+    "visualizationLocation": {
+      "K52": {
+        "pageKey": "K53"
+      }
+    }
+  }
+}
+```
+
+### onVisualizationElementsChanged
+
+#### Event Enumeration
+
+`EventType.ON_VIZ_ELEMENT_CHANGED`
+
+#### Description
+
+Raised when a visualization element is changed.
+
+#### Content
+
+Array of objects containing visualization element changed information.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_VIZ_ELEMENT_CHANGED, vizElementChangedHandler);
+```
+
+#### Content Example
+
+```json
+[
+  {
+    "visualizationKey": "K52",
+    "attributeElements": [
+      {
+        "attribute": {
+          "id": "70BACB0C3844364E12D005B61DC8C718",
+          "name": "Product"
+        },
+        "elements": [
+          {
+            "id": "h20129;70BACB0C3844364E12D005B61DC8C718",
+            "name": "Sebixtex"
+          },
+          {
+            "id": "h20114;70BACB0C3844364E12D005B61DC8C718",
+            "name": "Ecin"
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+### onVisualizationResized
+
+#### Event Enumeration
+
+`EventType.ON_VISUALIZATION_RESIZED`
+
+#### Description
+
+Raised when a visualization changes size.
+
+#### Content
+
+Object containing the visualization that changed size information.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResizedChangedHandler);
+```
+
+#### Content Example
+
+```json
+{
+  "visualizationKey": "W367",
+  "size": "normal"
+}
+```
+
+### onDossierInstanceIDChange
+
+#### Event Enumeration
+
+`EventType.ON_DOSSIER_INSTANCE_ID_CHANGE`
+
+#### Description
+
+Raised when the embedded dossier instance id changes.
+
+#### Content
+
+String of the new instance id.
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierChangedHandler);
+```
+
+#### Content Example
+
+"003EB6548141F191CC73308269BB2635"
+
+### onDossierAuthoringSaved
+
+#### Event Enumeration
+
+`EventType.ON_DOSSIER_AUTHORING_SAVED`
+
+#### Description
+
+Raised when a dossier is saved after authoring or editing.
+
+#### Content
+
+None
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_SAVED, dossierAuthoringSavedHandler);
+```
+
+### onDossierAuthoringClosed
+
+#### Event Enumeration
+
+`EventType.ON_DOSSIER_AUTHORING_CLOSED`
+
+#### Description
+
+Raised when the authoring or edit mode of dossier is closed.
+
+#### Content
+
+None
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_CLOSED, dossierAuthoringClosedHandler);
+```
+
+### onPageRenderFinished
+
+#### Event Enumeration
+
+`EventType.ON_PAGE_RENDER_FINISHED`
+
+#### Description
+
+Raised when the page finishes rendering.
+
+#### Content
+
+None
+
+#### Code Example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderFinishedHandler);
+```
+
+## Event Handlers
 
 There are two methods for registering and removing an event handler.
 
-#### registerEventHandler(evtName, handler)
+### registerEventHandler(evtName, handler)
 
-##### Class
+#### Class
 
 `Dossier`
 
-##### Description
+#### Description
 
 Register the event handler `handler` on `evtName`.
 
-#### removeEventHandler(evtName, handler)
+### removeEventHandler(evtName, handler)
 
-##### Class
+#### Class
 
 `Dossier`
 
-##### Description
+#### Description
 
 Remove the event handler `handler` on `evtName`.
 
-### Wrapper Functions
+## Wrapper Functions
 
 The following wrapper functions make it easy to register event handlers for specific events.
 
-#### registerGraphicsSelectEventHandlerToViz(vizKey, handler)
+### registerGraphicsSelectEventHandlerToViz(vizKey, handler)
 
-##### Class
+#### Class
 
 `Dossier`
 
-##### Description
+#### Description
 
 Wrapper function for `registerEventHandler` for `EventType.ON_GRAPHICS_SELECTED` on certain visualizations (whose node key is equal to `vizKey`).
 
-#### registerFilterUpdateHandler(handler)
+### registerFilterUpdateHandler(handler)
 
-##### Class
+#### Class
 
 `Dossier`
 
-##### Description
+#### Description
 
 Wrapper function for `registerEventHandler` for `EventType.ON_FILTER_UPDATED`.
 
 Equal to `registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler)`.
 
-#### registerPageSwitchHandler(handler)
+### registerPageSwitchHandler(handler)
 
-##### Class
+#### Class
 
 `Dossier`
 
-##### Description
+#### Description
 
 Wrapper function for `registerEventHandler` for `EventType.ON_PAGE_SWITCHED`.
 
@@ -183,43 +579,52 @@ Because the Map visualization can have multiple map layers, the selected graphic
 
 ```json
 {
-  "name": "graphicsSelected",
-  "value": {
-    //primary key for the map visualization
-    "vizKey": "W99",
-    "graphics": [
-      //each object represent the selected graphics info for one layer
-      {
-        //layer key
-        "key": "W99",
-        //layer name
-        "name": "Layer 1",
-        "graphics": [
-          [
-            { "n": "Category", "v": "Electronics" },
-            { "n": "Quarter", "v": "2009 Q4" }
-          ],
-          [
-            { "n": "Category", "v": "Electronics" },
-            { "n": "Quarter", "v": "2009 Q3" }
-          ]
+  //primary key for the map visualization
+  "vizKey": "W99",
+  "graphics": [
+    //each object represent the selected graphics info for one layer
+    {
+      //layer key
+      "key": "W99",
+      //layer name
+      "name": "Layer 1",
+      "graphics": [
+        [
+          { "n": "Category", "v": "Electronics" },
+          { "n": "Quarter", "v": "2009 Q4" }
+        ],
+        [
+          { "n": "Category", "v": "Electronics" },
+          { "n": "Quarter", "v": "2009 Q3" }
         ]
-      },
-      {
-        "key": "W100",
-        "name": "Layer 2",
-        "graphics": [
-          [
-            { "n": "Category", "v": "Books" },
-            { "n": "Year", "v": "2009" }
-          ],
-          [
-            { "n": "Category", "v": "Movies" },
-            { "n": "Year", "v": "2008" }
-          ]
+      ]
+    },
+    {
+      "key": "W100",
+      "name": "Layer 2",
+      "graphics": [
+        [
+          { "n": "Category", "v": "Books" },
+          { "n": "Year", "v": "2009" }
+        ],
+        [
+          { "n": "Category", "v": "Movies" },
+          { "n": "Year", "v": "2008" }
         ]
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
 ```
+
+### registerDossierInstanceIDChangeHandler(handler)
+
+#### Class
+
+`Dossier`
+
+#### Description
+
+Wrapper function for `registerEventHandler` for `EventType.ON_DOSSIER_INSTANCE_ID_CHANGE`.
+
+Equal to `registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierInstanceIdChangeHandler)`.
