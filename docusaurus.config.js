@@ -11,7 +11,7 @@ const config = {
   url: process.env.URL || "https://github.microstrategy.com/",
   baseUrl: process.env.BASE_URL || "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.ico",
   // we will use `undefined` to be intuitive for our case
   trailingSlash: undefined,
@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: process.env.ORGANIZATION_NAME, // Usually your GitHub org/user name.
-  projectName: "embedding-sdk-docs", // Usually your repo name.
+  projectName: `${process.env.REPO_NAME}`, // Usually your repo name.
   deploymentBranch: "gh-pages",
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -44,7 +44,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/embedding-sdk-docs/tree/main`,
+          editUrl: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/${process.env.REPO_NAME}/tree/${process.env.BRANCH_NAME}`,
           // includeCurrentVersion: true,
           // lastVersion: "2021",
           // versions: {
@@ -70,7 +70,7 @@ const config = {
         logo: {
           alt: "MicroStrategy Developer",
           src: "img/dev-docs-logo.png",
-          href: "https://developer.microstrategy.com/",
+          href: "https://microstrategy.github.io/",
         },
         items: [
           {
@@ -95,7 +95,7 @@ const config = {
             position: "right",
           },
           {
-            href: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/embedding-sdk-docs/`,
+            href: `https://${process.env.GITHUB_HOST}/${process.env.ORGANIZATION_NAME}/${process.env.REPO_NAME}/`,
             label: "GitHub",
             position: "right",
           },
@@ -109,29 +109,6 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: "VNIM4BJNXH",
-
-      //   // Public API key: it is safe to commit it
-      //   apiKey: "63b4dee06cd578c7d072be3818dbf145",
-
-      //   indexName: "embedding-sdk-docs",
-
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
-
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   externalUrlRegex: "external\\.com|domain\\.com",
-
-      //   // Optional: Algolia search parameters
-      //   searchParameters: {},
-
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: "search",
-
-      //   //... other Algolia params
-      // },
     }),
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 };
