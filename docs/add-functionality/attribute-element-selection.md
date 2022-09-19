@@ -1,11 +1,11 @@
 ---
-title: Enable the Selection of Attribute Elements
+title: Enable the selection of attribute elements
 description: Attribute element selection within dossiers provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.
 ---
 
 The MicroStrategy 2021 Update 3 release exposes attribute element selection within dossiers. This provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.
 
-## Embedding SDK Functionalities
+## Embedding SDK functionalities
 
 With the visualization element selection feature, the Embedding SDK could do the things below:
 
@@ -19,7 +19,7 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 - Enables the user to register an event handler to notify the parent application when the attribute element selection is changed. Incorporate the ability to register and unregister events for a callback. This enables the parent application to know when the attribute element selection is changed and provide information about the newly selected attribute elements.
 
-## Embedding SDK APIs and Examples
+## Embedding SDK APIs and examples
 
 ### API for attribute element selection in a dossier
 
@@ -29,7 +29,7 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 The Dossier object created using microstrategy.dossier.create(props). See Methods and Properties for an Embedded Dossier for more information.
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Name | Data Type | Description                                                                 | Required? | Sample              |
 | -------------- | --------- | --------------------------------------------------------------------------- | --------- | ------------------- |
@@ -119,7 +119,7 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 `microstrategy.dossier.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See Methods and Properties for an Embedded Dossier for more information about the fields in the props input parameter.
 
@@ -193,7 +193,7 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 `Dossier.getAvailableElements(visKey)`
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Name | Description                                                                              | Data Type | Required? | Default Value | Example |
 | -------------- | ---------------------------------------------------------------------------------------- | --------- | --------- | ------------- | ------- |
@@ -245,11 +245,11 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 In some instances, the available elements may change when visualization data is changed by a user’s manual actions. An onVisualizationElementsChanged event monitors this action and enables the user to update their available elements immediately when the data is changed.
 
-#### Event Name
+#### Event name
 
 `onVisualizationElementsChanged`
 
-#### Callback Format
+#### Callback format
 
 The following code example includes `registerEventHandler`, which is an existing API.
 

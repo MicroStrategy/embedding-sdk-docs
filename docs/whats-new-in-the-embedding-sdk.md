@@ -1,11 +1,11 @@
 ---
-title: What's New in the Embedding SDK
+title: What's new in the Embedding SDK
 description: In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 ---
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2021 Update 4
+## 2021 update 4
 
 - [Enhancements to authoring an embedded dossier](./add-functionality/authoring-library), including:
   - controlling the display of items in the authoring toolbar.
@@ -13,12 +13,12 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
   - support for creating a new dossier.
 - [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#methods-and-properties#sharefeature)
 
-## 2021 Update 3
+## 2021 update 3
 
 - [Author an embedded dossier.](./add-functionality/authoring-library)
 - [Enable the selection of attribute elements.](./add-functionality/attribute-element-selection)
 
-## 2021 Update 2
+## 2021 update 2
 
 - [Interact with panel stacks in dossiers.](./add-functionality/panel-stacks)
 - [Embed a single visualization.](./add-functionality/embed-vis)
@@ -29,11 +29,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [Apply multiple filters after a dossier is rendered.](./add-functionality/filters#apply-multiple-filters-after-the-dossier-is-rendered)
 - [Show or hide the shareDossier function.](./add-functionality/methods-and-properties#sharefeature)
 
-## 2020 Update 3
+## 2020 update 3
 
 [Error handling.](./add-functionality/error-handling)
 
-## 2020 Update 2
+## 2020 update 2
 
 A new method to [remove an embedded dossier](./add-functionality/methods-and-properties#method-for-removing-an-embedded-dossier).
 

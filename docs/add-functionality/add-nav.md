@@ -1,5 +1,5 @@
 ---
-title: Add Navigation
+title: Add navigation
 description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dossier. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 ---
 
@@ -11,7 +11,7 @@ To help you get started, we have provided a [page navigation example in the Embe
 
 :::
 
-## Helper Methods for Navigation
+## Helper methods for navigation
 
 You can use the methods described below to navigate within the dossier. You can get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
@@ -23,7 +23,7 @@ Most of the navigation is performed using methods of the Dossier class, but ther
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Object`
 
@@ -74,7 +74,7 @@ embedDossier.getTableContent();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Promise`
 
@@ -107,7 +107,7 @@ embedDossier.goToPrevPage();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Promise`
 
@@ -140,7 +140,7 @@ embedDossier.goToNextPage();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Promise`
 
@@ -174,7 +174,7 @@ embedDossier.navigateToPage(lastPageOfChapter);
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Chapter`
 
@@ -194,7 +194,7 @@ embedDossier.getCurrentChapter();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Page`
 
@@ -214,7 +214,7 @@ embedDossier.getCurrentPage();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Page`
 
@@ -236,7 +236,7 @@ embedDossier.getPageByNodeKey("K52");
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Chapter[]`
 
@@ -256,7 +256,7 @@ embedDossier.getChapterList();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `Promise([{key:vizKey, name: vizName}])`
 
@@ -276,7 +276,7 @@ embedDossier.getCurrentPageVisualizationList();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `null`
 
@@ -296,7 +296,7 @@ embedDossier.openFilterSummaryBar();
 
 `Dossier`
 
-#### Return Type
+#### Return type
 
 `null`
 
@@ -316,7 +316,7 @@ embedDossier.closeFilterSummaryBar();
 
 `Chapter`
 
-#### Return Type
+#### Return type
 
 `Page[]`
 

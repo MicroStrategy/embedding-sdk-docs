@@ -1,5 +1,5 @@
 ---
-title: Seamless Login Using Identity Token
+title: Seamless login using identity token
 description: How to do seamless login with identity token
 ---
 

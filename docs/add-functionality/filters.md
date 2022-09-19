@@ -1,5 +1,5 @@
 ---
-title: Retrieve and Apply Filters
+title: Retrieve and apply filters
 description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
 ---
 
@@ -40,7 +40,7 @@ To help you get started, we have provided a set of filter examples in the Embedd
 
 :::
 
-## Retrieve Filters After a Dossier is Rendered
+## Retrieve filters after a dossier is rendered
 
 After an embedded dossier has been rendered, you can use the `getFilterList()` method of the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to chapters in the dossier.
 
@@ -61,13 +61,13 @@ After an embedded dossier has been rendered, you can use the `getFilterList()`�
 | `filterDetail` | An object to show the expressions and values that define the filter. They are different for each filter type. |
 | `isExclude`    | A boolean to specify whether to include or exclude the selections for the filter.                             |
 
-### Filter Types and Filter Details
+### Filter types and filter details
 
 The sections below show the filter details for each filter type.
 
-#### metricQualByValue
+#### `metricQualByValue`
 
-- `from/to` or `value` or `null`
+- `from`, `to`, `value`, and `null`
 
   If the filter operator is "between" or "not between", the `filterDetail` will be:
 
@@ -100,7 +100,7 @@ The sections below show the filter details for each filter type.
 
   A `string` that refers to a specific function type used by the metric qualifier filter. Only the `qualByValue` qualify type is supported. Possible values are "equals", "not equals", "greater", "greater equal", "less", "less equal", "between", "not between", "in", "not in", "is null", or "is not null".
 
-#### metricQualByRank
+#### `metricQualByRank`
 
 - `value`
 
@@ -110,7 +110,7 @@ The sections below show the filter details for each filter type.
 
   A `string` that refers to a specific qualify type used by the metric qualifier filter. Qualify types include "highest", "lowest", "highest percent", "lowest percent".
 
-#### metricSliderByValue
+#### `metricSliderByValue`
 
 - `max`
 
@@ -141,7 +141,7 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-#### metricSliderByRank
+#### `metricSliderByRank`
 
 - `max`
 
@@ -171,7 +171,7 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-#### attributeSearchSelector
+#### `attributeSearchSelector`
 
 - `supportMultiple`
 
@@ -189,7 +189,7 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-#### attributeSelector
+#### `attributeSelector`
 
 - `supportMultiple`
 
@@ -207,7 +207,7 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-#### attributeSlider
+#### `attributeSlider`
 
 - `supportMultiple`
 
@@ -217,7 +217,7 @@ The sections below show the filter details for each filter type.
 
   JSON object that specifies the total number of items and selection index of the item(s).
 
-  If "supportMultiple" is true:
+  If `supportMultiple` is true:
 
   ```json
   {
@@ -227,7 +227,7 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-  If "supportMultiple" is false:
+  If `supportMultiple` is false:
 
   ```json
   {
@@ -250,7 +250,7 @@ The sections below show the filter details for each filter type.
   ]
   ```
 
-#### calendar
+#### `calendar`
 
 - `maxDate`
 
@@ -268,7 +268,7 @@ The sections below show the filter details for each filter type.
 
   User-inputted value that specifies the ending of the date range.
 
-### Filter Type Examples
+### Filter type examples
 
 Some examples for the JSON filter object in the return array of `getFilterList()`:
 
@@ -281,7 +281,7 @@ Some examples for the JSON filter object in the return array of `getFilterList
 - [metricSliderByValue](#filter-type-metricsliderbyvalue)
 - [metricSliderByRank](#filter-type-metricsliderbyrank)
 
-#### Filter Type: attributeSelector
+#### Filter type: `attributeSelector`
 
 ```json
 {
@@ -317,7 +317,7 @@ Some examples for the JSON filter object in the return array of `getFilterList
 }
 ```
 
-#### Filter Type: attributeSearchSelector
+#### Filter type: `attributeSearchSelector`
 
 ```json
 {
@@ -343,7 +343,7 @@ Some examples for the JSON filter object in the return array of `getFilterList
 }
 ```
 
-#### Filter Type: attributeSlider
+#### Filter type: `attributeSlider`
 
 ```json
 {
@@ -424,7 +424,7 @@ Some examples for the JSON filter object in the return array of `getFilterList
 }
 ```
 
-#### Filter Type: calendar
+#### Filter type: `calendar`
 
 ```json
 {
@@ -441,7 +441,7 @@ Some examples for the JSON filter object in the return array of `getFilterList
 }
 ```
 
-#### Filter Type: metricQualByValue
+#### Filter type: `metricQualByValue`
 
 ```json
 {
@@ -486,7 +486,7 @@ or
 }
 ```
 
-#### Filter Type: metricQualByRank
+#### Filter type: `metricQualByRank`
 
 ```json
 {
@@ -501,7 +501,7 @@ or
 }
 ```
 
-#### Filter Type: metricSliderByValue
+#### Filter type: `metricSliderByValue`
 
 ```json
 [
@@ -544,7 +544,7 @@ or
 ]
 ```
 
-#### Filter Type: metricSliderByRank
+#### Filter type: `metricSliderByRank`
 
 ```json
 {
@@ -566,7 +566,7 @@ or
 }
 ```
 
-## Apply a Filter After the Dossier is Rendered
+## Apply a filter after the dossier is rendered
 
 After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
 
@@ -574,7 +574,7 @@ After an embedded dossier has been rendered, you can apply different kinds of fi
 
 Select all the attributes for the filter with `key` and apply the change immediately.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -591,7 +591,7 @@ Deselect all the attributes for the filter with `key` and save the change to cli
 
 Since `holdSubmit` is set to true, this change is applied and rendered together with other cached changes in an "Apply Filter request" where `holdSubmit` has a falsy value, typically `filterApplyAll`.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -610,7 +610,7 @@ Use this API for filters that support single selection.
 
 Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get it from the `getFilterList` API. `name` should be the attribute element name, if you provide the name, it is converted to a value (ID).
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -646,7 +646,7 @@ Use this API for filters that support multiple selections.
 
 Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get it from the `getFilterList` API. `name` should be the attribute element name, if you provide the name, it is converted to a value (ID).
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -694,7 +694,7 @@ Use this API for filters that support single selection.
 
 `name` is the attribute element name.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -725,7 +725,7 @@ Use this API for filters that support multiple selection.
 
 `name` is the attribute element name.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -752,7 +752,7 @@ Select single attributes for the filter with `key` using the slider style. Selec
 
 Use this API for filters that support single selection.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -770,7 +770,7 @@ Select multiple attributes for the filter with `key` using the slider style. The
 
 Use this API for filters that support multiple selection.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -792,7 +792,7 @@ If `to` is missing, the dataset end date is used.
 
 The from and to strings should a format recognized by the `Date.parse()` method. This format should beIETF-compliant RFC 2822 or ISO8601.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -819,7 +819,7 @@ Apply a metric qualify by value filter.
 
 `lastValue` – The number in the bottom input box
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -845,7 +845,7 @@ Apply metric qualify by rank filter.
 
 `value` – The rank value
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -876,7 +876,7 @@ The step items are: [0, 10, 20, 30, 40, 50]
 
 You enter a metric range of [13, 26], which is converted to the index of step items [1, 3]. This refers to the value range of 10~30.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -902,7 +902,7 @@ Apply metric slider by rank filter
 
 Since a slider has fixed steps, the metric range you enter is converted to an index of step items.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -927,7 +927,7 @@ No parameters
 
 Clear filter with `key`.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -942,7 +942,7 @@ Clear filter with `key`.
 
 Set filter as include.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -957,7 +957,7 @@ Set filter as include.
 
 Set filter as exclude.
 
-#### Example of `filterJson` Parameter
+#### Example of `filterJson` parameter
 
 ```json
 {
@@ -974,9 +974,9 @@ Applies all changes cached by `holdSubmit`.
 
 No parameters
 
-## Apply Multiple Filters After the Dossier is Rendered
+## Apply multiple filters after the dossier is rendered
 
-This section introduces how you can cache the results of several filters and apply them together. Let"s say you have the following filters:
+This section introduces how you can cache the results of several filters and apply them together. Let's say you have the following filters:
 
 :::note
 
@@ -1000,7 +1000,7 @@ Take the following steps:
 
    The result returned from server is filtered by Books, Movies, and Female.
 
-### Raise Event
+### Raise event
 
 We use events to communicate with the container page. You can listen on these events and provide the `eventHandler` function.
 
@@ -1012,15 +1012,15 @@ We use events to communicate with the container page. You can listen on these ev
 
   Remove the event `handler` on `evtName`.
 
-### Event Name and Event Context
+### Event name and event context
 
 You can get the `EventType` from `microstrategy.dossier.EventType`.
 
-#### onGraphicsSelected
+#### `onGraphicsSelected`
 
 Raised when a user select graphics in the visualization. This event is only raised when the visualization supports "Use as filter."
 
-##### Event Enum
+##### Event enum
 
 `EventType.ON_GRAPHICS_SELECTED`
 
@@ -1028,21 +1028,21 @@ Raised when a user select graphics in the visualization. This event is only rais
 
 Attribute element list for each selected graphic.
 
-##### Usage Example
+##### Usage example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
-##### Event Content Example
+##### Event content example
 
-[See below](#event-content-example-foreventtypeon_graphics_selected)
+[See below](#event-content-example-for-eventtypeon_graphics_selected)
 
-#### onPageSwitched
+#### `onPageSwitched`
 
 Raised when the user switches pages.
 
-##### Event Enum
+##### Event enum
 
 `EventType.ON_PAGE_SWITCHED`
 
@@ -1050,13 +1050,13 @@ Raised when the user switches pages.
 
 Current page path.
 
-##### Usage Example
+##### Usage example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
-##### Event Content Example
+##### Event content example
 
 ```json
 {
@@ -1064,11 +1064,11 @@ embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandle
 }
 ```
 
-#### onFilterUpdated
+#### `onFilterUpdated`
 
 Raised when the user changes the filter.
 
-##### Event Enum
+##### Event enum
 
 `EventType.ON_FILTER_UPDATED`
 
@@ -1076,17 +1076,17 @@ Raised when the user changes the filter.
 
 Changed filter into.
 
-##### Usage Example
+##### Usage example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
-##### Event Content Example
+##### Event content example
 
 same as `getFilterList`.
 
-### Event Content Example for `EventType.ON_GRAPHICS_SELECTED`
+### Event content example for `EventType.ON_GRAPHICS_SELECTED`
 
 ```json
 {

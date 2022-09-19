@@ -1,5 +1,5 @@
 ---
-title: Add Event Handling
+title: Add event handling
 description: Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
 ---
 
@@ -19,7 +19,7 @@ Each supported event is described in the table below. You get the EventType from
 
 ### onGraphicsSelected
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_GRAPHICS_SELECTED`
 
@@ -31,13 +31,13 @@ Raised when a graphic in the visualization is selected. This event is raised onl
 
 Attribute element list for each selected graphic.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -60,7 +60,7 @@ embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelect
 
 ### onPageSwitched
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_PAGE_SWITCHED`
 
@@ -72,13 +72,13 @@ Raised when the page is switched.
 
 Object containing the key of the page you switched to.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -88,7 +88,7 @@ embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandle
 
 ### onFilterUpdated
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_FILTER_UPDATED`
 
@@ -100,13 +100,13 @@ Raised when a filter is changed.
 
 Object containing changed filter information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -143,7 +143,7 @@ embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHand
 
 ### onError
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_ERROR`
 
@@ -155,13 +155,13 @@ Raised when an error occurs.
 
 Error object.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_ERROR, errorHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -177,7 +177,7 @@ embedDossier.registerEventHandler(EventType.ON_ERROR, errorHandler);
 
 ### onSessionError
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_SESSION_ERROR`
 
@@ -189,13 +189,13 @@ Raised when a session error occurs.
 
 Error object.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -211,7 +211,7 @@ embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandle
 
 ### onPageLoaded
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_PAGE_LOADED`
 
@@ -223,7 +223,7 @@ Raised when the page is loaded for the first time.
 
 None
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_LOADED, onPageLoadedHandler);
@@ -231,7 +231,7 @@ embedDossier.registerEventHandler(EventType.ON_PAGE_LOADED, onPageLoadedHandler)
 
 ### onLayoutChanged
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_LAYOUT_CHANGED`
 
@@ -243,13 +243,13 @@ Raised when the layout changes.
 
 Object containing layout changed information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_LAYOUT_CHANGED, layoutChangedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -264,7 +264,7 @@ embedDossier.registerEventHandler(EventType.ON_LAYOUT_CHANGED, layoutChangedHand
 
 ### onPromptAnswered
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_PROMPT_ANSWERED`
 
@@ -276,13 +276,13 @@ Raised when a prompt is answered.
 
 Object containing prompt answers information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PROMPT_ANSWERED, promptAnsweredHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -299,7 +299,7 @@ embedDossier.registerEventHandler(EventType.ON_PROMPT_ANSWERED, promptAnsweredHa
 
 ### onPromptLoaded
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_PROMPT_LOADED`
 
@@ -311,7 +311,7 @@ Raised when a prompt is loaded.
 
 None
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PROMPT_LOADED, promptLoadedHandler);
@@ -319,7 +319,7 @@ embedDossier.registerEventHandler(EventType.ON_PROMPT_LOADED, promptLoadedHandle
 
 ### onVizSelectionChanged
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_VIZ_SELECTION_CHANGED`
 
@@ -331,13 +331,13 @@ Raised when a visualization selection is changed. Need visualization selection t
 
 Object containing visualization selection information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_VIZ_SELECTION_CHANGED, vizSelectionChangedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -354,7 +354,7 @@ embedDossier.registerEventHandler(EventType.ON_VIZ_SELECTION_CHANGED, vizSelecti
 
 ### onVisualizationElementsChanged
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_VIZ_ELEMENT_CHANGED`
 
@@ -366,13 +366,13 @@ Raised when a visualization element is changed.
 
 Array of objects containing visualization element changed information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_VIZ_ELEMENT_CHANGED, vizElementChangedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 [
@@ -402,7 +402,7 @@ embedDossier.registerEventHandler(EventType.ON_VIZ_ELEMENT_CHANGED, vizElementCh
 
 ### onVisualizationResized
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_VISUALIZATION_RESIZED`
 
@@ -414,13 +414,13 @@ Raised when a visualization changes size.
 
 Object containing the visualization that changed size information.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResizedChangedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 ```json
 {
@@ -431,7 +431,7 @@ embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResized
 
 ### onDossierInstanceIDChange
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_DOSSIER_INSTANCE_ID_CHANGE`
 
@@ -443,19 +443,19 @@ Raised when the embedded dossier instance id changes.
 
 String of the new instance id.
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierChangedHandler);
 ```
 
-#### Content Example
+#### Content example
 
 "003EB6548141F191CC73308269BB2635"
 
 ### onDossierAuthoringSaved
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_DOSSIER_AUTHORING_SAVED`
 
@@ -467,7 +467,7 @@ Raised when a dossier is saved after authoring or editing.
 
 None
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_SAVED, dossierAuthoringSavedHandler);
@@ -475,7 +475,7 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_SAVED, dossierA
 
 ### onDossierAuthoringClosed
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_DOSSIER_AUTHORING_CLOSED`
 
@@ -487,7 +487,7 @@ Raised when the authoring or edit mode of dossier is closed.
 
 None
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_CLOSED, dossierAuthoringClosedHandler);
@@ -495,7 +495,7 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_CLOSED, dossier
 
 ### onPageRenderFinished
 
-#### Event Enumeration
+#### Event enumeration
 
 `EventType.ON_PAGE_RENDER_FINISHED`
 
@@ -507,13 +507,13 @@ Raised when the page finishes rendering.
 
 None
 
-#### Code Example
+#### Code example
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderFinishedHandler);
 ```
 
-## Event Handlers
+## Event handlers
 
 There are two methods for registering and removing an event handler.
 
@@ -537,7 +537,7 @@ Register the event handler `handler` on `evtName`.
 
 Remove the event handler `handler` on `evtName`.
 
-## Wrapper Functions
+## Wrapper functions
 
 The following wrapper functions make it easy to register event handlers for specific events.
 

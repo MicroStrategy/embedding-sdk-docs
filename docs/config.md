@@ -1,11 +1,11 @@
 ---
-title: Configure Library Server for Embedding
+title: Configure library server for embedding
 description: If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please enable Cross-Origin Resource Sharing (CORS) and allow Cross-Origin Cookies.
 ---
 
 If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please also meet the following requirements.
 
-## Enable Cross-Origin Resource Sharing (CORS)
+## Enable cross-origin resource sharing (CORS)
 
 Cross-Origin Resource Sharing (CORS) provides a way for a web application running in one origin (domain, protocol, and port) to access selected resources from a server in a different origin. A cross-origin HTTP request uses additional HTTP headers to tell the browser to let the web application share resources. For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. This means that when a web application requests HTTP resources from a different origin, the response from the other origin must include the right CORS headers.
 
@@ -40,19 +40,19 @@ Using the Library Admin page is the easiest way to enable CORS for the REST Ser
 
 Alternatively, you can also configure this in MicroStrategy Workstation by [editing the properties of the environment](https://www2.microstrategy.com/producthelp/Current/Workstation/WebHelp/Lang_1033/Content/library_admin_settings.htm#View).
 
-## Allow Cross-Origin Cookies
+## Allow cross-origin cookies
 
 Google Chrome (version 80+) and Microsoft Edge (version 86+) introduced new changes that may impact embedding.
 
 For Embedding SDK to function as expected in a 3rd-party context, it is required to explicitly label session cookies with `SameSite=None; Secure`.
 
-### For MicroStrategy 2021 Update 6 or after
+### For MicroStrategy 2021 update 6 or after
 
 Starting in MicroStrategy 2021 Update 6, you can manage SameSite Cookies for Library in Workstation, by following the steps in [this document](https://www2.microstrategy.com/producthelp/Current/Workstation/WebHelp/Lang_1033/Content/config_samesite_cookies.htm).
 
 ![SameSite Cookie](./images/SameSiteCookie.png)
 
-### For MicroStrategy 2021 Update 5 or before
+### For MicroStrategy 2021 update 5 or before
 
 If you are using MicroStrategy 2021 Update 5 or before, make the following changes on your server instance.
 

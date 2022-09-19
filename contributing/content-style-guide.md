@@ -24,7 +24,7 @@ More information about `markdownlint` could be found [here](https://github.com/D
 
 Use two hashes (##) for the headers to begin, and continue moving down the line (###, ####, etc.) for subsections.
 
-For headers that need an ordered list, e.g., "1. Do something in this step", it is recommended to write it like ### 1. Do something here instead of 1. ### Do something here because this would cause the Table of Contents plugin to show the wrong order.
+For headers that need an ordered list, e.g., "1. Do something in this step", it is recommended to write it like `### Step 1: Do something here`, `### 1. Do something here` or something similar instead of `1. ### Do something here` because this would cause the Table of Contents plugin to show the wrong order.
 
 ## Code blocks
 

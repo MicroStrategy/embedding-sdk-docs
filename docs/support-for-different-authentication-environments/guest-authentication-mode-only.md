@@ -1,5 +1,5 @@
 ---
-title: Use Guest Authentication
+title: Use guest authentication
 description: The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when Guest is the only authentication mode that is enabled.
 ---
 

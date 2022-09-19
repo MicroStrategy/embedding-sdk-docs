@@ -1,17 +1,17 @@
 ---
-title: Use Guest Authentication with Multiple Authentication Modes Enabled
+title: Use guest authentication with multiple authentication modes enabled
 description: The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
 ---
 
 The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
 
-## Set up Library Server
+## Set up library server
 
 Enable Guest and other authentications in MicroStrategy Library Admin.
 
 ![MSTR Library Admin Guest Auth](../images/MstrLibraryAdmin_GuestAuth.png)
 
-## Configure the Example
+## Configure the example
 
 1. A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/1_2_Guest_With_MultiAuth.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
 

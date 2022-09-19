@@ -1,5 +1,5 @@
 ---
-title: Author an Embedded Dossier
+title: Author an embedded dossier
 description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
 ---
 
@@ -11,7 +11,7 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 
 :::
 
-## Embedding SDK Functionalities
+## Embedding SDK functionalities
 
 With the Authoring Library feature, the Embedding SDK could enable the users to the things below:
 
@@ -25,9 +25,9 @@ With the Authoring Library feature, the Embedding SDK could enable the users to 
 
 - Register events to notify the parent application when the dossier is saved or closed.
 
-## Authoring Mode Constraints
+## Authoring mode constraints
 
-### The Availability of Existing Embedding SDK APIs
+### The availability of existing Embedding SDK APIs
 
 In authoring mode, most dossier-related APIs are disabled as they are designed for the consumption dossier instance. The remaining APIs supported in authoring mode are shown below.
 
@@ -54,7 +54,7 @@ The other APIs are disabled in authoring mode. If a disabled API is called in au
 
 To avoid unexpected events, except the newly added events (see the callback event API and example), you cannot receive Embedding SDK events in authoring mode as they are designed for consumption mode.
 
-### Initial Parameters
+### Initial parameters
 
 The props parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
@@ -79,7 +79,7 @@ If you have set values for these fields when setting `dossierRenderingMode = aut
 The fields ["instance", "filters", "visualizationAppearances", "visualizationSelectedElements"] are not allowed to be used when "dossierRenderingMode" is "authoring". Please remove these forbidden fields and try again.
 ```
 
-## Embedding SDK APIs and Examples
+## Embedding SDK APIs and examples
 
 ### API for entering authoring mode or disabling authoring mode in the initial loading
 
@@ -87,7 +87,7 @@ The fields ["instance", "filters", "visualizationAppearances", "visualizationSel
 
 `microstrategy.dossier.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
@@ -140,7 +140,7 @@ This API, similar to the `Dossier.resizeVisualization` API, can ignore the restr
 
 `Dossier.switchToMode(mode)`
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Name | Description                                                                                                                                      | Data Type | Available Values | Default Value |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---------------- | ------------- |
@@ -181,14 +181,14 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 When the Save or Close button is clicked in authoring mode, an event is raised that notifies your application.
 
-#### Event Name
+#### Event name
 
 | Parameter Name           | Trigger                                       |
 | ------------------------ | --------------------------------------------- |
 | onDossierAuthoringSaved  | When the dossier is saved in authoring mode.  |
 | onDossierAuthoringClosed | When the dossier is closed in authoring mode. |
 
-#### Callback Format
+#### Callback format
 
 The following code example includes `registerEventHandler`, which is an existing API.
 
@@ -204,13 +204,13 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 });
 ```
 
-### API for hiding the Edit button
+### API for hiding the edit button
 
 #### Function
 
 `microstrategy.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and Properties](./methods-and-properties) for an Embedded Dossier for more information.
 
@@ -254,7 +254,7 @@ microstrategy.dossier
 
 `microstrategy.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Names                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Data Type | Default Value | Description                                                            | Required? |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------- | ---------------------------------------------------------------------- | --------- |
@@ -310,7 +310,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 `microstrategy.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Names  | Data Type | Default Value | Description                                                                                                                                                                                                                               | Required? |
 | ---------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |

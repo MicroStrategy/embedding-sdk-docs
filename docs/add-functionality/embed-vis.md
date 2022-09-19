@@ -1,5 +1,5 @@
 ---
-title: Embed a Single Visualization
+title: Embed a single visualization
 description: You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
 ---
 
@@ -27,7 +27,7 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 
 :::
 
-## Embedding Workflow
+## Embedding workflow
 
 When initializing a dossier page, you must specify which visualization will be maximized and the visibility of its resize button. When the visualization is resized, whether it's by a manual click or the Embedding SDK, the dossier page raises an event to invoke a callback in your application.
 
@@ -41,7 +41,7 @@ When initializing a dossier page, you must specify which visualization will be m
 
 > The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
 
-#### Input Parameters
+#### Input parameters
 
 | Parameter Name                                                          | Description                                               | Data Type                               | Required? |
 | ----------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------- | --------- |
@@ -86,7 +86,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 `microstrategy.dossier.create(props)`
 
-#### Input Parameters
+#### Input parameters
 
 The `props` parameter contains several fields. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
 
@@ -138,13 +138,13 @@ microstrategy.dossier
 
 When a user manually clicks the resize button for a visualization, an event is raised that notifies your application.
 
-#### Event Name
+#### Event name
 
 `Dossier.onVisualizationResized`
 
 > The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
 
-#### Callback Format
+#### Callback format
 
 In the example below, `registerEventHandler` is an existing API:
 
@@ -162,7 +162,7 @@ in which the `resizedVisualization` callback parameter uses the following form
 | `resizedVisualization` | The resized visualization information, similar to:<pre>{<br/> visualizationKey: "string",<br/> size: "maximized" <br/>}<br/></pre> `size` is `normal` or `maximized`. | Object    | <br/><pre>{<br/> visualizationKey: "K52",<br/> size: "maximized"<br/>}</pre> |
 |                        |                                                                                                                                                                       |           |                                                                              |
 
-## API Errors
+## API errors
 
 ---
 

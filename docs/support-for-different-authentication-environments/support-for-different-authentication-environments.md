@@ -1,5 +1,5 @@
 ---
-title: Support for Different Authentication Environments
+title: Support for different authentication environments
 description: When you embed a dossier in an application, you want it to display as easily and quickly as possible. This can mean seamlessly, without requiring that the user enter credentials at all, or simply scanning a QR code by integrating with Badge. The code you write to achieve this depends on how authentication is configured for the environment where the embedded dossier is hosted. Samples or sample code are provided for different authentication environments.
 ---
 

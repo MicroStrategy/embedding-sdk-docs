@@ -1,5 +1,5 @@
 ---
-title: Interact with Panel Stacks
+title: Interact with panel stacks
 description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dossier to represent data in multiple ways. MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
 ---
 
@@ -17,7 +17,7 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 
 :::
 
-## Embedding Behavior Details
+## Embedding behavior details
 
 1. Develop a JavaScript function call to support programmatic pagination through a given panel stack. This approach is similar to what is currently done for page navigation. This involves the following:
    1. Go to a specific panel, based on the panel identifier (key)
@@ -28,7 +28,7 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 1. Use hooks to interact or switch to the selected panel. This should work in both situations where a separate panel selector exists and when a normal panel selector exists in the panel header.
 1. Incorporate the ability to register and unregister events for callback. This enables the parent application to know when a panel stack is switched and provide information about the new panel stack.
 
-## Embedding Workflow
+## Embedding workflow
 
 ![panel stack workflow](../images/panel_stack_workflow.png)
 
@@ -38,7 +38,7 @@ To help you get started, we have provided an [example in the Embedding SDK Playg
 
 `Dossier.getCurrentPagePanelStacks()`
 
-#### Input Parameters
+#### Input parameters
 
 none
 
@@ -132,7 +132,7 @@ The `Dossier` object is created using `microstrategy.dossier.create(props)`. 
 
 :::
 
-#### Input Parameters
+#### Input parameters
 
 - `panelKey`
 
@@ -264,60 +264,60 @@ in which the data format of selectedVis is similar to:
 }
 ```
 
-## Embedding SDK Errors
+## Embedding SDK errors
 
 Since you cannot set the callback parameters, it's impossible for these parameters to produce errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in turn returns an error object in rejected cases. The possible errors are shown below.
 
 ### Dossier.getCurrentPagePanelStacks()
 
-#### Error Case: The API was called while the page was still loading
+#### Error case: The API was called while the page was still loading
 
-##### Error Handler Callback Parameter
+##### Error handler callback parameter
 
 `Error Object`
 
-##### Error Message
+##### Error message
 
 You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.
 
 ### Dossier.switchPanel(panelKey)
 
-#### Error Case: The panelKey is missing
+#### Error case: The panelKey is missing
 
-##### Error Handler Callback Parameter
+##### Error handler callback parameter
 
 N/A
 
-##### Error Message
+##### Error message
 
 The panel key can not be empty!
 
-#### Error Case: The panelKey is invalid. It does not exist or it is not in the current page
+#### Error case: The panelKey is invalid. It does not exist or it is not in the current page
 
-##### Error Handler Callback Parameter
+##### Error handler callback parameter
 
 N/A
 
-##### Error Message
+##### Error message
 
 There isn’t a panel whose key is `${panelKey}` in the current page and selected panels. Please check whether your input parameter of `switchPanel` function is correct.
 
-#### Error Case: The API was called while the page was still loading and users cannot switch panels by manually clicking on them
+#### Error case: The API was called while the page was still loading and users cannot switch panels by manually clicking on them
 
-##### Error Handler Callback Parameter
+##### Error handler callback parameter
 
 N/A
 
-##### Error Message
+##### Error message
 
 You couldn’t switch a panel when the dossier is busy for loading data. Please wait for a while...
 
-#### Error Case: REST API error
+#### Error case: REST API error
 
-##### Error Handler Callback Parameter
+##### Error handler callback parameter
 
 N/A
 
-##### Error Message
+##### Error message
 
 The manipulation API has encountered an error when switching to panel `${panelKey}`. Please try again later.

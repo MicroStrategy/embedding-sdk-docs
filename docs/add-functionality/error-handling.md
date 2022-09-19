@@ -1,5 +1,5 @@
 ---
-title: Error Handling
+title: Error handling
 description: MicroStrategy provides custom error handling in two stages, during dossier creation and after dossier creation.
 ---
 
@@ -11,9 +11,9 @@ MicroStrategy provides custom error handling for these kinds of pop-up errors in
 
 MicroStrategy also provides session error handling for session errors in two stages. Because the handling method of the session error is different from other errors, we don't use the custom error handling in this case.
 
-## Custom Error Handling
+## Custom error handling
 
-### Custom Error Handling During Dossier Creation
+### Custom error handling during dossier creation
 
 The error handler used during dossier creation in microstrategy.dossier.create is implemented by default. The error handler is executed when the error occurs and you can get details of the error in the customErrorHandler parameter.
 
@@ -35,7 +35,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### Custom Error Handling After Dossier Creation
+### Custom error handling after dossier creation
 
 You can also provide error handling after the dossier is created. The error handler is executed when the error occurs and you can get details of the error in the `customErrorHandler` parameter.
 
@@ -67,7 +67,7 @@ microstrategy.dossier
   });
 ```
 
-## Session Error Handling
+## Session error handling
 
 When the session expiration error occurs:
 
@@ -80,7 +80,7 @@ The `sessionErrorHandler` created during dossier creation will not be deleted af
 
 There can be only one `sessionErrorHandler` function at the same time, whether during dossier creation or after dossier creation. So if you want to add a new `sessionErrorHandler`, you should use `removeSessionErrorhandler()` to remove the existing `sessionErrorHandler` first.
 
-### Session Error Handling During Dossier Creation
+### Session error handling during dossier creation
 
 The session error handler is executed when the error occurs and you can get details of the error in the `sessionErrorHandler` parameter.
 
@@ -94,7 +94,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### Session Error Handling After Dossier Creation
+### Session error handling after dossier creation
 
 You can also provide a session error handler after the dossier is created. The session error handler is executed when the session expiration error occurs and you can get details of the error in the `sessionErrorHandler` parameter.
 

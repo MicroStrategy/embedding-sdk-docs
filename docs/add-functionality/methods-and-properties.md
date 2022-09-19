@@ -1,5 +1,5 @@
 ---
-title: Methods and Properties for an Embedded Dossier
+title: Methods and properties for an embedded dossier
 description: When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 ---
 
@@ -19,7 +19,7 @@ This example is provided as an HTML file, which must be hosted on a web server.
 
 This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the URL (specified by the `url` property) where the dossier to be embedded is located.
 
-#### Return Value
+#### Return value
 
 This method returns a promise, which is resolved when the dossier instance is created.
 
@@ -29,7 +29,7 @@ The `props` parameter is explained in [Properties](#properties).
 
 ## Properties
 
-### placeholder
+### `placeholder`
 
 The `placeholder` property refers to the DOM object of the container `<div>`.
 
@@ -37,11 +37,11 @@ The `placeholder` property refers to the DOM object of the container `<div>`.
 
 Yes
 
-#### Default Value
+#### Default value
 
 No
 
-### url, serverURL, applicationID, objectID, and pageKey
+### `url`, `serverURL`, `applicationID`, `objectID`, and `pageKey`
 
 The `url` property refers to the full URL of the dossier to be embedded. There are two ways to configure the URL to embed a dossier:
 
@@ -55,7 +55,7 @@ One of the following is required:
 - `url` is required.
 - `serverURL`, `applicationID`, and `objectID` are required, while `pageKey` is optional.
 
-#### Default Value
+#### Default value
 
 No
 
@@ -92,7 +92,7 @@ The `containerHeight` property sets the height of the placeholder.
 
 No
 
-#### Default Value
+#### Default value
 
 `600px`
 
@@ -107,7 +107,7 @@ The `containerWidth` property sets the width of the placeholder.
 
 No
 
-#### Default Value
+#### Default value
 
 `800px`
 
@@ -122,7 +122,7 @@ The `customAuthenticationType` property specifies the token type returned by the
 
 No
 
-#### Default Value
+#### Default value
 
 `CustomAuthenticationType.IDENTITY_TOKEN`
 
@@ -136,7 +136,7 @@ Manipulations are not affected by this property. They persist in the same way as
 
 No
 
-#### Default Value
+#### Default value
 
 `true`
 
@@ -153,7 +153,7 @@ The `dockedComment` object is used to configure the comments panel on the Dossie
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -189,7 +189,7 @@ The `dockedFilter` object is used to configure the filter panel on the Dossier p
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -226,7 +226,7 @@ The `dockedTOC` object is used to configure the Table of Contents (TOC) panel on
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -258,7 +258,7 @@ The `dossierFeature` object is used to customize the dossier feature on the Doss
 
 No
 
-#### Default Value
+#### Default value
 
 If this object is not specified, the MicroStrategy Library default behavior is used.
 
@@ -284,7 +284,7 @@ Use `enableCollaboration` property to enable or disable collaboration-related co
 
 No
 
-#### Default Value
+#### Default value
 
 `true`
 
@@ -308,7 +308,7 @@ The `enableCustomAuthentication` property specifies whether custom authenticatio
 
 No
 
-#### Default Value
+#### Default value
 
 `false`
 
@@ -324,7 +324,7 @@ When this is set to `true`, the placeholder is adjusted to fit the width of the 
 
 No
 
-#### Default Value
+#### Default value
 
 `false`
 
@@ -340,7 +340,7 @@ Use this property to customize the filter functionality on the page. All types o
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -360,7 +360,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### filters
+### Filters
 
 Use the `filters` object to apply attribute selection or attribute search filters during the execution of a dossier. It supports passing multiple filter definitions with multiple selectors.
 
@@ -388,7 +388,7 @@ Filter Format:
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -465,7 +465,7 @@ The `getLoginToken` property specifies a function that returns a promise, which 
 
 No
 
-#### Default Value
+#### Default value
 
 See the sample code in the next column for the default implementation of this function.
 
@@ -502,7 +502,7 @@ microstrategy.dossier.create({
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to provide an identity token with `getLoginToken` function.
 
-### instance
+### Instance
 
 Use this `instance` object to specify a dossier instance for the embedded dossier. If you would like to make some manipulation to the dossier before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a dossier instance.
 
@@ -515,7 +515,7 @@ Use this `instance` object to specify a dossier instance for the embedded dossie
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -557,7 +557,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 
 No
 
-#### Default Value
+#### Default value
 
 - If `navigationBar` is `null`, the navigation bar is hidden by default.
 - If `navigationBar` is not `null`, the default values of its properties take effect.
@@ -603,7 +603,7 @@ Use the `optionsFeature` object to customize the Options feature on the page. Al
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -644,7 +644,7 @@ Use the `shareFeature` object to customize the Share features on the page. All d
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -679,7 +679,7 @@ This property is supported on the dossier and login pages, but not the Library p
 
 No
 
-#### Default Value
+#### Default value
 
 `false`
 
@@ -707,7 +707,7 @@ Use this property to customize the Table of Contents (TOC) feature on the page.
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -738,7 +738,7 @@ Use this property to customize the message features on the UI. If `disableNotifi
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -774,7 +774,7 @@ If the welcome tutorial is enabled, the Library tutorial is also automatically e
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
@@ -821,17 +821,17 @@ Format:
 
 No
 
-#### Default Value
+#### Default value
 
 `null`
 
 No visualization needs to be maximized or restored during initial loading.
 
-### authoring
+### Authoring
 
 The `authoring` object controls the dossier interface in authoring mode. See [Author a Embedded Dossier](./authoring-library#api-for-controlling-the-authoring-ui) for details.
 
-## Method for Removing an Embedded Dossier
+## Method for removing an embedded dossier
 
 ### microstrategy.dossier.destroy(config)
 
@@ -843,7 +843,7 @@ The config parameter:
 
 This method removes the embedded dossier in the same placeholder you used when calling `microstrategy.dossier.create`. The `placeholder` refers to the DOM object of the container `<div>`.
 
-#### Return Value
+#### Return value
 
 `null`
 

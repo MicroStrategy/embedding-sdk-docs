@@ -1,5 +1,5 @@
 ---
-title: More Examples
+title: More examples
 description: There are examples hosted on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/), from the simple example to showcase one specific feature of Embedding SDK to more complicated application with a lot of integration with MicroStrategy's REST API and third-party SDK.
 ---
 
