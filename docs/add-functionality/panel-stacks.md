@@ -128,7 +128,7 @@ In which the callback parameters are:
 
 :::tip
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](https://www2.microstrategy.com/producthelp/Current/EmbeddingSDK/Content/topics/dossier_properties.htm) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
 
 :::
 

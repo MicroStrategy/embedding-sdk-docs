@@ -7,11 +7,11 @@ When you embed a MicroStrategy dossier in your application, you can provide a se
 
 For example, assume that a user is already authenticated with a third-party server and this 3rd-party server is managing the user credentials so that it can authenticate with other applications on the user's behalf. (The third-party server is responsible for securing the data and initiating authentication on HTTPS.) If a user has already logged into MicroStrategy Web, you can also get an identity token using MicroStrategy Task API.
 
-MicroStrategy Embedding SDK supports [identity token](../add-functionality/methods-and-properties#customauthenticationtype) as a custom authentication type.
+MicroStrategy Embedding SDK supports [identity token](../add-functionality/methods-and-properties.md#customauthenticationtype) as a custom authentication type.
 
 The authentication workflow is the following:
 
-![Seamless Login](../images/seamless_login.png)
+![Seamless login](../images/seamless_login.png)
 
 1. The third-party application server logs in, invoking the REST API login endpoint (`POST /api/auth/login`) and providing the user's credential information.
 1. Once the user is logged in, the identity token can be retrieved with the authorization token, using `POST /api/auth/identityToken`. The MicroStrategy Library Server returns an identity token to the caller in the response header. The identity token has a very short duration.

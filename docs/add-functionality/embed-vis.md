@@ -39,19 +39,15 @@ When initializing a dossier page, you must specify which visualization will be m
 
 `Dossier.changeVisualizationSize(props)`
 
-> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
 
 #### Input parameters
 
-| Parameter Name                                                          | Description                                               | Data Type                               | Required? |
-| ----------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------- | --------- |
-| `props.visualizationKey`                                                | The visualization node key entered by you or from         |                                         |           |
-| the result of `getCurrentPageVisualizationList`.                        | String                                                    | Yes                                     |           |
-| `props.size`                                                            | The visualization sizing of `normal` or `maximized`. If a |                                         |           |
-| string is not provided, the visualization size remains the same.        | String                                                    | No                                      |           |
-|                                                                         | `props.resizeButtonVisible`                               | Determines whether the resize button is |           |
-| visible. If a Boolean is not provided, the visibility remains the same. |                                                           |                                         |           |
-| Boolean                                                                 | No                                                        |                                         |           |
+| Parameter Name              | Description                                                                                                                | Data Type | Required? |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | --- |
+| `props.visualizationKey`    | The visualization node key entered by you or from the result of `getCurrentPageVisualizationList`.                         | String    | Yes       |     |
+| `props.size`                | The visualization sizing of `normal` or `maximized`. If a string is not provided, the visualization size remains the same. | String    | No        |     |
+| `props.resizeButtonVisible` | Determines whether the resize button is visible. If a Boolean is not provided, the visibility remains the same.            | Boolean   | No        |
 
 #### Response
 
@@ -78,7 +74,6 @@ Since the target state is specified in the API parameters, the callback paramete
 | Parameter Name | Data Type    | Example                           | Comments                                            |
 | -------------- | ------------ | --------------------------------- | --------------------------------------------------- |
 | `error`        | Error Object | `new Error("invalid operation!")` | See [API Errors](#api-errors) for more information. |
-|                |              |                                   |                                                     |
 
 ### 2. Embed the dossier with a single visualization maximized
 
@@ -88,14 +83,13 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Input parameters
 
-The `props` parameter contains several fields. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
+The `props` parameter contains several fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
 
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
 | `props.visualizationAppearances[i].visualizationKey`    | The visualization node key input by you.                                                                        | String    | Yes       | N/A           |
 | `props.visualizationAppearances[i].size`                | Set to `normal` or `maximized`.                                                                                 | String    | No        | N/A           |
 | `props.visualizationAppearances[i].resizeButtonVisible` | Determines whether the resize button is visible. If a Boolean is not provided, the visibility remains the same. | Boolean   | No        | N/A           |
-|                                                         |                                                                                                                 |           |           |               |
 
 Example:
 
@@ -142,7 +136,7 @@ When a user manually clicks the resize button for a visualization, an event is r
 
 `Dossier.onVisualizationResized`
 
-> The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and Properties for an Embedded Dossier](./methods-and-properties) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
 
 #### Callback format
 
@@ -160,7 +154,6 @@ in which the `resizedVisualization` callback parameter uses the following form
 | Parameter Name         | Description                                                                                                                                                           | Data Type | Sample                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------- |
 | `resizedVisualization` | The resized visualization information, similar to:<pre>{<br/> visualizationKey: "string",<br/> size: "maximized" <br/>}<br/></pre> `size` is `normal` or `maximized`. | Object    | <br/><pre>{<br/> visualizationKey: "K52",<br/> size: "maximized"<br/>}</pre> |
-|                        |                                                                                                                                                                       |           |                                                                              |
 
 ## API errors
 
@@ -181,4 +174,3 @@ Since you cannot set the callback parameters, it's impossible for these paramete
 |                                                                                | `size` is not a valid value.                                                                                                                                |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].size should match pattern "(^(maximized\|normal)$)"                                                 |
 |                                                                                | `resizeButtonVisible` isn’t a valid value.                                                                                                                  |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].resizeButtonVisible should be boolean                                                               |
 |                                                                                | The value of `visualizationKey` is not a valid visualization key or it is not in the current page or panel stack .                                          |                                  | There isn’t a visualization whose key is '${vizAppearance.visualizationKey}' in the current page. Please check whether your input 'visualizationKey' is correct.                                  |
-|                                                                                |                                                                                                                                                             |                                  |                                                                                                                                                                                                   |

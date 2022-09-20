@@ -49,7 +49,7 @@ There are three main ways to add your new doc into the sidebar:
 {
   "type": "doc",
   "id": "whats-new",
-  "label": "What's New"
+  "label": "What's new"
 }
 ```
 
@@ -62,7 +62,7 @@ There are three main ways to add your new doc into the sidebar:
     "type": "doc",
     "id": "support-for-different-authentication-environments/support-for-different-authentication-environments"
   },
-  "label": "Support for Different Authentication Environments",
+  "label": "Support for different authentication environments",
   "items": ["support-for-different-authentication-environments/guest-authentication-mode-only", "support-for-different-authentication-environments/multiple-modes", "support-for-different-authentication-environments/authentication-saml", "support-for-different-authentication-environments/authentication-custom"]
 }
 ```

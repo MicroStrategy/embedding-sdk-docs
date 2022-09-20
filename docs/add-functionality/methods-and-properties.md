@@ -799,7 +799,7 @@ microstrategy.dossier.create({
 
 ### visualizationAppearances
 
-If you want to show just one visualization on the dossier page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a Single Visualization](./embed-vis) for more information about the feature.
+If you want to show just one visualization on the dossier page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a single visualization](./embed-vis.md) for more information about the feature.
 
 Format:
 
@@ -829,7 +829,7 @@ No visualization needs to be maximized or restored during initial loading.
 
 ### Authoring
 
-The `authoring` object controls the dossier interface in authoring mode. See [Author a Embedded Dossier](./authoring-library#api-for-controlling-the-authoring-ui) for details.
+The `authoring` object controls the dossier interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
 
 ## Method for removing an embedded dossier
 

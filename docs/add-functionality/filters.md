@@ -7,7 +7,7 @@ You can apply filters both when an embedded dossier is being executed and after 
 
 - **Apply filters during execution**
 
-  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties#filters) property.
+  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties.md#filters) property.
 
 - **Apply and retrieve filters after execution**
 

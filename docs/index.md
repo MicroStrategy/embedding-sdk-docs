@@ -18,7 +18,7 @@ There are three basic steps for embedding a dossier.
 
    :::tip
 
-   If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](./config).
+   If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](./config.md).
 
    :::
 
@@ -40,17 +40,17 @@ There are three basic steps for embedding a dossier.
 
    :::tip
 
-   Check out all the [properties](./add-functionality/methods-and-properties#properties) you can set in the `microstrategy.dossier.create(props)` method. You can do many things with the [properties](./add-functionality/methods-and-properties#properties). To name a few, you can set filters, show/hide UI elements, and adjust the size of the embedded dossier.
+   Check out all the [properties](./add-functionality/methods-and-properties.md#properties) you can set in the `microstrategy.dossier.create(props)` method. You can do many things with the [properties](./add-functionality/methods-and-properties.md#properties). To name a few, you can set filters, show/hide UI elements, and adjust the size of the embedded dossier.
 
    :::
 
 To help you get started, we have provided a number of simple applications with sample code and explanations.
 
-- [Support for Different Authentication Environments](./support-for-different-authentication-environments)
+- [Support for different authentication environments](./support-for-different-authentication-environments/support-for-different-authentication-environments.md)
 
   Examples that display an embedded dossier in different authentication environments
 
-- [Add Functionality](./add-functionality)
+- [Add functionality](./add-functionality/add-functionality.md)
 
   Examples that add functionality, such as controlling navigation, retrieving and applying filters, setting properties, and managing events like page changes
 
@@ -58,8 +58,8 @@ To help you get started, we have provided a number of simple applications with s
 
   A playground for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
 
-- [More Embedding SDK Examples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
+- [More Embedding SDK examples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
 
   A collection of examples highlighting functionality and workflows of the Embedding SDK. You can play with the examples with no setup.
 
-To see changes to the Embedding SDK in the current release, refer to [What's New](./whats-new-in-the-embedding-sdk).
+To see changes to the Embedding SDK in the current release, refer to [What's new](./whats-new-in-the-embedding-sdk.md).

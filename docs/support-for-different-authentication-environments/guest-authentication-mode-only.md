@@ -56,7 +56,7 @@ Because this simple embedding example uses a dossier on the demo server, you are
 
 **To customize the example to use your MicroStrategy Library Server**:
 
-1. Decide where you want to have the HTML page. If the domain is different from your MicroStrategy Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Requests (CORS)](../config).
+1. Decide where you want to have the HTML page. If the domain is different from your MicroStrategy Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](../config.md).
 
 1. In an IDE, text editor or [Embedding SDK Playground](https://microstrategy.github.io/playground/), open the HTML file and configure it to reflect the values in your environment:
 
@@ -84,7 +84,7 @@ Because this simple embedding example uses a dossier on the demo server, you are
 
 1. Configure your environment so that only guest authentication is enabled.
 
-   If guest authentication is the only authentication mode that is enabled, the application will open and the dossier will be displayed without asking for credentials. However, if multiple authentication modes are enabled, the dossier will not be displayed seamlessly. You need to add additional code that enables guest authentication. [Using guest authentication when there are multiple authentication modes](./multiple-modes) provides a simple example and an explanation of how to add the necessary code.
+   If guest authentication is the only authentication mode that is enabled, the application will open and the dossier will be displayed without asking for credentials. However, if multiple authentication modes are enabled, the dossier will not be displayed seamlessly. You need to add additional code that enables guest authentication. [Using guest authentication when there are multiple authentication modes](./multiple-modes.md) provides a simple example and an explanation of how to add the necessary code.
 
 1. Open the page URL in a browser or run it in [Embedding SDK Playground](https://microstrategy.github.io/playground/). The embedded dossier should be displayed in the application.
 
