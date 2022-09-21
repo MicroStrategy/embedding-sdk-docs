@@ -1,0 +1,53 @@
+---
+title: What's new in the Embedding SDK
+description: In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
+---
+
+In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
+
+## 2021 update 4
+
+- [Enhancements to authoring an embedded dossier](./add-functionality/authoring-library.md), including:
+  - controlling the display of items in the authoring toolbar.
+  - controlling the display of authoring panels.
+  - support for creating a new dossier.
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#methods-and-properties#sharefeature)
+
+## 2021 update 3
+
+- [Author an embedded dossier.](./add-functionality/authoring-library.md)
+- [Enable the selection of attribute elements.](./add-functionality/attribute-element-selection.md)
+
+## 2021 update 2
+
+- [Interact with panel stacks in dossiers.](./add-functionality/panel-stacks.md)
+- [Embed a single visualization.](./add-functionality/embed-vis.md)
+
+## 2021
+
+- [More updates in error handling.](./add-functionality/error-handling.md)
+- [Apply multiple filters after a dossier is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
+- [Show or hide the shareDossier function.](./add-functionality/methods-and-properties.md#sharefeature)
+
+## 2020 update 3
+
+[Error handling.](./add-functionality/error-handling.md)
+
+## 2020 update 2
+
+A new method to [remove an embedded dossier](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+
+## 2019
+
+A new property, [dossierFeature](./add-functionality/methods-and-properties.md#dossierfeature), allows you to customize dossier features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
+
+## 11.0
+
+- A new property allows you to [pass filters during dossier execution](./add-functionality/methods-and-properties.md#filters).
+- New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dossier.
+
+## 10.9
+
+The Embedding SDK was introduced in 10.9.
+
+- This new SDK was added to the MicroStrategy Developer Library to support embedding MicroStrategy content in third-party web applications or portals.
