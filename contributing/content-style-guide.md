@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-file MD041 -->
 
-# Content Styling Guidelines
+# Content styling guidelines
 
 We try to keep our styling consistent throughout the documentation. Please follow the guidelines to help us provide better documentation.
 
@@ -19,6 +19,14 @@ To automatically fix these violations when saving a Markdown document, configure
 ```
 
 More information about `markdownlint` could be found [here](https://github.com/DavidAnson/markdownlint#rules--aliases).
+
+## Front Matter
+
+- `title` is the `h1` heading that shows on the HTML page.
+- `sidebar_label` is the title you want to show in the sidebar navigation.
+- `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
+
+Note: Do not use backticks in front matter since they won't be rendered the same as markdown content.
 
 ## Headers
 
@@ -41,6 +49,10 @@ For headers that need an ordered list, e.g., "1. Do something in this step", it 
 
   ```js
   JavaScript code
+  ```
+
+  ```javascript
+  JavaScript code or JavaScript object. We skip lint for this type of code block. We use it for incomplete JavaScript code, such as JavaScript object.
   ```
 
   ```xml
@@ -74,7 +86,7 @@ Supported languages are listed [here](https://prismjs.com/#languages-list).
   [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/#!/Authentication/postLogin)
   ```
 
-## Ordered List
+## Ordered list
 
 It is enforced to use `1.` only for all ordered lists for ease of maintenance.
 
@@ -86,20 +98,26 @@ The list below shows the usage of emojis in our Docs site:
 
 - `:heavy_check_mark:` for the checkmark in the table.
 
-## Links and Images
+## Links and images
 
-- Make sure you check that all links and images are still functional after adding them into Markdown. Some of the REST API links have spaces in them, which don’t work in Markdown and should be replaced by a `%20` or the appropriate generated characters (you can use inspect on the page to identify the id/anchor link).
+- Make sure you check that all links and images are still functional after adding them into Markdown. Some of the links have spaces in them, which don’t work in Markdown and should be replaced by a `%20` or the appropriate generated characters (you can use inspect on the page to identify the id/anchor link).
 
-- Images in the `/images` folder are linked relatively. The pathway back can be found by looking at the permalink for the page and backing out until the root folder is reached. For example, if you want to access the images from `content/common-workflows.md`, you need to access the images like this: `![ALT TEXT](./images/IMAGE-NAME)`, and if you want to access the images from `content/common-workflows/authentication.md`, you need to access the images like this: `![ALT TEXT](../images/IMAGE-NAME)`.
+- Images in the `/images` folder are linked relatively. The pathway back can be found by looking at the permalink for the page and backing out until the root folder is reached. For example, if you want to access the images from `playground.md`, you need to access the images like this: `![ALT TEXT](./images/IMAGE-NAME)`, and if you want to access the images from `add-functionality/add-event.md`, you need to access the images like this: `![ALT TEXT](../images/IMAGE-NAME)`.
 
-- Endpoints for REST API should have links if possible.
+- Endpoints for REST API calls should have links if possible.
 
 ## Naming conventions
 
-- All folder and file names should have **dashes** (`-`) between **lowercase** letters. There should be no spaces in folder or file names.
-- Permalinks for nested files or folders should recognize the nesting; that is, the permalink should be an absolute path from content and include all the folders like `/common-workflows/manage-prompt-objects/prompt-types.html`.
-- Lowercase letters only.
-- If the page is the root page of the folder, please don’t include the folder name in the permalink, e.g., Use `/common-workflows/filter-data.html` instead of `/common-workflows/filter-data/filter-data.html`.
+- Folders and files
+
+  - All folder and file names should have **dashes** (`-`) between **lowercase** letters. There should be no spaces in folder or file names.
+  - Permalinks for nested files or folders should recognize the nesting; that is, the permalink should be an relative path from the current folder. For instance, to access `add-functionality/add-event.md` from `add-functionality/add-functionality.md` you would use the link `./add-event.md`.
+  - Markdown links should have a `.md` ending to them like `./add-functionality/add-functionality.md`.
+
+- Titles, sidebar labels, and headers
+
+  - These should use **sentence case**. For example, prefer "This is the title from MicroStrategy" over "This Is The Title From MicroStrategy".
+  - `sidebar_label` should only be used if you want a different title in the sidebar than the `title` in front matter. (Note: For folders, `label` in sidebars.js takes priority over `sidebar_label`)
 
 ## Tables
 

@@ -28,7 +28,7 @@ const sidebars = {
         type: "doc",
         id: "support-for-different-authentication-environments/support-for-different-authentication-environments",
       },
-      label: "Support for Different Authentication Environments",
+      label: "Support for different authentication environments",
       items: [
         "support-for-different-authentication-environments/guest-authentication-mode-only",
         "support-for-different-authentication-environments/multiple-modes",
@@ -42,7 +42,7 @@ const sidebars = {
         type: "doc",
         id: "add-functionality/add-functionality",
       },
-      label: "Add Functionality to an Embedded Dossier",
+      label: "Add functionality to an embedded dossier",
       items: [
         "add-functionality/methods-and-properties",
         "add-functionality/add-nav",
@@ -53,6 +53,18 @@ const sidebars = {
         "add-functionality/embed-vis",
         "add-functionality/attribute-element-selection",
         "add-functionality/authoring-library",
+      ],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-library-main-page/embed-library-main-page",
+      },
+      label: "Embed MicroStrategy Library home page",
+      items: [
+        "embed-library-main-page/embed-library-properties",
+        "embed-library-main-page/library-page-apis",
       ],
     },
     "samples",
