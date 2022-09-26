@@ -5,20 +5,27 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2021 update 4
+## 2021 Update 7
 
-- [Enhancements to authoring an embedded dossier](./add-functionality/authoring-library.md), including:
-  - controlling the display of items in the authoring toolbar.
-  - controlling the display of authoring panels.
-  - support for creating a new dossier.
-- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties#methods-and-properties#sharefeature)
+[Embed MicroStrategy Library home page.](./embed-library-main-page/embed-library-main-page.md)
 
-## 2021 update 3
+- Users can embed MicroStrategy Library home page and use any child page accessed from the sidebar.
+- Users can control the visibility of the navigation bar and the sidebar of the library home page.
+
+## 2021 Update 4
+
+- [Enhancements to authoring an embedded dossier.](./add-functionality/authoring-library.md)
+  - Control the display of items in the authoring toolbar.
+  - Control the display of authoring panels.
+  - Support for creating a new dossier.
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#methods-and-properties#sharefeature)
+
+## 2021 Update 3
 
 - [Author an embedded dossier.](./add-functionality/authoring-library.md)
 - [Enable the selection of attribute elements.](./add-functionality/attribute-element-selection.md)
 
-## 2021 update 2
+## 2021 Update 2
 
 - [Interact with panel stacks in dossiers.](./add-functionality/panel-stacks.md)
 - [Embed a single visualization.](./add-functionality/embed-vis.md)
@@ -29,11 +36,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [Apply multiple filters after a dossier is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
 - [Show or hide the shareDossier function.](./add-functionality/methods-and-properties.md#sharefeature)
 
-## 2020 update 3
+## 2020 Update 3
 
 [Error handling.](./add-functionality/error-handling.md)
 
-## 2020 update 2
+## 2020 Update 2
 
 A new method to [remove an embedded dossier](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
 

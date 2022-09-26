@@ -18,7 +18,7 @@ overrides:
     - "**/*.md"
     processor: "markdown/markdown"
   - files:
-      - '**/*.md/*.{js,javascript}'
+      - '**/*.md/*.{js}'
     parserOptions:
       ecmaFeatures:
         impliedStrict: true

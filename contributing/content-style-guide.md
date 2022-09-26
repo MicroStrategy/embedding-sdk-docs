@@ -43,6 +43,10 @@ For headers that need an ordered list, e.g., "1. Do something in this step", it 
   JavaScript code
   ```
 
+  ```javascript
+  JavaScript code or JavaScript object. We skip lint for this type of code block. We use it for incomplete JavaScript code, such as JavaScript object.
+  ```
+
   ```xml
   XML code
   ```

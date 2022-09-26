@@ -55,6 +55,18 @@ const sidebars = {
         "add-functionality/authoring-library",
       ],
     },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-library-main-page/embed-library-main-page",
+      },
+      label: "Embed MicroStrategy Library home page",
+      items: [
+        "embed-library-main-page/embed-library-properties",
+        "embed-library-main-page/library-page-apis",
+      ],
+    },
     "samples",
   ],
 };
