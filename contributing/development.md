@@ -41,6 +41,8 @@ We want to keep our documentation consistent in styling. More details could be f
 
   - `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
 
+  Note: Don't use backticks in front matter. The text won't be surrounded by code background effect.
+
 ### Pages ordering on the navigation sidebar and pagination buttons
 
 This is all based on the ordering in `sidebars.js` file.

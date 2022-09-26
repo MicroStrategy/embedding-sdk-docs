@@ -20,6 +20,14 @@ To automatically fix these violations when saving a Markdown document, configure
 
 More information about `markdownlint` could be found [here](https://github.com/DavidAnson/markdownlint#rules--aliases).
 
+## Front Matter
+
+- `title` is the `h1` heading that shows on the HTML page.
+- `sidebar_label` is the title you want to show in the sidebar navigation.
+- `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
+
+Note: Do not use backticks in front matter since they won't be rendered the same as markdown content.
+
 ## Headers
 
 Use two hashes (##) for the headers to begin, and continue moving down the line (###, ####, etc.) for subsections.
@@ -103,10 +111,11 @@ The list below shows the usage of emojis in our Docs site:
 - Folders and files
 
   - All folder and file names should have **dashes** (`-`) between **lowercase** letters. There should be no spaces in folder or file names.
-  - Permalinks for nested files or folders should recognize the nesting; that is, the permalink should be an relative path from the current page. For instance, to access `add-functionality/add-event.md` from `add-functionality/add-functionality.md` you would use the link `./add-event.md`.
+  - Permalinks for nested files or folders should recognize the nesting; that is, the permalink should be an relative path from the current folder. For instance, to access `add-functionality/add-event.md` from `add-functionality/add-functionality.md` you would use the link `./add-event.md`.
   - Markdown links should have a `.md` ending to them like `./add-functionality/add-functionality.md`.
 
 - Titles, sidebar labels, and headers
+
   - These should use **sentence case**. For example, prefer "This is the title from MicroStrategy" over "This Is The Title From MicroStrategy".
   - `sidebar_label` should only be used if you want a different title in the sidebar than the `title` in front matter. (Note: For folders, `label` in sidebars.js takes priority over `sidebar_label`)
 
