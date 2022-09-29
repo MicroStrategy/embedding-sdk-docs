@@ -20,7 +20,7 @@ To automatically fix these violations when saving a Markdown document, configure
 
 More information about `markdownlint` could be found [here](https://github.com/DavidAnson/markdownlint#rules--aliases).
 
-## Front Matter
+## Front matter
 
 - `title` is the `h1` heading that shows on the HTML page.
 - `sidebar_label` is the title you want to show in the sidebar navigation.
