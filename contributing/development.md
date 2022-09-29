@@ -100,6 +100,6 @@ You can also run `yarn lint` before committing to make sure no errors exist.
 
 When you try to commit your changes, `yarn lint:eslint`, `yarn lint:prettier`, and `yarn lint:markdownlint` will be run in sequence. If any error is detected, the commit will fail. You need to follow the error messages and suggestions of changes to fix all the errors before committing them.
 
-## Creating Pull Request
+## Creating pull request
 
 When you finish making changes, and you'd like to propose them for review, fill up the [pull request template](../.github/pull_request_template.md) to open your PR (pull request). You can find more detail on creating a PR in the official GitHub documentation [here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
