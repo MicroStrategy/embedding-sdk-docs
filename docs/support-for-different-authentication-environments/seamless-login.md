@@ -9,6 +9,8 @@ For example, assume that a user is already authenticated with a third-party serv
 
 MicroStrategy Embedding SDK supports [identity token](../add-functionality/methods-and-properties.md#customauthenticationtype) as a custom authentication type.
 
+## Getting identity token from Library Server
+
 The authentication workflow is the following:
 
 ![Seamless login](../images/seamless_login.png)
@@ -21,5 +23,24 @@ The authentication workflow is the following:
 :::tip
 
 A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/3_Use_IdentityToken.html), which shows how to pass the identity token to Embedding SDK. Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
+
+:::
+
+## Getting identity token from MicroStrategy Web
+
+If your user has already logged into MicroStrategy Web, you can get identity token from MicroStrategy Web and use the identity token in Embedding SDK.
+
+The authentication workflow is the following:
+
+![Web Seamless Login](../images/web_seamless_login.jpg)
+
+1. User has already logged into MicroStrategy Web. The client application calls `createIdentityToken` task. `POST /servlet/taskProc` with `taskId=createIdentityToken&taskContentType=json&taskEnv=xhr` in payload. See [Web SDK](https://www2.microstrategy.com/producthelp/Current/WEBSDK/Content/topics/taskinfr/TI_QuickStartGuide_UseTasks.htm) for how to use tasks.
+1. The MicroStrategy Web returns an identity token to the caller in the response body. The identity token has a very short duration.
+1. The client application provides the identity token to the Embedding SDK, which is used for embedding a dossier.
+1. The SDK will exchange the identity token for an authorization token and use the authorization token to communicate with the Library Server in the subsequent requests.
+
+:::tip
+
+You need to enable seamless login between MicroStrategy Web and Library to use this workflow. See [this document](https://www2.microstrategy.com/producthelp/current/InstallConfig/en-us/Content/enable_seamless_login_web_library.htm) for details.
 
 :::
