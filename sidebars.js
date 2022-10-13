@@ -53,6 +53,7 @@ const sidebars = {
         "add-functionality/embed-vis",
         "add-functionality/attribute-element-selection",
         "add-functionality/authoring-library",
+        "add-functionality/use-custom-dossier-link",
       ],
     },
     {
