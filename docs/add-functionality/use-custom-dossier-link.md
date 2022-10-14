@@ -14,7 +14,7 @@ If you set the "Host Web Portal" value to be the URL of the client application, 
 The link in the email would be a url like:
 
 ```url
-http://{hostWebPortal}?mstrLibraryLink=http%3A%2F%2Flibrary%2Ecom%3A8080%2FMicroStrategyLibrary%2Fapp%2F9D8A49D54E04E0BE62C877ACC18A5A0A%2F0627433046E1B80BCE681C87E48F5C28%2Fbookmarks%3Fids%3D77776092475755EE696EEABF94CF3A61
+http://{hostWebPortal}?mstrLibraryLink=https%3A%2F%2Fdemo%2Emicrostrategy%2Ecom%3A8080%2FMicroStrategyLibrary%2Fapp%2F9D8A49D54E04E0BE62C877ACC18A5A0A%2F0627433046E1B80BCE681C87E48F5C28%2Fbookmarks%3Fids%3D77776092475755EE696EEABF94CF3A61
 ```
 
 You can see it's the client application URL, not the embedded dossier URL. However, in this URL, the url-encoded result of the embedded dossier url is still stored in the value of the query parameter `mstrLibraryLink`. In the above case, it's the url-encoded result of
