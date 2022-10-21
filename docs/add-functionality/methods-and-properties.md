@@ -21,11 +21,31 @@ This method creates an iFrame on the web page (in the location specified by the 
 
 #### Return value
 
-This method returns a promise, which is resolved when the dossier instance is created.
+This method returns a promise, which is resolved to a `Dossier` object when the dossier instance is created.
 
 The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
 The `props` parameter is explained in [Properties](#properties).
+
+### Dossier.getDossierInstanceId()
+
+After calling `microstrategy.dossier.create(props)` to embed a dossier and get a `Dossier` object, you can use `Dossier.getDossierInstanceId()` to get the embedded dossier's instance id.
+
+#### Return value
+
+This method returns a promise, which is resolved to the dossier instance id. An example is as below:
+
+#### Sample
+
+```js
+const myDossier = await microstrategy.dossier.create({
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+  placeholder: document.getElementById("embedding-dossier-container"),
+});
+const instanceId = await myDossier.getDossierInstanceId();
+```
+
+The `instanceId` is a unique GUID, which is different each time you embed a dossier into a container.
 
 ## Properties
 
