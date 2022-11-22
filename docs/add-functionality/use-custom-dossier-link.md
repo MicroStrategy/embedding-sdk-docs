@@ -1,5 +1,5 @@
 ---
-title: How to handle dossier link in email
+title: How to handle dossier link in email notifications when sharing content
 description: The client application could get the embed URL from the application settings.
 ---
 
