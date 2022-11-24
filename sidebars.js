@@ -68,6 +68,21 @@ const sidebars = {
         "embed-library-main-page/library-page-apis",
       ],
     },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "native-embedding-architecture/native-embedding-architecture",
+      },
+      label: "The native embedding APIs",
+      items: [
+        "native-embedding-architecture/embed-multiple-viz",
+        "native-embedding-architecture/destroy-multiple-viz",
+        "native-embedding-architecture/embedding-components",
+        "native-embedding-architecture/mstr-environment",
+        "native-embedding-architecture/mstr-dossier",
+      ],
+    },
     "samples",
   ],
 };
