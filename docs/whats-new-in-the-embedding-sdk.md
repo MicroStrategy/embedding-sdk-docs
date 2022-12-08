@@ -34,7 +34,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 - [More updates in error handling.](./add-functionality/error-handling.md)
 - [Apply multiple filters after a dossier is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
-- [Show or hide the shareDossier function.](./add-functionality/methods-and-properties.md#sharefeature)
+- [Show or hide the `shareDossier` function.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2020 Update 3
 

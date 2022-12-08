@@ -5,7 +5,7 @@ description: The example in this topic illustrates how to seamlessly display an 
 
 The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
 
-## Set up library server
+## Set up Library Server
 
 Enable Guest and other authentications in MicroStrategy Library Admin.
 

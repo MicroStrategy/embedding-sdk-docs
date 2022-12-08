@@ -571,7 +571,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `options` - Show or hide the options icon. The default is `true`.
 - `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
-- `edit` - Show or hide the edit icon. The default is `true`.
+- `edit` - Show or hide the edit icon. The default is `false`.
 
 #### Required?
 
@@ -609,6 +609,55 @@ microstrategy.dossier.create({
 });
 ```
 
+### customUi
+
+Use the `customUi` object to customize the UI component visibilities except the dossier consumption and authoring pages. The detailed properties are as below:
+
+- `library` - This field is used to customized the UI components on the MicroStrategy Library home page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuilibrary)
+
+#### Required?
+
+No
+
+#### Default value
+
+`null`
+
+If `customUi` or `customUi.library` is `null`, all the UI components on MicroStrategy Library home page would be visible.
+
+#### Sample
+
+```js
+microstrategy.dossier.create({
+  placeholder: placeholderDiv,
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
+  customUi: {
+    library: {
+      navigationBar: {
+        enabled: true,
+        sortAndFilter: true,
+        title: true,
+        searchBar: true,
+        createNew: {
+          enabled: true,
+        },
+        notifications: true,
+        multiSelect: {
+          enabled: true,
+        },
+        account: {
+          enabled: true,
+        },
+      },
+      sideBar: {
+        enabled: true,
+        show: false,
+      },
+    },
+  },
+});
+```
+
 ### optionsFeature
 
 Use the `optionsFeature` object to customize the Options feature on the page. All detailed properties below are `Boolean`, with `true` as the default value.
@@ -618,6 +667,8 @@ Use the `optionsFeature` object to customize the Options feature on the page. Al
 - `logout` - Show or hide the logout functionality.
 - `manage` - Show or hide manage functionality.
 - `showTutorials` - Show or hide tutorial functionality.
+- `myLibraries` - Show or hide the "My Libraries" functionality.
+- `preferences` - Show or hide the preferences functionality.
 
 #### Required?
 
@@ -643,6 +694,8 @@ microstrategy.dossier.create({
     logout: true,
     manage: false,
     showTutorials: true,
+    myLibraries: true,
+    preferences: false,
   },
 });
 ```
