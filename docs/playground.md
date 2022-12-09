@@ -11,7 +11,7 @@ Start building your application using the [Embedding SDK Playground](https://mic
 
 ![Embedding SDK Playground](./images/embedded-analytics-sandbox.jpeg)
 
-## Examples in Playground
+## Examples in playground
 
 You can view examples in the Embedding SDK Playground by opening the Examples Gallery from "Start Over" button. Please save your work before opening an example.
 

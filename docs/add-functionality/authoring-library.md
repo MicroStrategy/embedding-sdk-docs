@@ -208,7 +208,7 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 
@@ -252,7 +252,7 @@ microstrategy.dossier
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 
@@ -308,7 +308,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 

@@ -1,5 +1,5 @@
 ---
-title: Configure library server for embedding
+title: Configure Library Server for embedding
 description: If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please enable Cross-Origin Resource Sharing (CORS) and allow SameSite cookies.
 ---
 
@@ -46,13 +46,13 @@ Google Chrome (version 80+) and Microsoft Edge (version 86+) introduced new chan
 
 For Embedding SDK to function as expected in a 3rd-party context, it is required to explicitly label session cookies with `SameSite=None; Secure`.
 
-### For MicroStrategy 2021 update 6 or after
+### For MicroStrategy 2021 Update 6 or after
 
 Starting in MicroStrategy 2021 Update 6, you can manage SameSite Cookies for Library in Workstation, by following the steps in [this document](https://www2.microstrategy.com/producthelp/Current/Workstation/WebHelp/Lang_1033/Content/config_samesite_cookies.htm).
 
 ![SameSite Cookie](./images/SameSiteCookie.png)
 
-### For MicroStrategy 2021 update 5 or before
+### For MicroStrategy 2021 Update 5 or before
 
 If you are using MicroStrategy 2021 Update 5 or before, make the following changes on your server instance.
 

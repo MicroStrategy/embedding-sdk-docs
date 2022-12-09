@@ -66,6 +66,7 @@ const sidebars = {
       items: [
         "embed-library-main-page/embed-library-properties",
         "embed-library-main-page/library-page-apis",
+        "embed-library-main-page/embed-custom-ui-on-all-pages",
       ],
     },
     "samples",
