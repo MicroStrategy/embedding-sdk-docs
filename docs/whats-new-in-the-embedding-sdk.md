@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## 2021 Update 8
+
+- [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
+- [Ability to customize Library home page from embedding dossier page](./add-functionality/methods-and-properties.md#customui)
+
 ## 2021 Update 7
 
 [Embed MicroStrategy Library home page.](./embed-library-main-page/embed-library-main-page.md)
