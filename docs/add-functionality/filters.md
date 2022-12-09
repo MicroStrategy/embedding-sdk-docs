@@ -13,15 +13,15 @@ You can apply filters both when an embedded dossier is being executed and after 
 
   Once you have used the `dossier.create(props)` method to embed a dossier into a third-party web page, you can use methods in the Embedding SDK to retrieve and apply filters.
 
-  - [Retrieve Filters After a Dossier is Rendered](#retrieve-filters-after-a-dossier-is-rendered)
+  - [Retrieve filters after a dossier is rendered](#retrieve-filters-after-a-dossier-is-rendered)
 
     After an embedded dossier has been rendered, you can use the `getFilterList()` method of the `Dossier` class to retrieve information about filters that were applied to chapters in the dossier.
 
-  - [Apply Filters After a Dossier is Rendered](#apply-a-filter-after-the-dossier-is-rendered)
+  - [Apply filters after a dossier is rendered](#apply-a-filter-after-the-dossier-is-rendered)
 
     After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using a number of different methods on the Embedding SDK. Chapter is the only filter type that is currently supported.
 
-  - [Apply Multiple Filters After a Dossier is Rendered](#apply-multiple-filters-after-the-dossier-is-rendered)
+  - [Apply multiple filters after a dossier is rendered](#apply-multiple-filters-after-the-dossier-is-rendered)
 
     This section introduces how you can cache the results of several filters and apply them together.
 
