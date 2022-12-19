@@ -123,7 +123,9 @@ microstrategy.dossier
     placeholder: placeholderDiv,
     url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
     sessionErrorHandler: function (error) {
-      console.log("catch session expiration error during creation: " + error.message);
+      console.log(
+        "catch session expiration error during creation: " + error.message
+      );
       //Do something to handle the session expiration error
     },
   })

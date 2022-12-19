@@ -239,10 +239,13 @@ You can add code to invoke the callback:
 
 ```js
 myDossier &&
-  myDossier.registerPanelSwitchEventHandler("onVizSelectionChanged", (selectedVis) => {
-    // The handling logic
-    // ...
-  });
+  myDossier.registerPanelSwitchEventHandler(
+    "onVizSelectionChanged",
+    (selectedVis) => {
+      // The handling logic
+      // ...
+    }
+  );
 ```
 
 in which the data format of selectedVis is similar to:

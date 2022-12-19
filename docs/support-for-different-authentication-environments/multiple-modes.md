@@ -21,7 +21,10 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
      <head>
        <meta charset="UTF-8" />
        <title>GuestLoginExample</title>
-       <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"></script>
+       <script
+         type="text/javascript"
+         src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"
+       ></script>
      </head>
      <body>
        <div id="mydossier"></div>
@@ -63,7 +66,8 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
              url: dossierUrl,
              enableCustomAuthentication: true,
              enableResponsive: true,
-             customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
+             customAuthenticationType:
+               microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
              getLoginToken: login,
            });
          });
@@ -77,7 +81,10 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
    1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibraryDev` with your Library Server URL.
 
       ```html
-      <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"></script>
+      <script
+        type="text/javascript"
+        src="https://demo.microstrategy.com/MicroStrategyLibraryDev/javascript/embeddinglib.js"
+      ></script>
       ```
 
       The `embeddinglib.js` file, which contains the Embedding SDK, is included in the `MicroStrategyLibrary` web application.
