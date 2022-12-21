@@ -192,3 +192,69 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 should be rendered as
 
 ![Admonitions](../docs/images/admonitions.png)
+
+## Helpful tags
+
+### Available since tag
+
+If you want to mention that the doc is available since some specific release, you can use the following code snippet:
+
+```jsx
+<Available since="2021 Update 8" />
+```
+
+If you want to use the same info inline, you can use the following code snippet:
+
+```jsx
+<Available since="2021 Update 8" inline />
+```
+
+For example:
+
+```md
+---
+title: Some newly added doc
+description: This is a demo of the usage of the available since tag.
+---
+
+<Available since="2021 Update 8" />
+The summary of the newly available doc.
+
+- `GET /api/available/since` <Available since="2021 Update 8" inline />
+```
+
+and it will look like this:
+
+![Available since example](../docs/images/available-since-tag-example.png)
+
+### Deprecated since tag
+
+If you want to mention that the doc is deprecated since some specific release, you can use the following code snippet:
+
+```jsx
+<Deprecated since="2021 Update 8" />
+```
+
+If you want to use the same info inline, you can use the following code snippet:
+
+```jsx
+<Deprecated since="2021 Update 8" inline />
+```
+
+For example:
+
+```md
+---
+title: Some deprecated doc
+description: This is a demo of the usage of the deprecated since tag.
+---
+
+<Deprecated since="2021 Update 8" />
+The summary of the deprecated doc.
+
+- `GET /api/deprecated/since` <Deprecated since="2021 Update 8" inline />
+```
+
+and it will look like this:
+
+![Deprecated since example](../docs/images/deprecated-since-tag-example.png)
