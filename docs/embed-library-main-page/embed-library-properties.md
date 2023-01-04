@@ -163,8 +163,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
   serverUrl: "https://{host}:{port}/{Library}",
   enableCustomerAuthentication: true,
-  customAuthenticationType:
-    microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
+  customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   //The following function is the default implementation. User can provide custom implementation.
   getLoginToken: function () {
     return fetch("https://{host}:{port}/{Library}/api/auth/login", {

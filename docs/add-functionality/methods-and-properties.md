@@ -498,8 +498,7 @@ microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
-  customAuthenticationType:
-    microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
+  customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   //The following function is the default implementation. User can provide custom implementation.
   getLoginToken: function () {
     return fetch("http://{host}:{port}/{Library}/api/auth/login", {
