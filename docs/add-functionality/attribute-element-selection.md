@@ -254,10 +254,13 @@ In some instances, the available elements may change when visualization data is 
 The following code example includes `registerEventHandler`, which is an existing API.
 
 ```js
-myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_VIZ_ELEMENT_CHANGED, function (availableElements) {
-  console.log("The available elements: ", availableElements);
-  // The other handling logic after getting these available elements
-});
+myDossier.registerEventHandler(
+  microstrategy.dossier.EventType.ON_VIZ_ELEMENT_CHANGED,
+  function (availableElements) {
+    console.log("The available elements: ", availableElements);
+    // The other handling logic after getting these available elements
+  }
+);
 ```
 
 The callback parameter's availableElements are shown below.

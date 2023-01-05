@@ -470,7 +470,10 @@ None
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_SAVED, dossierAuthoringSavedHandler);
+embedDossier.registerEventHandler(
+  EventType.ON_DOSSIER_AUTHORING_SAVED,
+  dossierAuthoringSavedHandler
+);
 ```
 
 ### onDossierAuthoringClosed
@@ -490,7 +493,10 @@ None
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(EventType.ON_DOSSIER_AUTHORING_CLOSED, dossierAuthoringClosedHandler);
+embedDossier.registerEventHandler(
+  EventType.ON_DOSSIER_AUTHORING_CLOSED,
+  dossierAuthoringClosedHandler
+);
 ```
 
 ### onPageRenderFinished

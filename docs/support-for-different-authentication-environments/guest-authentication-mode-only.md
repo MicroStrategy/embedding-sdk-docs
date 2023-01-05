@@ -16,12 +16,16 @@ Please also check out the examples in [Embedding SDK Playground](https://microst
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+    <script
+      type="text/javascript"
+      src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"
+    ></script>
   </head>
   <body>
     <div id="embedding-dossier-container"></div>
     <script>
-      let url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0"; // https://{env-url}/{libraryName}/app/{projectId}/{dossierId}
+      let url =
+        "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0"; // https://{env-url}/{libraryName}/app/{projectId}/{dossierId}
       let dossier; // Variable to store the dossier created. Used by Event Handler do not remove!
       let config; // Variable to store the configuration settings for dossier.
       async function runCode() {
@@ -63,7 +67,10 @@ Because this simple embedding example uses a dossier on the demo server, you are
    - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStrategy Library installation. Replace `demo.microstrategy.com` with your server path.
 
      ```html
-     <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+     <script
+       type="text/javascript"
+       src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"
+     ></script>
      ```
 
      The `embeddinglib.js` file, which contains the Embedding SDK, is included in the MicroStrategyLibrary web application.
@@ -71,7 +78,8 @@ Because this simple embedding example uses a dossier on the demo server, you are
    - Set the value for url to reference a dossier in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `B7CA92F04B9FAE8D941C3E9B7E0CD754` and `27D332AC6D43352E0928B9A1FCAF4AB0` with your Project ID and Dossier ID.
 
      ```js
-     url = "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0";
+     url =
+       "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0";
      ```
 
    :::tip
