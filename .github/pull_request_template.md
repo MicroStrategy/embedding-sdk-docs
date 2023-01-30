@@ -5,7 +5,7 @@
 <!-- Please mark the relevant options with 'X' like [X] -->
 
 - [ ] Add new content for the documentation
-- [ ] Fix typos in documentation
+- [ ] Modification in the existing documentation
 - [ ] Change infrastructure (not related to documentation content)
 
 ## Checklist
