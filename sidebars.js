@@ -69,6 +69,15 @@ const sidebars = {
         "embed-library-main-page/embed-custom-ui-on-all-pages",
       ],
     },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-report-page/embed-report-page",
+      },
+      label: "Embed MicroStrategy Report page",
+      items: ["embed-report-page/embed-report-properties"],
+    },
     "samples",
   ],
 };

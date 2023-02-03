@@ -1,9 +1,9 @@
 ---
 title: Embed MicroStrategy Library home page
-description: The Embedding SDK allows you to quickly integrate a MicroStrategy Library home page into a web application in a responsive manner. It also provides resources to add functionality such as toggling the navigation bar and sidebar, and getting group data of the current user.
+description: The Embedding SDK allows you to quickly integrate a MicroStrategy Library home page into a web application in a responsive manner. It also provides resources to add functionality such as toggling the navigation bar and sidebar, and getting group data for the current user.
 ---
 
-The Embedding SDK allows you to quickly integrate a MicroStrategy Library home page into a web application in a responsive manner. It also provides resources to add functionality such as toggling the navigation bar and sidebar, and getting group data of the current user.
+The Embedding SDK allows you to quickly integrate a MicroStrategy Library home page into a web application in a responsive manner. It also provides resources to add functionality such as toggling the navigation bar and sidebar, and getting group data for the current user.
 
 There are three basic steps for embedding a MicroStrategy Library home page.
 
@@ -15,10 +15,10 @@ There are three basic steps for embedding a MicroStrategy Library home page.
 
    Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
 
-1. Create a `<div>` as the placeholder where you want to embed the dossier.
+1. Create a `<div>` as the placeholder where you want to embed the Library home page.
 
    ```html
-   <div id="dossierContainer"></div>
+   <div id="LibraryHomePageContainer"></div>
    ```
 
 1. Call the `microstrategy.embeddingContexts.embedLibraryPage(props)` method when the application has finished loading.
@@ -26,7 +26,7 @@ There are three basic steps for embedding a MicroStrategy Library home page.
    ```js
    microstrategy.embeddingContexts.embedLibraryPage({
      serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
-     placeholder: document.getElementById("dossierContainer"),
+     placeholder: document.getElementById("LibraryHomePageContainer"),
    });
    ```
 

@@ -54,7 +54,7 @@ N/A
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
 });
 ```
 
@@ -79,7 +79,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerHeight: "600px",
 });
 ```
@@ -103,7 +103,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerWidth: "800px",
 });
 ```
@@ -293,7 +293,7 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page and dossier authoring page.
+Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page，dossier authoring page, and report consumption page.
 
 #### Properties
 

@@ -25,6 +25,10 @@ This method returns a promise, which is resolved to a `Dossier` object when the 
 
 The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
+Embedding too many pages using the Embedding SDK can lead to performance problems and even browser crashes due to limited browser resources. To ensure stable performance, it's recommended to embed the MicroStrategy Library page in no more than 4 to 6 containers.
+
+The other similar APIs like `microstrategy.embeddingContexts.embedReportPage(props)` and `microstrategy.embeddingContexts.embedLibraryPage(props)` follow this rule.
+
 The `props` parameter is explained in [Properties](#properties).
 
 ### Dossier.getDossierInstanceId()
@@ -569,7 +573,6 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `notification` - Show or hide the notification icon. The default is `true`.
 - `filter` - Show or hide the filter icon. The default is `true`.
 - `options` - Show or hide the options icon. The default is `true`.
-- `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
 - `edit` - Show or hide the edit icon. The default is `false`.
 
@@ -602,7 +605,6 @@ microstrategy.dossier.create({
     notification: false,
     filter: true,
     options: true,
-    search: false,
     bookmark: true,
     edit: false,
   },
@@ -614,6 +616,7 @@ microstrategy.dossier.create({
 Use the `customUi` object to customize the UI component visibilities except the dossier consumption and authoring pages. The detailed properties are as below:
 
 - `library` - This field is used to customized the UI components on the MicroStrategy Library home page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuilibrary)
+- `reportConsumption` - This field is used to customize the UI components on the report consumption page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuireportconsumption).
 
 #### Required?
 
