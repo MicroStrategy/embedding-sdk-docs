@@ -5,6 +5,13 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## 2021 Update 8 (February 2023)
+
+[Embed MicroStrategy Report page.](./embed-report-page/embed-report-page.md)
+
+- Users can embed MicroStrategy Report consumption page.
+- Users can control the visibility of the navigation bar of the Report consumption page.
+
 ## 2021 Update 8
 
 - [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
