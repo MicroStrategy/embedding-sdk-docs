@@ -1,9 +1,9 @@
 ---
 title: The customized UI settings in Embedding SDK
-description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dossier consumption page, and dossier authoring page.
+description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page.
 ---
 
-The embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, and dossier authoring page. To do this, you need to set the input parameters `props.customUi` in the functions below:
+The embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
 
 - microstrategy.embeddingContexts.embedLibraryPage(props)
 
@@ -14,6 +14,23 @@ microstrategy.embeddingContexts.embedLibraryPage({
   serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
   placeholder: document.getElementById("container"),
   customUi: {
+    reportConsumption: {
+      navigationBar: {
+        enabled: true,
+        gotoLibrary: true,
+        pageBy: true,
+        reset: true,
+        reExecute: true,
+        filter: true,
+        share: {
+          enabled: true,
+        },
+        account: {
+          enabled: true,
+        },
+        reprompt: true,
+      },
+    },
     library: {
       navigationBar: {
         enabled: true,
@@ -340,3 +357,45 @@ Use the `menubar` object to customize the visibilities of the menubar items on t
 - `library.visible`
   - Show the Library home icon on the dossier authoring page menubar or not.
   - Default value: `true`.
+
+### props.customUi.reportConsumption
+
+This field is used to customize the UI components on the report consumption page. It has 1 property: `navigationBar`.
+
+#### Properties
+
+##### navigationBar
+
+Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
+
+- `enabled`
+  - Enable or disable the navigation bar in Report consumption page.
+  - Default value: `true`.
+- `gotoLibrary`
+  - Show or hide the gotoLibrary icon.
+  - Default value: `true`.
+- `pageBy`
+  - Show or hide the pageBy icon.
+  - Default value: `true`.
+- `reset`
+  - Show or hide the reset icon.
+  - Default value: `true`.
+- `reExecute`
+  - Show or hide the reExecute icon.
+  - Default value: `true`.
+- `filter`
+  - Show or hide the filter icon.
+  - Default value: `true`.
+- `reprompt`
+  - Show or hide the re-prompt icon.
+  - Default value: `true`.
+- `share.enabled`
+  - Show or hide the share icon.
+  - Default value: `true`.
+- `account.enabled`
+  - Show or hide the account icon.
+  - Default value: `true`.
+
+#### Required?
+
+No

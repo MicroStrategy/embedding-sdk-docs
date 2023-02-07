@@ -9,11 +9,10 @@ The `embeddingContext` object could be created as below:
 
 ```js
 try {
-  const embeddingContext =
-    await microstrategy.embeddingContexts.embedLibraryPage({
-      serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
-      placeholder: document.getElementById("dossierContainer"),
-    });
+  const embeddingContext = await microstrategy.embeddingContexts.embedLibraryPage({
+    serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
+    placeholder: document.getElementById("dossierContainer"),
+  });
   // An example to call the LibraryPage APIs
   const myGroups = await embeddingContext.libraryPage.getAllMyGroups();
 } catch (err) {

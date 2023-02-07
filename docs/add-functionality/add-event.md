@@ -34,10 +34,7 @@ Attribute element list for each selected graphic.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_GRAPHICS_SELECTED,
-  graphicsSelectedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_GRAPHICS_SELECTED, graphicsSelectedHandler);
 ```
 
 #### Content example
@@ -78,10 +75,7 @@ Object containing the key of the page you switched to.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_PAGE_SWITCHED,
-  pageSwitchedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler);
 ```
 
 #### Content example
@@ -109,10 +103,7 @@ Object containing changed filter information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_FILTER_UPDATED,
-  filterUpdatedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHandler);
 ```
 
 #### Content example
@@ -201,10 +192,7 @@ Error object.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_SESSION_ERROR,
-  sessionErrorHandler
-);
+embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandler);
 ```
 
 #### Content example
@@ -238,10 +226,7 @@ None
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_PAGE_LOADED,
-  onPageLoadedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_PAGE_LOADED, onPageLoadedHandler);
 ```
 
 ### onLayoutChanged
@@ -261,10 +246,7 @@ Object containing layout changed information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_LAYOUT_CHANGED,
-  layoutChangedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_LAYOUT_CHANGED, layoutChangedHandler);
 ```
 
 #### Content example
@@ -297,10 +279,7 @@ Object containing prompt answers information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_PROMPT_ANSWERED,
-  promptAnsweredHandler
-);
+embedDossier.registerEventHandler(EventType.ON_PROMPT_ANSWERED, promptAnsweredHandler);
 ```
 
 #### Content example
@@ -311,9 +290,7 @@ embedDossier.registerEventHandler(
   "answers": [
     {
       "key": "3ECF2592C947B909B01624BCF690D6EA@0@10",
-      "values": [
-        "8D679D4F11D3E4981000E787EC6DE8A4:14~1048576~Books - Miscellaneous"
-      ],
+      "values": ["8D679D4F11D3E4981000E787EC6DE8A4:14~1048576~Books - Miscellaneous"],
       "useDefault": false
     }
   ]
@@ -337,10 +314,7 @@ None
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_PROMPT_LOADED,
-  promptLoadedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_PROMPT_LOADED, promptLoadedHandler);
 ```
 
 ### onVizSelectionChanged
@@ -360,10 +334,7 @@ Object containing visualization selection information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_VIZ_SELECTION_CHANGED,
-  vizSelectionChangedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_VIZ_SELECTION_CHANGED, vizSelectionChangedHandler);
 ```
 
 #### Content example
@@ -398,10 +369,7 @@ Array of objects containing visualization element changed information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_VIZ_ELEMENT_CHANGED,
-  vizElementChangedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_VIZ_ELEMENT_CHANGED, vizElementChangedHandler);
 ```
 
 #### Content example
@@ -449,10 +417,7 @@ Object containing the visualization that changed size information.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_VISUALIZATION_RESIZED,
-  vizResizedChangedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResizedChangedHandler);
 ```
 
 #### Content example
@@ -481,10 +446,7 @@ String of the new instance id.
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_DOSSIER_INSTANCE_ID_CHANGE,
-  dossierChangedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierChangedHandler);
 ```
 
 #### Content example
@@ -554,10 +516,7 @@ None
 #### Code example
 
 ```js
-embedDossier.registerEventHandler(
-  EventType.ON_PAGE_RENDER_FINISHED,
-  pageRenderFinishedHandler
-);
+embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderFinishedHandler);
 ```
 
 ## Event handlers
