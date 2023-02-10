@@ -5,23 +5,23 @@ description: Embed Multiple Visualizations in a page
 
 ## Purpose
 
-You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar as loading one OOTB Library dossier page.
+You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar as loading an out-of-the-box Library dossier page.
 
-Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. For how to deploy custom visualizations on MicroStrategy Library, please refer to [Deploy a Custom Visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
+Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a Custom Visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
 ## Requirements
 
-You need to use a new js bundle `embedding-component-alpha.js`:
+You must use the js bundle, `embedding-component-alpha.js`:
 
 ```html
 <script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embedding-component-alpha.js"></script>
 ```
 
-the js bundle is also in the web-dossier war, in the same directory as `embeddinglib.js`.
+The js bundle is also in the web-dossier war, in the same directory as `embeddinglib.js`.
 
 ## Example Code
 
-To embed multiple visualizations, after refering `embedding-component-alpha.js`, you need to write the code as below:
+To embed multiple visualizations, after refering `embedding-component-alpha.js`, use the code shown below:
 
 ```js
 try {
@@ -55,7 +55,7 @@ try {
 
 ## References
 
-This piece of code contains the function from 3 different namespace or classes:
+This piece of code contains a function from the following namespace and classes:
 
 - [microstrategy.embeddingComponent.environments](./embedding-components.html) Namespace
 
