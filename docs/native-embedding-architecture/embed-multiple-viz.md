@@ -14,7 +14,10 @@ Custom visualizations are also supported. To embed custom visualizations, you sh
 You need to use a new js bundle `embedding-component-alpha.js`:
 
 ```html
-<script type="text/javascript" src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embedding-component-alpha.js"></script>
+<script
+  type="text/javascript"
+  src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embedding-component-alpha.js"
+></script>
 ```
 
 the js bundle is also in the web-dossier war, in the same directory as `embeddinglib.js`.

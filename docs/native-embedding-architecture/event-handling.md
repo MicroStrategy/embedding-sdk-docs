@@ -81,7 +81,10 @@ Attribute element list or metric element list for the current selected elements 
 #### Code example
 
 ```js
-mstrDossier.registerEventHandler("onVizElementSelectionChanged", onVizElementSelectionChangedHandler);
+mstrDossier.registerEventHandler(
+  "onVizElementSelectionChanged",
+  onVizElementSelectionChangedHandler
+);
 ```
 
 #### Content example
