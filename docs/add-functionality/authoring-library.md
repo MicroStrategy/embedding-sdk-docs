@@ -193,22 +193,28 @@ When the Save or Close button is clicked in authoring mode, an event is raised t
 The following code example includes `registerEventHandler`, which is an existing API.
 
 ```js
-myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_SAVED, function () {
-  // The handling logic receiving the save event
-  // ...
-});
+myDossier.registerEventHandler(
+  microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_SAVED,
+  function () {
+    // The handling logic receiving the save event
+    // ...
+  }
+);
 
-myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_CLOSED, function () {
-  // The handling logic receiving the close event
-  // ...
-});
+myDossier.registerEventHandler(
+  microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_CLOSED,
+  function () {
+    // The handling logic receiving the close event
+    // ...
+  }
+);
 ```
 
 ### API for hiding the edit button
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 
@@ -252,7 +258,7 @@ microstrategy.dossier
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 
@@ -308,7 +314,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 #### Function
 
-`microstrategy.create(props)`
+`microstrategy.dossier.create(props)`
 
 #### Input parameters
 
