@@ -25,6 +25,10 @@ This method returns a promise, which is resolved to a `Dossier` object when the 
 
 The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
+Embedding too many pages using the Embedding SDK can lead to performance problems and even browser crashes due to limited browser resources. To ensure stable performance, it's recommended to embed the MicroStrategy Library page in no more than 4 to 6 containers.
+
+The other similar APIs like `microstrategy.embeddingContexts.embedReportPage(props)` and `microstrategy.embeddingContexts.embedLibraryPage(props)` follow this rule.
+
 The `props` parameter is explained in [Properties](#properties).
 
 ### Dossier.getDossierInstanceId()
@@ -99,7 +103,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### containerHeight
+### `containerHeight`
 
 The `containerHeight` property sets the height of the placeholder.
 
@@ -116,7 +120,7 @@ No
 
 `600px`
 
-### containerWidth
+### `containerWidth`
 
 The `containerWidth` property sets the width of the placeholder.
 
@@ -131,7 +135,7 @@ No
 
 `800px`
 
-### customAuthenticationType
+### `customAuthenticationType`
 
 The `customAuthenticationType` property specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the `CustomAuthenticationType` enumeration.
 
@@ -146,7 +150,7 @@ No
 
 `CustomAuthenticationType.IDENTITY_TOKEN`
 
-### disableNotification
+### `disableNotification`
 
 The `disableNotification` property specifies whether to display messages, such as "Add to Library" in the notification bar. If this property is set to true, message does not appear in the notification bar.
 
@@ -160,7 +164,7 @@ No
 
 `true`
 
-### dockedComment
+### `dockedComment`
 
 The `dockedComment` object is used to configure the comments panel on the Dossier page.
 
@@ -196,7 +200,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### dockedFilter
+### `dockedFilter`
 
 The `dockedFilter` object is used to configure the filter panel on the Dossier page.
 
@@ -232,7 +236,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### dockedTOC
+### `dockedTOC`
 
 The `dockedTOC` object is used to configure the Table of Contents (TOC) panel on the Dossier page.
 
@@ -268,7 +272,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### dossierFeature
+### `dossierFeature`
 
 The `dossierFeature` object is used to customize the dossier feature on the Dossier page.
 
@@ -296,7 +300,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### enableCollaboration
+### `enableCollaboration`
 
 Use `enableCollaboration` property to enable or disable collaboration-related controls of the embedded page.
 
@@ -320,7 +324,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### enableCustomAuthentication
+### `enableCustomAuthentication`
 
 The `enableCustomAuthentication` property specifies whether custom authentication is used.
 
@@ -334,7 +338,7 @@ No
 
 User needs to log in from the default login page.
 
-### enableResponsive
+### `enableResponsive`
 
 Specifies whether to enable responsive design.
 
@@ -348,7 +352,7 @@ No
 
 `false`
 
-### filterFeature
+### `filterFeature`
 
 Use this property to customize the filter functionality on the page. All types of the properties below are `Boolean`.
 
@@ -380,7 +384,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### Filters
+### `filters`
 
 Use the `filters` object to apply attribute selection or attribute search filters during the execution of a dossier. It supports passing multiple filter definitions with multiple selectors.
 
@@ -477,7 +481,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### getLoginToken
+### `getLoginToken`
 
 The `getLoginToken` property specifies a function that returns a promise, which is resolved with either the authorization token (`authToken`) or the identity token (`identityToken`) The token type is specified by the `customAuthenticationType` property.
 
@@ -522,7 +526,7 @@ microstrategy.dossier.create({
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to provide an identity token with `getLoginToken` function.
 
-### Instance
+### `instance`
 
 Use this `instance` object to specify a dossier instance for the embedded dossier. If you would like to make some manipulation to the dossier before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a dossier instance.
 
@@ -554,7 +558,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### navigationBar
+### `navigationBar`
 
 Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
 
@@ -569,9 +573,8 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `notification` - Show or hide the notification icon. The default is `true`.
 - `filter` - Show or hide the filter icon. The default is `true`.
 - `options` - Show or hide the options icon. The default is `true`.
-- `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
-- `edit` - Show or hide the edit icon. The default is `true`.
+- `edit` - Show or hide the edit icon. The default is `false`.
 
 #### Required?
 
@@ -602,14 +605,63 @@ microstrategy.dossier.create({
     notification: false,
     filter: true,
     options: true,
-    search: false,
     bookmark: true,
     edit: false,
   },
 });
 ```
 
-### optionsFeature
+### `customUi`
+
+Use the `customUi` object to customize the UI component visibilities except the dossier consumption and authoring pages. The detailed properties are as below:
+
+- `library` - This field is used to customized the UI components on the MicroStrategy Library home page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuilibrary)
+- `reportConsumption` - This field is used to customize the UI components on the report consumption page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuireportconsumption).
+
+#### Required?
+
+No
+
+#### Default value
+
+`null`
+
+If `customUi` or `customUi.library` is `null`, all the UI components on MicroStrategy Library home page would be visible.
+
+#### Sample
+
+```js
+microstrategy.dossier.create({
+  placeholder: placeholderDiv,
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
+  customUi: {
+    library: {
+      navigationBar: {
+        enabled: true,
+        sortAndFilter: true,
+        title: true,
+        searchBar: true,
+        createNew: {
+          enabled: true,
+        },
+        notifications: true,
+        multiSelect: {
+          enabled: true,
+        },
+        account: {
+          enabled: true,
+        },
+      },
+      sideBar: {
+        enabled: true,
+        show: false,
+      },
+    },
+  },
+});
+```
+
+### `optionsFeature`
 
 Use the `optionsFeature` object to customize the Options feature on the page. All detailed properties below are `Boolean`, with `true` as the default value.
 
@@ -618,6 +670,8 @@ Use the `optionsFeature` object to customize the Options feature on the page. Al
 - `logout` - Show or hide the logout functionality.
 - `manage` - Show or hide manage functionality.
 - `showTutorials` - Show or hide tutorial functionality.
+- `myLibraries` - Show or hide the "My Libraries" functionality.
+- `preferences` - Show or hide the preferences functionality.
 
 #### Required?
 
@@ -643,11 +697,13 @@ microstrategy.dossier.create({
     logout: true,
     manage: false,
     showTutorials: true,
+    myLibraries: true,
+    preferences: false,
   },
 });
 ```
 
-### shareFeature
+### `shareFeature`
 
 Use the `shareFeature` object to customize the Share features on the page. All detailed properties below are Boolean, with `true` as the default value.
 
@@ -689,7 +745,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### smartBanner
+### `smartBanner`
 
 Use the `smartBanner` property to enable or disable the smart banner feature when a user opens an embedded dossier in a mobile browser.
 
@@ -717,7 +773,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### tocFeature
+### `tocFeature`
 
 Use this property to customize the Table of Contents (TOC) feature on the page.
 
@@ -747,7 +803,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### uiMessage
+### `uiMessage`
 
 Use this property to customize the message features on the UI. If `disableNotification` is set to `true`, this property is ignored and all messages are hidden. All detailed properties below are `Boolean`.
 
@@ -779,7 +835,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### visibleTutorials
+### `visibleTutorials`
 
 Use this property to customize the visibility of tutorials. All detailed properties below are `Boolean`.
 
@@ -817,7 +873,7 @@ microstrategy.dossier.create({
 });
 ```
 
-### visualizationAppearances
+### `visualizationAppearances`
 
 If you want to show just one visualization on the dossier page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a single visualization](./embed-vis.md) for more information about the feature.
 
@@ -847,7 +903,7 @@ No
 
 No visualization needs to be maximized or restored during initial loading.
 
-### Authoring
+### `authoring`
 
 The `authoring` object controls the dossier interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
 

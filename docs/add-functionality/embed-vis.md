@@ -73,7 +73,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 | Parameter Name | Data Type    | Example                           | Comments                                            |
 | -------------- | ------------ | --------------------------------- | --------------------------------------------------- |
-| `error`        | Error Object | `new Error("invalid operation!")` | See [API Errors](#api-errors) for more information. |
+| `error`        | Error Object | `new Error("invalid operation!")` | See [API errors](#api-errors) for more information. |
 
 ### 2. Embed the dossier with a single visualization maximized
 

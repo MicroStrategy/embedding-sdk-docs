@@ -54,7 +54,7 @@ N/A
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
 });
 ```
 
@@ -79,7 +79,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerHeight: "600px",
 });
 ```
@@ -103,7 +103,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerWidth: "800px",
 });
 ```
@@ -193,13 +193,13 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom Error Handling During Dossier Creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
+You could also refer to [Custom error handling during dossier creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
 
 #### Required?
 
 No
 
-#### Default Value
+#### Default value
 
 false
 
@@ -293,55 +293,11 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded page.
+Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page，dossier authoring page, and report consumption page.
 
-`customUi` format:
+#### Properties
 
-```javascript
-{
-  library: {
-    navigationBar: {
-      enabled: false
-    },
-    sidebar: {
-      show: false
-    }
-  }
-}
-```
-
-- `customUi.library.navigationBar.enabled`: This field specifies whether enabling the library home page navigation bar or not when embedding the library home page.
-
-- `customUi.library.sidebar.show`: This field specifies whether expanding the sidebar or not when embedding the library home page.
-
-#### Required?
-
-No
-
-#### Default value
-
-`customUi.library.navigationBar.enabled`: true
-
-`customUi.library.sidebar.show`: false
-
-#### Sample
-
-```js
-microstrategy.embeddingContexts.embedLibraryPage({
-  serverUrl: url,
-  placeholder: container,
-  customUi: {
-    library: {
-      navigationBar: {
-        enabled: true,
-      },
-      sidebar: {
-        show: false,
-      },
-    },
-  },
-});
-```
+Please see all the properties in [The customized UI settings in Embedding SDK](./embed-custom-ui-on-all-pages.md)
 
 #### The navigation bar custom setting behavior
 

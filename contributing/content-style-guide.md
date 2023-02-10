@@ -22,9 +22,9 @@ More information about `markdownlint` could be found [here](https://github.com/D
 
 ## Front matter
 
-- `title` is the `h1` heading that shows on the HTML page.
-- `sidebar_label` is the title you want to show in the sidebar navigation.
-- `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
+- (Required) `title` is the `h1` heading that shows as the title of your documentation.
+- (Optional) `sidebar_label` is the title you want to show in the sidebar navigation. If the sidebar label is the same as `title`, you can omit this field.
+- (Required) `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose and it won't show up in the documentation. Therefore, If you want the reader see the description, you may want to have the same content of this description in your documentation as well.
 
 Note: Do not use backticks in front matter since they won't be rendered the same as markdown content.
 
@@ -90,6 +90,10 @@ Supported languages are listed [here](https://prismjs.com/#languages-list).
 
 It is enforced to use `1.` only for all ordered lists for ease of maintenance.
 
+## Unordered list
+
+It is suggested to use `-` instead of `*`.
+
 ## Emojis
 
 Our docs site supports all [Github-supported emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md). Please use it as needed.
@@ -105,6 +109,20 @@ The list below shows the usage of emojis in our Docs site:
 - Images in the `/images` folder are linked relatively. The pathway back can be found by looking at the permalink for the page and backing out until the root folder is reached. For example, if you want to access the images from `playground.md`, you need to access the images like this: `![ALT TEXT](./images/IMAGE-NAME)`, and if you want to access the images from `add-functionality/add-event.md`, you need to access the images like this: `![ALT TEXT](../images/IMAGE-NAME)`.
 
 - Endpoints for REST API calls should have links if possible.
+
+- For internal links:
+
+  - If the description of the link is related to the title of some page, use sentence case. For example:
+
+    ```md
+    [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
+    ```
+
+  - If the description of the link is in the middle of the sentence and it is a brief explanation of what the link is, use proper cases as needed. For example:
+
+    ```md
+    New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dossier.
+    ```
 
 ## Naming conventions
 
@@ -178,3 +196,83 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 should be rendered as
 
 ![Admonitions](../docs/images/admonitions.png)
+
+## Helpful tags
+
+### Available since tag
+
+If you want to mention that the doc is available since some specific release, you can use the following code snippet:
+
+```jsx
+<Available since="2021 Update 8" />
+```
+
+If you want to use the same info inline, you can use the following code snippet:
+
+```jsx
+<Available since="2021 Update 8" inline />
+```
+
+For example:
+
+```md
+---
+title: Some newly added doc
+description: This is a demo of the usage of the available since tag.
+---
+
+<Available since="2021 Update 8" />
+
+The summary of the newly available doc.
+
+- `GET /api/available/since` <Available since="2021 Update 8" inline />
+
+## Some section title
+
+<Available since="2021 Update 8" />
+
+The summary of the section.
+```
+
+and it will look like this:
+
+![Available since example](../docs/images/available-since-tag-example.png)
+
+### Deprecated since tag
+
+If you want to mention that the doc is deprecated since some specific release, you can use the following code snippet:
+
+```jsx
+<Deprecated since="2021 Update 8" />
+```
+
+If you want to use the same info inline, you can use the following code snippet:
+
+```jsx
+<Deprecated since="2021 Update 8" inline />
+```
+
+For example:
+
+```md
+---
+title: Some deprecated doc
+description: This is a demo of the usage of the deprecated since tag.
+---
+
+<Deprecated since="2021 Update 8" />
+
+The summary of the deprecated doc.
+
+- `GET /api/deprecated/since` <Deprecated since="2021 Update 8" inline />
+
+## Some section title
+
+<Deprecated since="2021 Update 8" />
+
+The summary of the section.
+```
+
+and it will look like this:
+
+![Deprecated since example](../docs/images/deprecated-since-tag-example.png)

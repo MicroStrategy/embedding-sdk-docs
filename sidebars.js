@@ -66,6 +66,7 @@ const sidebars = {
       items: [
         "embed-library-main-page/embed-library-properties",
         "embed-library-main-page/library-page-apis",
+        "embed-library-main-page/embed-custom-ui-on-all-pages",
       ],
     },
     {
@@ -86,6 +87,15 @@ const sidebars = {
         "native-embedding-architecture/apply-filter",
         "native-embedding-architecture/event-handling",
       ],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-report-page/embed-report-page",
+      },
+      label: "Embed MicroStrategy Report page",
+      items: ["embed-report-page/embed-report-properties"],
     },
     "samples",
   ],
