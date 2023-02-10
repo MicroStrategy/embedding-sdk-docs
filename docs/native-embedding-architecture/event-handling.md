@@ -90,7 +90,7 @@ The event data passed to the registered event handler is as follows:
 
 - attribute element selection
   <details>
-    <summary>Example</summary>
+    <summary>Example for attribute element selection</summary>
 
   ```json
   {
@@ -136,7 +136,7 @@ The event data passed to the registered event handler is as follows:
 
 - metric element selection
   <details>
-    <summary>Example</summary>
+    <summary>Example for metric element selection</summary>
 
   ```json
   {
@@ -175,6 +175,70 @@ The event data passed to the registered event handler is as follows:
             "name": "2014"
           }
         ]
+      ]
+    }
+  }
+  ```
+
+  </details>
+
+- map layer element selection
+
+  For map visualizations, each layer has its corresponding attribute element selection object or metric element selection object.
+
+  <details>
+    <summary>Example for may layer element selection</summary>
+
+  ```json
+  {
+    "visualizationKey": "K52",
+    "currentSelection": {
+      "type": "map_layers_element",
+      "layers": [
+        {
+          "key": "K52",
+          "name": "Layer 1",
+          "currentSelection": {
+            "selectionStatus": "included",
+            "type": "metric_element_list",
+            "attributes": [
+              {
+                "id": "CE7009ED794959855954969DBC62CEF2",
+                "name": "latitude ID"
+              },
+              {
+                "id": "A3AD18663D4E7A5AC945BCA1D9C66451",
+                "name": "longitude ID"
+              }
+            ],
+            "selections": [
+              [
+                {
+                  "id": "h55.3675;CE7009ED794959855954969DBC62CEF2",
+                  "name": "55.3675"
+                },
+                {
+                  "id": "h-154.0944;A3AD18663D4E7A5AC945BCA1D9C66451",
+                  "name": "-154.0944"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "key": "W67",
+          "name": "Layer 2",
+          "currentSelection": {
+            "selectionStatus": "unfiltered"
+          }
+        },
+        {
+          "key": "W76",
+          "name": "Layer 3",
+          "currentSelection": {
+            "selectionStatus": "unfiltered"
+          }
+        }
       ]
     }
   }

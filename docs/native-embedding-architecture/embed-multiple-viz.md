@@ -7,6 +7,8 @@ description: Embed Multiple Visualizations in a page
 
 You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar as loading one OOTB Library dossier page.
 
+Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. For how to deploy custom visualizations on MicroStrategy Library, please refer to [Deploy a Custom Visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
+
 ## Requirements
 
 You need to use a new js bundle `embedding-component-alpha.js`:
