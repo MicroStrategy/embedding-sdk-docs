@@ -19,7 +19,7 @@ The error handler used during dossier creation in microstrategy.dossier.create�
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   errorHandler: customErrorHandler,
 });
@@ -29,7 +29,7 @@ To disable the custom error handler during dossier creation, set disableCustomE
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   disableCustomErrorHandlerOnCreate: true,
 });
@@ -54,15 +54,15 @@ microstrategy.dossier
   .create({
     placeholder: placeholderDiv,
     url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
-    errorHandler: function (error) {
-      console.log("catch error during creation: " + error.message);
-      //Do something to handle the error
+    errorHandler(error) {
+      console.log(`catch error during creation: ${error.message}`);
+      // Do something to handle the error
     },
   })
-  .then(function (dossier) {
-    dossier.addCustomErrorHandler(function (error) {
-      console.log("catch error: " + error.message);
-      //Do something to handle the error
+  .then((dossier) => {
+    dossier.addCustomErrorHandler((error) => {
+      console.log(`catch error: ${error.message}`);
+      // Do something to handle the error
     });
   });
 ```
@@ -96,7 +96,7 @@ The session error handler is executed when the error occurs and you can get deta
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   sessionErrorHandler: (errorObject) => {
     // The handling logic of the user
@@ -122,15 +122,15 @@ microstrategy.dossier
   .create({
     placeholder: placeholderDiv,
     url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
-    sessionErrorHandler: function (error) {
-      console.log("catch session expiration error during creation: " + error.message);
-      //Do something to handle the session expiration error
+    sessionErrorHandler(error) {
+      console.log(`catch session expiration error during creation: ${error.message}`);
+      // Do something to handle the session expiration error
     },
   })
-  .then(function (dossier) {
-    dossier.addSessionErrorHandler(function (error) {
-      console.log("catch session expiration error: " + error.message);
-      //Do something to handle the session expiration error
+  .then((dossier) => {
+    dossier.addSessionErrorHandler((error) => {
+      console.log(`catch session expiration error: ${error.message}`);
+      // Do something to handle the session expiration error
     });
   });
 ```
