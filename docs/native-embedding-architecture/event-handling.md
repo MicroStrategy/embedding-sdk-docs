@@ -3,9 +3,9 @@ title: Add event handling
 description: Events allow the custom application page to listen for events from the embedded visualizations. You can listen for these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 ---
 
-Events allow the custom application page to listen for events from the embedded visualizations. You can listen for these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
+Events allow a custom application page to listen for events from embedded visualizations. You can listen for these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 
-Suppose we already have the MstrEnvironment object and MstrDossier object. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.
+Suppose you already have MstrEnvironment and MstrDossier objects. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.
 
 ```js
 try {
@@ -44,7 +44,7 @@ There is a method for registering an event handler.
 
 #### Description
 
-Register the event handler `handler` on `eventName`.
+Register the `handler` event handler on `eventName`.
 
 ## Error handlers
 
@@ -58,7 +58,7 @@ There is a method for registering an error handler.
 
 #### Description
 
-Register the error handler `handler` to handle errors during graphic manipulations of embedded visualizations.
+Register the `handler` error handler to handle errors during graphic manipulations of embedded visualizations.
 
 ## Events
 
@@ -72,11 +72,11 @@ Each supported event is described in the table below.
 
 #### Description
 
-Raised when the elements in the visualizations are selected or unselected in the graphics.
+Raised when elements in visualizations are selected or unselected in graphics.
 
 #### Content
 
-Attribute element list or metric element list for the current selected elements in the visualization.
+Attribute element list or metric element list for the currently selected elements in the visualization.
 
 #### Code example
 
@@ -190,7 +190,7 @@ The event data passed to the registered event handler is as follows:
   For map visualizations, each layer has its corresponding attribute element selection object or metric element selection object.
 
   <details>
-    <summary>Example for may layer element selection</summary>
+    <summary>Example for map layer element selection</summary>
 
   ```json
   {
