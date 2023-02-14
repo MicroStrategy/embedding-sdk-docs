@@ -60,7 +60,7 @@ try {
 
 This piece of code contains the function from 3 different namespace or classes:
 
-- [microstrategy.embeddingComponent.environments](embedding-components.md) Namespace
+- [`microstrategy.embeddingComponent.environments`](embedding-components.md) Namespace
 
   This namespace is responsible for creating and destroying MstrEnvironment objects.
 
