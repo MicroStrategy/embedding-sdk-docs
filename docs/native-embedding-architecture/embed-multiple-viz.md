@@ -64,7 +64,7 @@ This piece of code contains a function from the following namespace and classes:
 
   This namespace is responsible for creating and destroying MstrEnvironment objects.
 
-- [MstrEnvironment](mstr-environment.md) Class
+- [`MstrEnvironment`](mstr-environment.md) Class
 
   This class is responsible for creating and destroying MstrDossier objects.
 
