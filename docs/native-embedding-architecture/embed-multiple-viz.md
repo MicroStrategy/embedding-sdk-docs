@@ -68,6 +68,6 @@ This piece of code contains a function from the following namespace and classes:
 
   This class is responsible for creating and destroying MstrDossier objects.
 
-- [MstrDossier](mstr-dossier.md) Class
+- [`MstrDossier`](mstr-dossier.md) Class
 
   This class is responsible for showing visualizations in containers.
