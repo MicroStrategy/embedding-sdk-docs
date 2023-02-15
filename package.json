@@ -17,7 +17,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:markdownlint",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:markdownlint && yarn lint:sidebar",
     "lint:fix": "yarn lint:eslint:fix && yarn lint:prettier:fix && yarn lint:markdownlint:fix",
     "lint:eslint": "yarn eslint . --quiet",
     "lint:eslint:fix": "yarn eslint . --quiet --fix",
@@ -29,6 +29,7 @@
     "lint:prettier:md:fix": "yarn prettier \"**/*.md\" --list-different --config .prettiermarkdownrc --write",
     "lint:markdownlint": "yarn markdownlint docs/",
     "lint:markdownlint:fix": "yarn markdownlint docs/ --fix",
+    "lint:sidebar": "node scripts/lint_sidebars.js",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -49,7 +50,9 @@
     "chalk": "4.1.2",
     "dotenv-cli": "^6.0.0",
     "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-prettier": "^4.0.0",
     "gh-pages": "^4.0.0",

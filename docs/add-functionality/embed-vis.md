@@ -115,13 +115,13 @@ Multiple visualizations are not supported. This is because `size` is coupled o
 This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // ...
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     myDossier.goToNextPage();
     // ...
@@ -144,7 +144,7 @@ In the example below, `registerEventHandler` is an existing API:
 
 ```js
 myDossier &&
-  myDossier.registerEventHandler("onVisualizationResized", function (resizedVisualization) {
+  myDossier.registerEventHandler("onVisualizationResized", (resizedVisualization) => {
     // ... The handling logic after resizing the visualization
   });
 ```

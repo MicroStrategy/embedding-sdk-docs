@@ -503,23 +503,28 @@ microstrategy.dossier.create({
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-  //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function () {
+  // The following function is the default implementation. User can provide custom implementation.
+  getLoginToken() {
     return fetch("http://{host}:{port}/{Library}/api/auth/login", {
       method: "POST",
-      credentials: "include", //including cookie
-      mode: "cors", //setting as CORS mode for cross origin
+      credentials: "include", // including cookie
+      mode: "cors", // setting as CORS mode for cross origin
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         loginMode: 1, // Standard mode
         username: "input your username",
         password: "input your password",
       }),
-    }).then(function (response) {
-      if (response && response.ok) {
-        return response.headers.get("X-MSTR-authToken");
-      }
-    });
+    })
+      .then((response) => {
+        if (response && response.ok) {
+          return response.headers.get("X-MSTR-authToken");
+        }
+        throw Error("Failed to fetch auth token");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   },
 });
 ```
