@@ -128,9 +128,19 @@ microstrategy.dossier
     },
   })
   .then((dossier) => {
+    // if you want to add a new sessionErrorHandler(), you should remove the existing sessionErrorHandler() first
+    dossier.removeSessionErrorhandler();
     dossier.addSessionErrorHandler((error) => {
       console.log(`catch session expiration error: ${error.message}`);
       // Do something to handle the session expiration error
     });
   });
 ```
+
+## Error handling way in Embedding SDK when checking input params
+
+When using the Embedding SDK to embed a page by calling APIs, we will check the user input first. Different from other types of errors, for the input params error, under the default settings, we will directly pop up a pop-up window, so that users can get the most direct error feedback when developing code. It will throw an error after you click the OK button of this window, you can get it by adding a `catch` outside the called API.
+
+![error popup window](../images/error_popup_window.png)
+
+If you don't want to see this pop-up window, you can close the pop-up window by adding `disableErrorPopupWindow` parameter to the input. It will notify you of this error by throwing an error directly.
