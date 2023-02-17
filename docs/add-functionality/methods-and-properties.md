@@ -164,6 +164,33 @@ No
 
 `true`
 
+### `disableErrorPopupWindow`
+
+The `disableErrorPopupWindow` property specifies to disable the popup window caused by the alert which will show when error happens, and throw the error directly.
+The deatail of when the error will shown in alert, can be seen [at the error-handling page](error-handling.md#error-handling-before-starting-embed-page-to-library)
+
+#### Required?
+
+No
+
+#### Default value
+
+`undefined`
+
+#### Sample
+
+```js
+microstrategy.dossier
+  .create({
+    placeholder: placeholderDiv,
+    url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+    disableErrorPopupWindow: true,
+  })
+  .catch((err) => {
+    // add error handler logic here
+  });
+```
+
 ### `dockedComment`
 
 The `dockedComment` object is used to configure the comments panel on the Dossier page.
@@ -503,23 +530,28 @@ microstrategy.dossier.create({
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-  //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function () {
+  // The following function is the default implementation. User can provide custom implementation.
+  getLoginToken() {
     return fetch("http://{host}:{port}/{Library}/api/auth/login", {
       method: "POST",
-      credentials: "include", //including cookie
-      mode: "cors", //setting as CORS mode for cross origin
+      credentials: "include", // including cookie
+      mode: "cors", // setting as CORS mode for cross origin
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         loginMode: 1, // Standard mode
         username: "input your username",
         password: "input your password",
       }),
-    }).then(function (response) {
-      if (response && response.ok) {
-        return response.headers.get("X-MSTR-authToken");
-      }
-    });
+    })
+      .then((response) => {
+        if (response && response.ok) {
+          return response.headers.get("X-MSTR-authToken");
+        }
+        throw Error("Failed to fetch auth token");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   },
 });
 ```
