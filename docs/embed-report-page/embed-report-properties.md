@@ -178,23 +178,28 @@ microstrategy.embeddingContexts.embedReportPage({
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-  //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function () {
+  // The following function is the default implementation. User can provide custom implementation.
+  getLoginToken() {
     return fetch("https://{host}:{port}/{Library}/api/auth/login", {
       method: "POST",
-      credentials: "include", //including cookie
-      mode: "cors", //setting as CORS mode for cross origin
+      credentials: "include", // including cookie
+      mode: "cors", // setting as CORS mode for cross origin
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         loginMode: 1, // Standard mode
         username: "input your username",
         password: "input your password",
       }),
-    }).then(function (response) {
-      if (response && response.ok) {
-        return response.headers.get("X-MSTR-authToken");
-      }
-    });
+    })
+      .then((response) => {
+        if (response && response.ok) {
+          return response.headers.get("X-MSTR-authToken");
+        }
+        throw Error("Failed to fetch auth token.");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   },
 });
 ```
@@ -251,9 +256,9 @@ microstrategy.embeddingContexts.embedReportPage({
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
-  errorHandler: function (error) {
-    console.log("catch error during creation: " + error.message);
-    //Do something to handle the error
+  errorHandler(error) {
+    console.log(`catch error during creation: ${error.message}`);
+    // Do something to handle the error
   },
 });
 ```
@@ -283,9 +288,9 @@ microstrategy.embeddingContexts.embedReportPage({
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
-  sessionErrorHandler: function (error) {
-    console.log("catch session error: " + error.message);
-    //Do something to handle the error
+  sessionErrorHandler(error) {
+    console.log(`catch session error: ${error.message}`);
+    // Do something to handle the error
   },
 });
 ```

@@ -165,13 +165,13 @@ If you do not enter a value for visualizationSelectedElements, the dossier runs 
 This API returns a dossier promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // The initial parameters above
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     myDossier.goToNextPage();
     // The other
@@ -256,7 +256,7 @@ The following code example includes `registerEventHandler`, which is an existing
 ```js
 myDossier.registerEventHandler(
   microstrategy.dossier.EventType.ON_VIZ_ELEMENT_CHANGED,
-  function (availableElements) {
+  (availableElements) => {
     console.log("The available elements: ", availableElements);
     // The other handling logic after getting these available elements
   }
@@ -292,14 +292,14 @@ The callback parameter's availableElements are shown below.
 This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
-    url: url,
+    url,
     placeholder: placeholderDiv,
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     // The other handling logics
   });

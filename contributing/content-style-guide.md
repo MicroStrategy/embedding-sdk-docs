@@ -86,6 +86,10 @@ Supported languages are listed [here](https://prismjs.com/#languages-list).
   [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/#!/Authentication/postLogin)
   ```
 
+- When we write key:value in our code
+  - We should avoid using field values as variables, such as `${variable}` or `show: 'Boolean'`
+  - Instead, we should use constants, such as `show: true.`
+
 ## Ordered list
 
 It is enforced to use `1.` only for all ordered lists for ease of maintenance.
