@@ -31,7 +31,7 @@ There are three basic steps for embedding a dossier.
 1. Call the `microstrategy.dossier.create(props)` method when the application has finished loading.
 
    ```js
-   var placeholderDiv = document.getElementById("dossierContainer");
+   const placeholderDiv = document.getElementById("dossierContainer");
    microstrategy.dossier.create({
      placeholder: placeholderDiv,
      url: "{YOUR_LIBRARY_SERVER_URL}/app/{PROJECT_ID}/{DOSSIER_ID}",

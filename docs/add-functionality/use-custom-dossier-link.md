@@ -30,7 +30,7 @@ So the client application could use this URL to recover the status of the embedd
 let dossierUrl =
   "https://demo.microstrategy.com:8080/MicroStrategyLibrary/app/9D8A49D54E04E0BE62C877ACC18A5A0A/0627433046E1B80BCE681C87E48F5C28";
 // The logic to get the embedded dossier URL
-const url = new URL(location.href);
+const url = new URL(window.location.href);
 const mstrLibraryLink = url.searchParams.get("mstrLibraryLink");
 // Use this URL to replace the original URL if you want
 if (mstrLibraryLink) {
