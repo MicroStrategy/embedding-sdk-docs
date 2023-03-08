@@ -104,6 +104,8 @@ microstrategy.dossier.create({
 });
 ```
 
+In the `sessionErrorHandler`, the API user is responsible for re-logging in, and refreshing the dossier page. It could be done by triggering the original embedding logic, like calling `microstrategy.dossier.create()` again. The different authentication methods could be seen on the page [Support for different authentication environments](../support-for-different-authentication-environments/support-for-different-authentication-environments.md).
+
 ### Session error handling after dossier creation
 
 You can also provide a session error handler after the dossier is created. The session error handler is executed when the session expiration error occurs and you can get details of the error in the `sessionErrorHandler` parameter.

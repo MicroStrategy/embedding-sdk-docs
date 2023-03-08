@@ -939,6 +939,14 @@ No visualization needs to be maximized or restored during initial loading.
 
 The `authoring` object controls the dossier interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
 
+### `errorHandler`
+
+The custom error handler that is executed when an error occurs in the dossier-creating process. See [Custom error handling](./error-handling.md#custom-error-handling) for details.
+
+### `sessionErrorHandler`
+
+The custom error handler that is executed when the session expires in the embedding lifetime. See [Custom error handling](./error-handling.md#session-error-handling) for details.
+
 ## Method for removing an embedded dossier
 
 ### microstrategy.dossier.destroy(config)
