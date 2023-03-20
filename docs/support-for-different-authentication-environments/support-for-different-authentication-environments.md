@@ -15,6 +15,8 @@ When you embed a dossier in an application, you want it to display as easily and
 
   This sample illustrates how to seamlessly display an embedded dossier in a simple application using Guest authentication, in an environment with multiple authentication modes enabled. The application includes code that specifically enables Guest authentication for the embedded dossier.
 
+- [Use standard authentication](./standard-authentication.md)
+
 - [Use SAML or OIDC authentication](./authentication-saml.md)
 
   This sample illustrates how to embed a dossier using SAML and OIDC authentication.
