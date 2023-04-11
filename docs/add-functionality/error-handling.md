@@ -19,7 +19,7 @@ The error handler used during dossier creation in microstrategy.dossier.create�
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   errorHandler: customErrorHandler,
 });
@@ -29,7 +29,7 @@ To disable the custom error handler during dossier creation, set disableCustomE
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   disableCustomErrorHandlerOnCreate: true,
 });
@@ -54,15 +54,15 @@ microstrategy.dossier
   .create({
     placeholder: placeholderDiv,
     url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
-    errorHandler: function (error) {
-      console.log("catch error during creation: " + error.message);
-      //Do something to handle the error
+    errorHandler(error) {
+      console.log(`catch error during creation: ${error.message}`);
+      // Do something to handle the error
     },
   })
-  .then(function (dossier) {
-    dossier.addCustomErrorHandler(function (error) {
-      console.log("catch error: " + error.message);
-      //Do something to handle the error
+  .then((dossier) => {
+    dossier.addCustomErrorHandler((error) => {
+      console.log(`catch error: ${error.message}`);
+      // Do something to handle the error
     });
   });
 ```
@@ -96,13 +96,15 @@ The session error handler is executed when the error occurs and you can get deta
 
 ```js
 microstrategy.dossier.create({
-  url: url,
+  url,
   placeholder: container,
   sessionErrorHandler: (errorObject) => {
     // The handling logic of the user
   },
 });
 ```
+
+In the `sessionErrorHandler`, the API user is responsible for re-logging in, and refreshing the dossier page. It could be done by triggering the original embedding logic, like calling `microstrategy.dossier.create()` again. The different authentication methods could be seen on the page [Support for different authentication environments](../support-for-different-authentication-environments/support-for-different-authentication-environments.md).
 
 ### Session error handling after dossier creation
 
@@ -122,15 +124,25 @@ microstrategy.dossier
   .create({
     placeholder: placeholderDiv,
     url: "http://[host]:[port]/[Library]/app/[ProjectID]/[DossierID]",
-    sessionErrorHandler: function (error) {
-      console.log("catch session expiration error during creation: " + error.message);
-      //Do something to handle the session expiration error
+    sessionErrorHandler(error) {
+      console.log(`catch session expiration error during creation: ${error.message}`);
+      // Do something to handle the session expiration error
     },
   })
-  .then(function (dossier) {
-    dossier.addSessionErrorHandler(function (error) {
-      console.log("catch session expiration error: " + error.message);
-      //Do something to handle the session expiration error
+  .then((dossier) => {
+    // if you want to add a new sessionErrorHandler(), you should remove the existing sessionErrorHandler() first
+    dossier.removeSessionErrorhandler();
+    dossier.addSessionErrorHandler((error) => {
+      console.log(`catch session expiration error: ${error.message}`);
+      // Do something to handle the session expiration error
     });
   });
 ```
+
+## Error handling way in Embedding SDK when checking input params
+
+When using the Embedding SDK to embed a page by calling APIs, we will check the user input first. Different from other types of errors, for the input params error, under the default settings, we will directly pop up a pop-up window, so that users can get the most direct error feedback when developing code. It will throw an error after you click the OK button of this window, you can get it by adding a `catch` outside the called API.
+
+![error popup window](../images/error_popup_window.png)
+
+If you don't want to see this pop-up window, you can close the pop-up window by adding `disableErrorPopupWindow` parameter to the input. It will notify you of this error by throwing an error directly.

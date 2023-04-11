@@ -13,8 +13,9 @@
 <!-- Please mark the relevant options with 'X' like [X] -->
 
 - [ ] My changes rendered as expected by running `yarn start`.
-- [ ] My changes followed the [style guide](https://github.com/MicroStrategy/embedding-sdk-docs/blob/main/contributing/content-style-guide.md).
+- [ ] My changes followed the [style guide](https://github.com/MicroStrategy/embedding-sdk-docs/blob/public/contributing/content-style-guide.md).
 - [ ] I have self-reviewed this PR.
+- [ ] I have performed a syntax validation check to avoid syntax errors.
 
 ## Helpful Info
 
