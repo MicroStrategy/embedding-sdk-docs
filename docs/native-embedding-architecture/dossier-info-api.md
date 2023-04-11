@@ -1,6 +1,6 @@
 ---
 title: Getting Dossier Info via APIs
-description: You can getting dossier's infromation, such as definition and visualization data, with Embedding SDK APIs.
+description: You can get dossier information, such as definition and visualization data, with Embedding SDK APIs.
 ---
 
 You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get definition or data from the dossier.
@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({

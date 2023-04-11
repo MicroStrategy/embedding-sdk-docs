@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
@@ -35,4 +35,4 @@ try {
 
 After the embedded visualizations have been rendered, you can click the elements on the visualization. Normally, this manipulation will highlight the selected attribute elements or metric elements.
 
-When the visualization is a filter source targetting other visualizations that are also embedded on the client's page, the selection manipulation will trigger the filtering and all target visualizations will be updated to reflect the latest data. Note that if the target visualizations are not on the same page as the visualization as filter, this auto-refreshing will not be triggered.
+When the visualization is a filtered source targetting other visualizations that are also embedded on the client's page, the selection manipulation will trigger the filtering and all target visualizations will be updated to reflect the latest data. Note that if the target visualizations are not on the same page as the visualization as the filter, this auto-refreshing will not be triggered.

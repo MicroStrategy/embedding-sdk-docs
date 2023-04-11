@@ -1,9 +1,9 @@
 ---
 title: Add event handling
-description: Events allow the custom application page to listen for events from the embedded visualizations. You can listen for these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
+description: Events allow the custom application page to listen for events from the embedded visualizations. You can listen to these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 ---
 
-Events allow a custom application page to listen for events from embedded visualizations. You can listen for these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
+Events allow a custom application page to listen for events from embedded visualizations. You can listen to these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 
 Suppose you already have MstrEnvironment and MstrDossier objects. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.
 
@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({

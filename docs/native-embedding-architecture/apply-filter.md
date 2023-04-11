@@ -3,7 +3,7 @@ title: Retrieve and apply filters
 description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors and visualization as filter via new embedding SDK APIs available since 11.3.8. For chapter-level filters and on-page selectors, we currently only support attribute element list selectors.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualization as filter via new embedding SDK APIs available since 11.3.8. For chapter-level filters and on-page selectors, we currently only support attribute element list selectors.
 
 Suppose we already have the MstrEnvironment object and MstrDossier object:
 
@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
@@ -33,7 +33,7 @@ try {
 
 ## Get filter available elements
 
-To apply filters in the dossier, client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Embedding SDK to retrieve the available attribute elements of the filters or selectors.
+To apply filters in the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Embedding SDK to retrieve the available attribute elements of the filters or selectors.
 
 | `getFilterAvailableElements()` |                                                          |
 | ------------------------------ | -------------------------------------------------------- |
@@ -74,7 +74,7 @@ Example of the attribute element list in the resolved value:
 
 ## Apply filters after embedded visualizations are rendered
 
-After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve information about filters, selectors and visualization as filters in the dossier. After you have the key of the filter, selector or visualization as filter, you can use the `MstrDossier.applyFilter()` function to manipulate it. Note: For filters and selectors, we currently only support manipulating selector type of attribute element list.
+After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve information about filters, selectors, and visualization as filters in the dossier. After you have the key of the filter, selector, or visualization as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it. Note: For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
 
 | `applyFilter()` |                                               |
 | --------------- | --------------------------------------------- |
@@ -90,12 +90,12 @@ The sections below show the filter details for each filter type.
 
 #### Chapter-level Filters
 
-For chapter-level filter of type `attribute_element_list`, you can get its key and source attribute definition from the dossier definition with `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations on the same chapter as the filter will be refreshed to reflect the latest data.
+For the chapter-level filter of type `attribute_element_list`, you can get its key and source attribute definition from the dossier definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations on the same chapter as the filter will be refreshed to reflect the latest data.
 
 ```js
 try {
   await mstrDossier.applyFilter({
-    key: `${filter_key}`,
+    key: `${filterKey}`,
     currentSelection: {
       selectionStatus: "<string>", // optional, values: ['unfiltered', 'included', 'excluded'], default: 'included'
       allSelected: "<boolean>", // optional, default: false,
@@ -114,12 +114,12 @@ try {
 
 #### On-Page Selectors
 
-For on-page selectors of type `attribute_element_list`, you can get its key from the dossier definition and source attribute definition with `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations that are the targets of the selector will be refreshed to reflect the latest data.
+For on-page selectors of type `attribute_element_list`, you can get its key from the dossier definition and source attribute definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations that are the targets of the selector will be refreshed to reflect the latest data.
 
 ```js
 try {
   await mstrDossier.applyFilter({
-    key: `${selector_key}`,
+    key: `${selectorKey}`,
     currentSelection: {
       selectionStatus: "<string>", // optional, values: ['unfiltered', 'included', 'excluded'], default: 'included'
       allSelected: "<boolean>", // optional, default: false,
@@ -138,16 +138,16 @@ try {
 
 #### Visualization as Filters
 
-For visualization as filters, you need its key from the dossier definition with `MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization as filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, the elements of the visualization as filter will be highliteged accordingly and all embedded visualizations that are the targets of the visualization as filter will be refreshed to reflect the latest data.
+For visualization as filters, you need its key from the dossier definition with `MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization as a filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, the elements of the visualization as the filter will be highlighted accordingly, and all embedded visualizations that are the targets of the visualization as the filter will be refreshed to reflect the latest data.
 
 - attribute element selection
 
-  To select multiple attribute elements in the visualization as filter, you can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple attribute elements in the visualization as filters, you can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
     await mstrDossier.applyFilter({
-      key: `${visualization_key}`,
+      key: `${visualizationKey}`,
       currentSelection: {
         selectionStatus: "included", // optional
         type: "attribute_element_list", // required
@@ -155,7 +155,7 @@ For visualization as filters, you need its key from the dossier definition with 
           {
             attribute: {
               id: "<string>", // attribute id, required
-              name: "<string>", //attribute name, optional
+              name: "<string>", // attribute name, optional
             },
             elements: [
               {
@@ -174,12 +174,12 @@ For visualization as filters, you need its key from the dossier definition with 
 
 - metric element selection
 
-  To select multiple metric elements in the visualization as filter, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple metric elements in the visualization as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
     await mstrDossier.applyFilter({
-      key: `${visualization_key}`,
+      key: `${visualizationKey}`,
       currentSelection: {
         selectionStatus: "included", // optional
         type: "metric_element_list", // required
@@ -212,9 +212,9 @@ Some examples for the filter object in the function parameter of `MstrDossier.a
 
 - [Chapter-Level Filters](#chapter-level-filters)
 
-#### Chpater-Level Filters
+#### Chapter-Level Filters
 
-- Select element list of the filter
+- Select the element list of the filter
 
   ```js
   try {
@@ -266,9 +266,9 @@ Some examples for the filter object in the function parameter of `MstrDossier.a
 
 #### On-Page Selectors
 
-To applying selection on on-page selectors, you can use the same input as chapter-level filters.
+To apply selection on on-page selectors, you can use the same input as chapter-level filters.
 
-- Select element list of the selector
+- Select the element list of the selector
 
   ```js
   try {

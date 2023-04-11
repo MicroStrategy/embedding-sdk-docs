@@ -1,11 +1,11 @@
 ---
-title: Embed Multiple Visualizations in a page
-description: Embed Multiple Visualizations in a page
+title: Embed Multiple Visualizations on a page
+description: Embed Multiple Visualizations on a page
 ---
 
 ## Purpose
 
-You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar as loading an out-of-the-box Library dossier page.
+You can use the new Embedding SDK API to embed multiple visualizations in a client's webpage, with high performance that is similar to loading an out-of-the-box Library dossier page.
 
 Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a Custom Visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
@@ -24,7 +24,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ## Example Code
 
-To embed multiple visualizations from 1 dossier, after refering `embedding-component-alpha.js`, use the code shown below:
+To embed multiple visualizations from 1 dossier, after referring `embedding-component-alpha.js`, use the code shown below:
 
 ```js
 try {
@@ -85,7 +85,7 @@ async function loadVisualizationsFromDossiers() {
     const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
       serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
       getAuthToken: () => {
-        // The similar logic as existing Embedding SDK, but only allows standard auth login
+        // The similar logic as the existing Embedding SDK, but only allows standard auth login
       },
     });
     const projectId = "B19DEDCC11D4E0EFC000EB9495D0F44F";

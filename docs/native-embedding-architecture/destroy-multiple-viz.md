@@ -1,6 +1,6 @@
 ---
-title: Destroy Visualizations in a page
-description: Destroy Visualizations in a page
+title: Destroy Visualizations on a page
+description: Destroy Visualizations on a page
 ---
 
 ## Purpose
@@ -16,7 +16,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
