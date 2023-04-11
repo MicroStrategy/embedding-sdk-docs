@@ -24,7 +24,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ## Example Code
 
-To embed multiple visualizations, after refering `embedding-component-alpha.js`, use the code shown below:
+To embed multiple visualizations from 1 dossier, after refering `embedding-component-alpha.js`, use the code shown below:
 
 ```js
 try {
@@ -53,6 +53,84 @@ try {
   // Your own code after the visualizations are all loaded
 } catch (error) {
   // Your own error handling code
+}
+```
+
+If you want to embed visualizations from multiple dossiers, you need to turn on this functionality by setting the feature flag as below before calling the APIs:
+
+```js
+window.microstrategy.nativeEmbedding.featureFlags.multipleDossiers = true;
+```
+
+then you can embed the visualizations from multiple dossiers in parallel like this:
+
+```js
+async function loadVisualizationsFromDossier({
+  mstrEnvironment,
+  projectId,
+  dossierId,
+  vizAndContainers,
+}) {
+  const mstrDossier = await mstrEnvironment.loadDossier({
+    projectId,
+    objectId: dossierId,
+  });
+  // The function here would keep the old behavior, to load the visualizations page by page
+  await mstrDossier.refresh(vizAndContainers);
+}
+
+async function loadVisualizationsFromDossiers() {
+  try {
+    // The preparation code starts here
+    const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
+      serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+      getAuthToken: () => {
+        // The similar logic as existing Embedding SDK, but only allows standard auth login
+      },
+    });
+    const projectId = "B19DEDCC11D4E0EFC000EB9495D0F44F";
+    const dossierAndVisualizations = [
+      {
+        dossierId: "DCB5909744F164E1D190B3B0137EEC5F",
+        vizAndContainers: [
+          {
+            key: "W70",
+            container: document.getElementById("containerA"),
+          },
+          {
+            key: "W112",
+            container: document.getElementById("containerB"),
+          },
+        ],
+      },
+      {
+        dossierId: "EDBA3FAE4F6A21187BD2CD92AE954802",
+        vizAndContainers: [
+          {
+            key: "W115",
+            container: document.getElementById("containerC"),
+          },
+          {
+            key: "W116",
+            container: document.getElementById("containerD"),
+          },
+        ],
+      },
+    ];
+    // Non-blocking concurrent loadings for visualizations from different dossiers
+    await Promise.all(
+      dossierAndVisualizations.map((dossierAndVisualization) =>
+        loadVisualizationsFromDossier({
+          mstrEnvironment,
+          projectId,
+          dossierId: dossierAndVisualization.dossierId,
+          vizAndContainers: dossierAndVisualization.vizAndContainers,
+        })
+      )
+    );
+  } catch (err) {
+    // Your custom error handling logic here
+  }
 }
 ```
 

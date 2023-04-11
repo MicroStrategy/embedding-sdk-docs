@@ -63,4 +63,5 @@ try {
 | Visualization key isn't a valid visualization key in the dossier                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
 | The container isn’t a valid HTML element in the dom tree                          | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
 | Some container has children that are not our shown visualization                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
+| Some container is occupied by other dossiers                                      | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
 | The REST API errors                                                               | Other          | Embedding SDK   | Caught by the catch() of the promise object |
