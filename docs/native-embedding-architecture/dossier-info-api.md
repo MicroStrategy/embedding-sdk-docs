@@ -1,5 +1,5 @@
 ---
-title: Getting Dossier Info via APIs
+title: Getting dossier info via APIs
 description: You can get dossier information, such as definition and visualization data, with Embedding SDK APIs.
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Embed Multiple Visualizations on a page
-description: Embed Multiple Visualizations on a page
+title: Embed multiple visualizations on a page
+description: Embed multiple visualizations on a page
 ---
 
 ## Purpose

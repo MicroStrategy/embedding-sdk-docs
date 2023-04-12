@@ -1,6 +1,6 @@
 ---
-title: Destroy Visualizations on a page
-description: Destroy Visualizations on a page
+title: Destroy visualizations on a page
+description: Destroy visualizations on a page
 ---
 
 ## Purpose

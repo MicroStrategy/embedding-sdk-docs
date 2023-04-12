@@ -1,5 +1,5 @@
 ---
-title: Visualization Manipulation on Graphics
+title: Visualization manipulation on graphics
 description: You can do manipulation on the embedded visualizations after they have been refreshed.
 ---
 
