@@ -42,7 +42,7 @@ try {
 
 #### API Errors
 
-The errors could be caught in this function include:
+The errors that could be caught in this function include:
 
 | Error Case                                            | Error Category   | Handling Module | Error Handling                              |
 | ----------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
@@ -79,7 +79,7 @@ try {
 
 #### API Errors
 
-The errors could be caught in this function include:
+The errors that could be caught in this function include:
 
 | Error Case                                         | Error Category | Handling Module | Error Handling                              |
 | -------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
