@@ -3,7 +3,7 @@ title: MstrDossier class
 description: MstrDossier class
 ---
 
-The object returned from `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dossier object.
+The object returned from the `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dossier object.
 
 ## APIs
 
@@ -32,7 +32,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://example.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as existing Embedding SDK, but only allows standard auth login
+      // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
   });
   const dossier = await environment.loadDossier({
