@@ -11,12 +11,12 @@ Custom visualizations are also supported. To embed custom visualizations, you sh
 
 ## Requirements
 
-You must use the js bundle, `embedding-component-alpha.js`:
+You must use the js bundle, `native-embedding-sdk.js`:
 
 ```html
 <script
   type="text/javascript"
-  src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/embedding-component-alpha.js"
+  src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/native-embedding-sdk.js"
 ></script>
 ```
 
@@ -24,7 +24,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ## Example Code
 
-To embed multiple visualizations from 1 dossier, after referring `embedding-component-alpha.js`, use the code shown below:
+To embed multiple visualizations from 1 dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
 ```js
 try {
