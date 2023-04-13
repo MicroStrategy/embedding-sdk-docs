@@ -55,13 +55,14 @@ try {
 
 #### API Errors
 
-| Error Case                                                                        | Error Category | Handling Module | Error Handling                              |
-| --------------------------------------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
-| The input parameter fails input validation                                        | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| The user wants to show more than 1 visualization in one container in input params | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| The user wants to show 1 visualization in multiple containers                     | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| Visualization key isn't a valid visualization key in the dossier                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| The container isn’t a valid HTML element in the dom tree                          | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| Some container has children that are not our shown visualization                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| Some container is occupied by other dossiers                                      | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| The REST API errors                                                               | Other          | Embedding SDK   | Caught by the catch() of the promise object |
+| Error Case                                                                        | Error Category | Handling Module | Error Handling                                                                                                                 |
+| --------------------------------------------------------------------------------- | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| The input parameter fails input validation                                        | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| The user wants to show more than 1 visualization in one container in input params | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| The user wants to show 1 visualization in multiple containers                     | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| Visualization key isn't a valid visualization key in the dossier                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| The container isn’t a valid HTML element in the dom tree                          | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| Some container has children that are not our shown visualization                  | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| Some container is occupied by other dossiers                                      | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| The REST API errors                                                               | Other          | Embedding SDK   | Caught by the catch() of the promise object                                                                                    |
+| The key is the visualization key of visualization in the panel                    | Invalid input  | Embedding SDK   | console err message in console "The visualization `${VisualizationKey}` is a visualization in a panel, which isn't supported." |

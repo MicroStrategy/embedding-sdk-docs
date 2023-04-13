@@ -9,8 +9,6 @@ If you want to gain better performance when embedding multiple separate visualiz
 
   This introductory sample embeds multiple single visualizations in a simple application. This sample can be used as is.
 
-- [Destroy Visualizations on a page](destroy-multiple-viz.md)
+- [Destroy visualizations on a page](destroy-multiple-viz.md)
 
   This introductory sample shows how to destroy the current visualizations before embedding a new set of visualizations.
-
-The new set of APIs is still in a pre-release early version(alpha version) and might have significant changes in the future.
