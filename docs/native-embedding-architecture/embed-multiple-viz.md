@@ -65,9 +65,9 @@ If we want to see the loading bar during the whole embedding process, we can mak
 
 ```html
 <body>
-    <div id="container1"></div>
-    <div id="container2"></div>
-</body>    
+  <div id="container1"></div>
+  <div id="container2"></div>
+</body>
 ```
 
 ```js

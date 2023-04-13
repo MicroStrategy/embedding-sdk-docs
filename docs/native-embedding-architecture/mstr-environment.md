@@ -49,10 +49,10 @@ try {
 
 #### API Errors
 
-| Error Case                                                  | Error Category   | Handling Module | Error Handling                              |
-| ----------------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
-| The input parameter fails input validation                  | Invalid input    | Embedding SDK   | Caught by the catch() of the promise object |
-| The REST API errors                                         | Other            | Embedding SDK   | Caught by the catch() of the promise object |
+| Error Case                                 | Error Category | Handling Module | Error Handling                              |
+| ------------------------------------------ | -------------- | --------------- | ------------------------------------------- |
+| The input parameter fails input validation | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
+| The REST API errors                        | Other          | Embedding SDK   | Caught by the catch() of the promise object |
 
 ### 2. The Destroy Dossier API
 
