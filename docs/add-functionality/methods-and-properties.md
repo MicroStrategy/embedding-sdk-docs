@@ -532,7 +532,7 @@ microstrategy.dossier.create({
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
-    return fetch("http://{host}:{port}/{Library}/api/auth/login", {
+    return fetch("https://{host}:{port}/{Library}/api/auth/login", {
       method: "POST",
       credentials: "include", // including cookie
       mode: "cors", // setting as CORS mode for cross origin
@@ -541,13 +541,14 @@ microstrategy.dossier.create({
         loginMode: 1, // Standard mode
         username: "input your username",
         password: "input your password",
+        applicationType: 35, // The number of it must be 35 in Embedding SDK, you can also don't set the param.
       }),
     })
       .then((response) => {
         if (response && response.ok) {
           return response.headers.get("X-MSTR-authToken");
         }
-        throw Error("Failed to fetch auth token");
+        throw Error("Failed to fetch auth token.");
       })
       .catch((error) => {
         console.log("Error:", error);
