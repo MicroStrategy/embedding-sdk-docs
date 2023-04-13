@@ -32,7 +32,7 @@ This API would return a Promise object that resolves to a MstrDossier object.
 ```js
 try {
   const environment = await microstrategy.embeddingComponent.environments.create({
-    serverUrl: "https://example.com/MicroStrategyLibrary",
+    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
       // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },
@@ -52,7 +52,6 @@ try {
 | Error Case                                                  | Error Category   | Handling Module | Error Handling                              |
 | ----------------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
 | The input parameter fails input validation                  | Invalid input    | Embedding SDK   | Caught by the catch() of the promise object |
-| The user wants to load more than 1 dossier in 1 environment | Unsupported case | Embedding SDK   | Caught by the catch() of the promise object |
 | The REST API errors                                         | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 
 ### 2. The Destroy Dossier API

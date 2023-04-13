@@ -29,7 +29,7 @@ This API would return a Promise object that resolves to a MstrEnvironment object
 ```js
 try {
   const environment = await microstrategy.embeddingComponent.environments.create({
-    serverUrl: "https://example.com/MicroStrategyLibrary",
+    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
       // The similar logic as getLoginToken existing Embedding SDK, but only support standard authentication now
     },
