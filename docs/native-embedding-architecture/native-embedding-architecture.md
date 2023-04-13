@@ -7,10 +7,10 @@ If you want to gain better performance when embedding multiple separate visualiz
 
 - [Embed Multiple Visualizations on a page](embed-multiple-viz.md)
 
-  This introductory sample embeds multiple single visualizations in a simple application. This sample can be used as is. These APIs could only support embedding read-only visualizations now.
+  This introductory sample embeds multiple single visualizations in a simple application. This sample can be used as is.
 
 - [Destroy Visualizations on a page](destroy-multiple-viz.md)
 
-  Because we only support embedding the visualizations from one dossier, we need the functionality to switch from the current dossier to another dossier. This introductory sample shows how to destroy the current visualizations before embedding a new set of visualizations.
+  This introductory sample shows how to destroy the current visualizations before embedding a new set of visualizations.
 
 The new set of APIs is still in a pre-release early version(alpha version) and might have significant changes in the future.
