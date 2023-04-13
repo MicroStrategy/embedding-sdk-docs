@@ -14,7 +14,7 @@ Suppose we already have the MstrEnvironment object and MstrDossier object:
 ```js
 try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
-    serverUrl: "https://example.com/MicroStrategyLibrary",
+    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
       // The similar logic as the existing Embedding SDK, but only allows standard auth login
     },

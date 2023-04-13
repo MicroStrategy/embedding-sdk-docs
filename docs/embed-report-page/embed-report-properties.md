@@ -59,7 +59,7 @@ N/A
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -86,7 +86,7 @@ No
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -112,7 +112,7 @@ No
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -226,7 +226,7 @@ false
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
@@ -252,7 +252,7 @@ N/A
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
@@ -284,7 +284,7 @@ N/A
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
