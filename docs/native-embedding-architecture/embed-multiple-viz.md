@@ -22,7 +22,7 @@ You must use the js bundle, `native-embedding-sdk.js`:
 
 The js bundle is also in the web-dossier war, in the same directory as `embeddinglib.js`.
 
-## Example Code
+## Example code
 
 ### Embed visualization from 1 dossier
 

@@ -25,7 +25,7 @@ try {
 }
 ```
 
-## Get Dossier Definition
+## Get dossier definition
 
 You can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve the definition of the dossier.
 
@@ -108,7 +108,7 @@ Example of the dossier definition in the resolved value:
 
 </details>
 
-## Get Visualization Data
+## Get visualization data
 
 You can use the `MstrDossier.getVisualizationData()` function in the Embedding SDK to retrieve the data of a single visualization.
 

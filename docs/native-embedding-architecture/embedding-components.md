@@ -7,7 +7,7 @@ This is the entry point of the new multiple visualizations SDK.
 
 ## APIs
 
-### 1. The Create Environment API
+### 1. The create environment API
 
 #### Function
 
@@ -51,7 +51,7 @@ The errors that could be caught in this function include:
 | Invalid authentication info or incorrect CORS setting | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 | The other REST API errors                             | Other            | Embedding SDK   | Caught by the catch() of the promise object |
 
-### 2. The Destroy Environment API
+### 2. The destroy environment API
 
 #### Function
 

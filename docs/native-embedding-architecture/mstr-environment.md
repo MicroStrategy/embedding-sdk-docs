@@ -7,7 +7,7 @@ This instance of this class is the object returned from `microstrategy.embedding
 
 ## APIs
 
-### 1. The Load Dossier API
+### 1. The load dossier API
 
 #### Function
 
@@ -54,7 +54,7 @@ try {
 | The input parameter fails input validation | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
 | The REST API errors                        | Other          | Embedding SDK   | Caught by the catch() of the promise object |
 
-### 2. The Destroy Dossier API
+### 2. The destroy dossier API
 
 #### Function
 
