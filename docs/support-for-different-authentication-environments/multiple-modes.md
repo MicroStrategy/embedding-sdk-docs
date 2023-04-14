@@ -41,6 +41,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
              headers: { "Content-Type": "application/json" },
              body: JSON.stringify({
                loginMode: 8, // Login as guest user.
+               applicationType: 35, // The number of it must be 35 in Embedding SDK, you can also don't set the param.
              }),
            };
            return fetch(baseURL + "/api/auth/login", options)

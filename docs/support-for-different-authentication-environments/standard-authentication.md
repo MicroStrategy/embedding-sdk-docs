@@ -9,10 +9,11 @@ To help you get started, we have provided [a live example](https://microstrategy
 
 The workflow consists of:
 
-1. [Set up Library Server](#set-up-library-server)
-1. [Import Embedding SDK](#import-embedding-sdk)
-1. [Embed dossier with custom authentication properties](#embed-dossier-with-custom-authentication-properties)
-1. [Make REST API calls to get auth token through Standard authentication](#authentication-through-rest-api-using-standard-authentication)
+- [Set up Library Server](#set-up-library-server)
+- [Import Embedding SDK](#import-embedding-sdk)
+- [Embed dossier with custom authentication properties](#embed-dossier-with-custom-authentication-properties)
+- [Authentication through REST API using Standard authentication](#authentication-through-rest-api-using-standard-authentication)
+- [Putting it all together](#putting-it-all-together)
 
 ## Set up Library Server
 
@@ -131,6 +132,7 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
         loginMode: 1, // 1 means Standard login
         username: prompt("Please enter your username"), // use guest / no password to test
         password: prompt("Please enter your password"),
+        applicationType: 35, // The number of it must be 35 in Embedding SDK, you can also don't set the param.
       }),
     };
     return fetch(baseServerUrl + "/" + libraryName + "/api/auth/login", options)
