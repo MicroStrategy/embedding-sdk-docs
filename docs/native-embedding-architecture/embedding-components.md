@@ -26,7 +26,7 @@ This API would return a Promise object that resolves to a MstrEnvironment object
 
 #### Example
 
-The getLoginToken function can be found in [the getLoginToken doc](http://localhost:3000/add-functionality/methods-and-properties#getlogintoken)
+The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {

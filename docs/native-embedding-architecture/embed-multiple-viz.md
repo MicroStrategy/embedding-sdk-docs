@@ -28,7 +28,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 To embed multiple visualizations from 1 dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
-The getLoginToken function can be found in [the getLoginToken doc](http://localhost:3000/add-functionality/methods-and-properties#getlogintoken)
+The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {
@@ -72,7 +72,7 @@ If we want to see the loading bar during the whole embedding process, we can mak
 </body>
 ```
 
-The getLoginToken function can be found in [the getLoginToken doc](http://localhost:3000/add-functionality/methods-and-properties#getlogintoken)
+The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {
