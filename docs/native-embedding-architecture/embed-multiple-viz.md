@@ -32,7 +32,6 @@ Find the `getLoginToken` function in [the getLoginToken doc](../add-functionalit
 
 ```js
 try {
- 
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
@@ -72,6 +71,26 @@ If you want to see the loading bar during the entire embedding process, create a
 </body>
 ```
 
+```css
+#mstrLoadingBarParent {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+
+#mstrLoadingBar {
+  width: 100%;
+  height: 100%;
+  background: transparent url(yourLoadingIconUrl) no-repeat center;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+}
+```
+
 Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
@@ -79,20 +98,10 @@ try {
   const showLoadingBar = (container) => {
     // the position of the loading bar parent element should be relative
     const loadingBarParentDiv = document.createElement("div");
-    loadingBarParentDiv.style.position = "relative";
-    loadingBarParentDiv.style.width = "100%";
-    loadingBarParentDiv.style.height = "100%";
-    loadingBarParentDiv.id = "mstrLoadingBar";
+    loadingBarParentDiv.id = "mstrLoadingBarParent";
     // create the div
     const loadingBarDiv = document.createElement("div");
-    loadingBarDiv.style.width = "100%";
-    loadingBarDiv.style.height = "100%";
-    loadingBarDiv.style.background = `transparent url(${yourLoadingIconUrl}) no-repeat center`;
-    loadingBarDiv.style.backgroundColor = "white";
-    loadingBarDiv.style.position = "absolute";
-    loadingBarDiv.style.left = "0";
-    loadingBarDiv.style.top = "0";
-    loadingBarDiv.style.display = "block";
+    loadingBarDiv.id = "mstrLoadingBar";
     loadingBarParentDiv.appendChild(loadingBarDiv);
     container.appendChild(loadingBarParentDiv);
   };
@@ -102,10 +111,8 @@ try {
   };
 
   const container1 = document.getElementById("container1");
-  const container2 = document.getElementById("container2");
 
   showLoadingBar(container1);
-  showLoadingBar(container2);
 
   // eslint-disable-next-line
   const environment = await microstrategy.embeddingComponent.environments.create({
@@ -120,7 +127,6 @@ try {
   });
 
   hideLoadingBar(container1);
-  hideLoadingBar(container2);
 
   await dossier.refresh([
     {

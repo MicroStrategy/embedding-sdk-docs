@@ -267,7 +267,7 @@ microstrategy.embeddingContexts.embedReportPage({
 
 The custom error handler that executes when a session expiration error occurs. It's a callback function that contains one parameter, `error`. The error object has a `message` property that contains the detailed error message.
 
-When session expires:
+When the session expires:
 
 - If `sessionErrorHandler` is not set, the embedded page redirects to the OOTB Library login page.
 - If `sessionErrorHandler` is set, the session error handler is triggered and the embedded page does not change for one minute. If the error handler doesn't do anything after one minute, such as reauthentication and refreshing the page to renew the session, the embedded page redirects to the OOTB Library login page.

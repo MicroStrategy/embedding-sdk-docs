@@ -11,6 +11,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 - You can use the Native Embedding SDK to embed visualizations from separate containers to improve performance.
 - Users can interact with the embed visualization.
+- Users can use APIs to do manipulation like filter.
 
 ## 2021 Update 8 (February 2023)
 

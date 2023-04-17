@@ -3,7 +3,7 @@ title: Embedding components namespace
 description: Embedding components namespace
 ---
 
-This is the entry point of the new Native Embedding SDK.
+This is the entry point of the Native Embedding SDK.
 
 ## APIs
 
@@ -60,8 +60,8 @@ The errors caught in this function include:
 
 #### Input Parameters
 
-| Parameter Name | Data Type             | Description                                                                                                                                              | Is Required |
-| -------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Parameter Name | Data Type             | Description                                                                                                                                       | Is Required |
+| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | environment    | MstrEnvironment class | The environment returned by the `create` function. <br/> When it’s not provided, the Embedding SDK destroys all environments in the current page. | true        |
 
 #### Response
