@@ -28,7 +28,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 To embed multiple visualizations from 1 dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
-The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {
@@ -60,10 +60,10 @@ try {
 }
 ```
 
-### Embed visulization with loading bar during the whole process
+### Display a loading bar during the entire visualization embedding process
 
-In the existing process to embed visualization, the native embed will know the container when we call the `dossier.refresh` API, and the loading bar will appear at that time.
-If we want to see the loading bar during the whole embedding process, we can make an implementation like this:
+During the existing visualization embedding process, the native embedding API knows which container to use when you call the dossier.refresh API, and the loading bar appears at that time.
+If you want to see the loading bar during the entire embedding process, create an implementation like this:
 
 ```html
 <body>
@@ -72,7 +72,7 @@ If we want to see the loading bar during the whole embedding process, we can mak
 </body>
 ```
 
-The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {
@@ -146,7 +146,7 @@ If you want to embed visualizations from multiple dossiers, you need to turn on 
 window.microstrategy.nativeEmbedding.featureFlags.multipleDossiers = true;
 ```
 
-then you can embed the visualizations from multiple dossiers in parallel like this:
+Then you can embed the visualizations from multiple dossiers in parallel like this:
 
 ```js
 async function loadVisualizationsFromDossier({

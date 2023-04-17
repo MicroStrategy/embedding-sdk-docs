@@ -9,7 +9,7 @@ After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple v
 
 ## Example code
 
-Suppose we already have the MstrEnvironment object and MstrDossier object:
+Let's say you already have MstrEnvironment and MstrDossier objects:
 
 ```js
 try {

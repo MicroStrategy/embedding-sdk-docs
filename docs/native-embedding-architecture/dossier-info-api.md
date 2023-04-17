@@ -3,9 +3,9 @@ title: Getting dossier info via APIs
 description: You can get dossier information, such as definition and visualization data, with Embedding SDK APIs.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get definition or data from the dossier.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get the definition or data from the dossier.
 
-Suppose we already have the MstrEnvironment object and MstrDossier object:
+Let's say you already have MstrEnvironment and MstrDossier objects:
 
 ```js
 try {
@@ -112,11 +112,11 @@ Example of the dossier definition in the resolved value:
 
 You can use the `MstrDossier.getVisualizationData()` function in the Embedding SDK to retrieve the data of a single visualization.
 
-| `getVisualizationData()` |                                                       |
-| ------------------------ | ----------------------------------------------------- |
-| Class                    | `MstrDossier`                                         |
-| Return Type              | `Promise<VisualizationData>`                          |
-| Description              | Get the definition and data of specific visualization |
+| `getVisualizationData()` |                                                          |
+| ------------------------ | -------------------------------------------------------- |
+| Class                    | `MstrDossier`                                            |
+| Return Type              | `Promise<VisualizationData>`                             |
+| Description              | Get the definition and data of a specific visualization. |
 
 ### `MstrDossier.getVisualizationData` examples
 

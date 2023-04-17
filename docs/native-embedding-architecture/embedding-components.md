@@ -22,11 +22,11 @@ async microstrategy.embeddingComponent.environments.create(props)
 
 #### Response
 
-This API would return a Promise object that resolves to a MstrEnvironment object.
+This API returns a promise object that resolves to a MstrEnvironment object.
 
 #### Example
 
-The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 try {
@@ -44,14 +44,13 @@ try {
 
 #### API Errors
 
-The errors that could be caught in this function include:
-
-| Error Case                                            | Error Category   | Handling Module | Error Handling                              |
+The errors caught in this function include:
+| Error Case | Error Category | Handling Module | Error Handling |
 | ----------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
-| The input parameter fails input validation            | Invalid input    | Embedding SDK   | Caught by the catch() of the promise object |
-| There is already an existing another environment      | Unsupported case | Embedding SDK   | Caught by the catch() of the promise object |
-| Invalid authentication info or incorrect CORS setting | Other            | Embedding SDK   | Caught by the catch() of the promise object |
-| The other REST API errors                             | Other            | Embedding SDK   | Caught by the catch() of the promise object |
+| The input parameter fails input validation | Invalid input | Embedding SDK | Caught by the catch() of the promise object |
+| There is already another existing environment | Unsupported case | Embedding SDK | Caught by the catch() of the promise object |
+| Invalid authentication info or incorrect CORS setting | Other | Embedding SDK | Caught by the catch() of the promise object |
+| Other REST API errors | Other | Embedding SDK | Caught by the catch() of the promise object |
 
 ### 2. The destroy environment API
 
@@ -67,7 +66,7 @@ async microstrategy.embeddingComponent.environments.destroy(environment)
 
 #### Response
 
-This API would return a promise object, that resolves to nothing.
+This API returns a promise object, that resolves to nothing.
 
 #### Example
 
@@ -81,8 +80,7 @@ try {
 
 #### API Errors
 
-The errors that could be caught in this function include:
-
-| Error Case                                         | Error Category | Handling Module | Error Handling                              |
+The errors caught in this function include:
+| Error Case | Error Category | Handling Module | Error Handling |
 | -------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
-| The environment doesn't exist in the client’s page | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
+| The environment doesn't exist in the client’s page | Invalid input | Embedding SDK | Caught by the catch() of the promise object |
