@@ -234,8 +234,8 @@ This piece of code contains a function from the following namespace and classes:
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is the object returned from the microstrategy.embeddingComponent.environments.create() function, which is responsible for creating and destroying MstrDossier objects.
+  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying MstrDossier objects.
 
 - [`MstrDossier`](mstr-dossier.md) Class
 
-  This class is returned from the MstrEnvironment.loadDossier() function, which is responsible for showing visualizations in containers.
+  This class is returned from `the MstrEnvironment.loadDossier()` function, which is responsible for showing visualizations in containers.
