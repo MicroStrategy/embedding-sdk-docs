@@ -11,7 +11,7 @@ The object returned from the `MstrEnvironment.loadDossier()` function, which all
 
 #### Function
 
-async refresh(props)
+`async refresh(props)`
 
 #### Input Parameters
 

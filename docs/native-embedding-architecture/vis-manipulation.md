@@ -3,7 +3,7 @@ title: Visualization manipulation on graphics
 description: You can do manipulation on the embedded visualizations after they have been refreshed.
 ---
 
-After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate these embedded visualizations on the graphics the same way as you are working on MicroStrategy Library.
+The embedded visualizations can be manipulated the same way as they are seen on MicroStrategy Library dossier pages.
 
 Currently, the supported manipulation types include visualization element selection, actions triggered by a click, dragging inside a visualization, and the actions inside the right-click menu.
 

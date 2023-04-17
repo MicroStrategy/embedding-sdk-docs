@@ -11,7 +11,7 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 #### Function
 
-async loadDossier(props)
+`async loadDossier(props)`
 
 #### Input Parameters
 

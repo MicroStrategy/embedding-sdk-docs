@@ -3,7 +3,7 @@ title: Embedding components namespace
 description: Embedding components namespace
 ---
 
-This is the entry point of the new multiple visualizations SDK.
+This is the entry point of the new Native Embedding SDK.
 
 ## APIs
 
@@ -11,7 +11,7 @@ This is the entry point of the new multiple visualizations SDK.
 
 #### Function
 
-async microstrategy.embeddingComponent.environments.create(props)
+`async microstrategy.embeddingComponent.environments.create(props)`
 
 #### Input Parameters
 
@@ -56,13 +56,13 @@ The errors caught in this function include:
 
 #### Function
 
-async microstrategy.embeddingComponent.environments.destroy(environment)
+`async microstrategy.embeddingComponent.environments.destroy(environment)`
 
 #### Input Parameters
 
 | Parameter Name | Data Type             | Description                                                                                                                                              | Is Required |
 | -------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| environment    | MstrEnvironment class | The environment returned by the create function. <br/> When it’s not provided, the Embedding SDK would destroy all the environments in the current page. | true        |
+| environment    | MstrEnvironment class | The environment returned by the `create` function. <br/> When it’s not provided, the Embedding SDK destroys all environments in the current page. | true        |
 
 #### Response
 
