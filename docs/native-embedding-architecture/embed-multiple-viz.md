@@ -169,7 +169,7 @@ async function loadVisualizationsFromDossiers() {
     const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
       serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
       getAuthToken: () => {
-        // The similar logic as the existing Embedding SDK, but only allows standard auth login
+        // Logic similar to the existing Embedding SDK, but only standard auth login is allowed
       },
     });
     const projectId = "B19DEDCC11D4E0EFC000EB9495D0F44F";

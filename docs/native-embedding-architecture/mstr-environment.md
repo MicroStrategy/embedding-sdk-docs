@@ -3,7 +3,7 @@ title: MstrEnvironment namespace
 description: MstrEnvironment namespace
 ---
 
-This instance of this class is the object returned from `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application.
+The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. MstrEnvironment class represents one MicroStrategy Library Application identified by a URL.
 
 ## APIs
 
@@ -17,15 +17,15 @@ async loadDossier(props)
 
 | Parameter Name   | Data Type | Description                                                                                                  | Is Required |
 | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
-| props.projectId  | String    | The project id. Should be a GUID                                                                             | true        |
+| props.projectId  | String    | The project ID, which must be a GUID.                                                                        | true        |
 | props.objectId   | String    | The dossier id. Should be a valid dossier ID. If the ID is a document id or report ID, would report an error | true        |
-| props.instanceId | String    | The dossier instance id, if it already exists.                                                               | false       |
+| props.instanceId | String    | The dossier instance ID, if it already exists.                                                               | false       |
 
-The `projectId` + `objectId` would be used as the identifier of the dossier. If the function is called 2 times with the same parameter, in their callback, the same MstrDossier object would be returned.
+The `projectId` + `objectId` is used as the dossier identifier. If the function is called twice with the same parameter, the same MstrDossier object is returned in the callback.
 
 #### Response
 
-This API would return a Promise object that resolves to a MstrDossier object.
+This API returns a promise object that resolves to a MstrDossier object.
 
 #### Example
 
@@ -34,7 +34,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as the existing Embedding SDK, but only allows standard auth login
+      // Logic similar to the existing Embedding SDK, but only standard auth login is allowed
     },
   });
   // Begin here
@@ -52,7 +52,7 @@ try {
 | Error Case                                 | Error Category | Handling Module | Error Handling                              |
 | ------------------------------------------ | -------------- | --------------- | ------------------------------------------- |
 | The input parameter fails input validation | Invalid input  | Embedding SDK   | Caught by the catch() of the promise object |
-| The REST API errors                        | Other          | Embedding SDK   | Caught by the catch() of the promise object |
+| Other REST API errors                      | Other          | Embedding SDK   | Caught by the catch() of the promise object |
 
 ### 2. The destroy dossier API
 
@@ -68,7 +68,7 @@ async unloadDossier(dossier)
 
 #### Response
 
-This API would return a Promise object that resolves to a MstrDossier object.
+This API returns a promise object that resolves to a MstrDossier object.
 
 #### Example
 
