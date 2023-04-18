@@ -132,7 +132,6 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
         loginMode: 1, // 1 means Standard login
         username: prompt("Please enter your username"), // use guest / no password to test
         password: prompt("Please enter your password"),
-        applicationType: 35, // The number of it must be 35 in Embedding SDK, you can also don't set the param.
       }),
     };
     return fetch(baseServerUrl + "/" + libraryName + "/api/auth/login", options)
@@ -157,6 +156,8 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
   }
 </script>
 ```
+
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding-SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ## Putting it all together
 
