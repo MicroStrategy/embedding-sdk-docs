@@ -43,14 +43,14 @@ When the visualization is a filtered source, targeting other visualizations that
 
 After the embedded visualizations have been rendered, you can right-click on the visualization. Normally, this manipulation triggers a pop-up menu and you can click a menu option to apply an action.
 
-The `Show Data` and `Go To Page` right-click menu options are not supported in Library. These options are hidden.
+MicroStrategy supports most of the manipulations in the right-click menu within Library, except the of clicking the `Show Data` and `Go To Page` items in the right-click menu of visualization. These two icons are hidden.
 
 ## Click, drag, and scroll in the visualization
 
 After the embedded visualizations have been rendered, you can click the icon to open a pop-up menu with multiple actions you can select.
 You can also click a column line and drag it, click the legend and drag it, scroll down to load more data, and so on.
 
-Currently, we support most of the manipulation with Library in this type of manipulation except of click the menu icon or the maximize icon on the top-right corner of visualization, these two icons will be hidden.
+MicroStrategy supports most of the manipulations within Library, except the of clicking the menu or maximize icons in the top-right corner of visualization. These two icons are hidden.
 
 ## How actions affect the loading bar
 

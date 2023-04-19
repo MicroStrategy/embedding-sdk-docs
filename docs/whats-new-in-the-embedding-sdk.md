@@ -7,11 +7,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 9 (May 2023)
 
-[Native Embedding SDK.](./native-embedding-architecture/native-embedding-architecture.md)
+[Native Embedding SDK](./native-embedding-architecture/native-embedding-architecture.md)
 
 - You can use the Native Embedding SDK to embed visualizations from separate containers to improve performance.
-- Users can interact with the embed visualization.
-- Users can use APIs to do manipulation like filter.
+- Users can interact with the embedded visualization.
+- Users can use APIs to perform manipulations such as filtering.
 
 ## 2021 Update 8 (February 2023)
 

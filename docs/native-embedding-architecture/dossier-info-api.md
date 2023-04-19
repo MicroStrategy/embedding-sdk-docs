@@ -3,7 +3,7 @@ title: Getting dossier info via APIs
 description: You can get dossier information, such as definition and visualization data, with Embedding SDK APIs.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get the definition or data from the dossier.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get the definition or data from the dossier.
 
 Let's say you already have MstrEnvironment and MstrDossier objects:
 

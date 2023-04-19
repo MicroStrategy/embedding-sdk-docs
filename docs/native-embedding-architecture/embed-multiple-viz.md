@@ -5,7 +5,7 @@ description: Embed multiple visualizations on a page
 
 ## Purpose
 
-You can use the new Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dossier page.
+You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dossier page.
 
 Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
@@ -24,9 +24,9 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ## Example code
 
-### Embed visualization from 1 dossier
+### Embed visualization from one dossier
 
-To embed multiple visualizations from 1 dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
 Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 

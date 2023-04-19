@@ -15,11 +15,11 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 #### Input Parameters
 
-| Parameter Name   | Data Type | Description                                                                                                  | Is Required |
-| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
-| props.projectId  | String    | The project ID, which must be a GUID.                                                                        | true        |
-| props.objectId   | String    | The dossier id. Should be a valid dossier ID. If the ID is a document id or report ID, would report an error | true        |
-| props.instanceId | String    | The dossier instance ID, if it already exists.                                                               | false       |
+| Parameter Name   | Data Type | Description                                                                                      | Is Required |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| props.projectId  | String    | The project ID, which must be a GUID.                                                            | true        |
+| props.objectId   | String    | The dossier ID, which must be valid. If the ID is a document or report ID, an error is reported. | true        |
+| props.instanceId | String    | The dossier instance ID, if it already exists.                                                   | false       |
 
 The `projectId` + `objectId` is used as the dossier identifier. If the function is called twice with the same parameter, the same MstrDossier object is returned in the callback.
 

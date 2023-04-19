@@ -3,7 +3,7 @@ title: Retrieve and apply filters
 description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [new Embedding SDK API](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualization as filter via new embedding SDK APIs available since 11.3.8. For chapter-level filters and on-page selectors, we currently only support attribute element list selectors.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualization as filter via Native Embedding SDK available since 11.3.8. For chapter-level filters and on-page selectors, we currently only support attribute element list selectors.
 
 Let's say you already have MstrEnvironment and MstrDossier objects:
 
