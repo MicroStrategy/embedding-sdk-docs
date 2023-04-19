@@ -26,7 +26,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ### Embed visualization from 1 dossier
 
-To embed multiple visualizations from 1 dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
 Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
 
