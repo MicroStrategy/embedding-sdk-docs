@@ -369,7 +369,7 @@ This field is used to customize the UI components on the report consumption page
 Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
 
 - `enabled`
-  - Enable or disable the navigation bar in Report consumption page.
+  - Enable or disable the navigation bar in report consumption page.
   - Default value: `true`.
 - `gotoLibrary`
   - Show or hide the gotoLibrary icon.

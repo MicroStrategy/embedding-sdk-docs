@@ -1,24 +1,24 @@
 ---
-title: Properties for an embedded MicroStrategy Report page
-description: Describes the properties that can be set for an embedded MicroStrategy Report page.
+title: Properties for an embedded MicroStrategy report page
+description: Describes the properties that can be set for an embedded MicroStrategy report page.
 ---
 
-To embed a MicroStrategy Report page into a web page, use the `embedReportPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+To embed a MicroStrategy report page into a web page, use the `embedReportPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedReportPage(props)`
 
-This method creates an iFrame on the web page, in the location specified by the `placeholder` property, and inserts a link to the MicroStrategy Report page URL. The Report page URL is built using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+This method creates an iFrame on the web page, in the location specified by the `placeholder` property, and inserts a link to the MicroStrategy report page URL. The report page URL is built using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy Report page is loaded.
+This method returns a promise, which is resolved when the MicroStrategy report page is loaded.
 
 The `props` parameter contains following required key-value pairs:
 
-- `serverUrl`, `projectId`, and `objectId` define the full Report page URL.
-- `placeholder` specifies where the iFrame containing the MicroStrategy Report page will be created.
+- `serverUrl`, `projectId`, and `objectId` define the full report page URL.
+- `placeholder` specifies where the iFrame containing the MicroStrategy report page will be created.
 
 It can also contain other optional key-value pairs to customize the UI, authentication, and custom error handler.
 
@@ -44,7 +44,7 @@ N/A
 
 ### `serverUrl`,`projectId`,`objectId`, and `pageKey`
 
-These properties build the full Report page URL to be embedded.
+These properties build the full report page URL to be embedded.
 The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Required?
@@ -238,7 +238,7 @@ microstrategy.embeddingContexts.embedReportPage({
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has a `message` property, which contains the detailed error message.
 
-When `errorHandler` is set, errors that occur inside the Report page produce an error in the browser console. See the detailed behavior in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+When `errorHandler` is set, errors that occur inside the report page produce an error in the browser console. See the detailed behavior in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
 
 #### Required?
 

@@ -95,7 +95,7 @@ const sidebars = {
         type: "doc",
         id: "embed-report-page/embed-report-page",
       },
-      label: "Embed MicroStrategy Report page",
+      label: "Embed MicroStrategy report page",
       items: ["embed-report-page/embed-report-properties"],
     },
     "samples",
