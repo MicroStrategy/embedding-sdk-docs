@@ -25,15 +25,15 @@ try {
       container: document.getElementById("container1"),
     },
   ]);
-  // The custom logic of yours
+  // Your custom logic
 } catch (error) {
   // Your own error handling code
 }
 ```
 
-## Get filter available elements
+## Get available filter elements
 
-To apply filters in the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Embedding SDK to retrieve the available attribute elements of the filters or selectors.
+To apply filters to the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Embedding SDK to retrieve the available attribute elements of the filters or selectors.
 
 | `getFilterAvailableElements()` |                                                          |
 | ------------------------------ | -------------------------------------------------------- |
@@ -74,7 +74,11 @@ Example of the attribute element list in the resolved value:
 
 ## Apply filters after embedded visualizations are rendered
 
-After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve information about filters, selectors, and visualization as filters in the dossier. After you have the key of the filter, selector, or visualization as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it. Note: For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
+After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dossier. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
+
+:::note
+Note: For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
+:::
 
 | `applyFilter()` |                                               |
 | --------------- | --------------------------------------------- |
@@ -88,9 +92,9 @@ After embedded visualizations have been rendered, you can use the `MstrDossier.
 
 The sections below show the filter details for each filter type.
 
-#### Chapter-level Filters
+#### Chapter-level filters
 
-For the chapter-level filter of type `attribute_element_list`, you can get its key and source attribute definition from the dossier definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations on the same chapter as the filter will be refreshed to reflect the latest data.
+For the chapter-level filter with an `attribute_element_list` type, you can get its key and source attribute definition from the dossier definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations on the same chapter as the filter are refreshed to reflect the latest data.
 
 ```js
 try {
@@ -112,9 +116,9 @@ try {
 }
 ```
 
-#### On-Page Selectors
+#### On-Page selectors
 
-For on-page selectors of type `attribute_element_list`, you can get its key from the dossier definition and source attribute definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations that are the targets of the selector will be refreshed to reflect the latest data.
+For on-page selectors with an `attribute_element_list` type, you can get its key from the dossier definition and source attribute definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations that are the targets of the selector are refreshed to reflect the latest data.
 
 ```js
 try {
@@ -136,13 +140,13 @@ try {
 }
 ```
 
-#### Visualization as Filters
+#### Visualizations used as filters
 
-For visualization as filters, you need its key from the dossier definition with `MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization as a filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, the elements of the visualization as the filter will be highlighted accordingly, and all embedded visualizations that are the targets of the visualization as the filter will be refreshed to reflect the latest data.
+For a visualization used as a filter, you need its key from the dossier definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization used as a filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, the elements of the visualization used as a filter are highlighted accordingly, and all embedded visualizations that are the targets of the visualization as the filter are refreshed to reflect the latest data.
 
 - attribute element selection
 
-  To select multiple attribute elements in the visualization as filters, you can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple attribute elements in the Visualizations used as filters, you can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
@@ -174,7 +178,7 @@ For visualization as filters, you need its key from the dossier definition with 
 
 - metric element selection
 
-  To select multiple metric elements in the visualization as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple metric elements in the Visualizations used as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
@@ -208,11 +212,11 @@ For visualization as filters, you need its key from the dossier definition with 
 
 ### `MstrDossier.applyFilter` examples
 
-Some examples for the filter object in the function parameter of `MstrDossier.applyFilter()`:
+Here are some examples for the filter object in the `MstrDossier.applyFilter()` function parameter:
 
-- [Chapter-Level Filters](#chapter-level-filters)
+- [Chapter-Level filters](#chapter-level-filters)
 
-#### Chapter-Level Filters
+#### Chapter-Level filters
 
 - Select the element list of the filter
 
@@ -249,7 +253,7 @@ Some examples for the filter object in the function parameter of `MstrDossier.a
   }
   ```
 
-- Unset the selection of the filter
+- Unset the filter selection.
 
   ```js
   try {
@@ -264,9 +268,9 @@ Some examples for the filter object in the function parameter of `MstrDossier.a
   }
   ```
 
-#### On-Page Selectors
+#### On-Page selectors
 
-To apply selection on on-page selectors, you can use the same input as chapter-level filters.
+To apply selections to on-page selectors, use the same input as chapter-level filters.
 
 - Select the element list of the selector
 
@@ -318,59 +322,59 @@ To apply selection on on-page selectors, you can use the same input as chapter-l
   }
   ```
 
-#### Visualization as filters
+#### Visualizations used as filters
 
 - Select attribute elements of the visualization
 
-  Select elements `June, April` of attribute `Month of Year` and `2014` of attribute `Year`.
+Select the `June, April` elements of the `Month of Year` attribute and the `2014` element of the `Year` attribute.
 
-  ```js
-  try {
-    await mstrDossier.applyFilter({
-      key: "K52",
-      currentSelection: {
-        selectionStatus: "included",
-        type: "attribute_element_list",
-        selections: [
-          {
-            attribute: {
-              id: "8D679D4511D3E4981000E787EC6DE8A4",
-              name: "Month of Year",
-            },
-            elements: [
-              {
-                id: "h6;8D679D4511D3E4981000E787EC6DE8A4",
-                name: "June",
-              },
-              {
-                id: "h4;8D679D4511D3E4981000E787EC6DE8A4",
-                name: "April",
-              },
-            ],
+```js
+try {
+  await mstrDossier.applyFilter({
+    key: "K52",
+    currentSelection: {
+      selectionStatus: "included",
+      type: "attribute_element_list",
+      selections: [
+        {
+          attribute: {
+            id: "8D679D4511D3E4981000E787EC6DE8A4",
+            name: "Month of Year",
           },
-          {
-            attribute: {
-              id: "8D679D5111D3E4981000E787EC6DE8A4",
-              name: "Year",
+          elements: [
+            {
+              id: "h6;8D679D4511D3E4981000E787EC6DE8A4",
+              name: "June",
             },
-            elements: [
-              {
-                id: "h2014;8D679D5111D3E4981000E787EC6DE8A4",
-                name: "2014",
-              },
-            ],
+            {
+              id: "h4;8D679D4511D3E4981000E787EC6DE8A4",
+              name: "April",
+            },
+          ],
+        },
+        {
+          attribute: {
+            id: "8D679D5111D3E4981000E787EC6DE8A4",
+            name: "Year",
           },
-        ],
-      },
-    });
-  } catch (error) {
-    // Your own error handling code
-  }
-  ```
+          elements: [
+            {
+              id: "h2014;8D679D5111D3E4981000E787EC6DE8A4",
+              name: "2014",
+            },
+          ],
+        },
+      ],
+    },
+  });
+} catch (error) {
+  // Your own error handling code
+}
+```
 
 - Select metric elements of the visualization
 
-  Select metric elements identified by attributes elements `June,2014` and `September,2014`.
+  Select metric elements identified by the `June,2014` and `September,2014` attribute elements.
 
   ```js
   try {

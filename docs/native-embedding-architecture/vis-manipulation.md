@@ -27,7 +27,7 @@ try {
       container: document.getElementById("container1"),
     },
   ]);
-  // The custom logic of yours
+  // Your custom logic
 } catch (error) {
   // Your own error handling code
 }

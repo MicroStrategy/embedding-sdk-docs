@@ -19,7 +19,7 @@ try {
     projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
     objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
   });
-  // The custom logic of yours
+  // Your custom logic
 } catch (error) {
   // Your own error handling code
 }
