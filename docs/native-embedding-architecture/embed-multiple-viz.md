@@ -28,14 +28,35 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
-Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 
 ```js
 try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
-    getAuthToken: () => {
-      // The similar logic as getLoginToken in existing Embedding SDK, but only support standard authentication now
+    // The following function is the default implementation. User can provide custom implementation.
+    // Only support standard authentication now.
+    getLoginToken() {
+      return fetch("https://{host}:{port}/{Library}/api/auth/login", {
+        method: "POST",
+        credentials: "include", // including cookie
+        mode: "cors", // setting as CORS mode for cross origin
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          loginMode: 1, // Standard mode
+          username: "input your username",
+          password: "input your password",
+        }),
+      })
+        .then((response) => {
+          if (response && response.ok) {
+            return response.headers.get("X-MSTR-authToken");
+          }
+          throw Error("Failed to fetch auth token.");
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+        });
     },
   });
   const dossier = await environment.loadDossier({
@@ -90,7 +111,7 @@ If you want to see the loading bar during the entire embedding process, create a
 }
 ```
 
-Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 
 ```js
 try {
@@ -117,7 +138,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as getLoginToken in existing Embedding SDK, but only support standard authentication now
+      // The similar logic as getLoginToken in the Native Embedding SDK, but only support standard authentication now
     },
   });
   const dossier = await environment.loadDossier({

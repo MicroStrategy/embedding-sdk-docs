@@ -26,7 +26,7 @@ This API returns a promise object that resolves to a MstrEnvironment object.
 
 #### Example
 
-Find the `getLoginToken` function in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 
 ```js
 try {
