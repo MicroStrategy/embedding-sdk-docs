@@ -76,7 +76,7 @@ const sidebars = {
         type: "doc",
         id: "native-embedding-architecture/native-embedding-architecture",
       },
-      label: "The native embedding APIs",
+      label: "The Native Embedding SDK",
       items: [
         "native-embedding-architecture/embed-multiple-viz",
         "native-embedding-architecture/destroy-multiple-viz",
