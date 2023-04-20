@@ -182,7 +182,7 @@ microstrategy.embeddingContexts.embedReportPage({
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
-    // The similar logic as getLoginToken function, which can be found in the doc in upper link
+    // The similar logic as getLoginToken in existing Embedding SDK
   },
 });
 ```
