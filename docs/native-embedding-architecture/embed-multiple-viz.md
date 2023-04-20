@@ -67,7 +67,6 @@ If you want to see the loading bar during the entire embedding process, create a
 ```html
 <body>
   <div id="container1"></div>
-  <div id="container2"></div>
 </body>
 ```
 
@@ -132,10 +131,6 @@ try {
     {
       key: "K66",
       container: container1,
-    },
-    {
-      key: "K52",
-      container: container2,
     },
   ]);
   // Your own code after the visualizations are all loaded
