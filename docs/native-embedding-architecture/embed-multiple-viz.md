@@ -28,8 +28,6 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
 
-Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
-
 ```js
 try {
   const environment = await microstrategy.embeddingComponent.environments.create({
@@ -79,6 +77,8 @@ try {
   // Your own error handling code
 }
 ```
+
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding-SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ### Display a loading bar during the entire visualization embedding process
 
