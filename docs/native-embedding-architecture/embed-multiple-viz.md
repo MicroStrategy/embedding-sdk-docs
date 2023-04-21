@@ -34,7 +34,7 @@ try {
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     // The following function is the default implementation. User can provide custom implementation.
     // Only support standard authentication now.
-    getLoginToken() {
+    getAuthToken() {
       return fetch("https://{host}:{port}/{Library}/api/auth/login", {
         method: "POST",
         credentials: "include", // including cookie
@@ -119,7 +119,7 @@ If you want to see the loading bar during the entire embedding process, create a
 You need to set the height and length with the container element.
 We haven't had a default height and length when we call `dossier. refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
 
-Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
+Find the `getAuthToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 
 ```js
 try {
@@ -142,11 +142,10 @@ try {
 
   showLoadingBar(container1);
 
-  // eslint-disable-next-line
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as getLoginToken in the Native Embedding SDK, but only support standard authentication now
+      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
     },
   });
   const dossier = await environment.loadDossier({
