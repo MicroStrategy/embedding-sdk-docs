@@ -257,11 +257,11 @@ After you embed multiple visualizations on a page, you can do some deeper manipu
 
 - [Retrieve and apply filters](apply-filter.md)
 
-  you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
+  You can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
 
 - [Getting dossier info via APIs](dossier-info-api.md)
 
-  you can use the Native Embedding SDK to get the definition or data from the dossier.
+  You can use the Native Embedding SDK to get the definition or data from the dossier.
 
 ## References
 
