@@ -74,6 +74,15 @@ const sidebars = {
       type: "category",
       link: {
         type: "doc",
+        id: "embed-report-page/embed-report-page",
+      },
+      label: "Embed MicroStrategy report page",
+      items: ["embed-report-page/embed-report-properties"],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
         id: "native-embedding-architecture/native-embedding-architecture",
       },
       label: "The Native Embedding SDK",
@@ -88,15 +97,6 @@ const sidebars = {
         "native-embedding-architecture/apply-filter",
         "native-embedding-architecture/event-handling",
       ],
-    },
-    {
-      type: "category",
-      link: {
-        type: "doc",
-        id: "embed-report-page/embed-report-page",
-      },
-      label: "Embed MicroStrategy report page",
-      items: ["embed-report-page/embed-report-properties"],
     },
     "samples",
   ],
