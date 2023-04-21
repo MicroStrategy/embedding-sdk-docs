@@ -7,7 +7,7 @@ This is the entry point of the Native Embedding SDK.
 
 ## APIs
 
-### 1. The create environment API
+### The create environment API
 
 #### Function
 
@@ -53,7 +53,7 @@ The errors caught in this function include:
 | Invalid authentication info or incorrect CORS setting | Other            | Native Embedding SDK | Caught by the `catch()` of the promise object |
 | Other REST API errors                                 | Other            | Native Embedding SDK | Caught by the `catch()` of the promise object |
 
-### 2. The destroy environment API
+### The destroy environment API
 
 #### Function
 
