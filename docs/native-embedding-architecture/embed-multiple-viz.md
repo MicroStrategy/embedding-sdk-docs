@@ -251,6 +251,10 @@ async function loadVisualizationsFromDossiers() {
 
 After you embed multiple visualizations on a page, you can do some deeper manipulation of them.
 
+- [Visualization manipulation on graphics](vis-manipulation.md)
+
+  This introductory shows what kinds of manipulation can we do and some behavior in the Native Embedding SDK.
+
 - [Add event handling](event-handling.md)
 
   You can listen to these events and handle the events in the handler functions.

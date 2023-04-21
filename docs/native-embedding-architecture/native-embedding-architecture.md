@@ -12,7 +12,3 @@ To improve performance when embedding multiple visualizations, use the Native Em
 - [Destroy visualizations on a page](destroy-multiple-viz.md)
 
   This introductory sample shows how to destroy the current visualizations before embedding a new set of visualizations.
-
-- [Visualization manipulation on graphics](vis-manipulation.md)
-
-  This introductory shows what kinds of manipulation can we do and some behavior in the Native Embedding SDK.
