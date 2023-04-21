@@ -3,9 +3,9 @@ title: The customized UI settings in Embedding SDK
 description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page.
 ---
 
-The embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
+The Embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
 
-- microstrategy.embeddingContexts.embedLibraryPage(props)
+- `microstrategy.embeddingContexts.embedLibraryPage(props)`
 
 Here is an example:
 
@@ -160,13 +160,13 @@ In the example above, the user uses `microstrategy.embeddingContexts.embedLibrar
 
 The details of `props.customUi` are as below:
 
-### props.customUi.library
+### `props.customUi.library`
 
 This field is used to customized the UI components on the MicroStrategy Library home page. It has 2 properties: `sidebar` and `navigationBar`.
 
 #### Properties
 
-##### sidebar
+##### `sidebar`
 
 Use the `sidebar` object to customize the sidebar on the MicroStrategy Library home page. All detailed properties below are `Boolean`.
 
@@ -177,7 +177,7 @@ Use the `sidebar` object to customize the sidebar on the MicroStrategy Library h
   - Show the "show sidebar" icon or not.
   - Default value: `true`.
 
-##### navigationBar
+##### `navigationBar`
 
 Use the `navigationBar` object to customize navigation bar on the MicroStrategy Library home page. All detailed properties below are `Boolean`.
 
@@ -210,13 +210,13 @@ Use the `navigationBar` object to customize navigation bar on the MicroStrategy 
 
 No
 
-### props.customUi.dossierConsumption
+### `props.customUi.dossierConsumption`
 
 This field is used to customized the UI components on the dossier consumption page. It has 1 property: `navigationBar`.
 
 #### Properties
 
-##### navigationBar
+##### `navigationBar`
 
 Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
 
@@ -273,7 +273,7 @@ This field is used to customized the UI components on the dossier authoring page
 
 #### Properties
 
-##### toolbar
+##### `toolbar`
 
 Use the `toolbar` object to customize the visibilities of the toolbar icons on the dossier authoring page. All detailed properties below are `Boolean`.
 
@@ -350,7 +350,7 @@ Use the `toolbar` object to customize the visibilities of the toolbar icons on t
   - Show the "Responsive Preview" button on the dossier authoring page toolbar or not.
   - Default value: `true`
 
-##### menubar
+##### `menubar`
 
 Use the `menubar` object to customize the visibilities of the menubar items on the dossier authoring page. All detailed properties below are `Boolean`.
 
@@ -358,18 +358,18 @@ Use the `menubar` object to customize the visibilities of the menubar items on t
   - Show the Library home icon on the dossier authoring page menubar or not.
   - Default value: `true`.
 
-### props.customUi.reportConsumption
+### `props.customUi.reportConsumption`
 
 This field is used to customize the UI components on the report consumption page. It has 1 property: `navigationBar`.
 
 #### Properties
 
-##### navigationBar
+##### `navigationBar`
 
 Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
 
 - `enabled`
-  - Enable or disable the navigation bar in Report consumption page.
+  - Enable or disable the navigation bar in report consumption page.
   - Default value: `true`.
 - `gotoLibrary`
   - Show or hide the gotoLibrary icon.
