@@ -26,7 +26,7 @@ This API returns a promise object that resolves to a `MstrEnvironment` object.
 
 #### Example
 
-Find the `getAuthToken` function in [the Native Embedding SDK doc](.native-embedding-architecture/embed-multiple-viz#example-code)
+Find the `getAuthToken` function in [the Native Embedding SDK doc](./embed-multiple-viz.md#example-code)
 
 ```js
 try {
