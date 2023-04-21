@@ -146,7 +146,7 @@ For a visualization used as a filter, you need its key from the dossier definiti
 
 - attribute element selection
 
-  To select multiple attribute elements in the Visualizations used as filters, you can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple attribute elements in the visualizations used as filters, you can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
@@ -178,7 +178,7 @@ For a visualization used as a filter, you need its key from the dossier definiti
 
 - metric element selection
 
-  To select multiple metric elements in the Visualizations used as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple metric elements in the visualizations used as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
