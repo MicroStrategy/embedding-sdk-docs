@@ -1,9 +1,9 @@
 ---
-title: The native embedding architecture
-description: The native embedding architecture
+title: The Native Embedding SDK
+description: The Native Embedding SDK
 ---
 
-To improve performance when embedding multiple visualizations, use the native embedding API. See the following pages for more information:
+To improve performance when embedding multiple visualizations, use the Native Embedding SDK. See the following pages for more information:
 
 - [Embed multiple visualizations on a page](embed-multiple-viz.md)
 

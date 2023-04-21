@@ -78,11 +78,11 @@ try {
 }
 ```
 
-`applicationType` must be unset or equal to `35`. Because the implementation of Embedding-SDK is based on login as a Library user, which uses the param of `applicationType:35`.
+`applicationType` must be unset or equal to `35`. Because the implementation of Native Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ### Display a loading bar during the entire visualization embedding process
 
-During the existing visualization embedding process, the native embedding API knows which container to use when you call the dossier.refresh API, and the loading bar appears at that time.
+During the existing visualization embedding process, the Native Embedding SDK knows which container to use when you call the dossier.refresh API, and the loading bar appears at that time.
 If you want to see the loading bar during the entire embedding process, create an implementation like this:
 
 ```html

@@ -1,9 +1,9 @@
 ---
 title: Getting dossier info via APIs
-description: You can get dossier information, such as definition and visualization data, with Embedding SDK APIs.
+description: You can get dossier information, such as definition and visualization data, with Native Embedding SDK.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Embedding SDK APIs to get the definition or data from the dossier.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Native Embedding SDK to get the definition or data from the dossier.
 
 Let's say you already have MstrEnvironment and MstrDossier objects:
 
@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
@@ -27,7 +27,7 @@ try {
 
 ## Get dossier definition
 
-You can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve the definition of the dossier.
+You can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve the definition of the dossier.
 
 | `getDossierDefinition()` |                                    |
 | ------------------------ | ---------------------------------- |
@@ -110,7 +110,7 @@ Example of the dossier definition in the resolved value:
 
 ## Get visualization data
 
-You can use the `MstrDossier.getVisualizationData()` function in the Embedding SDK to retrieve the data of a single visualization.
+You can use the `MstrDossier.getVisualizationData()` function in the Native Embedding SDK to retrieve the data of a single visualization.
 
 | `getVisualizationData()` |                                                          |
 | ------------------------ | -------------------------------------------------------- |

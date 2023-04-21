@@ -12,7 +12,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
@@ -33,7 +33,7 @@ try {
 
 ## Get available filter elements
 
-To apply filters to the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Embedding SDK to retrieve the available attribute elements of the filters or selectors.
+To apply filters to the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Native Embedding SDK to retrieve the available attribute elements of the filters or selectors.
 
 | `getFilterAvailableElements()` |                                                          |
 | ------------------------------ | -------------------------------------------------------- |
@@ -74,7 +74,7 @@ Example of the attribute element list in the resolved value:
 
 ## Apply filters after embedded visualizations are rendered
 
-After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dossier. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
+After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dossier. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
 
 :::note
 Note: For filters and selectors, we currently only support manipulating the selector type of the attribute element list.

@@ -33,7 +33,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // The similar logic as getLoginToken in existing Embedding SDK, but only support standard authentication now
+      // The similar logic as getLoginToken in existing Native Embedding SDK, but only support standard authentication now
     },
   });
   // Your own code
@@ -47,10 +47,10 @@ try {
 The errors caught in this function include:
 | Error Case | Error Category | Handling Module | Error Handling |
 | ----------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
-| The input parameter fails input validation | Invalid input | Embedding SDK | Caught by the catch() of the promise object |
-| There is already another existing environment | Unsupported case | Embedding SDK | Caught by the catch() of the promise object |
-| Invalid authentication info or incorrect CORS setting | Other | Embedding SDK | Caught by the catch() of the promise object |
-| Other REST API errors | Other | Embedding SDK | Caught by the catch() of the promise object |
+| The input parameter fails input validation | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
+| There is already another existing environment | Unsupported case | Native Embedding SDK | Caught by the catch() of the promise object |
+| Invalid authentication info or incorrect CORS setting | Other | Native Embedding SDK | Caught by the catch() of the promise object |
+| Other REST API errors | Other | Native Embedding SDK | Caught by the catch() of the promise object |
 
 ### 2. The destroy environment API
 
@@ -60,9 +60,9 @@ The errors caught in this function include:
 
 #### Input Parameters
 
-| Parameter Name | Data Type             | Description                                                                                                                                       | Is Required |
-| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| environment    | MstrEnvironment class | The environment returned by the `create` function. <br/> When it’s not provided, the Embedding SDK destroys all environments in the current page. | true        |
+| Parameter Name | Data Type             | Description                                                                                                                                              | Is Required |
+| -------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| environment    | MstrEnvironment class | The environment returned by the `create` function. <br/> When it’s not provided, the Native Embedding SDK destroys all environments in the current page. | true        |
 
 #### Response
 
@@ -83,4 +83,4 @@ try {
 The errors caught in this function include:
 | Error Case | Error Category | Handling Module | Error Handling |
 | -------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
-| The environment doesn't exist in the client’s page | Invalid input | Embedding SDK | Caught by the catch() of the promise object |
+| The environment doesn't exist in the client’s page | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
