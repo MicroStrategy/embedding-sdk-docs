@@ -1,6 +1,6 @@
 ---
-title: Embedding components namespace
-description: Embedding components namespace
+title: Embedding component namespace
+description: Embedding component namespace
 ---
 
 This is the entry point of the Native Embedding SDK.

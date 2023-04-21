@@ -46,10 +46,8 @@ try {
 }
 ```
 
-Example of the dossier definition in the resolved value:
-
 <details>
-  <summary>Example</summary>
+  <summary>Example of the dossier definition in the resolved value:</summary>
 
 ```json
 {
@@ -133,10 +131,8 @@ try {
 }
 ```
 
-Example of the visualization data in the resolved value:
-
 <details>
-  <summary>Example</summary>
+  <summary>Example of the visualization data in the resolved value:</summary>
 
 ```json
 {

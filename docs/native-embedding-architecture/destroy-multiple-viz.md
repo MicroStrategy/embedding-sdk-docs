@@ -5,7 +5,7 @@ description: Destroy visualizations on a page
 
 ## Purpose
 
-After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you also can destroy them to clear your page, or embed the visualizations from another dossier.
+After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can also destroy them to clear your page, or embed the visualizations from another dossier.
 
 ## Example code
 

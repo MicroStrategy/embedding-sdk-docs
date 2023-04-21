@@ -1,6 +1,6 @@
 ---
 title: Add event handling
-description: Events allow the custom application page to listen for events from the embedded visualizations. You can listen to these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
+description: Events allow the custom application page to listen to events from the embedded visualizations. You can listen to these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 ---
 
 Event handling allows a custom application page to listen to events from embedded visualizations. You can listen to these events and handle the events in the handler functions. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
@@ -50,7 +50,7 @@ Register the `handler` event handler on `eventName`.
 
 There is a method for registering an error handler.
 
-### registerErrorHandler(handler)
+### `registerErrorHandler(handler)`
 
 #### Class
 

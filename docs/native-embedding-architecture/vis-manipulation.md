@@ -5,7 +5,7 @@ description: You can do manipulation on the embedded visualizations after they h
 
 The embedded visualizations can be manipulated the same way as they are seen on MicroStrategy Library dossier pages.
 
-Currently, the supported manipulation types include visualization element selection, actions triggered by a click, dragging inside a visualization, and the actions inside the right-click menu.
+Currently, the supported manipulation types include element selection inside a visualization, actions inside the right-click menu, and actions triggered by clicking, dragging, and scrolling inside a visualization
 
 Let's say we already have the `MstrEnvironment` and `MstrDossier` objects, and embedded visualizations have been rendered.
 
@@ -35,9 +35,7 @@ try {
 
 ## Element selection in the visualization
 
-After the embedded visualizations have been rendered, you can click the elements in the visualization. Normally, this manipulation highlights the selected attribute or metric elements.
-
-When the visualization is a filtered source, targeting other visualizations that are also embedded on the client's page, the selection manipulation triggers the filtering and all target visualizations are updated to reflect the latest data. If the target visualizations are not on the same page as the visualization used as a filter, this auto-refreshing is not be triggered.
+Once the embedded visualizations are rendered, clicking on the elements in the visualization highlights the selected attribute or metric elements. Additionally, when the visualization is a filtered source that targets other embedded visualizations on the same page, selecting an element triggers filtering, and all target visualizations are updated to display the latest data. However, if the target visualizations are on a different page than the filtered source visualization, the auto-refresh feature is not triggered.
 
 ## Right click menu in the visualization
 
