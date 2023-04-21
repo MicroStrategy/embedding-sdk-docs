@@ -66,3 +66,7 @@ try {
 | A container is occupied by other dossiers                                           | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | Other REST API errors                                                               | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The key is the visualization key of the visualization in the panel                  | Invalid input  | Native Embedding SDK | console err message in console "The visualization `${VisualizationKey}` is a visualization in a panel, which isn't supported." |
+
+### The get infomation API
+
+You can see the API at the [Getting dossier info via APIs document](./dossier-info-api)
