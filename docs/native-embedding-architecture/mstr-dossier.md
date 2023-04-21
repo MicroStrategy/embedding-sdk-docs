@@ -69,4 +69,4 @@ try {
 
 ### The get infomation API
 
-You can see the API at the [Getting dossier info via APIs document](./dossier-info-api)
+You can see the API at the [Getting dossier info via APIs document](dossier-info-api)

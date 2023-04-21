@@ -119,7 +119,7 @@ If you want to see the loading bar during the entire embedding process, create a
 You need to set the height and length with the container element.
 We haven't had a default height and length when we call `dossier.refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
 
-Find the `getAuthToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
+Find the `getAuthToken` function in [the Native Embedding SDK doc](.native-embedding-architecture/embed-multiple-viz#example-code)
 
 ```js
 try {
@@ -251,15 +251,15 @@ async function loadVisualizationsFromDossiers() {
 
 After you embed multiple visualizations on a page, you can do some deeper manipulation of them.
 
-- [Add event handling](./event-handling.md)
+- [Add event handling](event-handling.md)
 
   You can listen to these events and handle the events in the handler functions.
 
-- [Retrieve and apply filters](./apply-filter.md)
+- [Retrieve and apply filters](apply-filter.md)
 
   you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
 
-- [Getting dossier info via APIs](./dossier-info-api.md)
+- [Getting dossier info via APIs](dossier-info-api.md)
 
   you can use the Native Embedding SDK to get the definition or data from the dossier.
 
