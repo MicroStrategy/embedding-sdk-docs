@@ -247,6 +247,22 @@ async function loadVisualizationsFromDossiers() {
 }
 ```
 
+## More available operations
+
+After you embed multiple visualizations on a page, you can do some deeper manipulation of them.
+
+- [Add event handling](./event-handling.md)
+
+  You can listen to these events and handle the events in the handler functions.
+
+- [Retrieve and apply filters](./apply-filter.md)
+
+  you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
+
+- [Getting dossier info via APIs](./dossier-info-api.md)
+
+  you can use the Native Embedding SDK to get the definition or data from the dossier.
+
 ## References
 
 This piece of code contains a function from the following namespace and classes:
