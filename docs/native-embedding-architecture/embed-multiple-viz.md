@@ -92,6 +92,11 @@ If you want to see the loading bar during the entire embedding process, create a
 ```
 
 ```css
+#container1 {
+  width: 200px;
+  height: 300px;
+}
+
 #mstrLoadingBarParent {
   width: 100%;
   height: 100%;
@@ -110,6 +115,9 @@ If you want to see the loading bar during the entire embedding process, create a
   display: block;
 }
 ```
+
+You need to set the height and length with the container element.
+We haven't had a default height and length when we call `dossier. refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
 
 Find the `getLoginToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 

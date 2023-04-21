@@ -46,12 +46,12 @@ try {
 
 The errors caught in this function include:
 
-| Error Case | Error Category | Handling Module | Error Handling |
-| ----------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
-| The input parameter fails input validation | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
-| There is already another existing environment | Unsupported case | Native Embedding SDK | Caught by the catch() of the promise object |
-| Invalid authentication info or incorrect CORS setting | Other | Native Embedding SDK | Caught by the catch() of the promise object |
-| Other REST API errors | Other | Native Embedding SDK | Caught by the catch() of the promise object |
+| Error Case                                            | Error Category   | Handling Module      | Error Handling                              |
+| ----------------------------------------------------- | ---------------- | -------------------- | ------------------------------------------- |
+| The input parameter fails input validation            | Invalid input    | Native Embedding SDK | Caught by the catch() of the promise object |
+| There is already another existing environment         | Unsupported case | Native Embedding SDK | Caught by the catch() of the promise object |
+| Invalid authentication info or incorrect CORS setting | Other            | Native Embedding SDK | Caught by the catch() of the promise object |
+| Other REST API errors                                 | Other            | Native Embedding SDK | Caught by the catch() of the promise object |
 
 ### 2. The destroy environment API
 
@@ -83,6 +83,6 @@ try {
 
 The errors caught in this function include:
 
-| Error Case | Error Category | Handling Module | Error Handling |
-| -------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
-| The environment doesn't exist in the client’s page | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
+| Error Case                                         | Error Category | Handling Module      | Error Handling                              |
+| -------------------------------------------------- | -------------- | -------------------- | ------------------------------------------- |
+| The environment doesn't exist in the client’s page | Invalid input  | Native Embedding SDK | Caught by the catch() of the promise object |
