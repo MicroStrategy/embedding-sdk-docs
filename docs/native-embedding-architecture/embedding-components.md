@@ -45,6 +45,7 @@ try {
 #### API Errors
 
 The errors caught in this function include:
+
 | Error Case | Error Category | Handling Module | Error Handling |
 | ----------------------------------------------------- | ---------------- | --------------- | ------------------------------------------- |
 | The input parameter fails input validation | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
@@ -81,6 +82,7 @@ try {
 #### API Errors
 
 The errors caught in this function include:
+
 | Error Case | Error Category | Handling Module | Error Handling |
 | -------------------------------------------------- | -------------- | --------------- | ------------------------------------------- |
 | The environment doesn't exist in the client’s page | Invalid input | Native Embedding SDK | Caught by the catch() of the promise object |
