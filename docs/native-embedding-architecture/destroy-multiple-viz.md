@@ -9,7 +9,7 @@ After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple vi
 
 ## Example code
 
-Let's say you already have MstrEnvironment and MstrDossier objects:
+Let's say you already have `MstrEnvironment` and `MstrDossier` objects:
 
 ```js
 try {
@@ -35,7 +35,7 @@ try {
 }
 ```
 
-To destroy the embedded visualizations, you can destroy the MstrDossier object that owns them:
+To destroy the embedded visualizations, you can destroy the `MstrDossier` object that owns them:
 
 ```js
 try {
@@ -45,7 +45,7 @@ try {
 }
 ```
 
-or destroy the MstrEnvironment object that owns these visualizations:
+or destroy the `MstrEnvironment` object that owns these visualizations:
 
 ```js
 try {

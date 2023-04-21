@@ -25,7 +25,7 @@ The `projectId` + `objectId` is used as the dossier identifier. If the function 
 
 #### Response
 
-This API returns a promise object that resolves to a MstrDossier object.
+This API returns a promise object that resolves to a `MstrDossier` object.
 
 #### Example
 

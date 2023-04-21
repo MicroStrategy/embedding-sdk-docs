@@ -5,7 +5,7 @@ description: Events allow the custom application page to listen for events from 
 
 Event handling allows a custom application page to listen to events from embedded visualizations. You can listen to these events and handle the events in the handler functions. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 
-Let's say you already have MstrEnvironment and MstrDossier objects. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.
+Let's say you already have `MstrEnvironment` and `MstrDossier` objects. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.
 
 ```js
 try {
@@ -36,7 +36,7 @@ try {
 
 There is a method for registering an event handler.
 
-### registerEventHandler(eventName, handler)
+### `registerEventHandler(eventName, handler)`
 
 #### Class
 
@@ -64,7 +64,7 @@ Register the `handler` error handler to handle errors during graphic manipulatio
 
 Each supported event is described in the table below.
 
-### onVizElementSelectionChanged
+### `onVizElementSelectionChanged`
 
 #### Event name
 
