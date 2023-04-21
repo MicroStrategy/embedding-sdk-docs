@@ -49,7 +49,6 @@ or destroy the `MstrEnvironment` object that owns these visualizations:
 
 ```js
 try {
-  // eslint-disable-next-line
   await microstrategy.embeddingComponent.environments(mstrEnvironment);
 } catch (error) {
   // Your own error handling code

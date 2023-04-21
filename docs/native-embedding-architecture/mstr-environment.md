@@ -49,10 +49,10 @@ try {
 
 #### API Errors
 
-| Error Case                                 | Error Category | Handling Module      | Error Handling                              |
-| ------------------------------------------ | -------------- | -------------------- | ------------------------------------------- |
-| The input parameter fails input validation | Invalid input  | Native Embedding SDK | Caught by the catch() of the promise object |
-| Other REST API errors                      | Other          | Native Embedding SDK | Caught by the catch() of the promise object |
+| Error Case                                 | Error Category | Handling Module      | Error Handling                                |
+| ------------------------------------------ | -------------- | -------------------- | --------------------------------------------- |
+| The input parameter fails input validation | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Other REST API errors                      | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object |
 
 ### 2. The destroy dossier API
 
@@ -83,6 +83,6 @@ try {
 
 #### API Errors
 
-| Error Case                                       | Error Category | Handling Module      | Error Handling                              |
-| ------------------------------------------------ | -------------- | -------------------- | ------------------------------------------- |
-| The input parameter isn’t a valid dossier object | Invalid input  | Native Embedding SDK | Caught by the catch() of the promise object |
+| Error Case                                       | Error Category | Handling Module      | Error Handling                                |
+| ------------------------------------------------ | -------------- | -------------------- | --------------------------------------------- |
+| The input parameter isn’t a valid dossier object | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |

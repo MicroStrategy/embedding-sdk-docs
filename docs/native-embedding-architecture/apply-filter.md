@@ -3,7 +3,7 @@ title: Retrieve and apply filters
 description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 8. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
+You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
 
 Let's say you already have the `MstrEnvironment` and `MstrDossier` objects:
 
@@ -77,7 +77,7 @@ Example of the attribute element list in the resolved value:
 After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dossier. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
 
 :::note
-Note: For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
+For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
 :::
 
 | `applyFilter()` |                                               |

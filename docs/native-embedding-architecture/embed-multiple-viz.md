@@ -117,7 +117,7 @@ If you want to see the loading bar during the entire embedding process, create a
 ```
 
 You need to set the height and length with the container element.
-We haven't had a default height and length when we call `dossier. refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
+We haven't had a default height and length when we call `dossier.refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
 
 Find the `getAuthToken` function in [the Native Embedding SDK doc](../native-embedding-architecture/embed-multiple-viz#example-code)
 
