@@ -9,10 +9,11 @@ To help you get started, we have provided [a live example](https://microstrategy
 
 The workflow consists of:
 
-1. [Set up Library Server](#set-up-library-server)
-1. [Import Embedding SDK](#import-embedding-sdk)
-1. [Embed dossier with custom authentication properties](#embed-dossier-with-custom-authentication-properties)
-1. [Make REST API calls to get auth token through Standard authentication](#authentication-through-rest-api-using-standard-authentication)
+- [Set up Library Server](#set-up-library-server)
+- [Import Embedding SDK](#import-embedding-sdk)
+- [Embed dossier with custom authentication properties](#embed-dossier-with-custom-authentication-properties)
+- [Authentication through REST API using standard authentication](#authentication-through-rest-api-using-standard-authentication)
+- [Putting it all together](#putting-it-all-together)
 
 ## Set up Library Server
 
@@ -155,6 +156,8 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
   }
 </script>
 ```
+
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ## Putting it all together
 

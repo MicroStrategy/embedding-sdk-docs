@@ -128,7 +128,7 @@ N/A
 
 ### `customAuthenticationType`
 
-Specifies the token type returned by the getLoginToken function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
+Specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
 
 #### Required?
 
@@ -158,6 +158,8 @@ See the sample code in the next column for the default implementation of this fu
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
+The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
+
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
@@ -166,26 +168,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
-    return fetch("https://{host}:{port}/{Library}/api/auth/login", {
-      method: "POST",
-      credentials: "include", // including cookie
-      mode: "cors", // setting as CORS mode for cross origin
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        loginMode: 1, // Standard mode
-        username: "input your username",
-        password: "input your password",
-      }),
-    })
-      .then((response) => {
-        if (response && response.ok) {
-          return response.headers.get("X-MSTR-authToken");
-        }
-        throw Error("Failed to fetch auth token.");
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
+    // The similar logic as getLoginToken in existing Embedding SDK
   },
 });
 ```
