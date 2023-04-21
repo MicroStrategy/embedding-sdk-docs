@@ -3,7 +3,7 @@ title: Retrieve and apply filters
 description: Filters can be applied both during the execution of an embedded dossier and after it has been rendered.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
+Filters can be applied both during the execution of an embedded dossier and after it has been rendered. After using [Native Embedding SDK](./embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
 
 Let's say you already have the `MstrEnvironment` and `MstrDossier` objects:
 
