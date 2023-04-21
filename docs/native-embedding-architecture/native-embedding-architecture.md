@@ -3,6 +3,8 @@ title: The Native Embedding SDK
 description: The Native Embedding SDK
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 To improve performance when embedding multiple visualizations, use the Native Embedding SDK. See the following pages for more information:
 
 - [Embed multiple visualizations on a page](embed-multiple-viz.md)
