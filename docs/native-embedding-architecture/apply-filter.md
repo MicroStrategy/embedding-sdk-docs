@@ -215,6 +215,8 @@ For a visualization used as a filter, you need its key from the dossier definiti
 Here are some examples for the filter object in the `MstrDossier.applyFilter()` function parameter:
 
 - [Chapter-Level filters](#chapter-level-filters)
+- [On-Page selectors](#on-page-selectors)
+- [Visualizations used as filters](#visualizations-used-as-filters)
 
 #### Chapter-Level filters
 
