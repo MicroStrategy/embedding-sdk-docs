@@ -1,6 +1,6 @@
 ---
-title: MstrEnvironment namespace
-description: MstrEnvironment namespace
+title: MstrEnvironment class
+description: MstrEnvironment class
 ---
 
 The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. `MstrEnvironment` class represents one MicroStrategy Library Application identified by a URL.
