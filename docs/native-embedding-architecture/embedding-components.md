@@ -22,7 +22,7 @@ This is the entry point of the Native Embedding SDK.
 
 #### Response
 
-This API returns a promise object that resolves to a MstrEnvironment object.
+This API returns a promise object that resolves to a `MstrEnvironment` object.
 
 #### Example
 
@@ -60,9 +60,9 @@ The errors caught in this function include:
 
 #### Input Parameters
 
-| Parameter Name | Data Type             | Description                                                                                                                                              | Is Required |
-| -------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| environment    | MstrEnvironment class | The environment returned by the `create` function. <br/> When it’s not provided, the Native Embedding SDK destroys all environments in the current page. | true        |
+| Parameter Name | Data Type               | Description                                                                                                                                              | Is Required |
+| -------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| environment    | `MstrEnvironment` class | The environment returned by the `create` function. <br/> When it’s not provided, the Native Embedding SDK destroys all environments in the current page. | true        |
 
 #### Response
 

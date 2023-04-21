@@ -3,7 +3,7 @@ title: MstrEnvironment namespace
 description: MstrEnvironment namespace
 ---
 
-The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. MstrEnvironment class represents one MicroStrategy Library Application identified by a URL.
+The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. `MstrEnvironment` class represents one MicroStrategy Library Application identified by a URL.
 
 ## APIs
 
@@ -21,7 +21,7 @@ The instance of this class is the object returned from the `microstrategy.embedd
 | props.objectId   | String    | The dossier ID, which must be valid. If the ID is a document or report ID, an error is reported. | true        |
 | props.instanceId | String    | The dossier instance ID, if it already exists.                                                   | false       |
 
-The `projectId` + `objectId` is used as the dossier identifier. If the function is called twice with the same parameter, the same MstrDossier object is returned in the callback.
+The `projectId` + `objectId` is used as the dossier identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
 
 #### Response
 
@@ -62,13 +62,13 @@ try {
 
 #### Input Parameters
 
-| Parameter Name | Data Type         | Description                                                | Is Required |
-| -------------- | ----------------- | ---------------------------------------------------------- | ----------- |
-| dossier        | MstrDossier class | The MstrDossier object created by the loadDossier function | true        |
+| Parameter Name | Data Type           | Description                                                  | Is Required |
+| -------------- | ------------------- | ------------------------------------------------------------ | ----------- |
+| dossier        | `MstrDossier` class | The `MstrDossier` object created by the loadDossier function | true        |
 
 #### Response
 
-This API returns a promise object that resolves to a MstrDossier object.
+This API returns a promise object that resolves to a `MstrDossier` object.
 
 #### Example
 

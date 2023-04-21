@@ -82,7 +82,7 @@ try {
 
 ### Display a loading bar during the entire visualization embedding process
 
-During the existing visualization embedding process, the Native Embedding SDK knows which container to use when you call the dossier.refresh API, and the loading bar appears at that time.
+During the existing visualization embedding process, the Native Embedding SDK knows which container to use when you call the `dossier.refresh` API, and the loading bar appears at that time.
 If you want to see the loading bar during the entire embedding process, create an implementation like this:
 
 ```html
@@ -246,12 +246,12 @@ This piece of code contains a function from the following namespace and classes:
 
 - [`microstrategy.embeddingComponent.environments`](embedding-components.md) Namespace
 
-  This namespace is responsible for creating and destroying MstrEnvironment objects.
+  This namespace is responsible for creating and destroying `MstrEnvironment` objects.
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying MstrDossier objects.
+  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying `MstrDossier` objects.
 
 - [`MstrDossier`](mstr-dossier.md) Class
 
-  This class is returned from `the MstrEnvironment.loadDossier()` function, which is responsible for showing visualizations in containers.
+  This class is returned from the `MstrEnvironment.loadDossier()` function, which is responsible for showing visualizations in containers.

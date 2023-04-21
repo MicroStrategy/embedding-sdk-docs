@@ -62,8 +62,8 @@ This piece of code contains a function from three different namespaces or classe
 
 - [`microstrategy.embeddingComponent.environments`](embedding-components.md) Namespace
 
-  This namespace is responsible for creating and destroying MstrEnvironment objects.
+  This namespace is responsible for creating and destroying `MstrEnvironment` objects.
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is responsible for creating and destroying MstrDossier objects.
+  This class is responsible for creating and destroying `MstrDossier` objects.

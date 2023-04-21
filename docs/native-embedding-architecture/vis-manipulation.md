@@ -7,7 +7,7 @@ The embedded visualizations can be manipulated the same way as they are seen on 
 
 Currently, the supported manipulation types include visualization element selection, actions triggered by a click, dragging inside a visualization, and the actions inside the right-click menu.
 
-Let's say we already have the MstrEnvironment and MstrDossier objects, and embedded visualizations have been rendered.
+Let's say we already have the `MstrEnvironment` and `MstrDossier` objects, and embedded visualizations have been rendered.
 
 ```js
 try {
