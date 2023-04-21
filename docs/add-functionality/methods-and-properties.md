@@ -558,7 +558,7 @@ microstrategy.dossier.create({
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to provide an identity token with `getLoginToken` function.
 
-`applicationType` must be unset or equal to `35`. Because the implementation of Embedding-SDK is based on login as a Library user, which uses the param of `applicationType:35`.
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ### `instance`
 

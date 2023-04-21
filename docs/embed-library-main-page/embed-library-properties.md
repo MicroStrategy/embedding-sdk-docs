@@ -128,7 +128,7 @@ N/A
 
 ### `customAuthenticationType`
 
-Specifies the token type returned by the getLoginToken function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
+Specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
 
 #### Required?
 
@@ -158,7 +158,7 @@ See the sample code in the next column for the default implementation of this fu
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
-The getLoginToken function can be found in [the getLoginToken doc](../add-functionality/methods-and-properties#getlogintoken)
+The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
