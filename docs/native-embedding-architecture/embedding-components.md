@@ -1,6 +1,6 @@
 ---
-title: microstrategy.embeddingComponent.environments namespace
-description: microstrategy.embeddingComponent.environments namespace
+title: embeddingComponent.environments namespace
+description: embeddingComponent.environments namespace
 ---
 
 This is the entry point of the Native Embedding SDK.
