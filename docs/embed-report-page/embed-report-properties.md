@@ -1,24 +1,24 @@
 ---
-title: Properties for an embedded MicroStrategy Report page
-description: Describes the properties that can be set for an embedded MicroStrategy Report page.
+title: Properties for an embedded MicroStrategy report page
+description: Describes the properties that can be set for an embedded MicroStrategy report page.
 ---
 
-To embed a MicroStrategy Report page into a web page, use the `embedReportPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+To embed a MicroStrategy report page into a web page, use the `embedReportPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedReportPage(props)`
 
-This method creates an iFrame on the web page, in the location specified by the `placeholder` property, and inserts a link to the MicroStrategy Report page URL. The Report page URL is built using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+This method creates an iFrame on the web page, in the location specified by the `placeholder` property, and inserts a link to the MicroStrategy report page URL. The report page URL is built using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy Report page is loaded.
+This method returns a promise, which is resolved when the MicroStrategy report page is loaded.
 
 The `props` parameter contains following required key-value pairs:
 
-- `serverUrl`, `projectId`, and `objectId` define the full Report page URL.
-- `placeholder` specifies where the iFrame containing the MicroStrategy Report page will be created.
+- `serverUrl`, `projectId`, and `objectId` define the full report page URL.
+- `placeholder` specifies where the iFrame containing the MicroStrategy report page will be created.
 
 It can also contain other optional key-value pairs to customize the UI, authentication, and custom error handler.
 
@@ -44,7 +44,7 @@ N/A
 
 ### `serverUrl`,`projectId`,`objectId`, and `pageKey`
 
-These properties build the full Report page URL to be embedded.
+These properties build the full report page URL to be embedded.
 The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Required?
@@ -59,7 +59,7 @@ N/A
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -86,7 +86,7 @@ No
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -112,7 +112,7 @@ No
 
 ```js
 const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: document.getElementById("embedding-report-container"),
@@ -140,7 +140,7 @@ N/A
 
 ### `customAuthenticationType`
 
-Specifies the token type returned by the getLoginToken function. There are two possible values, which can be provided by the `CustomAuthenticationType` enumeration.
+Specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the `CustomAuthenticationType` enumeration.
 
 #### Required?
 
@@ -170,6 +170,8 @@ See the sample code in the next column for the default implementation of this fu
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
+The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
+
 ```js
 microstrategy.embeddingContexts.embedReportPage({
   placeholder: placeholderDiv,
@@ -180,26 +182,7 @@ microstrategy.embeddingContexts.embedReportPage({
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
-    return fetch("https://{host}:{port}/{Library}/api/auth/login", {
-      method: "POST",
-      credentials: "include", // including cookie
-      mode: "cors", // setting as CORS mode for cross origin
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        loginMode: 1, // Standard mode
-        username: "input your username",
-        password: "input your password",
-      }),
-    })
-      .then((response) => {
-        if (response && response.ok) {
-          return response.headers.get("X-MSTR-authToken");
-        }
-        throw Error("Failed to fetch auth token.");
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
+    // The similar logic as getLoginToken in existing Embedding SDK
   },
 });
 ```
@@ -226,7 +209,7 @@ false
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
@@ -238,7 +221,7 @@ microstrategy.embeddingContexts.embedReportPage({
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has a `message` property, which contains the detailed error message.
 
-When `errorHandler` is set, errors that occur inside the Report page produce an error in the browser console. See the detailed behavior in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+When `errorHandler` is set, errors that occur inside the report page produce an error in the browser console. See the detailed behavior in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
 
 #### Required?
 
@@ -252,7 +235,7 @@ N/A
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,
@@ -267,7 +250,7 @@ microstrategy.embeddingContexts.embedReportPage({
 
 The custom error handler that executes when a session expiration error occurs. It's a callback function that contains one parameter, `error`. The error object has a `message` property that contains the detailed error message.
 
-When session expires:
+When the session expires:
 
 - If `sessionErrorHandler` is not set, the embedded page redirects to the OOTB Library login page.
 - If `sessionErrorHandler` is set, the session error handler is triggered and the embedded page does not change for one minute. If the error handler doesn't do anything after one minute, such as reauthentication and refreshing the page to renew the session, the embedded page redirects to the OOTB Library login page.
@@ -284,7 +267,7 @@ N/A
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
-  serverUrl: "https://example.com/MicroStrategyLibrary",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   placeholder: container,

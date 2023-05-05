@@ -1,11 +1,11 @@
 ---
-title: Embed MicroStrategy Report page
-description: The Embedding SDK allows you to quickly integrate a MicroStrategy Report page into a web application in a responsive manner. It also provides resources to add functionalities such as toggling the navigation bar and setting the visibility of icons in the navigation bar.
+title: Embed MicroStrategy report page
+description: The Embedding SDK allows you to quickly integrate a MicroStrategy report page into a web application in a responsive manner. It also provides resources to add functionalities such as toggling the navigation bar and setting the visibility of icons in the navigation bar.
 ---
 
-The Embedding SDK allows you to quickly integrate a MicroStrategy Report page into a web application in a responsive manner. It also provides resources to add functionalities such as toggling the navigation bar and setting the visibility of icons in the navigation bar.
+The Embedding SDK allows you to quickly integrate a MicroStrategy report page into a web application in a responsive manner. It also provides resources to add functionalities such as toggling the navigation bar and setting the visibility of icons in the navigation bar.
 
-There are three basic steps for embedding a MicroStrategy Report page.
+There are three basic steps for embedding a MicroStrategy report page.
 
 1. In the initial page of your web application, add a link to the MicroStrategy JavaScript Embedding SDK.
 
@@ -32,6 +32,6 @@ There are three basic steps for embedding a MicroStrategy Report page.
 
 To help you get started, we have provided a number of simple applications with sample code and explanations.
 
-- [Properties for an embedded MicroStrategy Report page](./embed-report-properties.md)
+- [Properties for an embedded MicroStrategy report page](./embed-report-properties.md)
 
-  Describes the properties that can be set for an embedded MicroStrategy Report page.
+  Describes the properties that can be set for an embedded MicroStrategy report page.

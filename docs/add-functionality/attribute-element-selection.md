@@ -125,7 +125,7 @@ An optional visualizationSelectedElements field has been added to the props obje
 
 | Parameter Name                                          | Description                                      | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | ------------------------------------------------ | --------- | --------- | ------------- |
-| props.visualizationSelectedElements[i].visualizationkey | The visualization node key input by you.         | String    | Yes       | N/A           |
+| props.visualizationSelectedElements[i].visualizationKey | The visualization node key input by you.         | String    | Yes       | N/A           |
 | props.visualizationSelectedElements[i].action           | Set to "replace", "add", or "remove".            | String    | No        | replace       |
 | props.visualizationSelectedElements[i].selection        | Selected attribute elements in the visualization | Object    | Yes       | N/A           |
 
@@ -136,7 +136,7 @@ microstrategy.dossier.create({
   // the other initial parameters
   visualizationSelectedElements: [
     {
-      visualizationkey: "K52",
+      visualizationKey: "K52",
       selection: {
         attributeElements: [
           {

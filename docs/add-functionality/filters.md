@@ -1,9 +1,9 @@
 ---
 title: Retrieve and apply filters
-description: You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
+description: Filters can be applied both during the execution of an embedded dossier and after it has been rendered.
 ---
 
-You can apply filters both when an embedded dossier is being executed and after the dossier has been rendered.
+Filters can be applied both during the execution of an embedded dossier and after it has been rendered.
 
 - **Apply filters during execution**
 
@@ -570,7 +570,7 @@ or
 
 After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
 
-### Dossier.filterSelectAllAttributes(filterJson)
+### Dossier.filterSelectAllAttributeElements(filterJson)
 
 Select all the attributes for the filter with `key` and apply the change immediately.
 
@@ -585,7 +585,7 @@ Select all the attributes for the filter with `key` and apply the change immedia
 }
 ```
 
-### Dossier.filterDeselectAllAttributes(filterJson)
+### Dossier.filterDeselectAllAttributeElements(filterJson)
 
 Deselect all the attributes for the filter with `key` and save the change to client side.
 
