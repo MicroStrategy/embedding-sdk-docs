@@ -22,9 +22,9 @@ More information about `markdownlint` could be found [here](https://github.com/D
 
 ## Front matter
 
-- `title` is the `h1` heading that shows on the HTML page.
-- `sidebar_label` is the title you want to show in the sidebar navigation.
-- `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose.
+- (Required) `title` is the `h1` heading that shows as the title of your documentation.
+- (Optional) `sidebar_label` is the title you want to show in the sidebar navigation. If the sidebar label is the same as `title`, you can omit this field.
+- (Required) `description` is the summary for this page. It provides better text snippet in the search result. This is only for SEO purpose and it won't show up in the documentation. Therefore, If you want the reader see the description, you may want to have the same content of this description in your documentation as well.
 
 Note: Do not use backticks in front matter since they won't be rendered the same as markdown content.
 
@@ -86,9 +86,17 @@ Supported languages are listed [here](https://prismjs.com/#languages-list).
   [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/#!/Authentication/postLogin)
   ```
 
+- When we write key:value in our code
+  - We should avoid using field values as variables, such as `${variable}` or `show: 'Boolean'`
+  - Instead, we should use constants, such as `show: true.`
+
 ## Ordered list
 
 It is enforced to use `1.` only for all ordered lists for ease of maintenance.
+
+## Unordered list
+
+It is suggested to use `-` instead of `*`.
 
 ## Emojis
 
@@ -218,9 +226,16 @@ description: This is a demo of the usage of the available since tag.
 ---
 
 <Available since="2021 Update 8" />
+
 The summary of the newly available doc.
 
 - `GET /api/available/since` <Available since="2021 Update 8" inline />
+
+## Some section title
+
+<Available since="2021 Update 8" />
+
+The summary of the section.
 ```
 
 and it will look like this:
@@ -250,9 +265,16 @@ description: This is a demo of the usage of the deprecated since tag.
 ---
 
 <Deprecated since="2021 Update 8" />
+
 The summary of the deprecated doc.
 
 - `GET /api/deprecated/since` <Deprecated since="2021 Update 8" inline />
+
+## Some section title
+
+<Deprecated since="2021 Update 8" />
+
+The summary of the section.
 ```
 
 and it will look like this:

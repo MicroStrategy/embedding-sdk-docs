@@ -54,7 +54,7 @@ N/A
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
 });
 ```
 
@@ -79,7 +79,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerHeight: "600px",
 });
 ```
@@ -103,7 +103,7 @@ No
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
-  url: "http://{host}:{port}/{Library}",
+  serverUrl: "http://{host}:{port}/{Library}",
   containerWidth: "800px",
 });
 ```
@@ -128,7 +128,7 @@ N/A
 
 ### `customAuthenticationType`
 
-Specifies the token type returned by the getLoginToken function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
+Specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the CustomAuthenticationType enumeration.
 
 #### Required?
 
@@ -158,29 +158,17 @@ See the sample code in the next column for the default implementation of this fu
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
+The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
+
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
   serverUrl: "https://{host}:{port}/{Library}",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-  //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function () {
-    return fetch("https://{host}:{port}/{Library}/api/auth/login", {
-      method: "POST",
-      credentials: "include", //including cookie
-      mode: "cors", //setting as CORS mode for cross origin
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        loginMode: 1, // Standard mode
-        username: "input your username",
-        password: "input your password",
-      }),
-    }).then(function (response) {
-      if (response && response.ok) {
-        return response.headers.get("X-MSTR-authToken");
-      }
-    });
+  // The following function is the default implementation. User can provide custom implementation.
+  getLoginToken() {
+    // The similar logic as getLoginToken in existing Embedding SDK
   },
 });
 ```
@@ -233,9 +221,9 @@ N/A
 microstrategy.embeddingContexts.embedLibraryPage({
   serverUrl: url,
   placeholder: container,
-  errorHandler: function (error) {
-    console.log("catch error during creation: " + error.message);
-    //Do something to handle the error
+  errorHandler(error) {
+    console.log(`catch error during creation: ${error.message}`);
+    // Do something to handle the error
   },
 });
 ```
@@ -263,9 +251,9 @@ N/A
 microstrategy.embeddingContexts.embedLibraryPage({
   serverUrl: url,
   placeholder: container,
-  sessionErrorHandler: function (error) {
-    console.log("catch session error: " + error.message);
-    //Do something to handle the error
+  sessionErrorHandler(error) {
+    console.log(`catch session error: ${error.message}`);
+    // Do something to handle the error
   },
 });
 ```
@@ -293,7 +281,7 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page and dossier authoring page.
+Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page，dossier authoring page, and report consumption page.
 
 #### Properties
 

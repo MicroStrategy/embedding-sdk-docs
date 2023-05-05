@@ -25,6 +25,10 @@ This method returns a promise, which is resolved to a `Dossier` object when the 
 
 The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
+Embedding too many pages using the Embedding SDK can lead to performance problems and even browser crashes due to limited browser resources. To ensure stable performance, it's recommended to embed the MicroStrategy Library page in no more than 4 to 6 containers.
+
+The other similar APIs like `microstrategy.embeddingContexts.embedReportPage(props)` and `microstrategy.embeddingContexts.embedLibraryPage(props)` follow this rule.
+
 The `props` parameter is explained in [Properties](#properties).
 
 ### Dossier.getDossierInstanceId()
@@ -159,6 +163,33 @@ No
 #### Default value
 
 `true`
+
+### `disableErrorPopupWindow`
+
+The `disableErrorPopupWindow` property specifies to disable the popup window caused by the alert which will show when error happens, and throw the error directly.
+The deatail of when the error will shown in alert, can be seen [at the error-handling page](error-handling.md#error-handling-before-starting-embed-page-to-library)
+
+#### Required?
+
+No
+
+#### Default value
+
+`undefined`
+
+#### Sample
+
+```js
+microstrategy.dossier
+  .create({
+    placeholder: placeholderDiv,
+    url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+    disableErrorPopupWindow: true,
+  })
+  .catch((err) => {
+    // add error handler logic here
+  });
+```
 
 ### `dockedComment`
 
@@ -499,28 +530,35 @@ microstrategy.dossier.create({
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
   enableCustomerAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
-  //The following function is the default implementation. User can provide custom implementation.
-  getLoginToken: function () {
-    return fetch("http://{host}:{port}/{Library}/api/auth/login", {
+  // The following function is the default implementation. User can provide custom implementation.
+  getLoginToken() {
+    return fetch("https://{host}:{port}/{Library}/api/auth/login", {
       method: "POST",
-      credentials: "include", //including cookie
-      mode: "cors", //setting as CORS mode for cross origin
+      credentials: "include", // including cookie
+      mode: "cors", // setting as CORS mode for cross origin
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         loginMode: 1, // Standard mode
         username: "input your username",
         password: "input your password",
       }),
-    }).then(function (response) {
-      if (response && response.ok) {
-        return response.headers.get("X-MSTR-authToken");
-      }
-    });
+    })
+      .then((response) => {
+        if (response && response.ok) {
+          return response.headers.get("X-MSTR-authToken");
+        }
+        throw Error("Failed to fetch auth token.");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   },
 });
 ```
 
 When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you need to provide an identity token with `getLoginToken` function.
+
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ### `instance`
 
@@ -569,7 +607,6 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `notification` - Show or hide the notification icon. The default is `true`.
 - `filter` - Show or hide the filter icon. The default is `true`.
 - `options` - Show or hide the options icon. The default is `true`.
-- `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
 - `edit` - Show or hide the edit icon. The default is `false`.
 
@@ -602,7 +639,6 @@ microstrategy.dossier.create({
     notification: false,
     filter: true,
     options: true,
-    search: false,
     bookmark: true,
     edit: false,
   },
@@ -614,6 +650,7 @@ microstrategy.dossier.create({
 Use the `customUi` object to customize the UI component visibilities except the dossier consumption and authoring pages. The detailed properties are as below:
 
 - `library` - This field is used to customized the UI components on the MicroStrategy Library home page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuilibrary)
+- `reportConsumption` - This field is used to customize the UI components on the report consumption page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuireportconsumption).
 
 #### Required?
 
@@ -903,6 +940,14 @@ No visualization needs to be maximized or restored during initial loading.
 ### `authoring`
 
 The `authoring` object controls the dossier interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
+
+### `errorHandler`
+
+The custom error handler that is executed when an error occurs in the dossier-creating process. See [Custom error handling](./error-handling.md#custom-error-handling) for details.
+
+### `sessionErrorHandler`
+
+The custom error handler that is executed when the session expires in the embedding lifetime. See [Custom error handling](./error-handling.md#session-error-handling) for details.
 
 ## Method for removing an embedded dossier
 

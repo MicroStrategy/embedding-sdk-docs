@@ -109,13 +109,13 @@ microstrategy.dossier.create({
 This API returns a promise `dossier` object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // ...
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     // ...
   });
@@ -193,21 +193,15 @@ When the Save or Close button is clicked in authoring mode, an event is raised t
 The following code example includes `registerEventHandler`, which is an existing API.
 
 ```js
-myDossier.registerEventHandler(
-  microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_SAVED,
-  function () {
-    // The handling logic receiving the save event
-    // ...
-  }
-);
+myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_SAVED, () => {
+  // The handling logic receiving the save event
+  // ...
+});
 
-myDossier.registerEventHandler(
-  microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_CLOSED,
-  function () {
-    // The handling logic receiving the close event
-    // ...
-  }
-);
+myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHORING_CLOSED, () => {
+  // The handling logic receiving the close event
+  // ...
+});
 ```
 
 ### API for hiding the edit button
@@ -242,13 +236,13 @@ If you do not enter a value for `navigationBar`, the dossier runs using the old 
 This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // ...
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     // ...
   });
@@ -275,7 +269,7 @@ Example:
 ```js
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
-  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/19A95FA711EC45A93E0B0080AFAB8FDF", //{host}:{port}/{Library}/app/{ProjectID}/{DossierID}
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/EC70648611E7A2F962E90080EFD58751/19A95FA711EC45A93E0B0080AFAB8FDF", // {host}:{port}/{Library}/app/{ProjectID}/{DossierID}
   authoring: {
     menubar: { library: { visible: false } },
     toolbar: { tableOfContents: { visible: false } },
@@ -289,13 +283,13 @@ microstrategy.dossier.create({
 This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // ...
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     // ...
   });
@@ -339,13 +333,13 @@ microstrategy.dossier.create({
 This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
 
 ```js
-var placeholderDiv = document.getElementById("dossierContainer");
-var myDossier;
+const placeholderDiv = document.getElementById("dossierContainer");
+let myDossier;
 microstrategy.dossier
   .create({
     // ...
   })
-  .then(function (dossier) {
+  .then((dossier) => {
     myDossier = dossier;
     // ...
   });

@@ -32,6 +32,7 @@ const sidebars = {
       items: [
         "support-for-different-authentication-environments/guest-authentication-mode-only",
         "support-for-different-authentication-environments/multiple-modes",
+        "support-for-different-authentication-environments/standard-authentication",
         "support-for-different-authentication-environments/authentication-saml",
         "support-for-different-authentication-environments/seamless-login",
       ],
@@ -67,6 +68,34 @@ const sidebars = {
         "embed-library-main-page/embed-library-properties",
         "embed-library-main-page/library-page-apis",
         "embed-library-main-page/embed-custom-ui-on-all-pages",
+      ],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-report-page/embed-report-page",
+      },
+      label: "Embed MicroStrategy report page",
+      items: ["embed-report-page/embed-report-properties"],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "native-embedding-architecture/native-embedding-architecture",
+      },
+      label: "The Native Embedding SDK",
+      items: [
+        "native-embedding-architecture/embed-multiple-viz",
+        "native-embedding-architecture/destroy-multiple-viz",
+        "native-embedding-architecture/embedding-components",
+        "native-embedding-architecture/mstr-environment",
+        "native-embedding-architecture/mstr-dossier",
+        "native-embedding-architecture/vis-manipulation",
+        "native-embedding-architecture/dossier-info-api",
+        "native-embedding-architecture/apply-filter",
+        "native-embedding-architecture/event-handling",
       ],
     },
     "samples",
