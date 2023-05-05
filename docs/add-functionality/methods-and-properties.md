@@ -548,6 +548,7 @@ microstrategy.dossier.create({
           return response.headers.get("X-MSTR-authToken");
         }
         throw Error("Failed to fetch auth token.");
+        throw Error("Failed to fetch auth token");
       })
       .catch((error) => {
         console.log("Error:", error);
