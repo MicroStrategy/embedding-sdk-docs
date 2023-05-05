@@ -169,6 +169,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
     // The similar logic as getLoginToken in existing Embedding SDK
+  },
 });
 ```
 
