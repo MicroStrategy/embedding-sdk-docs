@@ -3,6 +3,8 @@ title: MstrEnvironment class
 description: MstrEnvironment class
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. `MstrEnvironment` class represents one MicroStrategy Library Application identified by a URL.
 
 ## APIs

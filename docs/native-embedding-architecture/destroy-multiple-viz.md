@@ -3,6 +3,8 @@ title: Destroy visualizations on a page
 description: Destroy visualizations on a page
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 ## Purpose
 
 After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can also destroy them to clear your page, or embed the visualizations from another dossier.

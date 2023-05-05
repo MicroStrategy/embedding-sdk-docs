@@ -3,6 +3,8 @@ title: Embed multiple visualizations on a page
 description: Embed multiple visualizations on a page
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 ## Purpose
 
 You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dossier page.
