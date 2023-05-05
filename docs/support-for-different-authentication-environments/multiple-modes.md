@@ -75,6 +75,8 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
    </html>
    ```
 
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
+
 1. To use a dossier from your Library Server, make the following changes to the code:
 
    1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibraryInsights` with your Library Server URL.
