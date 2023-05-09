@@ -3,6 +3,8 @@ title: embeddingComponent.environments namespace
 description: embeddingComponent.environments namespace
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 This is the entry point of the Native Embedding SDK.
 
 ## APIs

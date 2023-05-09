@@ -3,6 +3,8 @@ title: Add event handling
 description: Events allow the custom application page to listen to events from the embedded visualizations. You can listen to these events and provide event handler functions to respond to them. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 Event handling allows a custom application page to listen to events from embedded visualizations. You can listen to these events and handle the events in the handler functions. For example, you can add code to capture element selection events from embedded visualizations and apply them as a filter.
 
 Let's say you already have `MstrEnvironment` and `MstrDossier` objects. Then you can use `MstrDossier.registerEventHandler` to register handlers for events. You can also use `MstrDossier.registerErrorHandler` to register handlers for errors that occur during graphic manipulations of embedded visualizations.

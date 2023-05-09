@@ -3,6 +3,8 @@ title: MstrDossier class
 description: MstrDossier class
 ---
 
+<Available since="2021 Update 9 (May 2023)"/>
+
 The object returned from the `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dossier object.
 
 ## APIs
