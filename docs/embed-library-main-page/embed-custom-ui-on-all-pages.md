@@ -259,6 +259,9 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `bookmark`
   - Show or hide the bookmark icon.
   - Default value: `true`.
+- `undoRedo`
+  - Show or hide the undo and redo buttons.
+  - Default value: `true`.
 - `edit`
   - Show or hide the edit icon.
   - Default value: `false`.
