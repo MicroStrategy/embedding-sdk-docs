@@ -641,6 +641,7 @@ microstrategy.dossier.create({
     filter: true,
     options: true,
     bookmark: true,
+    undoRedo: true,
     edit: false,
   },
 });

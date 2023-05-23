@@ -68,6 +68,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
         options: true,
         search: false,
         bookmark: true,
+        undoRedo: true,
         edit: false,
       },
     },
