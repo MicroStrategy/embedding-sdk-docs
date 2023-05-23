@@ -607,7 +607,6 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `notification` - Show or hide the notification icon. The default is `true`.
 - `filter` - Show or hide the filter icon. The default is `true`.
 - `options` - Show or hide the options icon. The default is `true`.
-- `search` - Show or hide the search icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
 - `undoRedo` - Show or hide the undo and redo buttons. The default is `true`.
 - `edit` - Show or hide the edit icon. The default is `false`.
