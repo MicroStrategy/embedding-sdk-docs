@@ -68,6 +68,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
         options: true,
         search: false,
         bookmark: true,
+        undoRedo: true,
         edit: false,
       },
     },
@@ -258,6 +259,9 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
   - Default value: `true`.
 - `bookmark`
   - Show or hide the bookmark icon.
+  - Default value: `true`.
+- `undoRedo`
+  - Show or hide the undo and redo buttons.
   - Default value: `true`.
 - `edit`
   - Show or hide the edit icon.
