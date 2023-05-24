@@ -608,6 +608,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 - `filter` - Show or hide the filter icon. The default is `true`.
 - `options` - Show or hide the options icon. The default is `true`.
 - `bookmark` - Show or hide the bookmark icon. The default is `true`.
+- `undoRedo` - Show or hide the undo and redo buttons. The default is `true`.
 - `edit` - Show or hide the edit icon. The default is `false`.
 
 #### Required?
@@ -640,6 +641,7 @@ microstrategy.dossier.create({
     filter: true,
     options: true,
     bookmark: true,
+    undoRedo: true,
     edit: false,
   },
 });
