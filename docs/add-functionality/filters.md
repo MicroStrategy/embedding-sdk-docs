@@ -570,7 +570,7 @@ or
 
 After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
 
-### Dossier.filterSelectAllAttributeElements(filterJson)
+### Dossier.filterSelectAllAttributes(filterJson)
 
 Select all the attributes for the filter with `key` and apply the change immediately.
 
@@ -585,7 +585,7 @@ Select all the attributes for the filter with `key` and apply the change immedia
 }
 ```
 
-### Dossier.filterDeselectAllAttributeElements(filterJson)
+### Dossier.filterDeselectAllAttributes(filterJson)
 
 Deselect all the attributes for the filter with `key` and save the change to client side.
 
