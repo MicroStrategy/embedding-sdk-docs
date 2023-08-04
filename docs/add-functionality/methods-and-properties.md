@@ -70,7 +70,9 @@ No
 The `url` property refers to the full URL of the dossier to be embedded. There are two ways to configure the URL to embed a dossier:
 
 1. Use the `url` property to specify a full URL.
-1. Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties. Embedding SDK will build the URL using: `serverURL` + '/app' + '/config/' + `configAppId` + '/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
+1. Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties.
+1. If the `configAppId` property is not provided, embedding SDK will build the URL using: `serverURL` + '/app/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
+1. Otherwise the URL will be: `serverURL` + '/app/' + 'config/' + `configAppId` + '/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
 
 #### Required?
 
