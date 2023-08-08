@@ -66,17 +66,16 @@ The existing parameters can be roughly divided into three categories and their b
 
 - The parameters used for some extra dossier instance manipulation, for example, filter and visualizationAppearances. These parameters are implementations of some embedding SDK APIs (for example, filter-related functions in the dossier class and changeVisualizationSize) for the initial workflow. As these embedding SDK APIs are forbidden in authoring mode, you must also forbid these parameters in the initial parameter in authoring mode to keep the consistent behavior. A complete list of these parameters are shown below.
 
-| Field Name                    | Description                                                                                               |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------- |
-| instance                      | An existing instance injected to the embedding SDK that is used for pre-handlings, like an answer prompt. |
-| filters                       | Applies filters to the dossier instance in consumption mode.                                              |
-| visualizationAppearances      | Applies visualization appearance manipulations to the dossier instance in consumption mode.               |
-| visualizationSelectedElements | Applies visualization element selections to the dossier instance in consumption mode.                     |
+| Field Name                    | Description                                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------------------- |
+| filters                       | Applies filters to the dossier instance in consumption mode.                                |
+| visualizationAppearances      | Applies visualization appearance manipulations to the dossier instance in consumption mode. |
+| visualizationSelectedElements | Applies visualization element selections to the dossier instance in consumption mode.       |
 
 If you have set values for these fields when setting `dossierRenderingMode = authoring`, a dialog appears with the error message:
 
 ```text
-The fields ["instance", "filters", "visualizationAppearances", "visualizationSelectedElements"] are not allowed to be used when "dossierRenderingMode" is "authoring". Please remove these forbidden fields and try again.
+The fields ["filters", "visualizationAppearances", "visualizationSelectedElements"] are not allowed to be used when "dossierRenderingMode" is "authoring". Please remove these forbidden fields and try again.
 ```
 
 ## Embedding SDK APIs and examples
@@ -125,12 +124,12 @@ microstrategy.dossier
 
 When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
 
-| Error Case                                                                                                                                                             | Error Category                        | Handling Module | Error Handling                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------- | --------------------------------------------- |
-| The dossierRenderingMode parameter has the wrong input type.                                                                                                           | Invalid input                         | Embedded SDK    | Display an error message and an alert dialog. |
-| The dossierRenderingMode parameter is neither “consumption“ nor “authoring“.                                                                                           | Invalid input                         | Embedded SDK    | Display an error message and an alert dialog. |
-| A required parameter is missed or it is not in the correct format.                                                                                                     | Invalid input in the unsupported case | Web Dossier     | Caught by error handler.                      |
-| The unsupported fields in the authoring mode include:<ul><li>instance</li><li>filters</li><li>visualizationAppearances</li><li>visualizationSelectedElements</li></ul> | Unsupported case                      | Embedded SDK    | Display an error message and an alert dialog. |
+| Error Case                                                                                                                                            | Error Category                        | Handling Module | Error Handling                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------- | --------------------------------------------- |
+| The dossierRenderingMode parameter has the wrong input type.                                                                                          | Invalid input                         | Embedded SDK    | Display an error message and an alert dialog. |
+| The dossierRenderingMode parameter is neither “consumption“ nor “authoring“.                                                                          | Invalid input                         | Embedded SDK    | Display an error message and an alert dialog. |
+| A required parameter is missed or it is not in the correct format.                                                                                    | Invalid input in the unsupported case | Web Dossier     | Caught by error handler.                      |
+| The unsupported fields in the authoring mode include:<ul><li>filters</li><li>visualizationAppearances</li><li>visualizationSelectedElements</li></ul> | Unsupported case                      | Embedded SDK    | Display an error message and an alert dialog. |
 
 ### API for switching to authoring mode
 
