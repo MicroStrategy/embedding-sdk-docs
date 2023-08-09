@@ -53,34 +53,31 @@ To embed multiple visualizations from one dossier, after referring `native-embed
             projectId: "EC70648611E7A2F962E90080EFD58751",
             objectId: "27D332AC6D43352E0928B9A1FCAF4AB0",
           };
-          function loginInAsGuest() {
-            async function getAuthToken(options, url) {
-              response = await fetch(url, options);
-              if (response.ok) {
-                return response.headers.get("x-mstr-authtoken");
-              } else {
-                console.log(json);
-              }
-            }
-            const createTokenOptions = {
-              method: "POST",
-              credentials: "include", // Including cookie
-              mode: "cors", // Setting as cors mode for cross origin
-              headers: { "content-type": "application/json" },
-              body: JSON.stringify({
-                // here we login as guest user, you can log in as normal user with `username` and `password` as well
-                // username: "input your username",
-                // password: "input your password",
-                loginMode: 8, // 8 means guest login, use `1` if you log in as normal user
-              }),
-            };
-            const loginUrl = `https://${configs.domain}/${configs.library}/api/auth/login`;
-            return getAuthToken(createTokenOptions, loginUrl);
-          }
-          const serverUrl = `https://${configs.domain}/${configs.library}`;
           const environment = await microstrategy.embeddingComponent.environments.create({
-            serverUrl: serverUrl,
-            getAuthToken: loginInAsGuest,
+            serverUrl: `https://${configs.domain}/${configs.library}`,
+            getAuthToken() {
+              return fetch(`https://${configs.domain}/${configs.library}/api/auth/login`, {
+                method: "POST",
+                credentials: "include", // including cookie
+                mode: "cors", // setting as CORS mode for cross origin
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  // here we login as guest user, you can log in as normal user with `username` and `password` as well
+                  // username: "input your username",
+                  // password: "input your password",
+                  loginMode: 8, // 8 means guest login, use `1` if you log in as normal user
+                }),
+              })
+                .then((response) => {
+                  if (response && response.ok) {
+                    return response.headers.get("X-MSTR-authToken");
+                  }
+                  throw Error("Failed to fetch auth token.");
+                })
+                .catch((error) => {
+                  console.log("Error:", error);
+                });
+            },
           });
           const mstrDossier = await environment.loadDossier({
             projectId: configs.projectId,
