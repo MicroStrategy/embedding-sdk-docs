@@ -29,6 +29,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 ### Embed visualizations from one dossier
 
 To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+(please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
 <!DOCTYPE html>
@@ -47,16 +48,15 @@ To embed multiple visualizations from one dossier, after referring `native-embed
     <script type="text/javascript">
       const nativeEmbedInDemoPage = async () => {
         try {
+          // configuration for the target dossier
           const configs = {
-            domain: "demo.microstrategy.com",
-            library: "MicroStrategyLibrary",
             projectId: "EC70648611E7A2F962E90080EFD58751",
             objectId: "27D332AC6D43352E0928B9A1FCAF4AB0",
           };
           const environment = await microstrategy.embeddingComponent.environments.create({
-            serverUrl: `https://${configs.domain}/${configs.library}`,
+            serverUrl: `https://demo.microstrategy.com/MicroStrategyLibrary`,
             getAuthToken() {
-              return fetch(`https://${configs.domain}/${configs.library}/api/auth/login`, {
+              return fetch(`https://demo.microstrategy.com/MicroStrategyLibrary/api/auth/login`, {
                 method: "POST",
                 credentials: "include", // including cookie
                 mode: "cors", // setting as CORS mode for cross origin
@@ -83,6 +83,7 @@ To embed multiple visualizations from one dossier, after referring `native-embed
             projectId: configs.projectId,
             objectId: configs.objectId,
           });
+          // the viz keys can be obtained from dossier definition APIs: e.g.`GET /app/v2/dossier/{dossierId}/definition`
           await mstrDossier.refresh([
             {
               key: "W1334",
