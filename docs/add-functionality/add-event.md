@@ -429,6 +429,93 @@ embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResized
 }
 ```
 
+### onLibraryItemSelected
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_ITEM_SELECTED`
+
+#### Description
+
+Raised when a library item selected. Need library item select mode to be enabled.
+
+#### Content
+
+Object containing library item selection information.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_LIBRARY_ITEM_SELECTED, libraryItemSelectionHandler);
+```
+
+#### Content example
+
+```json
+[
+  {
+    "id": "A7B1C43C4ABA7E499D4E1789A2EBCD55",
+    "docId": "BFB749B340572473A1288E9A2F6EDDA6",
+    "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
+    "name": "Distribution Center & Brands",
+    "type": 55,
+    "subtype": null
+  }
+]
+```
+
+### onLibraryMenuSelected
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_MENU_SELECTED`
+
+#### Description
+
+Raised when a library menu selected.
+
+#### Content
+
+Object containing library menu selection information.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_LIBRARY_MENU_SELECTED, libraryMenuSelectionHandler);
+```
+
+#### Content example
+
+```json
+{
+  "menuKey": "myContent",
+  "groupId": null
+}
+```
+
+### onLibraryItemSelectionCleared
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED`
+
+#### Description
+
+Raised when a library item selection cleared.
+
+#### Content
+
+None
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(
+  EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED,
+  libraryItemSelectioClearnHandler
+);
+```
+
 ### onDossierInstanceIDChange
 
 #### Event enumeration
