@@ -175,40 +175,6 @@ embedDossier.registerEventHandler(EventType.ON_ERROR, errorHandler);
 }
 ```
 
-### onSessionError
-
-#### Event enumeration
-
-`EventType.ON_SESSION_ERROR`
-
-#### Description
-
-Raised when a session error occurs.
-
-#### Content
-
-Error object.
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandler);
-```
-
-#### Content example
-
-```json
-{
-  "title": "Existing Live Session",
-  "message": "Invalid access token",
-  "desc": "You're logged in from another tab or window. Please refresh your session to see the latest updates.",
-  "errorCode": "ERR003_2",
-  "iServerErrorCode": "",
-  "statusCode": 401,
-  "ticketId": "e71565e0c8434133a4a4a53a56d92efb"
-}
-```
-
 ### onPageLoaded
 
 #### Event enumeration
