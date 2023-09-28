@@ -29,55 +29,78 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 ### Embed visualizations from one dossier
 
 To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+(please use `<meta charset="UTF-8" />` character encoding tag)
 
-```js
-try {
-  const environment = await microstrategy.embeddingComponent.environments.create({
-    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
-    // The following function is the default implementation. User can provide custom implementation.
-    // Only support standard authentication now.
-    getAuthToken() {
-      return fetch("https://{host}:{port}/{Library}/api/auth/login", {
-        method: "POST",
-        credentials: "include", // including cookie
-        mode: "cors", // setting as CORS mode for cross origin
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          loginMode: 1, // Standard mode
-          username: "input your username",
-          password: "input your password",
-        }),
-      })
-        .then((response) => {
-          if (response && response.ok) {
-            return response.headers.get("X-MSTR-authToken");
-          }
-          throw Error("Failed to fetch auth token.");
-        })
-        .catch((error) => {
-          console.log("Error:", error);
-        });
-    },
-  });
-  const dossier = await environment.loadDossier({
-    projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
-    objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
-  });
-
-  await dossier.refresh([
-    {
-      key: "K66",
-      container: document.getElementById("container1"),
-    },
-    {
-      key: "K52",
-      container: document.getElementById("container2"),
-    },
-  ]);
-  // Your own code after the visualizations are all loaded
-} catch (error) {
-  // Your own error handling code
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script
+      type="text/javascript"
+      src="https://demo.microstrategy.com/MicroStrategyLibrary/javascript/native-embedding-sdk.js"
+    ></script>
+  </head>
+  <body onload="nativeEmbedInDemoPage()">
+    <div id="container1" style="height: 500px;"></div>
+    <div id="container2" style="height: 500px;"></div>
+    <script type="text/javascript">
+      const nativeEmbedInDemoPage = async () => {
+        try {
+          // configuration for the target dossier
+          const configs = {
+            projectId: "EC70648611E7A2F962E90080EFD58751",
+            objectId: "27D332AC6D43352E0928B9A1FCAF4AB0",
+          };
+          const environment = await microstrategy.embeddingComponent.environments.create({
+            serverUrl: `https://demo.microstrategy.com/MicroStrategyLibrary`,
+            getAuthToken() {
+              return fetch(`https://demo.microstrategy.com/MicroStrategyLibrary/api/auth/login`, {
+                method: "POST",
+                credentials: "include", // including cookie
+                mode: "cors", // setting as CORS mode for cross origin
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  // here we login as guest user, you can log in as normal user with `username` and `password` as well
+                  // username: "input your username",
+                  // password: "input your password",
+                  loginMode: 8, // 8 means guest login, use `1` if you log in as normal user
+                }),
+              })
+                .then((response) => {
+                  if (response && response.ok) {
+                    return response.headers.get("X-MSTR-authToken");
+                  }
+                  throw Error("Failed to fetch auth token.");
+                })
+                .catch((error) => {
+                  console.log("Error:", error);
+                });
+            },
+          });
+          const mstrDossier = await environment.loadDossier({
+            projectId: configs.projectId,
+            objectId: configs.objectId,
+          });
+          // the viz keys can be obtained from dossier definition APIs: e.g.`GET /app/v2/dossier/{dossierId}/definition`
+          await mstrDossier.refresh([
+            {
+              key: "W1334",
+              container: document.getElementById("container1"),
+            },
+            {
+              key: "A1F3431F2CA2481BB966EC8F35A9AC3A",
+              container: document.getElementById("container2"),
+            },
+          ]);
+        } catch (e) {
+          console.error(e.message);
+        }
+      };
+    </script>
+  </body>
+</html>
 ```
 
 `applicationType` must be unset or equal to `35`. Because the implementation of Native Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
