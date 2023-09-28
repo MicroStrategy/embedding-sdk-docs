@@ -6,7 +6,6 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
 ## 2021 Update 11(September 2023)
-
 - [Event handlers added to Library for; item selection, and menu selection.](./add-functionality/add-event.md)
 
 ## 2021 Update 9 (May 2023)
