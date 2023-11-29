@@ -6,6 +6,8 @@ description: The Embedding SDK enables you to customize the UI components of all
 The Embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
 
 - `microstrategy.embeddingContexts.embedLibraryPage(props)`
+- `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
+- `microstrategy.embeddingContexts.embedReportPage(props)`
 
 Here is an example:
 
@@ -271,7 +273,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 
 No
 
-### props.customUi.dossierAuthoring
+### `props.customUi.dossierAuthoring`
 
 This field is used to customized the UI components on the dossier authoring page. It has 2 properties: `toolbar` and `menubar`.
 

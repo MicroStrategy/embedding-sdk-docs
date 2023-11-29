@@ -36,6 +36,6 @@ To help you get started, we have provided a number of simple applications with s
 
   Describes the properties that can be set for an embedded MicroStrategy Library home page.
 
-- [Library page APIs](./library-page-apis.md)
+- [Library page APIs](../embedding-context/library-page-apis.md)
 
   Describes which Embedding SDK APIs are available on the MicroStrategy Library home page.
