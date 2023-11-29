@@ -82,6 +82,15 @@ const sidebars = {
       type: "category",
       link: {
         type: "doc",
+        id: "embed-bot-consumption-page/embed-bot-consumption-page",
+      },
+      label: "Embed MicroStrategy bot consumption page",
+      items: ["embed-bot-consumption-page/embed-bot-consumption-properties"],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
         id: "embed-report-page/embed-report-page",
       },
       label: "Embed MicroStrategy report page",
