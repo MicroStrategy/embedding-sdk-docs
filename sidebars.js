@@ -66,9 +66,17 @@ const sidebars = {
       label: "Embed MicroStrategy Library home page",
       items: [
         "embed-library-main-page/embed-library-properties",
-        "embed-library-main-page/library-page-apis",
         "embed-library-main-page/embed-custom-ui-on-all-pages",
       ],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embed-dossier-consumption-page/embed-dossier-consumption-page",
+      },
+      label: "Embed MicroStrategy dossier consumption page",
+      items: ["embed-dossier-consumption-page/embed-dossier-consumption-properties"],
     },
     {
       type: "category",
@@ -78,6 +86,18 @@ const sidebars = {
       },
       label: "Embed MicroStrategy report page",
       items: ["embed-report-page/embed-report-properties"],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "embedding-context/embedding-context",
+      },
+      label: "Embedding context",
+      items: [
+        "embedding-context/library-page-apis",
+        "embedding-context/dossier-consumption-page-apis",
+      ],
     },
     {
       type: "category",

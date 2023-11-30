@@ -26,6 +26,8 @@ There are three basic steps for embedding a MicroStrategy report page.
    ```js
    microstrategy.embeddingContexts.embedReportPage({
      serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
+     projectId: "{YOUR_PROJECT_ID}",
+     objectId: "{YOUR_OBJECT_ID}",
      placeholder: document.getElementById("reportContainer"),
    });
    ```
