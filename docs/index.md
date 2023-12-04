@@ -14,7 +14,7 @@ There are three basic steps for embedding a dossier.
    <script src="{YOUR_LIBRARY_SERVER_URL}/javascript/embeddinglib.js"></script>
    ```
 
-   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
+   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
 
    :::tip
 
