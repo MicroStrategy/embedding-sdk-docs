@@ -301,7 +301,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | Error Case                                        | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
 | The authoring parameter has the wrong input type. | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
-| The authoring.$\{key\} has the wrong input type.   | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
+| The authoring.$\{key\} has the wrong input type.  | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
 
 ### API for creating a new dossier for authoring
 

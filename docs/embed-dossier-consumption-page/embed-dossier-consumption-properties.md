@@ -46,7 +46,6 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 });
 ```
 
-
 ### `serverUrl`, `projectId`, `objectId`
 
 The required parameters in the dossier URL.
@@ -101,7 +100,6 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
   pageKey: "K53--K46",
 });
 ```
-
 
 ### `containerHeight`
 
@@ -315,7 +313,6 @@ Specifies the custom UI settings on the embedded pages, including MicroStrategy 
 
 Please see all the properties in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md)
 
-
 ### `settings`
 
 Specify the custom settings on the embedding pages. Including the non-UI settings of dossier consumption page.
@@ -331,6 +328,7 @@ No
 Use the `dossierConsumption` object to customize the options on the dossier consumption page. The detailed properties contain:
 
 - `componentSelectionMode`
+
   - To assign the selection mode of the visualizations or groups on the dossier consumption page.
   - Available values: ["noSelection", "singleSelection", "multipleSelection"]
   - Default value: "noSelection".

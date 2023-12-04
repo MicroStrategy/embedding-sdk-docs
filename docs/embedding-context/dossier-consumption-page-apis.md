@@ -3,7 +3,7 @@ title: Dossier consumption page APIs
 description: Describes which Embedding SDK APIs are available on the MicroStrategy dossier consumption page.
 ---
 
-The `dossierConsumption` object is the manipulator of the MicroStrategy dossier consumption page. It could be got by `embeddingContext.dossierConsumption`. 
+The `dossierConsumption` object is the manipulator of the MicroStrategy dossier consumption page. It could be got by `embeddingContext.dossierConsumption`.
 
 The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 
@@ -30,19 +30,25 @@ This API would return a Promise object that resolves to an object that contains 
   "id": "EC5441154009D3C39D5BD6AD75865EF4",
   "name": "DDA_Dossier_filter_SearchBox_style",
   "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
-  "chapters": [{
-    "key": "K36",
-    "name": "Chapter 1",
-    "pages": [{
-      "key": "K53",
-      "name": "Page 1"
-    }, {
-      "key": "W78",
-      "name": "Page 2"
-    }]
-  }]
+  "chapters": [
+    {
+      "key": "K36",
+      "name": "Chapter 1",
+      "pages": [
+        {
+          "key": "K53",
+          "name": "Page 1"
+        },
+        {
+          "key": "W78",
+          "name": "Page 2"
+        }
+      ]
+    }
+  ]
 }
 ```
+
 If the API encounters an error in its executing process, the error would be thrown and could be caught.
 
 #### Example
@@ -77,7 +83,6 @@ This API could be used to select visualizations or groups on a dossier consumpti
   **Required?**
 
   Yes
-
 
 #### Return type
 
@@ -114,19 +119,23 @@ This API would return a Promise object that resolves to an object that contains 
 {
   "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
   "dossierId": "EC5441154009D3C39D5BD6AD75865EF4",
-  "selectedComponents": [{
-    "key": "K52",
-    "type": "visualization",
-    "chapterKey": "K36",
-    "pageKey": "K53"
-  }, {
-    "key": "53ACF03646491B5F5F5A7B83EB1BB0BE",
-    "type": "group",
-    "chapterKey": "K87",
-    "pageKey": "K67"
-  }] 
+  "selectedComponents": [
+    {
+      "key": "K52",
+      "type": "visualization",
+      "chapterKey": "K36",
+      "pageKey": "K53"
+    },
+    {
+      "key": "53ACF03646491B5F5F5A7B83EB1BB0BE",
+      "type": "group",
+      "chapterKey": "K87",
+      "pageKey": "K67"
+    }
+  ]
 }
 ```
+
 If the API encounters an error in its executing process, the error would be thrown and could be caught.
 
 #### Example
@@ -146,13 +155,11 @@ try {
 
 The API details are identical to [Dossier.getDossierInstanceId()](../add-functionality/methods-and-properties#dossiergetdossierinstanceid)
 
-
 ### `getCurrentPageVisualizationList()`
 
 #### Description
 
 The API details are identical to [Dossier.getCurrentPageVisualizationList()](../add-functionality/add-nav#getcurrentpagevisualizationlist)
-
 
 ### `changeVisualizationSize(props)`
 
@@ -160,13 +167,11 @@ The API details are identical to [Dossier.getCurrentPageVisualizationList()](../
 
 The API details are identical to [Dossier.changeVisualizationSize(props)](../add-functionality/embed-vis#1-change-the-visualization-size)
 
-
 ### `getCurrentPagePanelStacks()`
 
 #### Description
 
 The API details are identical to [Dossier.getCurrentPagePanelStacks()](../add-functionality/panel-stacks#1-get-the-panel-stack-definitions-from-the-current-page)
-
 
 ### `switchPanel(panelKey)`
 
@@ -174,13 +179,11 @@ The API details are identical to [Dossier.getCurrentPagePanelStacks()](../add-fu
 
 The API details are identical to [Dossier.switchPanel(panelKey)](../add-functionality/panel-stacks#2-switch-panels-on-the-current-page)
 
-
 ### `getAvailableElements(vizKey)`
 
 #### Description
 
 The API details are identical to [Dossier.getAvailableElements(visKey)](../add-functionality/attribute-element-selection#api-for-getting-available-elements)
-
 
 ### `selectVisualizationElements(props)`
 
