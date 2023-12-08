@@ -5,13 +5,12 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2021 Update 11 
+## 2021 Update 11
 
 - [Embed MicroStrategy dossier consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
   - You can use a new Embedding SDK API to embed a dossier consumption page, in which we support the user to navigate between the dossier and the homepage.
 - [Dossier consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
   - You can call new APIs on the dossier consumption page to get and set the selected components.
-
 
 ## 2021 Update 9
 
@@ -23,13 +22,9 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 8
 
-[Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
-
-- Users can embed MicroStrategy report consumption page.
-- Users can control the visibility of the navigation bar of the report consumption page.
-
-## 2021 Update 8
-
+- [Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
+  - Users can embed MicroStrategy report consumption page.
+  - Users can control the visibility of the navigation bar of the report consumption page.
 - [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
 - [Ability to customize Library home page from embedding dossier page](./add-functionality/methods-and-properties.md#customui)
 

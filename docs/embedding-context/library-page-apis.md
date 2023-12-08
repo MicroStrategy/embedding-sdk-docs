@@ -3,7 +3,7 @@ title: Library page APIs
 description: Describes which Embedding SDK APIs are available on the MicroStrategy Library home page.
 ---
 
-The `LibraryPage` object is the manipulator of the MicroStrategy Library home page. It could be got by `embeddingContext.libraryPage`. 
+The `LibraryPage` object is the manipulator of the MicroStrategy Library home page. It could be got by `embeddingContext.libraryPage`.
 
 The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 

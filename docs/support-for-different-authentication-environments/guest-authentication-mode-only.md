@@ -9,10 +9,10 @@ To help you get started, we have provided [a live example](https://microstrategy
 
 We have provided simple instructions and code snippets to help you configure the example to use a dossier from your MicroStrategy Library Server. If you customize the example, however, you must configure your Library Server to support only Guest authentication.
 
-Please also check out the examples in [Embedding SDK Playground](https://microstrategy.github.io/playground/) from the "Start over" button and <https://microstrategy.github.io/embedding-sdk-samples>.
+Please also check out the examples in [Embedding SDK Playground](https://microstrategy.github.io/playground/) from the "Start over" button and [https://microstrategy.github.io/embedding-sdk-samples](https://microstrategy.github.io/embedding-sdk-samples).
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
