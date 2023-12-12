@@ -451,7 +451,6 @@ None
 embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderFinishedHandler);
 ```
 
-
 ### onDossierInstanceChanged
 
 #### Event enumeration
@@ -480,10 +479,9 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_CHANGED, (conten
 {
   "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
   "dossierId": "D9AB379D11EC92C1D9DC0080EFD415BB",
-  "instanceId": "EC003BC7A046E75DE83373A254824F20",
+  "instanceId": "EC003BC7A046E75DE83373A254824F20"
 }
 ```
-
 
 ### onComponentSelectionChanged
 
@@ -513,28 +511,30 @@ embedDossier.registerEventHandler(EventType.ON_COMPONENT_SELECTION_CHANGED, (con
 {
   "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
   "dossierId": "EC5441154009D3C39D5BD6AD75865EF4",
-  "selectedComponents": [{
-    "key": "K52",
-    "type": "visualization",
-    "chapterKey": "K36",
-    "pageKey": "K53",
-    "dimensions": {
-      "width": 300.45, 
-      "height": 400.45,
+  "selectedComponents": [
+    {
+      "key": "K52",
+      "type": "visualization",
+      "chapterKey": "K36",
+      "pageKey": "K53",
+      "dimensions": {
+        "width": 300.45,
+        "height": 400.45
+      }
+    },
+    {
+      "key": "53ACF03646491B5F5F5A7B83EB1BB0BE",
+      "type": "group",
+      "chapterKey": "K87",
+      "pageKey": "K67",
+      "dimensions": {
+        "width": 700,
+        "height": 1000
+      }
     }
-  }, {
-    "key": "53ACF03646491B5F5F5A7B83EB1BB0BE",
-    "type": "group",
-    "chapterKey": "K87",
-    "pageKey": "K67",
-    "dimensions": {
-      "width": 700, 
-      "height": 1000,
-    }
-  }] 
+  ]
 }
 ```
-
 
 ## Event handlers
 

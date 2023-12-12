@@ -48,7 +48,7 @@ In authoring mode, most dossier-related APIs are disabled as they are designed f
 | Dossier.removeSessionErrorhandler               | Handles the error handlers.                                                                                       |
 | Dossier.makeSureSessionAlive                    | Checks the session. If it is expired, you should refresh it.                                                      |
 
-The other APIs are disabled in authoring mode. If a disabled API is called in authoring mode, an error is returned with the message, "The API ${funcName} isn't supported in the authoring mode!"
+The other APIs are disabled in authoring mode. If a disabled API is called in authoring mode, an error is returned with the message, "The API $\{funcName\} isn't supported in the authoring mode!"
 
 ### Events
 
@@ -301,7 +301,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | Error Case                                        | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
 | The authoring parameter has the wrong input type. | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
-| The authoring.{key} has the wrong input type.     | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
+| The authoring.$\{key\} has the wrong input type.  | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
 
 ### API for creating a new dossier for authoring
 
