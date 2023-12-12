@@ -5,7 +5,15 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2021 Update 11
+
+## 2021 Update 12
+
+[Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+
+- You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
+
+
+## 2021 Update 11 
 
 - [Embed MicroStrategy dossier consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
   - You can use a new Embedding SDK API to embed a dossier consumption page, in which we support the user to navigate between the dossier and the homepage.
