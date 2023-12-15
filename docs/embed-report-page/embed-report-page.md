@@ -13,7 +13,7 @@ There are three basic steps for embedding a MicroStrategy report page.
    <script src="{YOUR_LIBRARY_SERVER_URL}/javascript/embeddinglib.js"></script>
    ```
 
-   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., <https://demo.microstrategy.com/MicroStrategyLibrary>.
+   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
 
 1. Create a `<div>` as the placeholder where you want to embed the report.
 
@@ -26,6 +26,8 @@ There are three basic steps for embedding a MicroStrategy report page.
    ```js
    microstrategy.embeddingContexts.embedReportPage({
      serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
+     projectId: "{YOUR_PROJECT_ID}",
+     objectId: "{YOUR_OBJECT_ID}",
      placeholder: document.getElementById("reportContainer"),
    });
    ```

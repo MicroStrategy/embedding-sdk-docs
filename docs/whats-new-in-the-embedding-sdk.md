@@ -5,11 +5,21 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2021 Update 11(September 2023)
 
-- [Event handlers added to Library for; item selection, and menu selection.](./add-functionality/add-event.md)
+## 2021 Update 12
 
-## 2021 Update 9 (May 2023)
+- [Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+  - You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
+
+
+## 2021 Update 11 
+
+- [Embed MicroStrategy dossier consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - You can use a new Embedding SDK API to embed a dossier consumption page, in which we support the user to navigate between the dossier and the homepage.
+- [Dossier consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
+  - You can call new APIs on the dossier consumption page to get and set the selected components.
+
+## 2021 Update 9
 
 [Native Embedding SDK](./native-embedding-architecture/native-embedding-architecture.md)
 
@@ -17,15 +27,11 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - Users can interact with the embedded visualization.
 - Users can use APIs to perform manipulations such as filtering.
 
-## 2021 Update 8 (February 2023)
-
-[Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
-
-- Users can embed MicroStrategy report consumption page.
-- Users can control the visibility of the navigation bar of the report consumption page.
-
 ## 2021 Update 8
 
+- [Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
+  - Users can embed MicroStrategy report consumption page.
+  - Users can control the visibility of the navigation bar of the report consumption page.
 - [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
 - [Ability to customize Library home page from embedding dossier page](./add-functionality/methods-and-properties.md#customui)
 
