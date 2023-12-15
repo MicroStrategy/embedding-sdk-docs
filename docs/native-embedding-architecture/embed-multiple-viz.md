@@ -32,7 +32,7 @@ To embed multiple visualizations from one dossier, after referring `native-embed
 (please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

@@ -165,7 +165,7 @@ Here's how it would look if you follow the steps above.
 Adjust as needed.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

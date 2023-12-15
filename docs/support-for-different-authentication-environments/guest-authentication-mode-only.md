@@ -12,7 +12,7 @@ We have provided simple instructions and code snippets to help you configure the
 Please also check out the examples in [Embedding SDK Playground](https://microstrategy.github.io/playground/) from the "Start over" button and [https://microstrategy.github.io/embedding-sdk-samples](https://microstrategy.github.io/embedding-sdk-samples).
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
