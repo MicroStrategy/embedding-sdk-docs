@@ -16,7 +16,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 1. A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/1_2_Guest_With_MultiAuth.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en">
      <head>
        <meta charset="UTF-8" />
