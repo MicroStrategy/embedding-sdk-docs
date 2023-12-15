@@ -5,45 +5,7 @@ description: Describes which Embedding SDK APIs are available on the MicroStrate
 
 The `LibraryPage` object is the manipulator of the MicroStrategy Library home page. It could be got by `embeddingContext.libraryPage`.
 
-The `embeddingContext` object could be created as below:
-
-```js
-try {
-  const embeddingContext = await microstrategy.embeddingContexts.embedLibraryPage({
-    serverUrl: "{YOUR_LIBRARY_SERVER_URL}",
-    placeholder: document.getElementById("dossierContainer"),
-  });
-  // An example to call the LibraryPage APIs
-  const myGroups = await embeddingContext.libraryPage.getAllMyGroups();
-} catch (err) {
-  // Your custom error handling logic here
-}
-```
-
-This object is actually a service object that would persist in the embedding context. So if the user goes to a dossier page from the home page, then return to the home page again, this object could still be used.
-
-If the user wants to use the APIs below to manipulate the Library home page when he embeds a dossier page by `microstrategy.dossier.create()` at first, he could do the following things:
-
-- Click the "Go to Library" icon on the page to navigate to the Library home page;
-- Call `Dossier.getEmbeddingContext()` to get the EmbeddingContext object;
-- Use the EmbeddingContext object to call Library home page APIs.
-
-A piece of example code could be like this:
-
-```js
-try {
-  const dossier = await microstrategy.dossier.create({
-    url: "{YOUR_DOSSIER_URL}",
-    placeholder: document.getElementById("dossierContainer"),
-  });
-  // ... Some manual actions to go to the Library home page
-  const embeddingContext = dossier.getEmbeddingContext();
-  // Use some Library home page APIs
-  const myGroups = await embeddingContext.libraryPage.getAllMyGroups();
-} catch (err) {
-  // Your custom error handling logic here
-}
-```
+The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 
 The APIs under Library page object are as below.
 

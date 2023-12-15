@@ -141,74 +141,6 @@ embedDossier.registerEventHandler(EventType.ON_FILTER_UPDATED, filterUpdatedHand
 }
 ```
 
-### onError
-
-#### Event enumeration
-
-`EventType.ON_ERROR`
-
-#### Description
-
-Raised when an error occurs.
-
-#### Content
-
-Error object.
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(EventType.ON_ERROR, errorHandler);
-```
-
-#### Content example
-
-```json
-{
-  "title": "Existing Live Session",
-  "message": "Invalid access token",
-  "desc": "You're logged in from another tab or window. Please refresh your session to see the latest updates.",
-  "errorCode": "ERR003_2",
-  "iServerErrorCode": "",
-  "statusCode": 401,
-  "ticketId": "e71565e0c8434133a4a4a53a56d92efb"
-}
-```
-
-### onSessionError
-
-#### Event enumeration
-
-`EventType.ON_SESSION_ERROR`
-
-#### Description
-
-Raised when a session error occurs.
-
-#### Content
-
-Error object.
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(EventType.ON_SESSION_ERROR, sessionErrorHandler);
-```
-
-#### Content example
-
-```json
-{
-  "title": "Existing Live Session",
-  "message": "Invalid access token",
-  "desc": "You're logged in from another tab or window. Please refresh your session to see the latest updates.",
-  "errorCode": "ERR003_2",
-  "iServerErrorCode": "",
-  "statusCode": 401,
-  "ticketId": "e71565e0c8434133a4a4a53a56d92efb"
-}
-```
-
 ### onPageLoaded
 
 #### Event enumeration
@@ -429,93 +361,6 @@ embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResized
 }
 ```
 
-### onLibraryItemSelected
-
-#### Event enumeration
-
-`EventType.ON_LIBRARY_ITEM_SELECTED`
-
-#### Description
-
-Raised when a library item selected. Need library item select mode to be enabled.
-
-#### Content
-
-Object containing library item selection information.
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(EventType.ON_LIBRARY_ITEM_SELECTED, libraryItemSelectionHandler);
-```
-
-#### Content example
-
-```json
-[
-  {
-    "id": "A7B1C43C4ABA7E499D4E1789A2EBCD55",
-    "docId": "BFB749B340572473A1288E9A2F6EDDA6",
-    "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
-    "name": "Distribution Center & Brands",
-    "type": 55,
-    "subtype": null
-  }
-]
-```
-
-### onLibraryMenuSelected
-
-#### Event enumeration
-
-`EventType.ON_LIBRARY_MENU_SELECTED`
-
-#### Description
-
-Raised when a library menu selected.
-
-#### Content
-
-Object containing library menu selection information.
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(EventType.ON_LIBRARY_MENU_SELECTED, libraryMenuSelectionHandler);
-```
-
-#### Content example
-
-```json
-{
-  "menuKey": "myContent",
-  "groupId": null
-}
-```
-
-### onLibraryItemSelectionCleared
-
-#### Event enumeration
-
-`EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED`
-
-#### Description
-
-Raised when a library item selection cleared.
-
-#### Content
-
-None
-
-#### Code example
-
-```js
-embedDossier.registerEventHandler(
-  EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED,
-  libraryItemSelectioClearnHandler
-);
-```
-
 ### onDossierInstanceIDChange
 
 #### Event enumeration
@@ -594,7 +439,7 @@ embedDossier.registerEventHandler(
 
 #### Description
 
-Raised when the page finishes rendering.
+Raised when the dossier consumption page finishes rendering.
 
 #### Content
 
@@ -604,6 +449,91 @@ None
 
 ```js
 embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderFinishedHandler);
+```
+
+### onDossierInstanceChanged
+
+#### Event enumeration
+
+`EventType.ON_DOSSIER_INSTANCE_CHANGED`
+
+#### Description
+
+Raised when the a new dossier instance is created on a dossier consumption page.
+
+#### Content
+
+The event callback parameters contain the project id, dossier id and the instance id.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_CHANGED, (content) => {
+  // Use the content here
+});
+```
+
+#### Content example
+
+```json
+{
+  "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  "dossierId": "D9AB379D11EC92C1D9DC0080EFD415BB",
+  "instanceId": "EC003BC7A046E75DE83373A254824F20"
+}
+```
+
+### onComponentSelectionChanged
+
+#### Event enumeration
+
+`EventType.ON_COMPONENT_SELECTION_CHANGED`
+
+#### Description
+
+Raised when the dossier consumption page finishes rendering.
+
+#### Content
+
+The information of the selected components.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_COMPONENT_SELECTION_CHANGED, (content) => {
+  // Use the content here
+});
+```
+
+#### Content example
+
+```json
+{
+  "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  "dossierId": "EC5441154009D3C39D5BD6AD75865EF4",
+  "selectedComponents": [
+    {
+      "key": "K52",
+      "type": "visualization",
+      "chapterKey": "K36",
+      "pageKey": "K53",
+      "dimensions": {
+        "width": 300.45,
+        "height": 400.45
+      }
+    },
+    {
+      "key": "53ACF03646491B5F5F5A7B83EB1BB0BE",
+      "type": "group",
+      "chapterKey": "K87",
+      "pageKey": "K67",
+      "dimensions": {
+        "width": 700,
+        "height": 1000
+      }
+    }
+  ]
+}
 ```
 
 ## Event handlers

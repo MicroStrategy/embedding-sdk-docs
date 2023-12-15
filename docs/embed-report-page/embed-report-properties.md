@@ -175,7 +175,7 @@ The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-fu
 ```js
 microstrategy.embeddingContexts.embedReportPage({
   placeholder: placeholderDiv,
-  serverUrl: "https://{host}:{port}/{Library}",
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
   enableCustomerAuthentication: true,

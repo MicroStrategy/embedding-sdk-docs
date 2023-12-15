@@ -325,33 +325,6 @@ The special behaviors are as below:
 - If sidebar is disabled in the application settings, whether setting `customUi.library.sidebar.show` to true or false, the sidebar couldn't be shown.
 - If the navigation bar is enabled in `customUi.library.navigationBar.enabled` and application settings, and "Collapse toolbar by default" is enabled by default, when `customUi.library.sidebar.show` is true, the navigation bar would be expanded and shown.
 
-### `libraryItemSelectMode`
-
-Specifies the library item select mode on the embedded pages, including grid and list views.
-
-#### Required?
-
-No
-
-#### Default value
-
-N/A
-
-#### Allowed values
-
-- single
-- multiple
-
-#### Sample
-
-```js
-microstrategy.embeddingContexts.embedLibraryPage({
-  placeholder: placeholderDiv,
-  serverUrl: "http://{host}:{port}/{Library}",
-  libraryItemSelectMode: "single",
-});
-```
-
 ### `currentPage`
 
 Specifies the page on the sidebar entries that you want to embed.
