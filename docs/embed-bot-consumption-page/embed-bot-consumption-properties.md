@@ -46,7 +46,6 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 });
 ```
 
-
 ### `serverUrl`, `projectId`, `objectId`
 
 The required parameters in the bot URL.
@@ -101,7 +100,6 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
   pageKey: "K53--K46",
 });
 ```
-
 
 ### `containerHeight`
 
@@ -326,6 +324,7 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
 Use the `botConsumption` object to customize UI of the bot consumption page. All detailed properties below are `Boolean`.
 
 - `snapshot.enabled`
+
   - Enable the snapshot panel on the bot consumption page or not.
   - Default value: `true`.
 
@@ -357,7 +356,6 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 });
 ```
 
-
 ### `permissions`
 
 Specify the permissions on the embedded bot consumption page.
@@ -370,7 +368,7 @@ No
 
 ##### `allowClipboardWrite`
 
-To grant the "ClipboardWrite" permission or not. Could be used to enable the copy functionality on a bot message or not. It's worthy note that the copy functionality also requires the Library server to be HTTPS. If it's an HTTP server, the copy functionality would be disabled, regardless of the value of this flag. 
+To grant the "ClipboardWrite" permission or not. Could be used to enable the copy functionality on a bot message or not. It's worthy note that the copy functionality also requires the Library server to be HTTPS. If it's an HTTP server, the copy functionality would be disabled, regardless of the value of this flag.
 
 ##### Default value
 
