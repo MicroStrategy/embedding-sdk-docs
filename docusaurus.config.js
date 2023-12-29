@@ -80,7 +80,7 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "Version 2021",
+            label: "Version 2024",
             position: "right",
             items: [
               {
