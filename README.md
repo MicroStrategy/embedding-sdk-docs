@@ -56,3 +56,11 @@ If you have a solution to one of the open issues, you will need to fork the repo
 That's how you can get started easily as a member of the MicroStrategy Embedding SDK Documentation community. :sparkles:
 
 If you want to know more, or you're making a more complex contribution, check out [Getting Started with Contributing](CONTRIBUTING.md).
+
+### Ownership
+
+Team: PA-SDK-CTC
+
+Contact: Ran Yu (ryu)
+
+DevOps POC: Zhou Wang (zhowang)
