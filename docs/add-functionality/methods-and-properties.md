@@ -530,7 +530,7 @@ When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`,
 microstrategy.dossier.create({
   placeholder: placeholderDiv,
   url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
-  enableCustomerAuthentication: true,
+  enableCustomAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {

@@ -164,7 +164,7 @@ The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-fu
 microstrategy.embeddingContexts.embedLibraryPage({
   placeholder: placeholderDiv,
   serverUrl: "https://{host}:{port}/{Library}",
-  enableCustomerAuthentication: true,
+  enableCustomAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
