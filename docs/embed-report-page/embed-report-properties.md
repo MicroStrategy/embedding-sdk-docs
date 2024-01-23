@@ -178,7 +178,7 @@ microstrategy.embeddingContexts.embedReportPage({
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
-  enableCustomerAuthentication: true,
+  enableCustomAuthentication: true,
   customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.AUTH_TOKEN,
   // The following function is the default implementation. User can provide custom implementation.
   getLoginToken() {
