@@ -66,6 +66,9 @@
     "shelljs": "^0.8.5",
     "typescript": "~5.2.2"
   },
+  "resolutions": {
+    "follow-redirects": "1.15.5"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
