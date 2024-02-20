@@ -1,9 +1,9 @@
 ---
 title: Use SAML or OIDC authentication
-description: The example in this topic illustrates how to display an embedded dossier using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
+description: The example in this topic illustrates how to display an embedded dashboard using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
 ---
 
-The example in this topic illustrates how to display an embedded dossier using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
+The example in this topic illustrates how to display an embedded dashboard using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
 
 A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/4_Use_SAML.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
 

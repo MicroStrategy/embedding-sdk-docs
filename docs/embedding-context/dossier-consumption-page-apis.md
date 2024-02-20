@@ -1,21 +1,21 @@
 ---
-title: Dossier consumption page APIs
-description: Describes which Embedding SDK APIs are available on the MicroStrategy dossier consumption page.
+title: Dashboard consumption page APIs
+description: Describes which Embedding SDK APIs are available on the MicroStrategy dashboard consumption page.
 ---
 
-The `dossierConsumption` object is the manipulator of the MicroStrategy dossier consumption page. It could be got by `embeddingContext.dossierConsumption`.
+The `dossierConsumption` object is the manipulator of the MicroStrategy dashboard consumption page. It could be got by `embeddingContext.dossierConsumption`.
 
 The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 
 The APIs under Library page object are as below.
 
-## Dossier consumption page APIs
+## Dashboard consumption page APIs
 
 ### `getDossierDefinition()`
 
 #### Description
 
-This API is used for getting the dossier definition. Its result contains the dossier id, name, project id and TOC information.
+This API is used for getting the dashboard definition. Its result contains the dashboard id, name, project id and TOC information.
 
 #### Class
 
@@ -23,7 +23,7 @@ This API is used for getting the dossier definition. Its result contains the dos
 
 #### Return type
 
-This API would return a Promise object that resolves to an object that contains the dossier definition. Its serialized JSON string is as below:
+This API would return a Promise object that resolves to an object that contains the dashboard definition. Its serialized JSON string is as below:
 
 ```json
 {
@@ -66,7 +66,7 @@ try {
 
 #### Description
 
-This API could be used to select visualizations or groups on a dossier consumption page.
+This API could be used to select visualizations or groups on a dashboard consumption page.
 
 #### Class
 
@@ -105,7 +105,7 @@ try {
 
 #### Description
 
-This API could be used to get currently selected visualizations and groups on a dossier consumption page.
+This API could be used to get currently selected visualizations and groups on a dashboard consumption page.
 
 #### Class
 

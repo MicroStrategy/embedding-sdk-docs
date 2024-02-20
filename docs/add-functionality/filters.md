@@ -1,27 +1,27 @@
 ---
 title: Retrieve and apply filters
-description: Filters can be applied both during the execution of an embedded dossier and after it has been rendered.
+description: Filters can be applied both during the execution of an embedded dashboard and after it has been rendered.
 ---
 
-Filters can be applied both during the execution of an embedded dossier and after it has been rendered.
+Filters can be applied both during the execution of an embedded dashboard and after it has been rendered.
 
 - **Apply filters during execution**
 
-  You can pass filters as properties when an embedded dossier is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties.md#filters) property.
+  You can pass filters as properties when an embedded dashboard is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties.md#filters) property.
 
 - **Apply and retrieve filters after execution**
 
-  Once you have used the `dossier.create(props)` method to embed a dossier into a third-party web page, you can use methods in the Embedding SDK to retrieve and apply filters.
+  Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web page, you can use methods in the Embedding SDK to retrieve and apply filters.
 
-  - [Retrieve filters after a dossier is rendered](#retrieve-filters-after-a-dossier-is-rendered)
+  - [Retrieve filters after a dashboard is rendered](#retrieve-filters-after-a-dashboard-is-rendered)
 
-    After an embedded dossier has been rendered, you can use the `getFilterList()` method of the `Dossier` class to retrieve information about filters that were applied to chapters in the dossier.
+    After an embedded dashboard has been rendered, you can use the `getFilterList()` method of the `Dossier` class to retrieve information about filters that were applied to chapters in the dossier.
 
-  - [Apply filters after a dossier is rendered](#apply-a-filter-after-the-dossier-is-rendered)
+  - [Apply filters after a dashboard is rendered](#apply-a-filter-after-the-dashboard-is-rendered)
 
-    After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using a number of different methods on the Embedding SDK. Chapter is the only filter type that is currently supported.
+    After an embedded dashboard has been rendered, you can apply different kinds of filters to chapters in the dashboard using a number of different methods on the Embedding SDK. Chapter is the only filter type that is currently supported.
 
-  - [Apply multiple filters after a dossier is rendered](#apply-multiple-filters-after-the-dossier-is-rendered)
+  - [Apply multiple filters after a dashboard is rendered](#apply-multiple-filters-after-the-dashboard-is-rendered)
 
     This section introduces how you can cache the results of several filters and apply them together.
 
@@ -40,9 +40,9 @@ To help you get started, we have provided a set of filter examples in the Embedd
 
 :::
 
-## Retrieve filters after a dossier is rendered
+## Retrieve filters after a dashboard is rendered
 
-After an embedded dossier has been rendered, you can use the `getFilterList()` method of the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to chapters in the dossier.
+After an embedded dashboard has been rendered, you can use the `getFilterList()` method of the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to chapters in the dossier.
 
 | `getFilterList()` |                                                           |
 | ----------------- | --------------------------------------------------------- |
@@ -566,9 +566,9 @@ or
 }
 ```
 
-## Apply a filter after the dossier is rendered
+## Apply a filter after the dashboard is rendered
 
-After an embedded dossier has been rendered, you can apply different kinds of filters to chapters in the dossier using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
+After an embedded dashboard has been rendered, you can apply different kinds of filters to chapters in the dashboard using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
 
 ### Dossier.filterSelectAllAttributes(filterJson)
 
@@ -974,7 +974,7 @@ Applies all changes cached by `holdSubmit`.
 
 No parameters
 
-## Apply multiple filters after the dossier is rendered
+## Apply multiple filters after the dashboard is rendered
 
 This section introduces how you can cache the results of several filters and apply them together. Let's say you have the following filters:
 
@@ -1002,7 +1002,7 @@ Take the following steps:
 
 ## Events
 
-There are two events that are fired on the embedded dossier when a filter is applied after rendering.
+There are two events that are fired on the embedded dashboard when a filter is applied after rendering.
 
 - [onFilterUpdated](./add-event.md#onfilterupdated)
 - [onVisualizationElementsChanged](./add-event.md#onvisualizationelementschanged)

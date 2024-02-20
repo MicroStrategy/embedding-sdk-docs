@@ -7,7 +7,7 @@ description: Embed multiple visualizations on a page
 
 ## Purpose
 
-You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dossier page.
+You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dashboard page.
 
 Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
@@ -83,7 +83,7 @@ To embed multiple visualizations from one dossier, after referring `native-embed
             projectId: configs.projectId,
             objectId: configs.objectId,
           });
-          // the viz keys can be obtained from dossier definition APIs: e.g.`GET /app/v2/dossier/{dossierId}/definition`
+          // the viz keys can be obtained from dashboard definition APIs: e.g.`GET /app/v2/dossier/{dossierId}/definition`
           await mstrDossier.refresh([
             {
               key: "W1334",
@@ -288,9 +288,9 @@ After you embed multiple visualizations on a page, you can do some deeper manipu
 
   You can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
 
-- [Getting dossier info via APIs](dossier-info-api.md)
+- [Getting dashboard info via APIs](dossier-info-api.md)
 
-  You can use the Native Embedding SDK to get the definition or data from the dossier.
+  You can use the Native Embedding SDK to get the definition or data from the dashboard.
 
 ## References
 
