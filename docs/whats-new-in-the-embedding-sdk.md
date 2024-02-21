@@ -19,7 +19,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 - [Embed MicroStrategy dashboard consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
   - You can use a new Embedding SDK API to embed a dashboard consumption page, in which we support the user to navigate between the dashboard and the homepage.
-- [Dashboardconsumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
+- [Dashboard consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
   - You can call new APIs on the dashboard consumption page to get and set the selected components.
 
 ## 2021 Update 9
