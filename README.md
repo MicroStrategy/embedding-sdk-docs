@@ -14,7 +14,7 @@ Documentation for Embedding SDK
     https://microstrategy.atlassian.net/wiki/spaces/DevOps/pages/1070727930/CI+pipelines+Point+of+Contacts
 -->
 
-Team: PA-SDK-CTC
+Team: AC-Services
 
 Contact: Ran Yu (ryu)
 
