@@ -9,7 +9,7 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 ## APIs
 
-### The load dossier API
+### The load dashboard API
 
 #### Function
 
@@ -17,13 +17,13 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 #### Input Parameters
 
-| Parameter Name   | Data Type | Description                                                                                      | Is Required |
-| ---------------- | --------- | ------------------------------------------------------------------------------------------------ | ----------- |
-| props.projectId  | String    | The project ID, which must be a GUID.                                                            | true        |
-| props.objectId   | String    | The dossier ID, which must be valid. If the ID is a document or report ID, an error is reported. | true        |
-| props.instanceId | String    | The dossier instance ID, if it already exists.                                                   | false       |
+| Parameter Name   | Data Type | Description                                                                                        | Is Required |
+| ---------------- | --------- | -------------------------------------------------------------------------------------------------- | ----------- |
+| props.projectId  | String    | The project ID, which must be a GUID.                                                              | true        |
+| props.objectId   | String    | The dashboard ID, which must be valid. If the ID is a document or report ID, an error is reported. | true        |
+| props.instanceId | String    | The dashboard instance ID, if it already exists.                                                   | false       |
 
-The `projectId` + `objectId` is used as the dossier identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
+The `projectId` + `objectId` is used as the dashboard identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
 
 #### Response
 
@@ -56,7 +56,7 @@ try {
 | The input parameter fails input validation | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
 | Other REST API errors                      | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object |
 
-### The destroy dossier API
+### The destroy dashboard API
 
 #### Function
 
@@ -85,6 +85,6 @@ try {
 
 #### API Errors
 
-| Error Case                                       | Error Category | Handling Module      | Error Handling                                |
-| ------------------------------------------------ | -------------- | -------------------- | --------------------------------------------- |
-| The input parameter isn’t a valid dossier object | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Error Case                                         | Error Category | Handling Module      | Error Handling                                |
+| -------------------------------------------------- | -------------- | -------------------- | --------------------------------------------- |
+| The input parameter isn’t a valid dashboard object | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |

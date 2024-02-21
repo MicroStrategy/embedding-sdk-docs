@@ -1,12 +1,12 @@
 ---
 title: Introduction to the Embedding SDK
 slug: /
-description: The Embedding SDK allows you to quickly integrate a MicroStrategy dossier into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
+description: The Embedding SDK allows you to quickly integrate a MicroStrategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 ---
 
-The Embedding SDK allows you to quickly integrate a MicroStrategy dossier into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
+The Embedding SDK allows you to quickly integrate a MicroStrategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 
-There are three basic steps for embedding a dossier.
+There are three basic steps for embedding a dashboard.
 
 1. In the initial page of your web application, add a link to the MicroStrategy JavaScript Embedding SDK.
 
@@ -22,7 +22,7 @@ There are three basic steps for embedding a dossier.
 
    :::
 
-1. Create a `<div>` as the placeholder where you want to embed the dossier.
+1. Create a `<div>` as the placeholder where you want to embed the dashboard.
 
    ```html
    <div id="dossierContainer"></div>
@@ -40,7 +40,7 @@ There are three basic steps for embedding a dossier.
 
    :::tip
 
-   Check out all the [properties](./add-functionality/methods-and-properties.md#properties) you can set in the `microstrategy.dossier.create(props)` method. You can do many things with the [properties](./add-functionality/methods-and-properties.md#properties). To name a few, you can set filters, show/hide UI elements, and adjust the size of the embedded dossier.
+   Check out all the [properties](./add-functionality/methods-and-properties.md#properties) you can set in the `microstrategy.dossier.create(props)` method. You can do many things with the [properties](./add-functionality/methods-and-properties.md#properties). To name a few, you can set filters, show/hide UI elements, and adjust the size of the embedded dashboard.
 
    :::
 
@@ -48,7 +48,7 @@ To help you get started, we have provided a number of simple applications with s
 
 - [Support for different authentication environments](./support-for-different-authentication-environments/support-for-different-authentication-environments.md)
 
-  Examples that display an embedded dossier in different authentication environments
+  Examples that display an embedded dashboard in different authentication environments
 
 - [Add functionality](./add-functionality/add-functionality.md)
 

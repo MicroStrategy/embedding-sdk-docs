@@ -75,7 +75,7 @@ const sidebars = {
         type: "doc",
         id: "embed-dossier-consumption-page/embed-dossier-consumption-page",
       },
-      label: "Embed MicroStrategy dossier consumption page",
+      label: "Embed MicroStrategy dashboard consumption page",
       items: ["embed-dossier-consumption-page/embed-dossier-consumption-properties"],
     },
     {
