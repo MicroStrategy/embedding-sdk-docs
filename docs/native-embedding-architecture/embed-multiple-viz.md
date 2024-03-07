@@ -1,6 +1,6 @@
 ---
-title: Embed multiple visualizations on a page
-description: Embed multiple visualizations on a page
+title: Embed multiple dossier visualizations on a page
+description: Embed multiple dossier visualizations on a page
 ---
 
 <Available since="2021 Update 9 (May 2023)"/>
@@ -170,7 +170,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK.
     },
   });
   const dossier = await environment.loadDossier({
@@ -223,7 +223,7 @@ async function loadVisualizationsFromDossiers() {
     const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
       serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
       getAuthToken: () => {
-        // Logic similar to the existing Embedding SDK, but only standard auth login is allowed
+        // Logic similar to the existing Embedding SDK.
       },
     });
     const projectId = "B19DEDCC11D4E0EFC000EB9495D0F44F";

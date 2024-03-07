@@ -18,7 +18,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({

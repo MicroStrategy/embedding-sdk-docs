@@ -8,6 +8,8 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 ## 2024 Update 3
 
 - Rename 'dossier' into 'dashboard'.
+- [Embed Bot Visualizations with Native Embedding SDK](./native-embedding-architecture/embed-bot-visualizations.md)
+  - You can use the new Embedding SDK APIs to embed the visualizations on a bot consumption page.
 
 ## 2021 Update 12
 
