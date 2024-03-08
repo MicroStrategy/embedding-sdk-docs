@@ -42,60 +42,65 @@ To embed multiple visualizations from one dossier, after referring `native-embed
     <div id="container1" style="height: 500px;"></div>
     <div id="container2" style="height: 500px;"></div>
     <script type="text/javascript">
-
-      try {
+      const nativeEmbedInDemoPage = async () => {
+        try {
           // configuration for the target dossier
           const configs = {
-          projectId: "EC70648611E7A2F962E90080EFD58751",
-          objectId: "27D332AC6D43352E0928B9A1FCAF4AB0",
+            projectId: "EC70648611E7A2F962E90080EFD58751",
+            objectId: "27D332AC6D43352E0928B9A1FCAF4AB0",
           };
           const environment = await microstrategy.embeddingComponent.environments.create({
-          serverUrl: `https://demo.microstrategy.com/MicroStrategyLibrary`,
-          getAuthToken() {
+            serverUrl: `https://demo.microstrategy.com/MicroStrategyLibrary`,
+            getAuthToken() {
               return fetch(`https://demo.microstrategy.com/MicroStrategyLibrary/api/auth/login`, {
-              method: "POST",
-              credentials: "include", // including cookie
-              mode: "cors", // setting as CORS mode for cross origin
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
+                method: "POST",
+                credentials: "include", // including cookie
+                mode: "cors", // setting as CORS mode for cross origin
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
                   // here we login as guest user, you can log in as normal user with `username` and `password` as well
                   // username: "input your username",
                   // password: "input your password",
                   loginMode: 8, // 8 means guest login, use `1` if you log in as normal user
-              }),
+                }),
               })
-              .then((response) => {
+                .then((response) => {
                   if (response && response.ok) {
-                  return response.headers.get("X-MSTR-authToken");
+                    return response.headers.get("X-MSTR-authToken");
                   }
                   throw Error("Failed to fetch auth token.");
-              })
-              .catch((error) => {
+                })
+                .catch((error) => {
                   console.log("Error:", error);
-              });
-          },
+                });
+            },
           });
           const mstrBot = await environment.loadBot({
-          projectId: configs.projectId,
-          objectId: configs.objectId,
+            projectId: configs.projectId,
+            objectId: configs.objectId,
           });
-          // the viz keys can be obtained from dashboard definition APIs: e.g.`GET /app/v2/dossier/{dossierId}/definition`
-          const dataIdAndContainers = [{
+          // the data id can be obtained from the `mstrBot.getQuestions() API`
+          const dataIdAndContainers = [
+            {
               dataId: "A1F3431F2CA2481BB966EC8F35A9AC3A",
               container: document.getElementById("container1"),
-          },
-          {
-              key: "B1F3431F2CA2481BB966EC8F35A9AC3A",
+            },
+            {
+              dataId: "B1F3431F2CA2481BB966EC8F35A9AC3A",
               container: document.getElementById("container2"),
-          },
-          ]
-          const botVizList = await Promise.all(dataIdAndContainers.map((dataIdAndContainer) => {
-          const {dataId, container} = dataIdAndContainer;
-          return mstrBot.renderVisualization(dataId, container);
-          }))
-      } catch (e) {
+            },
+          ];
+          const botVizList = await Promise.all(
+            dataIdAndContainers.map((dataIdAndContainer) => {
+              const { dataId, container } = dataIdAndContainer;
+              return mstrBot.renderVisualization(dataId, container);
+            })
+          );
+        } catch (e) {
           console.error(e.message);
-      }
+        }
+      };
+      nativeEmbedInDemoPage();
     </script>
   </body>
 </html>
