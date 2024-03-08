@@ -118,9 +118,12 @@ const sidebars = {
       items: [
         "native-embedding-architecture/embed-multiple-viz",
         "native-embedding-architecture/destroy-multiple-viz",
+        "native-embedding-architecture/embed-bot-visualizations",
         "native-embedding-architecture/embedding-components",
         "native-embedding-architecture/mstr-environment",
         "native-embedding-architecture/mstr-dossier",
+        "native-embedding-architecture/mstr-bot",
+        "native-embedding-architecture/mstr-bot-visualization",
         "native-embedding-architecture/vis-manipulation",
         "native-embedding-architecture/dossier-info-api",
         "native-embedding-architecture/apply-filter",

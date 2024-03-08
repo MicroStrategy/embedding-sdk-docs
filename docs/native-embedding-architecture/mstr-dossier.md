@@ -34,7 +34,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK.
     },
   });
   const dossier = await environment.loadDossier({
@@ -69,6 +69,6 @@ try {
 | Other REST API errors                                                               | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The key is the visualization key of the visualization in the panel                  | Invalid input  | Native Embedding SDK | console err message in console "The visualization `${VisualizationKey}` is a visualization in a panel, which isn't supported." |
 
-### The get infomation API
+### The get information API
 
 You can see the API at the [Getting dashboard info via APIs document](dossier-info-api)
