@@ -181,7 +181,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom error handling during dossier creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
+You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
 
 #### Required?
 
@@ -265,7 +265,7 @@ Specifies the application that the user wants to show in the embedded page.
 The application in MicroStrategy has 2 categories:
 
 - If the application selects library home page as its home screen, the library home page would be embedded with the application's configuration.
-- If the application selects a dossier as its home screen, the embedding would fail and an error would occur.
+- If the application selects a dashboard as its home screen, the embedding would fail and an error would occur.
 
 #### Required?
 
@@ -281,7 +281,7 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page，dossier authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dashboard consumption page，dashboard authoring page, and report consumption page.
 
 #### Properties
 
@@ -324,6 +324,33 @@ The special behaviors are as below:
 
 - If sidebar is disabled in the application settings, whether setting `customUi.library.sidebar.show` to true or false, the sidebar couldn't be shown.
 - If the navigation bar is enabled in `customUi.library.navigationBar.enabled` and application settings, and "Collapse toolbar by default" is enabled by default, when `customUi.library.sidebar.show` is true, the navigation bar would be expanded and shown.
+
+### `libraryItemSelectMode`
+
+Specifies the library item select mode on the embedded pages, including grid and list views.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Allowed values
+
+- single
+- multiple
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedLibraryPage({
+  placeholder: placeholderDiv,
+  serverUrl: "http://{host}:{port}/{Library}",
+  libraryItemSelectMode: "single",
+});
+```
 
 ### `currentPage`
 

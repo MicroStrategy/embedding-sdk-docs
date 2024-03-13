@@ -5,7 +5,7 @@ description: You can do manipulation on the embedded visualizations after they h
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-The embedded visualizations can be manipulated the same way as they are seen on MicroStrategy Library dossier pages.
+The embedded visualizations can be manipulated the same way as they are seen on MicroStrategy Library dashboard pages.
 
 Currently, the supported manipulation types include element selection inside a visualization, actions inside the right-click menu, and actions triggered by clicking, dragging, and scrolling inside a visualization
 
@@ -16,7 +16,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK.
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({

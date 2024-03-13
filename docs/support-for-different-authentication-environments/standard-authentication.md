@@ -1,17 +1,17 @@
 ---
 title: Use standard authentication
-description: The example in this topic illustrates how to seamlessly display an embedded dossier using standard authentication
+description: The example in this topic illustrates how to seamlessly display an embedded dashboard using standard authentication
 ---
 
-The example in this topic showcases how to display an embedded dossier using Standard authentication
+The example in this topic showcases how to display an embedded dashboard using Standard authentication
 
-To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g17) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dossier and authenticate using Standard authentication.
+To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g17) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dashboard and authenticate using Standard authentication.
 
 The workflow consists of:
 
 - [Set up Library Server](#set-up-library-server)
 - [Import Embedding SDK](#import-embedding-sdk)
-- [Embed dossier with custom authentication properties](#embed-dossier-with-custom-authentication-properties)
+- [Embed dashboard with custom authentication properties](#embed-dashboard-with-custom-authentication-properties)
 - [Authentication through REST API using standard authentication](#authentication-through-rest-api-using-standard-authentication)
 - [Putting it all together](#putting-it-all-together)
 
@@ -34,9 +34,9 @@ Import Embedding SDK from your Library Server to your HTML page. In the code sam
 </head>
 ```
 
-## Embed dossier with custom authentication properties
+## Embed dashboard with custom authentication properties
 
-The sample code below shows how to embed a sample dossier with properties set to enable custom authentication mode where you have to provide the auth token to log in. Note: the `login` function will be implemented in the [next section](#authentication-through-rest-api-using-standard-authentication).
+The sample code below shows how to embed a sample dashboard with properties set to enable custom authentication mode where you have to provide the auth token to log in. Note: the `login` function will be implemented in the [next section](#authentication-through-rest-api-using-standard-authentication).
 
 ```html
 <body>
@@ -50,8 +50,8 @@ The sample code below shows how to embed a sample dossier with properties set to
       "/" +
       libraryName +
       "/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
-    let dossier; // Variable to store the dossier created. Used by Event Handler do not remove!
-    let config; // Variable to store the configuration settings for dossier.
+    let dossier; // Variable to store the dashboard created. Used by Event Handler do not remove!
+    let config; // Variable to store the configuration settings for dashboard.
 
     async function runCode() {
       // For more details on configuration properties, see https://microstrategy.github.io/embedding-sdk-docs/add-functionality/methods-and-properties
@@ -77,9 +77,9 @@ The sample code below shows how to embed a sample dossier with properties set to
 
       // INSERT PROPERTIES ABOVE HERE
 
-      // Embed the dossier with the configuration settings
+      // Embed the dashboard with the configuration settings
       try {
-        dossier = await window.microstrategy.dossier.create(config);
+        dashboard = await window.microstrategy.dossier.create(config);
       } catch (error) {
         console.error(error);
       }
@@ -186,8 +186,8 @@ Adjust as needed.
         "/" +
         libraryName +
         "/app/EC70648611E7A2F962E90080EFD58751/837B57D711E941BF000000806FA1298F";
-      let dossier; // Variable to store the dossier created. Used by Event Handler do not remove!
-      let config; // Variable to store the configuration settings for dossier.
+      let dossier; // Variable to store the dashboard created. Used by Event Handler do not remove!
+      let config; // Variable to store the configuration settings for dashboard.
       async function runCode() {
         // For more details on configuration properties, see https://microstrategy.github.io/embedding-sdk-docs/add-functionality/methods-and-properties
         config = {
@@ -262,9 +262,9 @@ Adjust as needed.
 
         // INSERT PROPERTIES ABOVE HERE
 
-        // Embed the dossier with the configuration settings
+        // Embed the dashboard with the configuration settings
         try {
-          dossier = await window.microstrategy.dossier.create(config);
+          dashboard = await window.microstrategy.dossier.create(config);
         } catch (error) {
           console.error(error);
         }

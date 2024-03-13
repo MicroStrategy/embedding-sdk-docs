@@ -1,9 +1,9 @@
 ---
 title: Add navigation
-description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dossier. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 ---
 
-The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dossier. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
 :::tip
 
@@ -13,7 +13,7 @@ To help you get started, we have provided a [page navigation example in the Embe
 
 ## Helper methods for navigation
 
-You can use the methods described below to navigate within the dossier. You can get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+You can use the methods described below to navigate within the dashboard. You can get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
 Most of the navigation is performed using methods of the Dossier class, but there is one method for navigation in the Chapter class.
 
@@ -29,7 +29,7 @@ Most of the navigation is performed using methods of the Dossier class, but ther
 
 #### Description
 
-Return the structure of the embedded dossier in the following format:
+Return the structure of the embedded dashboard in the following format:
 
 ```json
 {
@@ -80,7 +80,7 @@ embedDossier.getTableContent();
 
 #### Description
 
-Go to the previous page of the embedded dossier.
+Go to the previous page of the embedded dashboard.
 
 Return a promise, resolved with
 
@@ -113,7 +113,7 @@ embedDossier.goToPrevPage();
 
 #### Description
 
-Go to the next page of the embedded dossier.
+Go to the next page of the embedded dashboard.
 
 Return a promise, resolved with
 
@@ -146,7 +146,7 @@ embedDossier.goToNextPage();
 
 #### Description
 
-Switch to the specified page of the embedded dossier.
+Switch to the specified page of the embedded dashboard.
 
 Return a promise, resolved with
 
@@ -180,7 +180,7 @@ embedDossier.navigateToPage(lastPageOfChapter);
 
 #### Description
 
-Return the current chapter of the embedded dossier.
+Return the current chapter of the embedded dashboard.
 
 #### Example
 
@@ -200,7 +200,7 @@ embedDossier.getCurrentChapter();
 
 #### Description
 
-Return the current page of the embedded dossier.
+Return the current page of the embedded dashboard.
 
 #### Example
 
@@ -220,7 +220,7 @@ embedDossier.getCurrentPage();
 
 #### Description
 
-Return the page of the embedded dossier with the specified `nodeKey`.
+Return the page of the embedded dashboard with the specified `nodeKey`.
 
 You can get the `nodeKey` from the return value of `getTableContent()`, or You can get the `nodeKey` from the `nodeKey` property of the Page object (`Page.nodeKey`).
 
@@ -242,7 +242,7 @@ embedDossier.getPageByNodeKey("K52");
 
 #### Description
 
-Return a list of all chapters in the embedded dossier.
+Return a list of all chapters in the embedded dashboard.
 
 #### Example
 
@@ -262,7 +262,7 @@ embedDossier.getChapterList();
 
 #### Description
 
-Return an array of all the visualizations in the current page of the embedded dossier.
+Return an array of all the visualizations in the current page of the embedded dashboard.
 
 #### Example
 
@@ -322,7 +322,7 @@ embedDossier.closeFilterSummaryBar();
 
 #### Description
 
-Return an array of all the pages in this chapter of the embedded dossier.
+Return an array of all the pages in this chapter of the embedded dashboard.
 
 #### Example
 

@@ -1,23 +1,23 @@
 ---
-title: Properties for an embedded MicroStrategy dossier consumption page
-description: Describes the properties that can be set for an embedded MicroStrategy dossier consumption page.
+title: Properties for an embedded MicroStrategy dashboard consumption page
+description: Describes the properties that can be set for an embedded MicroStrategy dashboard consumption page.
 ---
 
-When you embed a MicroStrategy dossier consumption page into a web page, you use the `embedDossierConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+When you embed a MicroStrategy dashboard consumption page into a web page, you use the `embedDossierConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the MicroStrategy dossier consumption page URL (specified by the `serverUrl` property).
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the MicroStrategy dashboard consumption page URL (specified by the `serverUrl` property).
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy dossier consumption page is loaded.
+This method returns a promise, which is resolved when the MicroStrategy dashboard consumption page is loaded.
 
 #### Input parameters
 
-The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the MicroStrategy dossier consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
+The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the MicroStrategy dashboard consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
 
 The `props` parameter could contain the following key:value pairs:
 
@@ -48,7 +48,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 
 ### `serverUrl`, `projectId`, `objectId`
 
-The required parameters in the dossier URL.
+The required parameters in the dashboard URL.
 
 These properties build the full report page URL to be embedded.
 The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
@@ -74,7 +74,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 
 ### `customApplicationId`, `pageKey`
 
-The optional parameters in the dossier URL.
+The optional parameters in the dashboard URL.
 
 Specifies the application and page that the user wants to show in the embedded page.
 
@@ -230,7 +230,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom error handling during dossier creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation).
+You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation).
 
 #### Required?
 
@@ -307,7 +307,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dossier consumption page，dossier authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dashboard consumption page，dashboard authoring page, and report consumption page.
 
 #### Properties
 
@@ -315,7 +315,7 @@ Please see all the properties in [The customized UI settings in Embedding SDK](.
 
 ### `settings`
 
-Specify the custom settings on the embedding pages. Including the non-UI settings of dossier consumption page.
+Specify the custom settings on the embedding pages. Including the non-UI settings of dashboard consumption page.
 
 #### Required?
 
@@ -325,16 +325,16 @@ No
 
 ##### `dossierConsumption`
 
-Use the `dossierConsumption` object to customize the options on the dossier consumption page. The detailed properties contain:
+Use the `dossierConsumption` object to customize the options on the dashboard consumption page. The detailed properties contain:
 
 - `componentSelectionMode`
 
-  - To assign the selection mode of the visualizations or groups on the dossier consumption page.
+  - To assign the selection mode of the visualizations or groups on the dashboard consumption page.
   - Available values: ["noSelection", "singleSelection", "multipleSelection"]
   - Default value: "noSelection".
 
 - `disableManipulationsAutoSaving`
-  - Disable the dossier instance manipulation auto saving or not.
+  - Disable the dashboard instance manipulation auto saving or not.
   - Default value: `false`.
 
 #### Sample

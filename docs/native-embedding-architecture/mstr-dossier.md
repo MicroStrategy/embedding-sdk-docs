@@ -5,7 +5,7 @@ description: MstrDossier class
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-The object returned from the `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dossier object.
+The object returned from the `MstrEnvironment.loadDossier()` function, which allows access to the MicroStrategy dashboard object.
 
 ## APIs
 
@@ -34,7 +34,7 @@ try {
   const environment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK.
     },
   });
   const dossier = await environment.loadDossier({
@@ -62,13 +62,13 @@ try {
 | The input parameter fails input validation                                          | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The user wants to show more than one visualization in one container in input params | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The user wants to show one visualization in multiple containers                     | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
-| Visualization key isn't a valid visualization key in the dossier                    | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
+| Visualization key isn't a valid visualization key in the dashboard                  | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The container isn’t a valid HTML element in the DOM tree                            | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | A container has children that are not shown in the visualization                    | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | A container is occupied by other dossiers                                           | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | Other REST API errors                                                               | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The key is the visualization key of the visualization in the panel                  | Invalid input  | Native Embedding SDK | console err message in console "The visualization `${VisualizationKey}` is a visualization in a panel, which isn't supported." |
 
-### The get infomation API
+### The get information API
 
-You can see the API at the [Getting dossier info via APIs document](dossier-info-api)
+You can see the API at the [Getting dashboard info via APIs document](dossier-info-api)

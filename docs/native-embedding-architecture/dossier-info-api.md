@@ -1,11 +1,11 @@
 ---
-title: Getting dossier info via APIs
-description: You can get dossier information, such as definition and visualization data, with Native Embedding SDK.
+title: Getting dashboard info via APIs
+description: You can get dashboard information, such as definition and visualization data, with Native Embedding SDK.
 ---
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-Filters can be applied both during the execution of an embedded dossier and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to load the dossier in a client's webpage, you can use the Native Embedding SDK to get the definition or data from the dossier.
+Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to load the dashboard in a client's webpage, you can use the Native Embedding SDK to get the definition or data from the dashboard.
 
 Let's say you already have `MstrEnvironment` and `MstrDossier` objects:
 
@@ -14,7 +14,7 @@ try {
   const mstrEnvironment = await microstrategy.embeddingComponent.environments.create({
     serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
     getAuthToken: () => {
-      // Logic similar to the existing Native Embedding SDK, but only standard auth login is allowed
+      // Logic similar to the existing Native Embedding SDK
     },
   });
   const mstrDossier = await mstrEnvironment.loadDossier({
@@ -27,15 +27,15 @@ try {
 }
 ```
 
-## Get dossier definition
+## Get dashboard definition
 
-You can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve the definition of the dossier.
+You can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve the definition of the dashboard.
 
-| `getDossierDefinition()` |                                    |
-| ------------------------ | ---------------------------------- |
-| Class                    | `MstrDossier`                      |
-| Return Type              | `Promise<DossierDefinition>`       |
-| Description              | Get the definition of the dossier. |
+| `getDossierDefinition()` |                                      |
+| ------------------------ | ------------------------------------ |
+| Class                    | `MstrDossier`                        |
+| Return Type              | `Promise<DossierDefinition>`         |
+| Description              | Get the definition of the dashboard. |
 
 ### `MstrDossier.getDossierDefinition` examples
 
@@ -49,7 +49,7 @@ try {
 ```
 
 <details>
-  <summary>Example of the dossier definition in the resolved value:</summary>
+  <summary>Example of the dashboard definition in the resolved value:</summary>
 
 ```json
 {

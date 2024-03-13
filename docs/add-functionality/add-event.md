@@ -1,17 +1,17 @@
 ---
 title: Add event handling
-description: Events allow an embedded dossier to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
+description: Events allow an embedded dashboard to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dashboard and apply them as a filter to a second dashboard.
 ---
 
-Events allow an embedded dossier to communicate with the container page. You can listen to these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handlers. For example, you can add code to capture selection events from one dossier and apply them as a filter to a second dossier.
+Events allow an embedded dashboard to communicate with the container page. You can listen to these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handlers. For example, you can add code to capture selection events from one dashboard and apply them as a filter to a second dashboard.
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g5) that embeds a dossier and adds event handling, as well as a description of [events](#events), [event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle additional events.
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g5) that embeds a dashboard and adds event handling, as well as a description of [events](#events), [event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle additional events.
 
 :::
 
-Once you have used the `dossier.create(props)` method to embed a dossier into a third-party web page, you can use the methods described below to communicate between the dossier and the container page. You can register [event handlers](#event-handlers) for the [events](#events) that are automatically raised when a visualization is selected or when a page or filter is changed. [Wrapper functions](#wrapper-functions) are provided to make it easy to register event handlers for specific events.
+Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web page, you can use the methods described below to communicate between the dashboard and the container page. You can register [event handlers](#event-handlers) for the [events](#events) that are automatically raised when a visualization is selected or when a page or filter is changed. [Wrapper functions](#wrapper-functions) are provided to make it easy to register event handlers for specific events.
 
 ## Events
 
@@ -218,7 +218,7 @@ embedDossier.registerEventHandler(EventType.ON_PROMPT_ANSWERED, promptAnsweredHa
 
 ```json
 {
-  "messageName": "Sales Dossier (w/ Attribute Element Prompt)",
+  "messageName": "Sales Dashboard (w/ Attribute Element Prompt)",
   "answers": [
     {
       "key": "3ECF2592C947B909B01624BCF690D6EA@0@10",
@@ -361,6 +361,93 @@ embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResized
 }
 ```
 
+### onLibraryItemSelected
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_ITEM_SELECTED`
+
+#### Description
+
+Raised when a library item selected. Need library item select mode to be enabled.
+
+#### Content
+
+Object containing library item selection information.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_LIBRARY_ITEM_SELECTED, libraryItemSelectionHandler);
+```
+
+#### Content example
+
+```json
+[
+  {
+    "id": "A7B1C43C4ABA7E499D4E1789A2EBCD55",
+    "docId": "BFB749B340572473A1288E9A2F6EDDA6",
+    "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
+    "name": "Distribution Center & Brands",
+    "type": 55,
+    "subtype": null
+  }
+]
+```
+
+### onLibraryMenuSelected
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_MENU_SELECTED`
+
+#### Description
+
+Raised when a library menu selected.
+
+#### Content
+
+Object containing library menu selection information.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_LIBRARY_MENU_SELECTED, libraryMenuSelectionHandler);
+```
+
+#### Content example
+
+```json
+{
+  "menuKey": "myContent",
+  "groupId": null
+}
+```
+
+### onLibraryItemSelectionCleared
+
+#### Event enumeration
+
+`EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED`
+
+#### Description
+
+Raised when a library item selection cleared.
+
+#### Content
+
+None
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(
+  EventType.ON_LIBRARY_ITEM_SELECTION_CLEARED,
+  libraryItemSelectioClearnHandler
+);
+```
+
 ### onDossierInstanceIDChange
 
 #### Event enumeration
@@ -369,7 +456,7 @@ embedDossier.registerEventHandler(EventType.ON_VISUALIZATION_RESIZED, vizResized
 
 #### Description
 
-Raised when the embedded dossier instance id changes.
+Raised when the embedded dashboard instance id changes.
 
 #### Content
 
@@ -393,7 +480,7 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossi
 
 #### Description
 
-Raised when a dossier is saved after authoring or editing.
+Raised when a dashboard is saved after authoring or editing.
 
 #### Content
 
@@ -416,7 +503,7 @@ embedDossier.registerEventHandler(
 
 #### Description
 
-Raised when the authoring or edit mode of dossier is closed.
+Raised when the authoring or edit mode of dashboard is closed.
 
 #### Content
 
@@ -439,7 +526,7 @@ embedDossier.registerEventHandler(
 
 #### Description
 
-Raised when the dossier consumption page finishes rendering.
+Raised when the dashboard consumption page finishes rendering.
 
 #### Content
 
@@ -459,11 +546,11 @@ embedDossier.registerEventHandler(EventType.ON_PAGE_RENDER_FINISHED, pageRenderF
 
 #### Description
 
-Raised when the a new dossier instance is created on a dossier consumption page.
+Raised when the a new dashboard instance is created on a dashboard consumption page.
 
 #### Content
 
-The event callback parameters contain the project id, dossier id and the instance id.
+The event callback parameters contain the project id, dashboard id and the instance id.
 
 #### Code example
 
@@ -491,7 +578,7 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_CHANGED, (conten
 
 #### Description
 
-Raised when the dossier consumption page finishes rendering.
+Raised when the dashboard consumption page finishes rendering.
 
 #### Content
 
