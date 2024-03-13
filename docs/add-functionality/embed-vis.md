@@ -39,7 +39,7 @@ When initializing a dashboard page, you must specify which visualization will be
 
 `Dossier.changeVisualizationSize(props)`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Input parameters
 
@@ -83,7 +83,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Input parameters
 
-The `props` parameter contains several fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
+The `props` parameter contains several fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
 
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
@@ -136,7 +136,7 @@ When a user manually clicks the resize button for a visualization, an event is r
 
 `Dossier.onVisualizationResized`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Callback format
 

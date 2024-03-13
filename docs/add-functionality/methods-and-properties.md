@@ -1,5 +1,5 @@
 ---
-title: Methods and properties for an embedded dossier
+title: Methods and properties for an embedded dashboard
 description: When you embed a MicroStrategy dashboard into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 ---
 
@@ -943,7 +943,7 @@ No visualization needs to be maximized or restored during initial loading.
 
 ### `authoring`
 
-The `authoring` object controls the dashboard interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
+The `authoring` object controls the dashboard interface in authoring mode. See [Author an embedded dashboard](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
 
 ### `errorHandler`
 
@@ -953,7 +953,7 @@ The custom error handler that is executed when an error occurs in the dossier-cr
 
 The custom error handler that is executed when the session expires in the embedding lifetime. See [Custom error handling](./error-handling.md#session-error-handling) for details.
 
-## Method for removing an embedded dossier
+## Method for removing an embedded dashboard
 
 ### microstrategy.dossier.destroy(config)
 

@@ -27,7 +27,7 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 `Dossier.selectVizElement(props)`
 
-The Dossier object created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The Dossier object created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Input parameters
 
@@ -121,7 +121,7 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 #### Input parameters
 
-An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information about the fields in the props input parameter.
+An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about the fields in the props input parameter.
 
 | Parameter Name                                          | Description                                      | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | ------------------------------------------------ | --------- | --------- | ------------- |

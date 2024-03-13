@@ -77,7 +77,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 2
 
-A new method to [remove an embedded dossier](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+A new method to [remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
 
 ## 2019
 

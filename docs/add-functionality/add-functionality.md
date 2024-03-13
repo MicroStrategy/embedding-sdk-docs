@@ -1,11 +1,11 @@
 ---
-title: Add functionality to an embedded dossier
+title: Add functionality to an embedded dashboard
 description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
 ---
 
 Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
 
-- [Methods and properties for an embedded dossier](./methods-and-properties.md)
+- [Methods and properties for an embedded dashboard](./methods-and-properties.md)
 
   Describes the properties that can be set for an embedded dashboard. Provides an example that modifies UI elements like the navigation bar and size of the embedded dashboard through properties.
 
@@ -37,7 +37,7 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
   Describes how to programmatically make attribute element selections on an embedded dashboard and capture the selection events.
 
-- [Author an embedded dossier](./authoring-library.md)
+- [Author an embedded dashboard](./authoring-library.md)
 
   Describes how to embed a dashboard in authoring or edit mode during the initial dashboard load and after the dashboard is loaded.
 
