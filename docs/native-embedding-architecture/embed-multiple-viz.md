@@ -28,7 +28,7 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ### Embed visualizations from one dossier
 
-To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use the code shown below:
 (please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
