@@ -1,13 +1,13 @@
 ---
-title: Author an embedded dossier
-description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
+title: Author an embedded dashboard
+description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 ---
 
-Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dossier development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dossier in the authoring mode, whether it is during the initial load or in the view mode of the dossier.
+Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g16) that will embed a dossier in authoring mode along with an edit button that you can use to switch to authoring mode. You need to modify the environment url and dossier url to use your dossier and environment. See the steps to do this in [Introduction to Embedding SDK](../).
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g16) that will embed a dashboard in authoring mode along with an edit button that you can use to switch to authoring mode. You need to modify the environment url and dashboard url to use your dashboard and environment. See the steps to do this in [Introduction to Embedding SDK](../).
 
 :::
 
@@ -17,24 +17,24 @@ With the Authoring Library feature, the Embedding SDK could enable the users to 
 
 - Call `microstrategy.dossier.create` API with specific initialized parameters to:
 
-  a. Enter the authoring Library page to edit a dossier directly.
+  a. Enter the authoring Library page to edit a dashboard directly.
 
-  b. Hiding the Edit button in the navigation bar of the consumption Library page, to disable the user to edit the dossier.
+  b. Hiding the Edit button in the navigation bar of the consumption Library page, to disable the user to edit the dashboard.
 
 - Call the `Dossier.switchToMode` API to switch from view mode to authoring mode.
 
-- Register events to notify the parent application when the dossier is saved or closed.
+- Register events to notify the parent application when the dashboard is saved or closed.
 
 ## Authoring mode constraints
 
 ### The availability of existing Embedding SDK APIs
 
-In authoring mode, most dossier-related APIs are disabled as they are designed for the consumption dossier instance. The remaining APIs supported in authoring mode are shown below.
+In authoring mode, most dossier-related APIs are disabled as they are designed for the consumption dashboard instance. The remaining APIs supported in authoring mode are shown below.
 
 | Supported API                                   | Description                                                                                                       |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| microstrategy.dossier.create                    | Creates or destroys the embedded dossier view.                                                                    |
-| microstrategy.dossier.destroy                   | Creates or destroys the embedded dossier view.                                                                    |
+| microstrategy.dossier.create                    | Creates or destroys the embedded dashboard view.                                                                  |
+| microstrategy.dossier.destroy                   | Creates or destroys the embedded dashboard view.                                                                  |
 | Dossier.switchToMode                            | The API added in this feature used in authoring mode.                                                             |
 | Dossier.registerEventHandler                    | Adds an event handler.                                                                                            |
 | Dossier.removeEventHandler                      | Removes an event handler.                                                                                         |
@@ -56,7 +56,7 @@ To avoid unexpected events, except the newly added events (see the callback even
 
 ### Initial parameters
 
-The props parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The props parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 The existing parameters can be roughly divided into three categories and their behaviors can be set with `dossierRenderingMode = authoring`.
 
@@ -64,13 +64,13 @@ The existing parameters can be roughly divided into three categories and their b
 
 - The parameters used for some UI customization in consumption mode, for example, navigationBar.enabled. You can still use these parameters with dossierRenderingMode = authoring, but their effects can only be seen when switching back to consumption mode.
 
-- The parameters used for some extra dossier instance manipulation, for example, filter and visualizationAppearances. These parameters are implementations of some embedding SDK APIs (for example, filter-related functions in the dossier class and changeVisualizationSize) for the initial workflow. As these embedding SDK APIs are forbidden in authoring mode, you must also forbid these parameters in the initial parameter in authoring mode to keep the consistent behavior. A complete list of these parameters are shown below.
+- The parameters used for some extra dashboard instance manipulation, for example, filter and visualizationAppearances. These parameters are implementations of some embedding SDK APIs (for example, filter-related functions in the dashboard class and changeVisualizationSize) for the initial workflow. As these embedding SDK APIs are forbidden in authoring mode, you must also forbid these parameters in the initial parameter in authoring mode to keep the consistent behavior. A complete list of these parameters are shown below.
 
-| Field Name                    | Description                                                                                 |
-| ----------------------------- | ------------------------------------------------------------------------------------------- |
-| filters                       | Applies filters to the dossier instance in consumption mode.                                |
-| visualizationAppearances      | Applies visualization appearance manipulations to the dossier instance in consumption mode. |
-| visualizationSelectedElements | Applies visualization element selections to the dossier instance in consumption mode.       |
+| Field Name                    | Description                                                                                   |
+| ----------------------------- | --------------------------------------------------------------------------------------------- |
+| filters                       | Applies filters to the dashboard instance in consumption mode.                                |
+| visualizationAppearances      | Applies visualization appearance manipulations to the dashboard instance in consumption mode. |
+| visualizationSelectedElements | Applies visualization element selections to the dashboard instance in consumption mode.       |
 
 If you have set values for these fields when setting `dossierRenderingMode = authoring`, a dialog appears with the error message:
 
@@ -88,7 +88,7 @@ The fields ["filters", "visualizationAppearances", "visualizationSelectedElement
 
 #### Input parameters
 
-An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 | Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
 | -------------------------- | --------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -176,16 +176,16 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | -------------------------------- | ---------------- | --------------- | -------------------------------------------- |
 | Dossier authoring isn’t allowed. | Unsupported case | Web Dossier     | Caught by the catch() of the promise object. |
 
-### Callback for monitoring when the dossier is saved or closed
+### Callback for monitoring when the dashboard is saved or closed
 
 When the Save or Close button is clicked in authoring mode, an event is raised that notifies your application.
 
 #### Event name
 
-| Parameter Name           | Trigger                                       |
-| ------------------------ | --------------------------------------------- |
-| onDossierAuthoringSaved  | When the dossier is saved in authoring mode.  |
-| onDossierAuthoringClosed | When the dossier is closed in authoring mode. |
+| Parameter Name           | Trigger                                         |
+| ------------------------ | ----------------------------------------------- |
+| onDossierAuthoringSaved  | When the dashboard is saved in authoring mode.  |
+| onDossierAuthoringClosed | When the dashboard is closed in authoring mode. |
 
 #### Callback format
 
@@ -211,7 +211,7 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 
 #### Input parameters
 
-An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 | Parameter Name           | Data Type | Default Value | Description                                                                                                                                                                          | Required? |
 | ------------------------ | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -228,7 +228,7 @@ microstrategy.dossier.create({
 });
 ```
 
-If you do not enter a value for `navigationBar`, the dossier runs using the old behavior and the navigation bar is hidden.
+If you do not enter a value for `navigationBar`, the dashboard runs using the old behavior and the navigation bar is hidden.
 
 #### Response
 
@@ -261,7 +261,7 @@ microstrategy.dossier
 | props.authoring.toolbar.tableOfContents.visible <br/>props.authoring.toolbar.undo.visible <br/>props.authoring.toolbar.redo.visible <br/>props.authoring.toolbar.refresh.visible <br/>props.authoring.toolbar.pauseDataRetrieval.visible <br/>props.authoring.toolbar.reprompt.visible <br/>props.authoring.toolbar.dividerLeft.visible <br/>props.authoring.toolbar.addData.visible <br/>props.authoring.toolbar.addChapter.visible <br/>props.authoring.toolbar.addPage.visible <br/>props.authoring.toolbar.insertVisualization.visible <br/>props.authoring.toolbar.insertFilter.visible <br/>props.authoring.toolbar.insertText.visible <br/>props.authoring.toolbar.insertImage.visible <br/>props.authoring.toolbar.insertHtml.visible <br/>props.authoring.toolbar.insertShape.visible <br/>props.authoring.toolbar.insertPanelStack.visible <br/>props.authoring.toolbar.insertInfoWindow.visible <br/>props.authoring.toolbar.save.visible <br/>props.authoring.toolbar.dividerRight.visible <br/>props.authoring.toolbar.more.visible <br/>props.authoring.toolbar.freeformLayout.visible <br/>props.authoring.toolbar.nlp.visible <br/>props.authoring.toolbar.responsiveViewEditor.visible <br/>props.authoring.toolbar.responsivePreview.visible | Boolean   | true          | Show or hide corresponding buttons on the toolbar in the authoring UI. | No        |
 | props.authoring.panelVisibility.contents <br/>props.authoring.panelVisibility.datasets <br/>props.authoring.panelVisibility.editor <br/>props.authoring.panelVisibility.filter <br/>props.authoring.panelVisibility.format <br/>props.authoring.panelVisibility.layers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Boolean   | true          | Show or hide corresponding authoring panels.                           | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 Example:
 
@@ -303,7 +303,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | The authoring parameter has the wrong input type. | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
 | The authoring.$\{key\} has the wrong input type.  | Invalid input  | Embedded SDK    | Display an error message and an alert dialog. |
 
-### API for creating a new dossier for authoring
+### API for creating a new dashboard for authoring
 
 #### Function
 
@@ -311,11 +311,11 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 #### Input parameters
 
-| Parameter Names  | Data Type | Default Value | Description                                                                                                                                                                                                                               | Required? |
-| ---------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| props.newDossier | Boolean   | false         | Use when creating a new dossier from scratch. When set to `true`, a new dossier instance is created from a blank dossier template. In this case, the `instance`, `objectID`, or `url` parameters don't have to and shouldn't be provided. | No        |
+| Parameter Names  | Data Type | Default Value | Description                                                                                                                                                                                                                                     | Required? |
+| ---------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| props.newDossier | Boolean   | false         | Use when creating a new dashboard from scratch. When set to `true`, a new dashboard instance is created from a blank dashboard template. In this case, the `instance`, `objectID`, or `url` parameters don't have to and shouldn't be provided. | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 Example:
 

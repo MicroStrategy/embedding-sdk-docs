@@ -195,7 +195,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all errors that occur in the initial loading process as the result of manual actions are handled by OOTB Library and an error dialog appears.
 
-Refer to [Custom error handling during dossier creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in the `microstrategy.embeddingContexts.embedReportPage` function.
+Refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in the `microstrategy.embeddingContexts.embedReportPage` function.
 
 #### Required?
 
@@ -285,7 +285,7 @@ Specifies the application that the user wants to show in the embedded page.
 The application in MicroStrategy has two categories:
 
 - If the application selects the Library home page as its home screen, the Library home page is embedded with the application's configuration.
-- If the application selects a dossier as its home screen, the embedding fails and an error occurs.
+- If the application selects a dashboard as its home screen, the embedding fails and an error occurs.
 
 #### Required?
 
@@ -301,7 +301,7 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including the MicroStrategy Library home, dossier consumption，dossier authoring, and report consumption pages.
+Specifies the custom UI settings on the embedded pages, including the MicroStrategy Library home, dashboard consumption，dashboard authoring, and report consumption pages.
 
 #### Properties
 

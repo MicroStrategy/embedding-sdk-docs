@@ -43,7 +43,7 @@ const sidebars = {
         type: "doc",
         id: "add-functionality/add-functionality",
       },
-      label: "Add functionality to an embedded dossier",
+      label: "Add functionality to an embedded dashboard",
       items: [
         "add-functionality/methods-and-properties",
         "add-functionality/add-nav",
@@ -75,7 +75,7 @@ const sidebars = {
         type: "doc",
         id: "embed-dossier-consumption-page/embed-dossier-consumption-page",
       },
-      label: "Embed MicroStrategy dossier consumption page",
+      label: "Embed MicroStrategy dashboard consumption page",
       items: ["embed-dossier-consumption-page/embed-dossier-consumption-properties"],
     },
     {
@@ -118,9 +118,12 @@ const sidebars = {
       items: [
         "native-embedding-architecture/embed-multiple-viz",
         "native-embedding-architecture/destroy-multiple-viz",
+        "native-embedding-architecture/embed-bot-visualizations",
         "native-embedding-architecture/embedding-components",
         "native-embedding-architecture/mstr-environment",
         "native-embedding-architecture/mstr-dossier",
+        "native-embedding-architecture/mstr-bot",
+        "native-embedding-architecture/mstr-bot-visualization",
         "native-embedding-architecture/vis-manipulation",
         "native-embedding-architecture/dossier-info-api",
         "native-embedding-architecture/apply-filter",

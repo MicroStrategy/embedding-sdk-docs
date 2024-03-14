@@ -1,9 +1,9 @@
 ---
 title: Use guest authentication with multiple authentication modes enabled
-description: The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
+description: The example in this topic illustrates how to seamlessly display an embedded dashboard using Guest authentication when multiple authentication modes are enabled.
 ---
 
-The example in this topic illustrates how to seamlessly display an embedded dossier using Guest authentication when multiple authentication modes are enabled.
+The example in this topic illustrates how to seamlessly display an embedded dashboard using Guest authentication when multiple authentication modes are enabled.
 
 ## Set up Library Server
 
@@ -77,7 +77,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
 `applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
 
-1. To use a dossier from your Library Server, make the following changes to the code:
+1. To use a dashboard from your Library Server, make the following changes to the code:
 
    1. Configure the path to the Embedding SDK javascript file, replacing `https://demo.microstrategy.com/MicroStrategyLibraryInsights` with your Library Server URL.
 
@@ -90,7 +90,7 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
       The `embeddinglib.js` file, which contains the Embedding SDK, is included in the `MicroStrategyLibrary` web application.
 
-   1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dossier ID.
+   1. Configure variables to set the values for the path to the MicroStrategy Library installation, the project ID, and the dashboard ID.
 
       - Set the value of the `baseURL` variable to the path to your MicroStrategy Library by replace `https://demo.microstrategy.com/MicroStrategyLibraryInsights` with your Library Server URL.
 
@@ -98,13 +98,13 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
         const baseURL = "https://demo.microstrategy.com/MicroStrategyLibraryInsights";
         ```
 
-      - Set the value of the `projectId` variable to the ID for the project containing the dossier you want to embed.
+      - Set the value of the `projectId` variable to the ID for the project containing the dashboard you want to embed.
 
         ```js
         const projectId = "EC70648611E7A2F962E90080EFD58751";
         ```
 
-      - Set the value of the `dossierId` variable to the ID of the dossier you want to embed.
+      - Set the value of the `dossierId` variable to the ID of the dashboard you want to embed.
 
         ```js
         const dossierId = "837B57D711E941BF000000806FA1298F";
@@ -112,14 +112,14 @@ Enable Guest and other authentications in MicroStrategy Library Admin.
 
       :::tip
 
-      You can obtain the project ID and dossier ID by running the dossier in MicroStrategy Library and copying the URL.
+      You can obtain the project ID and dashboard ID by running the dashboard in MicroStrategy Library and copying the URL.
 
       :::
 
-1. Once you have configured the code, save your HTML file and open it in a browser. The embedded dossier is seamlessly displayed in the browser.
+1. Once you have configured the code, save your HTML file and open it in a browser. The embedded dashboard is seamlessly displayed in the browser.
 
 :::tip
 
-If the dossier does not render on the page, you can use the browser developer tools to review any exceptions or errors being thrown. When you make an XHR request for `POST /auth/login`, you only need to wait until the response headers are returned. The expected status code will be 204 (Success no content). Review [the documentation on `XMLHTTPRequest.readyState`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState) to understand what is necessary to obtain the request header.
+If the dashboard does not render on the page, you can use the browser developer tools to review any exceptions or errors being thrown. When you make an XHR request for `POST /auth/login`, you only need to wait until the response headers are returned. The expected status code will be 204 (Success no content). Review [the documentation on `XMLHTTPRequest.readyState`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState) to understand what is necessary to obtain the request header.
 
 :::

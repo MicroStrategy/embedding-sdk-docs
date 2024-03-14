@@ -1,17 +1,17 @@
 ---
 title: Embed a single visualization
-description: You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
+description: You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
 ---
 
-You can use the Embedding SDK to embed a dossier with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
+You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
 
 This functionality allows you to:
 
-- Target between a maximized view of a single visualization or a normal view of the entire dossier.
+- Target between a maximized view of a single visualization or a normal view of the entire dashboard.
 - Add event handling so the parent portal is aware of the maximizing action performed by the user.
-- Select a single visualization to appear by default when the dossier opens.
-- Hide the maximize button so viewers cannot view the entire dossier.
-- Choose any visualization on the dossier to appear by default, even if it's not on the current page.
+- Select a single visualization to appear by default when the dashboard opens.
+- Hide the maximize button so viewers cannot view the entire dashboard.
+- Choose any visualization on the dashboard to appear by default, even if it's not on the current page.
 
 Check out the video below to see how it's done!
 
@@ -23,13 +23,13 @@ Check out the video below to see how it's done!
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15) that will embed a dossier with a single visualization maximized with options to switch between `Max Size` and `Normal Size`.
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15) that will embed a dashboard with a single visualization maximized with options to switch between `Max Size` and `Normal Size`.
 
 :::
 
 ## Embedding workflow
 
-When initializing a dossier page, you must specify which visualization will be maximized and the visibility of its resize button. When the visualization is resized, whether it's by a manual click or the Embedding SDK, the dossier page raises an event to invoke a callback in your application.
+When initializing a dashboard page, you must specify which visualization will be maximized and the visibility of its resize button. When the visualization is resized, whether it's by a manual click or the Embedding SDK, the dashboard page raises an event to invoke a callback in your application.
 
 ![maximize_viz_workflow](../images/maximize_viz_workflow.png)
 
@@ -39,7 +39,7 @@ When initializing a dossier page, you must specify which visualization will be m
 
 `Dossier.changeVisualizationSize(props)`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Input parameters
 
@@ -75,7 +75,7 @@ Since the target state is specified in the API parameters, the callback paramete
 | -------------- | ------------ | --------------------------------- | --------------------------------------------------- |
 | `error`        | Error Object | `new Error("invalid operation!")` | See [API errors](#api-errors) for more information. |
 
-### 2. Embed the dossier with a single visualization maximized
+### 2. Embed the dashboard with a single visualization maximized
 
 #### Function
 
@@ -83,7 +83,7 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Input parameters
 
-The `props` parameter contains several fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
+The `props` parameter contains several fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
 
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
@@ -106,7 +106,7 @@ microstrategy.dossier.create({
 });
 ```
 
-If you don't enter values for `visualizationAppearances`, the dossier runs using the default behavior.
+If you don't enter values for `visualizationAppearances`, the dashboard runs using the default behavior.
 
 Multiple visualizations are not supported. This is because `size` is coupled on different visualizations, in which only one visualization can be maximized.
 
@@ -136,7 +136,7 @@ When a user manually clicks the resize button for a visualization, an event is r
 
 `Dossier.onVisualizationResized`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Callback format
 
@@ -164,16 +164,16 @@ in which the `resizedVisualization` callback parameter uses the following form
 
 Since you cannot set the callback parameters, it's impossible for these parameters to produce errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in turn returns an error object in rejected cases. The possible errors are shown below.
 
-| Related APIs                                                                   | Error Case                                                                                                                                                  | Error Handler Callback Parameter | Error Message                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Dossier.changeVisualizationSize(props)`                                       | The `visKey` is not a valid visualization key or it is not in the current page or panel stack.                                                              | Error Object                     | There isn’t a visualization whose key is “${0}“. Please check whether your input visKey is correct.                                                                                                     |
-|                                                                                | The dossier page is still loading.                                                                                                                          |                                  | You couldn’t manipulate a visualization when the page data is not ready. Please wait a few seconds to call this function again.                                                                         |
-|                                                                                | The dossier’s manipulation is not finished, so maximize or restore could not be performed. This may occur when the last maximize or restore is in progress. |                                  | You couldn’t resize a visualization when the dossier is busy for loading data.                                                                                                                          |
-|                                                                                | Another visualization is already maximized.                                                                                                                 |                                  | Another visualization `"${maximizedSiblingKey}"` is already maximized. Please call `dossier.changeVisualizationSize({visualizationKey: "${maximizedSiblingKey}", size: "normal"})` to restore it first. |
-|                                                                                | `visualizationKey` is missing.                                                                                                                              |                                  | Invalid input for Dossier.changeVisualizationSize(props): data should have required property 'visualizationKey'                                                                                         |
-|                                                                                | `size` is not a valid value.                                                                                                                                |                                  | Invalid input for Dossier.changeVisualizationSize(props): data.size should match pattern "(^(maximized\|normal)$)"                                                                                      |
-|                                                                                | `resizeButtonVisible` is not a valid value,                                                                                                                 |                                  | Invalid input for Dossier.changeVisualizationSize(props): data.resizeButtonVisible should be boolean                                                                                                    |
-| `microstrategy.dossier.create(props)` `Dossier.changeVisualizationSize(props)` | `visualizationKey` is missing                                                                                                                               |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0] should have required property 'visualizationKey'                                                          |
-|                                                                                | `size` is not a valid value.                                                                                                                                |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].size should match pattern "(^(maximized\|normal)$)"                                                       |
-|                                                                                | `resizeButtonVisible` isn’t a valid value.                                                                                                                  |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].resizeButtonVisible should be boolean                                                                     |
-|                                                                                | The value of `visualizationKey` is not a valid visualization key or it is not in the current page or panel stack .                                          |                                  | There isn’t a visualization whose key is `"${vizAppearance.visualizationKey}"` in the current page. Please check whether your input 'visualizationKey' is correct.                                      |
+| Related APIs                                                                   | Error Case                                                                                                                                                    | Error Handler Callback Parameter | Error Message                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Dossier.changeVisualizationSize(props)`                                       | The `visKey` is not a valid visualization key or it is not in the current page or panel stack.                                                                | Error Object                     | There isn’t a visualization whose key is “${0}“. Please check whether your input visKey is correct.                                                                                                     |
+|                                                                                | The dashboard page is still loading.                                                                                                                          |                                  | You couldn’t manipulate a visualization when the page data is not ready. Please wait a few seconds to call this function again.                                                                         |
+|                                                                                | The dashboard's manipulation is not finished, so maximize or restore could not be performed. This may occur when the last maximize or restore is in progress. |                                  | You couldn’t resize a visualization when the dashboard is busy for loading data.                                                                                                                        |
+|                                                                                | Another visualization is already maximized.                                                                                                                   |                                  | Another visualization `"${maximizedSiblingKey}"` is already maximized. Please call `dossier.changeVisualizationSize({visualizationKey: "${maximizedSiblingKey}", size: "normal"})` to restore it first. |
+|                                                                                | `visualizationKey` is missing.                                                                                                                                |                                  | Invalid input for Dossier.changeVisualizationSize(props): data should have required property 'visualizationKey'                                                                                         |
+|                                                                                | `size` is not a valid value.                                                                                                                                  |                                  | Invalid input for Dossier.changeVisualizationSize(props): data.size should match pattern "(^(maximized\|normal)$)"                                                                                      |
+|                                                                                | `resizeButtonVisible` is not a valid value,                                                                                                                   |                                  | Invalid input for Dossier.changeVisualizationSize(props): data.resizeButtonVisible should be boolean                                                                                                    |
+| `microstrategy.dossier.create(props)` `Dossier.changeVisualizationSize(props)` | `visualizationKey` is missing                                                                                                                                 |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0] should have required property 'visualizationKey'                                                          |
+|                                                                                | `size` is not a valid value.                                                                                                                                  |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].size should match pattern "(^(maximized\|normal)$)"                                                       |
+|                                                                                | `resizeButtonVisible` isn’t a valid value.                                                                                                                    |                                  | Error when valid parameter for microstrategy.dossier.create: data.visualizationAppearances[0].resizeButtonVisible should be boolean                                                                     |
+|                                                                                | The value of `visualizationKey` is not a valid visualization key or it is not in the current page or panel stack .                                            |                                  | There isn’t a visualization whose key is `"${vizAppearance.visualizationKey}"` in the current page. Please check whether your input 'visualizationKey' is correct.                                      |

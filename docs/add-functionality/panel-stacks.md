@@ -1,9 +1,9 @@
 ---
 title: Interact with panel stacks
-description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dossier to represent data in multiple ways. MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
+description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
 ---
 
-The MicroStrategy 2021 Update 1 release exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm) within dossiers. This provides end users with the ability to conveniently reuse segments of space within a dossier to represent data in multiple ways. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new Embedding SDK functions.
+The MicroStrategy 2021 Update 1 release exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm) within dossiers. This provides end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new Embedding SDK functions.
 
 MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header.
 
@@ -13,7 +13,7 @@ Similar to providing navigation capabilities through provided embedded SDK funct
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g23) that will embed a dossier with a panel stack and the option to switch between panels.
+To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g23) that will embed a dashboard with a panel stack and the option to switch between panels.
 
 :::
 
@@ -128,7 +128,7 @@ In which the callback parameters are:
 
 :::tip
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 :::
 
@@ -310,7 +310,7 @@ N/A
 
 ##### Error message
 
-You couldn’t switch a panel when the dossier is busy for loading data. Please wait for a while...
+You couldn’t switch a panel when the dashboard is busy for loading data. Please wait for a while...
 
 #### Error case: REST API error
 

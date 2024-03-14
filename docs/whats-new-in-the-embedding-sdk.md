@@ -5,17 +5,24 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## 2024 Update 3
+
+- Rename 'dossier' into 'dashboard'.
+- [Embed Bot Visualizations with Native Embedding SDK](./native-embedding-architecture/embed-bot-visualizations.md)
+  - You can use the new Embedding SDK APIs to embed the visualizations on a bot consumption page.
+
 ## 2021 Update 12
 
-- [Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
-  - You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
+[Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+
+- You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
 
 ## 2021 Update 11
 
-- [Embed MicroStrategy dossier consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
-  - You can use a new Embedding SDK API to embed a dossier consumption page, in which we support the user to navigate between the dossier and the homepage.
-- [Dossier consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
-  - You can call new APIs on the dossier consumption page to get and set the selected components.
+- [Embed MicroStrategy dashboard consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - You can use a new Embedding SDK API to embed a dashboard consumption page, in which we support the user to navigate between the dashboard and the homepage.
+- [Dashboard consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
+  - You can call new APIs on the dashboard consumption page to get and set the selected components.
 
 ## 2021 Update 9
 
@@ -30,8 +37,8 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
   - Users can embed MicroStrategy report consumption page.
   - Users can control the visibility of the navigation bar of the report consumption page.
-- [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
-- [Ability to customize Library home page from embedding dossier page](./add-functionality/methods-and-properties.md#customui)
+- [Ability to customize dashboard pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
+- [Ability to customize Library home page from embedding dashboard page](./add-functionality/methods-and-properties.md#customui)
 
 ## 2021 Update 7
 
@@ -42,15 +49,15 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 4
 
-- [Enhancements to authoring an embedded dossier.](./add-functionality/authoring-library.md)
+- [Enhancements to authoring an embedded dashboard.](./add-functionality/authoring-library.md)
   - Control the display of items in the authoring toolbar.
   - Control the display of authoring panels.
-  - Support for creating a new dossier.
+  - Support for creating a new dashboard.
 - [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#methods-and-properties#sharefeature)
 
 ## 2021 Update 3
 
-- [Author an embedded dossier.](./add-functionality/authoring-library.md)
+- [Author an embedded dashboard.](./add-functionality/authoring-library.md)
 - [Enable the selection of attribute elements.](./add-functionality/attribute-element-selection.md)
 
 ## 2021 Update 2
@@ -61,7 +68,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 ## 2021
 
 - [More updates in error handling.](./add-functionality/error-handling.md)
-- [Apply multiple filters after a dossier is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
+- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
 - [Show or hide the `shareDossier` function.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2020 Update 3
@@ -70,16 +77,16 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 2
 
-A new method to [remove an embedded dossier](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+A new method to [remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
 
 ## 2019
 
-A new property, [dossierFeature](./add-functionality/methods-and-properties.md#dossierfeature), allows you to customize dossier features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
+A new property, [dossierFeature](./add-functionality/methods-and-properties.md#dossierfeature), allows you to customize dashboard features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
 
 ## 11.0
 
-- A new property allows you to [pass filters during dossier execution](./add-functionality/methods-and-properties.md#filters).
-- New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dossier.
+- A new property allows you to [pass filters during dashboard execution](./add-functionality/methods-and-properties.md#filters).
+- New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dashboard.
 
 ## 10.9
 

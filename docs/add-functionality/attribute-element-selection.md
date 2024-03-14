@@ -11,9 +11,9 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 - Support programmatic selecting of attribute elements in visualizations. This involves the following:
 
-  a. Select attribute elements from a single visualization after the dossier is rendered.
+  a. Select attribute elements from a single visualization after the dashboard is rendered.
 
-  b. Select attribute elements in multiple visualizations on the initial loading of the dossier.
+  b. Select attribute elements in multiple visualizations on the initial loading of the dashboard.
 
 - Support programmatic retrieval of available elements in a visualization.
 
@@ -27,7 +27,7 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 `Dossier.selectVizElement(props)`
 
-The Dossier object created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The Dossier object created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 #### Input parameters
 
@@ -113,7 +113,7 @@ When an error occurs, this API returns a promise object that in turn returns an 
 | The action is not "replace" and the current visualization selection mode is metric cell selection.        | Invalid input  | Web Dossier     | Caught by the catch() of the promise object. |
 | The visualization is a filter and the target visualization is loading, so elements could not be selected. | Other          | Web Dossier     | Caught by the catch() of the promise object. |
 
-### API for selecting attribute elements in multiple visualizations on initial dossier load
+### API for selecting attribute elements in multiple visualizations on initial dashboard load
 
 #### Function
 
@@ -121,7 +121,7 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 #### Input parameters
 
-An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information about the fields in the props input parameter.
+An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about the fields in the props input parameter.
 
 | Parameter Name                                          | Description                                      | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | ------------------------------------------------ | --------- | --------- | ------------- |
@@ -158,7 +158,7 @@ microstrategy.dossier.create({
 });
 ```
 
-If you do not enter a value for visualizationSelectedElements, the dossier runs using the old behavior and no new attribute elements are selected in the visualization.
+If you do not enter a value for visualizationSelectedElements, the dashboard runs using the old behavior and no new attribute elements are selected in the visualization.
 
 #### Response
 

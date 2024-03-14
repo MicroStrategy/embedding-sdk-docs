@@ -1,13 +1,13 @@
 ---
-title: Methods and properties for an embedded dossier
-description: When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
+title: Methods and properties for an embedded dashboard
+description: When you embed a MicroStrategy dashboard into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 ---
 
-When you embed a MicroStrategy dossier into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
+When you embed a MicroStrategy dashboard into a web page, you use the `create(props)` method under the `microstrategy.dossier` namespace.
 
 :::tip
 
-To help you get started, we have provided an [example on playground](https://microstrategy.github.io/playground/?example=g1) that sets properties on an embedded dossier. Use the `create(props)` method under the `microstrategy.dossier` namespace to set properties. The props parameter contains optional key-value pairs to customize the UI, features, and authentication, in addition to the required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created.
+To help you get started, we have provided an [example on playground](https://microstrategy.github.io/playground/?example=g1) that sets properties on an embedded dashboard. Use the `create(props)` method under the `microstrategy.dossier` namespace to set properties. The props parameter contains optional key-value pairs to customize the UI, features, and authentication, in addition to the required key-value pairs that define the URL where the dashboard is located and the ID of the `<div>` placeholder where the iFrame containing the dashboard instance will be created.
 
 This example is provided as an HTML file, which must be hosted on a web server. It cannot be run as a standalone file.
 
@@ -17,13 +17,13 @@ This example is provided as an HTML file, which must be hosted on a web server.
 
 ### microstrategy.dossier.create(props)
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the URL (specified by the `url` property) where the dossier to be embedded is located.
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the URL (specified by the `url` property) where the dashboard to be embedded is located.
 
 #### Return value
 
-This method returns a promise, which is resolved to a `Dossier` object when the dossier instance is created.
+This method returns a promise, which is resolved to a `Dossier` object when the dashboard instance is created.
 
-The `props` parameter contains required key-value pairs that define the URL where the dossier is located and the ID of the `<div>` placeholder where the iFrame containing the dossier instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
+The `props` parameter contains required key-value pairs that define the URL where the dashboard is located and the ID of the `<div>` placeholder where the iFrame containing the dashboard instance will be created. It can also contain other optional key-value pairs to customize the UI, features, and authentication.
 
 Embedding too many pages using the Embedding SDK can lead to performance problems and even browser crashes due to limited browser resources. To ensure stable performance, it's recommended to embed the MicroStrategy Library page in no more than 4 to 6 containers.
 
@@ -33,11 +33,11 @@ The `props` parameter is explained in [Properties](#properties).
 
 ### Dossier.getDossierInstanceId()
 
-After calling `microstrategy.dossier.create(props)` to embed a dossier and get a `Dossier` object, you can use `Dossier.getDossierInstanceId()` to get the embedded dossier's instance id.
+After calling `microstrategy.dossier.create(props)` to embed a dashboard and get a `Dossier` object, you can use `Dossier.getDossierInstanceId()` to get the embedded dashboard's instance id.
 
 #### Return value
 
-This method returns a promise, which is resolved to the dossier instance id. An example is as below:
+This method returns a promise, which is resolved to the dashboard instance id. An example is as below:
 
 #### Sample
 
@@ -49,7 +49,7 @@ const myDossier = await microstrategy.dossier.create({
 const instanceId = await myDossier.getDossierInstanceId();
 ```
 
-The `instanceId` is a unique GUID, which is different each time you embed a dossier into a container.
+The `instanceId` is a unique GUID, which is different each time you embed a dashboard into a container.
 
 ## Properties
 
@@ -67,7 +67,7 @@ No
 
 ### `url`, `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey`
 
-The `url` property refers to the full URL of the dossier to be embedded. There are two ways to configure the URL to embed a dossier:
+The `url` property refers to the full URL of the dashboard to be embedded. There are two ways to configure the URL to embed a dossier:
 
 1. Use the `url` property to specify a full URL.
 1. Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties.
@@ -156,7 +156,7 @@ No
 
 The `disableNotification` property specifies whether to display messages, such as "Add to Library" in the notification bar. If this property is set to true, message does not appear in the notification bar.
 
-Manipulations are not affected by this property. They persist in the same way as the default dossier status.
+Manipulations are not affected by this property. They persist in the same way as the default dashboard status.
 
 #### Required?
 
@@ -195,7 +195,7 @@ microstrategy.dossier
 
 ### `dockedComment`
 
-The `dockedComment` object is used to configure the comments panel on the Dossier page.
+The `dockedComment` object is used to configure the comments panel on the Dashboard page.
 
 - `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
 - `canClose` - `Boolean`. If set to `false`, the panel is forced to appear.
@@ -231,7 +231,7 @@ microstrategy.dossier.create({
 
 ### `dockedFilter`
 
-The `dockedFilter` object is used to configure the filter panel on the Dossier page.
+The `dockedFilter` object is used to configure the filter panel on the Dashboard page.
 
 - `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
 - `canClose` - `Boolean`. If set to `false`, the panel is forced to appear.
@@ -267,7 +267,7 @@ microstrategy.dossier.create({
 
 ### `dockedTOC`
 
-The `dockedTOC` object is used to configure the Table of Contents (TOC) panel on the Dossier page.
+The `dockedTOC` object is used to configure the Table of Contents (TOC) panel on the Dashboard page.
 
 - `dockedPosition` - Only `"left"` or `"right"` is accepted as the position of the docked panel.
 - `theme` - The color theme of the page. Only `"light"` or `"dark"` is accepted. The default is `"light"`.
@@ -303,7 +303,7 @@ microstrategy.dossier.create({
 
 ### `dossierFeature`
 
-The `dossierFeature` object is used to customize the dossier feature on the Dossier page.
+The `dossierFeature` object is used to customize the dashboard feature on the Dashboard page.
 
 - `readonly` - Enable or disable context menus. If this property is set to `true`, all context menus are disabled. This includes the visualization right-mouse-click context menu and the context menu at the top right of the visualization that contains options such as Export.
 
@@ -415,7 +415,7 @@ microstrategy.dossier.create({
 
 ### `filters`
 
-Use the `filters` object to apply attribute selection or attribute search filters during the execution of a dossier. It supports passing multiple filter definitions with multiple selectors.
+Use the `filters` object to apply attribute selection or attribute search filters during the execution of a dashboard. It supports passing multiple filter definitions with multiple selectors.
 
 Filter Format:
 
@@ -564,7 +564,7 @@ When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOK
 
 ### `instance`
 
-Use this `instance` object to specify a dossier instance for the embedded dossier. If you would like to make some manipulation to the dossier before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a dossier instance.
+Use this `instance` object to specify a dashboard instance for the embedded dashboard. If you would like to make some manipulation to the dashboard before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a dashboard instance.
 
 - `mid` - This instance ID.
 - `id` - Instance ID for a report-based in-memory dossier.
@@ -600,7 +600,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
 
 - `enabled` - Enable or disable the navigation bar. The default is `false`.
 - `gotoLibrary` - Show or hide the gotoLibrary icon. The default is `true`.
-- `title` - Show or hide the dossier title. The default is `true`.
+- `title` - Show or hide the dashboard title. The default is `true`.
 - `toc` - Show or hide the TOC icon. The default is `true`.
 - `reset` - Show or hide the reset icon. The default is `true`.
 - `reprompt` - Show or hide the reprompt icon. The default is `true`.
@@ -651,7 +651,7 @@ microstrategy.dossier.create({
 
 ### `customUi`
 
-Use the `customUi` object to customize the UI component visibilities except the dossier consumption and authoring pages. The detailed properties are as below:
+Use the `customUi` object to customize the UI component visibilities except the dashboard consumption and authoring pages. The detailed properties are as below:
 
 - `library` - This field is used to customized the UI components on the MicroStrategy Library home page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuilibrary)
 - `reportConsumption` - This field is used to customize the UI components on the report consumption page. Its details could be seen in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md#propscustomuireportconsumption).
@@ -785,9 +785,9 @@ microstrategy.dossier.create({
 
 ### `smartBanner`
 
-Use the `smartBanner` property to enable or disable the smart banner feature when a user opens an embedded dossier in a mobile browser.
+Use the `smartBanner` property to enable or disable the smart banner feature when a user opens an embedded dashboard in a mobile browser.
 
-This property is supported on the dossier and login pages, but not the Library page. If credentials are not provided, the user is redirected to the login page and the property setting in the original URL remains in effect.
+This property is supported on the dashboard and login pages, but not the Library page. If credentials are not provided, the user is redirected to the login page and the property setting in the original URL remains in effect.
 
 #### Required?
 
@@ -856,7 +856,7 @@ No
 
 `null`
 
-Depends on the default status of the dossier and the value in the `disableNotification` property.
+Depends on the default status of the dashboard and the value in the `disableNotification` property.
 
 #### Sample
 
@@ -879,7 +879,7 @@ Use this property to customize the visibility of tutorials. All detailed propert
 
 - `welcome` - Enable or disable the welcome tutorial.
 - `library` - Enable or disable the Library tutorial.
-- `dossier` - Enable or disable the dossier tutorial.
+- `dossier` - Enable or disable the dashboard tutorial.
 - `notification` - Enable or disable the notification tutorial.
 
 If the welcome tutorial is enabled, the Library tutorial is also automatically enabled.
@@ -913,7 +913,7 @@ microstrategy.dossier.create({
 
 ### `visualizationAppearances`
 
-If you want to show just one visualization on the dossier page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a single visualization](./embed-vis.md) for more information about the feature.
+If you want to show just one visualization on the dashboard page, use the `visualizationAppearances` object to assign which visualization needs to be resized in the initial loading process and whether the user could see the resize button of the visualization. See [Embed a single visualization](./embed-vis.md) for more information about the feature.
 
 Format:
 
@@ -943,7 +943,7 @@ No visualization needs to be maximized or restored during initial loading.
 
 ### `authoring`
 
-The `authoring` object controls the dossier interface in authoring mode. See [Author an embedded dossier](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
+The `authoring` object controls the dashboard interface in authoring mode. See [Author an embedded dashboard](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
 
 ### `errorHandler`
 
@@ -953,7 +953,7 @@ The custom error handler that is executed when an error occurs in the dossier-cr
 
 The custom error handler that is executed when the session expires in the embedding lifetime. See [Custom error handling](./error-handling.md#session-error-handling) for details.
 
-## Method for removing an embedded dossier
+## Method for removing an embedded dashboard
 
 ### microstrategy.dossier.destroy(config)
 
@@ -963,7 +963,7 @@ The config parameter:
   {"placeholder": placeholderDiv}
 ```
 
-This method removes the embedded dossier in the same placeholder you used when calling `microstrategy.dossier.create`. The `placeholder` refers to the DOM object of the container `<div>`.
+This method removes the embedded dashboard in the same placeholder you used when calling `microstrategy.dossier.create`. The `placeholder` refers to the DOM object of the container `<div>`.
 
 #### Return value
 

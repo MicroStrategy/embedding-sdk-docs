@@ -1,9 +1,9 @@
 ---
 title: The customized UI settings in Embedding SDK
-description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page.
+description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dashboard consumption page, dashboard authoring page, and report consumption page.
 ---
 
-The Embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dossier consumption page, dossier authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
+The Embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dashboard consumption page, dashboard authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
 
 - `microstrategy.embeddingContexts.embedLibraryPage(props)`
 - `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
@@ -159,7 +159,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
 });
 ```
 
-In the example above, the user uses `microstrategy.embeddingContexts.embedLibraryPage` to embed a MicroStrategy Library home page. After the embedded page is loaded, the user may click a dossier in the dossier list to go to a dossier consumption page, or RMC the "Edit" menu to go to a dossier authoring page. The user could use fields `props.customUi.dossierConsumption` and `props.customUi.dossierAuthoring` to show or hide the components in these 2 pages.
+In the example above, the user uses `microstrategy.embeddingContexts.embedLibraryPage` to embed a MicroStrategy Library home page. After the embedded page is loaded, the user may click a dashboard in the dashboard list to go to a dashboard consumption page, or RMC the "Edit" menu to go to a dashboard authoring page. The user could use fields `props.customUi.dossierConsumption` and `props.customUi.dossierAuthoring` to show or hide the components in these 2 pages.
 
 The details of `props.customUi` are as below:
 
@@ -185,7 +185,7 @@ Use the `sidebar` object to customize the sidebar on the MicroStrategy Library h
 Use the `navigationBar` object to customize navigation bar on the MicroStrategy Library home page. All detailed properties below are `Boolean`.
 
 - `enabled`
-  - Show the Library home page navigation bar or not. If the navigation bar is disabled in custom application, the true value wouldn’t take effect, which is the same as the original dossier navigation bar icons behavior.
+  - Show the Library home page navigation bar or not. If the navigation bar is disabled in custom application, the true value wouldn’t take effect, which is the same as the original dashboard navigation bar icons behavior.
   - Default value: `true`.
 - `sortAndFilter`
   - Show the library filter icon and the search bar on the Library home page navigation bar or not.
@@ -215,7 +215,7 @@ No
 
 ### `props.customUi.dossierConsumption`
 
-This field is used to customized the UI components on the dossier consumption page. It has 1 property: `navigationBar`.
+This field is used to customized the UI components on the dashboard consumption page. It has 1 property: `navigationBar`.
 
 #### Properties
 
@@ -230,7 +230,7 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
   - Show or hide the gotoLibrary icon.
   - Default value: `true`.
 - `title`
-  - Show or hide the dossier title.
+  - Show or hide the dashboard title.
   - Default value: `true`.
 - `toc`
   - Show or hide the TOC icon.
@@ -275,93 +275,93 @@ No
 
 ### `props.customUi.dossierAuthoring`
 
-This field is used to customized the UI components on the dossier authoring page. It has 2 properties: `toolbar` and `menubar`.
+This field is used to customized the UI components on the dashboard authoring page. It has 2 properties: `toolbar` and `menubar`.
 
 #### Properties
 
 ##### `toolbar`
 
-Use the `toolbar` object to customize the visibilities of the toolbar icons on the dossier authoring page. All detailed properties below are `Boolean`.
+Use the `toolbar` object to customize the visibilities of the toolbar icons on the dashboard authoring page. All detailed properties below are `Boolean`.
 
 - `tableOfContents.visible`
-  - Show the TOC button on the dossier authoring page toolbar or not.
+  - Show the TOC button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `undo.visible`
-  - Show the undo button on the dossier authoring page toolbar or not.
+  - Show the undo button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `redo.visible`
-  - Show the redo button on the dossier authoring page toolbar or not.
+  - Show the redo button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `refresh.visible`
-  - Show the refresh button on the dossier authoring page toolbar or not.
+  - Show the refresh button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `pauseDataRetrieval.visible`
-  - Show the "pauseDataRetrieval" button on the dossier authoring page toolbar or not.
+  - Show the "pauseDataRetrieval" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `dividerLeft.visible`
-  - Show the left divider on the dossier authoring page toolbar or not.
+  - Show the left divider on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `addData.visible`
-  - Show the "Add Data" button on the dossier authoring page toolbar or not.
+  - Show the "Add Data" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `addChapter.visible`
-  - Show the "Add Chapter" button on the dossier authoring page toolbar or not.
+  - Show the "Add Chapter" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `addPage.visible`
-  - Show the "Add Page" button on the dossier authoring page toolbar or not.
+  - Show the "Add Page" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertVisualization.visible`
-  - Show the "Visualization" button on the dossier authoring page toolbar or not.
+  - Show the "Visualization" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertFilter.visible`
-  - Show the "Filter" button on the dossier authoring page toolbar or not.
+  - Show the "Filter" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertText.visible`
-  - Show the "Text" button on the dossier authoring page toolbar or not.
+  - Show the "Text" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertImage.visible`
-  - Show the "Image" button on the dossier authoring page toolbar or not.
+  - Show the "Image" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertHtml.visible`
-  - Show the "Html" button on the dossier authoring page toolbar or not.
+  - Show the "Html" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertShape.visible`
-  - Show the "Shape" button on the dossier authoring page toolbar or not.
+  - Show the "Shape" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertPanelStack.visible`
-  - Show the "Panel Stack" button on the dossier authoring page toolbar or not.
+  - Show the "Panel Stack" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `insertInfoWindow.visible`
-  - Show the "Information Window" button on the dossier authoring page toolbar or not.
+  - Show the "Information Window" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `save.visible`
-  - Show the save button on the dossier authoring page toolbar or not.
+  - Show the save button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `dividerRight.visible`
-  - Show the right divider on the dossier authoring page toolbar or not.
+  - Show the right divider on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `more.visible`
-  - Show the "More" button(Only shown in small window) on the dossier authoring page toolbar or not.
+  - Show the "More" button(Only shown in small window) on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `freeformLayout.visible`
-  - Show the "Freeform Layout" button on the dossier authoring page toolbar or not.
+  - Show the "Freeform Layout" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `nlp.visible`
-  - Show the nlp button on the dossier authoring page toolbar or not.
+  - Show the nlp button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `responsiveViewEditor.visible`
-  - Show the "Responsive View Editor" button on the dossier authoring page toolbar or not.
+  - Show the "Responsive View Editor" button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
 - `responsivePreview.visible`
-  - Show the "Responsive Preview" button on the dossier authoring page toolbar or not.
+  - Show the "Responsive Preview" button on the dashboard authoring page toolbar or not.
   - Default value: `true`
 
 ##### `menubar`
 
-Use the `menubar` object to customize the visibilities of the menubar items on the dossier authoring page. All detailed properties below are `Boolean`.
+Use the `menubar` object to customize the visibilities of the menubar items on the dashboard authoring page. All detailed properties below are `Boolean`.
 
 - `library.visible`
-  - Show the Library home icon on the dossier authoring page menubar or not.
+  - Show the Library home icon on the dashboard authoring page menubar or not.
   - Default value: `true`.
 
 ### `props.customUi.reportConsumption`
