@@ -43,7 +43,7 @@ const sidebars = {
         type: "doc",
         id: "add-functionality/add-functionality",
       },
-      label: "Add functionality to an embedded dossier",
+      label: "Add functionality to an embedded dashboard",
       items: [
         "add-functionality/methods-and-properties",
         "add-functionality/add-nav",

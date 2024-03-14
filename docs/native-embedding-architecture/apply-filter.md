@@ -35,7 +35,7 @@ try {
 
 ## Get available filter elements
 
-To apply filters to the dossier, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Native Embedding SDK to retrieve the available attribute elements of the filters or selectors.
+To apply filters to the dashboard, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Native Embedding SDK to retrieve the available attribute elements of the filters or selectors.
 
 | `getFilterAvailableElements()` |                                                          |
 | ------------------------------ | -------------------------------------------------------- |

@@ -1,9 +1,9 @@
 ---
-title: Author an embedded dossier
-description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+title: Author an embedded dashboard
+description: To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 ---
 
-Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 
 :::tip
 
@@ -56,7 +56,7 @@ To avoid unexpected events, except the newly added events (see the callback even
 
 ### Initial parameters
 
-The props parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The props parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 The existing parameters can be roughly divided into three categories and their behaviors can be set with `dossierRenderingMode = authoring`.
 
@@ -88,7 +88,7 @@ The fields ["filters", "visualizationAppearances", "visualizationSelectedElement
 
 #### Input parameters
 
-An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 | Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
 | -------------------------- | --------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -211,7 +211,7 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 
 #### Input parameters
 
-An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 | Parameter Name           | Data Type | Default Value | Description                                                                                                                                                                          | Required? |
 | ------------------------ | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -261,7 +261,7 @@ microstrategy.dossier
 | props.authoring.toolbar.tableOfContents.visible <br/>props.authoring.toolbar.undo.visible <br/>props.authoring.toolbar.redo.visible <br/>props.authoring.toolbar.refresh.visible <br/>props.authoring.toolbar.pauseDataRetrieval.visible <br/>props.authoring.toolbar.reprompt.visible <br/>props.authoring.toolbar.dividerLeft.visible <br/>props.authoring.toolbar.addData.visible <br/>props.authoring.toolbar.addChapter.visible <br/>props.authoring.toolbar.addPage.visible <br/>props.authoring.toolbar.insertVisualization.visible <br/>props.authoring.toolbar.insertFilter.visible <br/>props.authoring.toolbar.insertText.visible <br/>props.authoring.toolbar.insertImage.visible <br/>props.authoring.toolbar.insertHtml.visible <br/>props.authoring.toolbar.insertShape.visible <br/>props.authoring.toolbar.insertPanelStack.visible <br/>props.authoring.toolbar.insertInfoWindow.visible <br/>props.authoring.toolbar.save.visible <br/>props.authoring.toolbar.dividerRight.visible <br/>props.authoring.toolbar.more.visible <br/>props.authoring.toolbar.freeformLayout.visible <br/>props.authoring.toolbar.nlp.visible <br/>props.authoring.toolbar.responsiveViewEditor.visible <br/>props.authoring.toolbar.responsivePreview.visible | Boolean   | true          | Show or hide corresponding buttons on the toolbar in the authoring UI. | No        |
 | props.authoring.panelVisibility.contents <br/>props.authoring.panelVisibility.datasets <br/>props.authoring.panelVisibility.editor <br/>props.authoring.panelVisibility.filter <br/>props.authoring.panelVisibility.format <br/>props.authoring.panelVisibility.layers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Boolean   | true          | Show or hide corresponding authoring panels.                           | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 Example:
 
@@ -315,7 +315,7 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | ---------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | props.newDossier | Boolean   | false         | Use when creating a new dashboard from scratch. When set to `true`, a new dashboard instance is created from a blank dashboard template. In this case, the `instance`, `objectID`, or `url` parameters don't have to and shouldn't be provided. | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dossier](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
 Example:
 
