@@ -336,20 +336,21 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
 - `aiBot` <Available since="2024.06" />
 
   - Enable the snapshot panel, topics panel, chat panel(show clear history, show give topics, should load history, should save to history) on the bot consumption page or not.
+  - Default value is undefined, which falls back to the following:
 
   ```javascript
    {
      snapshot: {
-        enabled: false,
+        enabled: true,
       },
       topicsPanel: {
-        enabled: false,
+        enabled: true,
       },
       chatPanel: {
-        showClearHistory: false,
-        showGiveTopics: false,
-        shouldLoadHistory: false,
-        shouldSaveToHistory: false,
+        showClearHistory: true,
+        showGiveTopics: true,
+        shouldLoadHistory: true,
+        shouldSaveToHistory: true,
       }
     }
   ```
