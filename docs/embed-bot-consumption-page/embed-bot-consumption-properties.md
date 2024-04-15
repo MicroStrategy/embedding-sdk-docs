@@ -340,7 +340,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
 
   ```javascript
    {
-     snapshot: {
+      snapshotPanel: {
         enabled: true,
       },
       topicsPanel: {
@@ -389,7 +389,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
     },
     botConsumption: {
       aiBot: {
-        snapshot: {
+        snapshotPanel: {
           enabled: false,
         },
         topicsPanel: {
