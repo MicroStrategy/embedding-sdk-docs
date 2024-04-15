@@ -323,14 +323,36 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
 
 Use the `botConsumption` object to customize UI of the bot consumption page. All detailed properties below are `Boolean`.
 
-- `snapshot.enabled`
+- `snapshot.enabled` <Deprecated since="2024.06" />
 
   - Enable the snapshot panel on the bot consumption page or not.
   - Default value: `true`.
 
 - `navigationBar.enabled`
+
   - Enable the navigation bar on the bot consumption page or not.
   - Default value: `false`.
+
+- `aiBot` <Available since="2024.06" />
+
+  - Enable the snapshot panel, topics panel, chat panel(show clear history, show give topics, should load history, should save to history) on the bot consumption page or not.
+
+  ```javascript
+   {
+     snapshot: {
+        enabled: false,
+      },
+      topicsPanel: {
+        enabled: false,
+      },
+      chatPanel: {
+        showClearHistory: false,
+        showGiveTopics: false,
+        shouldLoadHistory: false,
+        shouldSaveToHistory: false,
+      }
+    }
+  ```
 
 #### Sample
 
@@ -350,6 +372,34 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
       },
       navigationBar: {
         enabled: true,
+      },
+    },
+  },
+});
+
+microstrategy.embeddingContexts.embedBotConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  customUi: {
+    addToLibraryBanner: {
+      enabled: true,
+    },
+    botConsumption: {
+      aiBot: {
+        snapshot: {
+          enabled: false,
+        },
+        topicsPanel: {
+          enabled: false,
+        },
+        chatPanel: {
+          showClearHistory: false,
+          showGiveTopics: false,
+          shouldLoadHistory: false,
+          shouldSaveToHistory: false,
+        },
       },
     },
   },
