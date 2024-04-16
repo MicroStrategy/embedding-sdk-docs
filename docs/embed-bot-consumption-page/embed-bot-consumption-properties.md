@@ -328,6 +328,11 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
   - Enable the snapshot panel on the bot consumption page or not.
   - Default value: `true`.
 
+- `topicsPanel.enabled` <Deprecated since="2024 Update6" />
+
+  - Enable the topics panel on the bot consumption page or not.
+  - Default value is undefined, which falls back to true.
+
 - `navigationBar.enabled`
 
   - Enable the navigation bar on the bot consumption page or not.
