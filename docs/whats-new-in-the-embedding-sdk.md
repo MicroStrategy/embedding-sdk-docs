@@ -5,6 +5,14 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## 2024 Update6
+
+[Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+
+- Deprecate 'botConsumption' object property `snapshot.enabled` to customize UI of the bot consumption page.
+- Deprecate 'botConsumption' object property `topicsPanel.enabled` to customize UI of the bot consumption page.
+- Introduce 'botConsumption' object property `aiBot` to customize UI of the bot consumption page.
+
 ## 2024 Update 3
 
 - Rename 'dossier' into 'dashboard'.

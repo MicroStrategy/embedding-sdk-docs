@@ -323,14 +323,49 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
 
 Use the `botConsumption` object to customize UI of the bot consumption page. All detailed properties below are `Boolean`.
 
-- `snapshot.enabled`
+- `snapshot.enabled` <Deprecated since="2024 Update6" />
 
   - Enable the snapshot panel on the bot consumption page or not.
   - Default value: `true`.
 
+- `topicsPanel.enabled` <Deprecated since="2024 Update6" />
+
+  - Enable the topics panel on the bot consumption page or not.
+  - Default value is undefined, which falls back to true.
+
 - `navigationBar.enabled`
+
   - Enable the navigation bar on the bot consumption page or not.
   - Default value: `false`.
+
+- `aiBot` <Available since="2024 Update6" />
+
+  - Enable the snapshot panel, topics panel, chat panel(show clear history, show give topics, should load history, should save to history) on the bot consumption page or not.
+  - Default value is undefined, which falls back to the following:
+
+  ```javascript
+   {
+      snapshotPanel: {
+        enabled: true,
+      },
+      topicsPanel: {
+        enabled: true,
+      },
+      chatPanel: {
+        showClearHistory: true,
+        showGiveTopics: true,
+        shouldLoadHistory: true,
+        shouldSaveToHistory: true,
+      }
+    }
+  ```
+
+- `aiBot.snapshotPanel.enabled`: This field specifies whether to enable the snapshot panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.topicsPanel.enabled`: This field specifies whether to enable the topic panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showClearHistory`: This field specifies whether to show clear history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showGiveTopics`: This field specifies whether to show give topics in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.shouldLoadHistory`: This field specifies whether to load chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.shouldSaveToHistory`: This field specifies whether to save chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 
 #### Sample
 
@@ -345,8 +380,19 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
       enabled: true,
     },
     botConsumption: {
-      snapshot: {
-        enabled: false,
+      aiBot: {
+        snapshotPanel: {
+          enabled: false,
+        },
+        topicsPanel: {
+          enabled: false,
+        },
+        chatPanel: {
+          showClearHistory: false,
+          showGiveTopics: false,
+          shouldLoadHistory: false,
+          shouldSaveToHistory: false,
+        },
       },
       navigationBar: {
         enabled: true,
