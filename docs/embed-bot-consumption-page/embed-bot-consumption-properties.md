@@ -340,11 +340,14 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
 
 - `aiBot` <Available since="2024 Update6" />
 
-  - Enable the snapshot panel, topics panel, chat panel(show clear history, show give topics, should load history, should save to history) on the bot consumption page or not.
+  - Enable title bars, the snapshot panel, topics panel, chat panel(show clear history, show give topics, should load history, should save to history) on the bot consumption page or not.
   - Default value is undefined, which falls back to the following:
 
   ```javascript
    {
+      titleBar: {
+        enabled: true,
+      },
       snapshotPanel: {
         enabled: true,
       },
@@ -360,6 +363,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
     }
   ```
 
+- `aiBot.titleBar.enabled`: This field specifies whether to enable the title bar of chat panel, snapshot panel and topic panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true. However, it's ignored when the field isn't defined or defined as true. Only when the value is false, the title bars of panels are hidden.
 - `aiBot.snapshotPanel.enabled`: This field specifies whether to enable the snapshot panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.topicsPanel.enabled`: This field specifies whether to enable the topic panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.showClearHistory`: This field specifies whether to show clear history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
@@ -381,6 +385,9 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
     },
     botConsumption: {
       aiBot: {
+        titleBar: {
+          enabled: false,
+        },
         snapshotPanel: {
           enabled: false,
         },
