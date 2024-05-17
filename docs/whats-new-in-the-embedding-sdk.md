@@ -12,6 +12,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - Deprecate 'botConsumption' object property `snapshot.enabled` to customize UI of the bot consumption page.
 - Deprecate 'botConsumption' object property `topicsPanel.enabled` to customize UI of the bot consumption page.
 - Introduce 'botConsumption' object property `aiBot` to customize UI of the bot consumption page.
+- Introduce 'customUi' object property `theme` to customize UI of Microstrategy Library including bot consumption page.
 
 ## 2024 Update 3
 
