@@ -305,6 +305,31 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 });
 ```
 
+### `disableHyper`
+
+<Available since="2024 Update6" />
+Use the `disableHyper` boolean value to decide if the hyper extension highlight service should be disable or not for the bot consumption page
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedBotConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  disableHyper: true,
+});
+```
+
 ### `customUi`
 
 Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, bot consumption page，bot authoring page, and report consumption page.
