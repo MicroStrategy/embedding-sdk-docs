@@ -319,6 +319,14 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
   - Enable the Library "Add To Library" banner or not. If the banner is disabled in custom application, the true value wouldn’t take effect.
   - Default value: `false`.
 
+#### `theme`
+
+<Available since="2024 Update6" />
+Use the `theme` object to customize the "theme" in the MicroStrategy Library including bot consumption page. All detailed properties below are `Boolean`.
+
+- `enabled`
+  - Enable the Library "theme" colors or not. The value can be true or false. If the value isn't defined, the default is true.
+
 ##### `botConsumption`
 
 Use the `botConsumption` object to customize UI of the bot consumption page. All detailed properties below are `Boolean`.
@@ -384,6 +392,9 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
   customUi: {
     addToLibraryBanner: {
       enabled: true,
+    },
+    theme: {
+      enabled: false,
     },
     botConsumption: {
       aiBot: {
