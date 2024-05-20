@@ -38,7 +38,7 @@ This API would return a Promise object that resolves to nothing.
 #### Example
 
 ```js
-await embeddingContext.botConsumptionService.setSidebarVisibility({
+await embeddingContext.botConsumptionService.askQuestion({
   questionText: "how are you?",
   type: "text",
 });
