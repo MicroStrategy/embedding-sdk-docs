@@ -13,7 +13,8 @@ The APIs under embed botConsumption page object are as below.
 
 #### Description
 
-This API could be used to send a question to bot consumption page, and the library bot could help you to send a question automatically
+This API can be used to ask a question to a bot consumption page which is already loaded.
+If the bot consumption page is loading then the question will be triggered after it is initialized
 
 #### Class
 

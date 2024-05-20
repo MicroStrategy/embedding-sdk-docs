@@ -316,7 +316,7 @@ No
 
 #### Default value
 
-N/A
+undefined
 
 #### Sample
 
