@@ -308,7 +308,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 ### `disableHyper`
 
 <Available since="2024 Update6" />
-Use the `disableHyper` boolean value to decide if the hyper extension highlight service should be disable or not for the bot consumption page
+Use the `disableHyper` boolean value to decide if the hyper extension should highlight the bot consumption page or not
 
 #### Required?
 

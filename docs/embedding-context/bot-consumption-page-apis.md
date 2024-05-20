@@ -13,7 +13,7 @@ The APIs under embed botConsumption page object are as below.
 
 #### Description
 
-This API could be used to send a question to bot consumption page, which is all delegated to the mstr-chatbot's onSend function to ask a question
+This API could be used to send a question to bot consumption page, and the library bot could help you to send a question automatically
 
 #### Class
 
