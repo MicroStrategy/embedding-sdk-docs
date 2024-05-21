@@ -13,6 +13,9 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - Deprecate 'botConsumption' object property `topicsPanel.enabled` to customize UI of the bot consumption page.
 - Introduce 'botConsumption' object property `aiBot` to customize UI of the bot consumption page.
 - Introduce 'customUi' object property `theme` to customize UI of Microstrategy Library including bot consumption page.
+- Introduce 'botConsumption' boolean property 'disableHyper' to customize if you want to disable hyper extension highlight service in bot consumption page.
+- [Bot consumption page APIs](./embedding-context/bot-consumption-page-apis.md)
+  - You can call new APIs on the bot consumption page to interact with Microstrategy bot.
 
 ## 2024 Update 3
 

@@ -106,6 +106,7 @@ const sidebars = {
       items: [
         "embedding-context/library-page-apis",
         "embedding-context/dossier-consumption-page-apis",
+        "embedding-context/bot-consumption-page-apis",
       ],
     },
     {
