@@ -391,6 +391,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
         showClearHistory: true,
         showGiveTopics: true,
         showWelcomePageBotImg: true,
+        showCopyBtn: true,
         shouldLoadHistory: true,
         shouldSaveToHistory: true,
       }
@@ -403,6 +404,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
 - `aiBot.chatPanel.showClearHistory`: This field specifies whether to show clear history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.showGiveTopics`: This field specifies whether to show give topics in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.showWelcomePageBotImg`: This field specifies whether to show bot image in the welcome page of the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showCopyBtn`: This field specifies whether to show copy button in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.shouldLoadHistory`: This field specifies whether to load chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.shouldSaveToHistory`: This field specifies whether to save chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 
@@ -436,6 +438,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
           showClearHistory: false,
           showGiveTopics: false,
           showWelcomePageBotImg: false,
+          showCopyBtn: false,
           shouldLoadHistory: false,
           shouldSaveToHistory: false,
         },
