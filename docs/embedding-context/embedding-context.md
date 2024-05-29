@@ -123,8 +123,8 @@ This API would return a Promise that resolves to an object, whose serialized jso
 
 ```json
 {
-  "redirect": true,
-};
+  "redirect": true
+}
 ```
 
 The value of the `redirect` field denotes the page is changed or not. For the case that input `pageInfo` points to the current page, the value of `redirect` would be `false`.

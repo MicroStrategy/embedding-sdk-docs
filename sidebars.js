@@ -34,8 +34,8 @@ const sidebars = {
         "support-for-different-authentication-environments/multiple-modes",
         "support-for-different-authentication-environments/standard-authentication",
         "support-for-different-authentication-environments/authentication-saml",
-        "support-for-different-authentication-environments/seamless-login",
         "support-for-different-authentication-environments/new-authentication-apis",
+        "support-for-different-authentication-environments/seamless-login",
       ],
     },
     {
