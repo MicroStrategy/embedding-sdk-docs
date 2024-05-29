@@ -94,3 +94,69 @@ See the identical function in [Session error handling after dashboard creation](
 #### Description
 
 See the identical function in [Session error handling after dashboard creation](../add-functionality/error-handling#session-error-handling-after-dossier-creation).
+
+### `goToPage(pageInfo)`
+
+#### Description
+
+This API could be used to navigate to an arbitrary page on the OOTB Library.
+
+#### Class
+
+`EmbeddingContext`
+
+#### Input Parameters
+
+| Parameter Name         | Data Type | Description                                     | Is Required |
+| ---------------------- | --------- | ----------------------------------------------- | ----------- |
+| pageInfo.applicationId | string    | The application ID, which must be a GUID.       | false       |
+| pageInfo.projectId     | string    | The project ID, which must be a GUID.           | false       |
+| pageInfo.objectId      | string    | The object ID, which must be a valid object id. | false       |
+| pageInfo.pageKey       | string    | The page key.                                   | false       |
+| pageInfo.isAuthoring   | boolean   | Go to the authoring page or not.                | false       |
+
+The API call like `embeddingContext.goToPage()` will navigate to the homepage.
+
+#### Return type
+
+This API would return a Promise that resolves to an object, whose serialized json is like:
+
+```json
+{
+  "redirect": true,
+};
+```
+
+The value of the `redirect` field denotes the page is changed or not. For the case that input `pageInfo` points to the current page, the value of `redirect` would be `false`.
+
+If it encounters an error in its executing process, the error would be thrown and could be caught.
+
+#### Example
+
+```js
+try {
+  await embeddingContext.goToPage({
+    applicationId: "3580143DAA42D06B0440D7814C39E562",
+    projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+    objectId: "EC70648611E7A2F962E90080EFD58751",
+    pageKey: "W69",
+    isAuthoring: false,
+  });
+} catch (err) {
+  // The other error handling logic here
+}
+```
+
+#### API Errors
+
+| Error Case                                                                   | Error Category | Handling Module      | Error Handling                                |
+| ---------------------------------------------------------------------------- | -------------- | -------------------- | --------------------------------------------- |
+| The input parameter fails input validation                                   | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| The request url isn’t valid, like the invalid project, object id, or pageKey | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| The other cases that the user can’t open the page                            | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object |
+
+The case "the input parameter fails input validation" contains:
+
+- The field value's data type isn't right
+- `objectId` and `projectId` don't exist at the same time
+- `pageKey`, `isAuthoring` appears when `objectId` and `projectId` don't exist

@@ -83,3 +83,17 @@ If you are using MicroStrategy 2021 Update 5 or before, make the following chang
 1. Restart Tomcat.
 
 For more information, see [Chrome v80 Cookie Behavior and the Impact on MicroStrategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-MicroStrategy-Deployments?language=en_US).
+
+## The Partitioned Cookie Change
+
+Before MicroStrategy 2024 Update 6, when the Library server and the client website are in different domains, the Embedding SDK requires third-party cookies to be allowed to work correctly. In the past, Chrome's default setting was only "Block third-party cookies in Incognito mode", so the customer can use Embedding SDK without changing the Chrome settings.
+
+![The default Chrome preference](./images/chrome-preference.png)
+
+However, third-party cookies are on their way out. Google is expected to stop the use of third-party cookies by [2025 Q2](https://developers.google.com/privacy-sandbox/3pcd). At that time, Chrome will block third-party cookies by default, and the customer can't use Embedding SDK unless he changes the Chrome preference to enable the 3rd party cookies manually.
+
+To avoid the changes of third-party cookies default setting breaking the Embedding SDK workflow, we adopt [CHIPS](https://developer.chrome.com/docs/privacy-sandbox/chips/)(Cookies Having Independent Partitioned State) solution to put the Library server's cookie into partitioned storage. The user needs to enable the partitioned cookie in the Library settings to use this solution:
+
+![The partitioned cookie setting](./images/partitioned-cookie.png)
+
+After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes, and the user need to do more to make it work. The details can be seen in [SAML or OIDC authentication after MicroStrategy 2024 Update 6](./support-for-different-authentication-environments/authentication-saml#for-microstrategy-2024-update-6-or-after).
