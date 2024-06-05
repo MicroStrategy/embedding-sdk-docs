@@ -392,6 +392,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
         showGiveTopics: true,
         showWelcomePageBotImg: true,
         showCopyBtn: true,
+        shouldExpandRelatedSuggestionsOnInit: true,
         shouldLoadHistory: true,
         shouldSaveToHistory: true,
       }
@@ -405,6 +406,7 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
 - `aiBot.chatPanel.showGiveTopics`: This field specifies whether to show give topics in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.showWelcomePageBotImg`: This field specifies whether to show bot image in the welcome page of the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.showCopyBtn`: This field specifies whether to show copy button in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.shouldExpandRelatedSuggestionsOnInit`: This field specifies whether to show the related suggestions list in the chat panel as expanded or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.shouldLoadHistory`: This field specifies whether to load chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.shouldSaveToHistory`: This field specifies whether to save chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 
