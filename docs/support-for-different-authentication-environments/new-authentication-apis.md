@@ -3,7 +3,7 @@ title: SAML and OIDC authentication APIs
 description: Describes the Embedding SDK APIs that are available for SAML and OIDC authentication.
 ---
 
-To simplify the SAML and OIDC login workflow, we expose 2 new APIs `microstrategy.auth.samlLogin(serverUrl)` and `microstrategy.auth.oidcLogin(serverUrl)`. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g28).
+To simplify the SAML and OIDC login workflow, we expose 2 new APIs `microstrategy.auth.samlLogin(serverUrl)` and `microstrategy.auth.oidcLogin(serverUrl)`. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g17).
 
 The details of these 2 APIs are as below:
 

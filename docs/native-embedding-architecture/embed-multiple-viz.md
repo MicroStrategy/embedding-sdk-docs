@@ -11,6 +11,8 @@ You can use the Native Embedding SDK to embed multiple visualizations in a clien
 
 Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
+Here is a live demo for this in [Embedding Playground](https://playground.microstrategy.com/?example=g28).
+
 ## Requirements
 
 You must use the js bundle, `native-embedding-sdk.js`:
