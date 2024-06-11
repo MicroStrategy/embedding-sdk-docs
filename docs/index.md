@@ -58,8 +58,4 @@ To help you get started, we have provided a number of simple applications with s
 
   A playground for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
 
-- [More Embedding SDK examples on Github](https://microstrategy.github.io/embedding-sdk-samples/)
-
-  A collection of examples highlighting functionality and workflows of the Embedding SDK. You can play with the examples with no setup.
-
 To see changes to the Embedding SDK in the current release, refer to [What's new](./whats-new-in-the-embedding-sdk.md).

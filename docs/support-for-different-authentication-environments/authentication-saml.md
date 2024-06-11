@@ -5,7 +5,7 @@ description: The example in this topic illustrates how to display an embedded da
 
 The example in this topic illustrates how to display an embedded dashboard using SAML authentication. The same code works for OIDC except the `loginMode` parameter.
 
-A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/4_Use_SAML.html). Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
+A live example can be seen on [GitHub](https://microstrategy.github.io/playground/?example=g17). Also check out [other examples](https://microstrategy.github.io/playground).
 
 ## The workflow
 
@@ -35,7 +35,7 @@ You may encounter some difficulties in this workflow:
 
 In MicroStrategy 2024 Update 6, we add the [partitioned cookie change](../config#the-partitioned-cookie-change) to enable the customer to use the Embedding SDK even if third-party cookies are blocked. But if third-party cookies are blocked, the old SAML or OIDC login process can't work.
 
-You can unblock the third-party cookies manually to support the old workflow, but we recommend you use the new [embedding auth APIs](../support-for-different-authentication-environments/new-authentication-apis.md), which can work in the third-party cookies blocked case, and simplify the SAML or OIDC login logic. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g28). A simple code piece would be like this:
+You can unblock the third-party cookies manually to support the old workflow, but we recommend you use the new [embedding auth APIs](../support-for-different-authentication-environments/new-authentication-apis.md), which can work in the third-party cookies blocked case, and simplify the SAML or OIDC login logic. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g17). A simple code piece would be like this:
 
 ```js
 microstrategy.embeddingContexts.embedLibraryPage({
