@@ -1,5 +1,13 @@
 <!-- Please include a summary of the change and which issue is fixed above. Please also include relevant motivation and context. List any dependencies that are required for this change. -->
 
+## Please DO NOT skip the pre-commit checks
+
+<!-- Please mark the relevant options with 'X' like [X] -->
+
+- [ ] Passed all pre-commit tests
+
+### Try `yarn lint:fix` to fix the format issues found by pre-commit tests
+
 ## Type of Changes
 
 <!-- Please mark the relevant options with 'X' like [X] -->
