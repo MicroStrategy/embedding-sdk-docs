@@ -1,9 +1,9 @@
 ---
-title: Use standard authentication
-description: The example in this topic illustrates how to seamlessly display an embedded dashboard using standard authentication
+title: Use standard or LDAP authentication
+description: The example in this topic illustrates how to seamlessly display an embedded dashboard using standard or LDAP authentication
 ---
 
-The example in this topic showcases how to display an embedded dashboard using Standard authentication
+The example in this topic showcases how to display an embedded dashboard using Standard or LDAP authentication
 
 To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g17) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dashboard and authenticate using Standard authentication.
 
@@ -12,7 +12,7 @@ The workflow consists of:
 - [Set up Library Server](#set-up-library-server)
 - [Import Embedding SDK](#import-embedding-sdk)
 - [Embed dashboard with custom authentication properties](#embed-dashboard-with-custom-authentication-properties)
-- [Authentication through REST API using standard authentication](#authentication-through-rest-api-using-standard-authentication)
+- [Authentication through REST API using standard or LDAP authentication](#authentication-through-rest-api-using-standard-or-ldap-authentication)
 - [Putting it all together](#putting-it-all-together)
 
 ## Set up Library Server
@@ -36,7 +36,7 @@ Import Embedding SDK from your Library Server to your HTML page. In the code sam
 
 ## Embed dashboard with custom authentication properties
 
-The sample code below shows how to embed a sample dashboard with properties set to enable custom authentication mode where you have to provide the auth token to log in. Note: the `login` function will be implemented in the [next section](#authentication-through-rest-api-using-standard-authentication).
+The sample code below shows how to embed a sample dashboard with properties set to enable custom authentication mode where you have to provide the auth token to log in. Note: the `login` function will be implemented in the [next section](#authentication-through-rest-api-using-standard-or-ldap-authentication).
 
 ```html
 <body>
@@ -93,11 +93,11 @@ The sample code below shows how to embed a sample dashboard with properties set 
 </body>
 ```
 
-## Authentication through REST API using Standard authentication
+## Authentication through REST API using Standard or LDAP authentication
 
 The `getAuthToken()` function will make a REST API call to see if there is an existing login session. The endpoint used is [GET /api/auth/token](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/getAuthToken).
 
-The `createAuthToken()` function will authenticate the user using Standard authentication. The endpoint used is [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/postLogin). The main points are to change the `loginMode` to 1 for Standard authentication and to provide the `username` and `password` unlike Guest authentication.
+The `createAuthToken()` function will authenticate the user using Standard authentication. The endpoint used is [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/postLogin). The main points are to change the `loginMode` to `1` for Standard authentication, to `16` for LDAP authentication, and to provide the `username` and `password` unlike Guest authentication.
 
 The `login()` function should be used for [`getLoginToken`](../add-functionality/methods-and-properties#getlogintoken). This function return the existing auth token if it exists using `getAuthToken()` and create a new one to return if it doesn't exist using `createAuthToken()`.
 
@@ -130,6 +130,7 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         loginMode: 1, // 1 means Standard login
+        // loginMode: 16, // 16 means LDAP login
         username: prompt("Please enter your username"), // use guest / no password to test
         password: prompt("Please enter your password"),
       }),
@@ -231,6 +232,7 @@ Adjust as needed.
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
               loginMode: 1, // 1 means Standard login
+              // loginMode: 16, // 16 means LDAP login
               username: prompt("Please enter your username"), // use guest / no password to test
               password: prompt("Please enter your password"),
             }),
