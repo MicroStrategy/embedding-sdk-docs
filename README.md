@@ -4,24 +4,6 @@
 
 Documentation for Embedding SDK
 
-## Summary
-
-### Ownership
-
-<!-- Begin: Owner
-    If a repo belongs to several teams write down the team that owns the largest proportion.
-    This information can be found here:
-    https://microstrategy.atlassian.net/wiki/spaces/DevOps/pages/1070727930/CI+pipelines+Point+of+Contacts
--->
-
-Team: AC-Services
-
-Contact: Ran Yu (ryu)
-
-DevOps POC: Zhou Wang (zhowang)
-
-<!-- End: Owner -->
-
 ## Usage
 
 ### Requirements
