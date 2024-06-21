@@ -119,13 +119,13 @@ The list below shows the usage of emojis in our Docs site:
   - If the description of the link is related to the title of some page, use sentence case. For example:
 
     ```md
-    [Ability to customize dossier pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
+    [Ability to customize dashboard pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
     ```
 
   - If the description of the link is in the middle of the sentence and it is a brief explanation of what the link is, use proper cases as needed. For example:
 
     ```md
-    New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dossier.
+    New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dashboard.
     ```
 
 ## Naming conventions

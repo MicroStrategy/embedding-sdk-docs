@@ -5,28 +5,45 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## 2024 Update 6
+
+- [Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+  - Deprecate `botConsumption` object property `snapshot.enabled` to customize UI of the bot consumption page.
+  - Deprecate `botConsumption` object property `topicsPanel.enabled` to customize UI of the bot consumption page.
+  - Introduce `botConsumption` object property `aiBot` to customize UI of the bot consumption page.
+  - Introduce `customUi` object property `theme` to customize UI of Microstrategy Library including bot consumption page.
+  - Introduce `botConsumption` boolean property `disableHyper` to customize if you want to disable hyper extension highlight service in bot consumption page.
+- [Bot consumption page APIs.](./embedding-context/bot-consumption-page-apis.md)
+  - You can call new APIs on the bot consumption page to interact with Microstrategy bot.
+- [New dashboard consumption page APIs.](./embedding-context/dossier-consumption-page-apis.md)
+  - You can call the [dashboard APIs](./add-functionality/add-functionality.md) via the `embeddingContext.dossierConsumption` object on a dashboard consumption page.
+- [A new embedding context API.](./embedding-context/#gotopagepageinfo)
+  - You can call the new API `embeddingContext.goToPage(page)` to navigate to an arbitrary page on the OOTB Library.
+- [New OAuth APIs for SAML and OIDC login.](./support-for-different-authentication-environments/new-authentication-apis.md)
+  - You can call the new APIs to simplify the original SAML or OIDC workflow.
+
 ## 2024 Update 3
 
 - Rename 'dossier' into 'dashboard'.
-- [Embed Bot Visualizations with Native Embedding SDK](./native-embedding-architecture/embed-bot-visualizations.md)
+- [Embed Bot Visualizations with Native Embedding SDK.](./native-embedding-architecture/embed-bot-visualizations.md)
   - You can use the new Embedding SDK APIs to embed the visualizations on a bot consumption page.
 
 ## 2021 Update 12
 
-[Embed MicroStrategy bot consumption page](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+[Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
 
 - You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
 
 ## 2021 Update 11
 
-- [Embed MicroStrategy dashboard consumption page](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
   - You can use a new Embedding SDK API to embed a dashboard consumption page, in which we support the user to navigate between the dashboard and the homepage.
-- [Dashboard consumption page APIs](./embedding-context/dossier-consumption-page-apis.md)
+- [Dashboard consumption page APIs.](./embedding-context/dossier-consumption-page-apis.md)
   - You can call new APIs on the dashboard consumption page to get and set the selected components.
 
 ## 2021 Update 9
 
-[Native Embedding SDK](./native-embedding-architecture/native-embedding-architecture.md)
+[The Native Embedding SDK.](./native-embedding-architecture/native-embedding-architecture.md)
 
 - You can use the Native Embedding SDK to embed visualizations from separate containers to improve performance.
 - Users can interact with the embedded visualization.

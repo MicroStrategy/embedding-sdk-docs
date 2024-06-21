@@ -34,6 +34,7 @@ const sidebars = {
         "support-for-different-authentication-environments/multiple-modes",
         "support-for-different-authentication-environments/standard-authentication",
         "support-for-different-authentication-environments/authentication-saml",
+        "support-for-different-authentication-environments/new-authentication-apis",
         "support-for-different-authentication-environments/seamless-login",
       ],
     },
@@ -106,6 +107,7 @@ const sidebars = {
       items: [
         "embedding-context/library-page-apis",
         "embedding-context/dossier-consumption-page-apis",
+        "embedding-context/bot-consumption-page-apis",
       ],
     },
     {
