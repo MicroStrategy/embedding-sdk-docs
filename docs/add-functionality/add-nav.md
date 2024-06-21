@@ -1,9 +1,9 @@
 ---
 title: Add navigation
-description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+description: Once you have embedded a dashboard, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dashboard, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 ---
 
-The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. Once you have embedded a dossier, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. Once you have embedded a dashboard, you can use helper methods in the Embedding SDK to let users navigate within the dashboard. For example, you can add code to get the table of contents for the dashboard, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
 :::tip
 
@@ -13,7 +13,7 @@ To help you get started, we have provided a [page navigation example in the Embe
 
 ## Helper methods for navigation
 
-You can use the methods described below to navigate within the dashboard. You can get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
+You can use the methods described below to navigate within the dashboard. You can get the table of contents for the dashboard, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations.
 
 Most of the navigation is performed using methods of the Dossier class, but there is one method for navigation in the Chapter class.
 

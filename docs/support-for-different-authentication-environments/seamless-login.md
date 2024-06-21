@@ -22,7 +22,7 @@ The authentication workflow is the following:
 
 :::tip
 
-A live example can be seen on [GitHub](https://microstrategy.github.io/embedding-sdk-samples/feature_showcase/3_Use_IdentityToken.html), which shows how to pass the identity token to Embedding SDK. Also check out [other examples](https://microstrategy.github.io/embedding-sdk-samples/).
+A live example can be seen on [GitHub](https://microstrategy.github.io/playground/?example=g17) with 'Identity Token Authentication' operation under 'Authentication' tag, which shows how to pass the identity token to Embedding SDK. Also check out [other examples](https://microstrategy.github.io/playground).
 
 :::
 

@@ -1,9 +1,9 @@
 ---
 title: Author an embedded dashboard
-description: To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+description: To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 ---
 
-Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dossier, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 
 :::tip
 

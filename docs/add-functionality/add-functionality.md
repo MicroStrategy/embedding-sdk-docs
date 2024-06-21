@@ -1,9 +1,9 @@
 ---
 title: Add functionality to an embedded dashboard
-description: Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
+description: Once you have embedded a dashboard, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
 ---
 
-Once you have embedded a dossier, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
+Once you have embedded a dashboard, you can use helper methods in the Embedding SDK to add other functionality. The topics in this section describe how to implement different kinds of functionalities with code examples.
 
 - [Methods and properties for an embedded dashboard](./methods-and-properties.md)
 
@@ -11,7 +11,7 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
 - [Add navigation](./add-nav.md)
 
-  Describes the methods that can be used for navigation within an embedded dashboard. For example, the Embedding SDK lets you add code to get the table of contents for the dossier, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations. Provides an example that illustrates how to include navigation controls to allow users to page through the various chapters and pages of an embedded dashboard.
+  Describes the methods that can be used for navigation within an embedded dashboard. For example, the Embedding SDK lets you add code to get the table of contents for the dashboard, go to the previous or next page, navigate to a specific page, get the current page or chapter, get a specific page, or get a list of pages, chapters and visualizations. Provides an example that illustrates how to include navigation controls to allow users to page through the various chapters and pages of an embedded dashboard.
 
 - [Add event handling](./add-event.md)
 
@@ -19,7 +19,7 @@ Once you have embedded a dossier, you can use helper methods in the Embedding SD
 
 - [Retrieve and apply filters](./filters.md)
 
-  Describes how to retrieve and apply filters for an embedded dashboard and shows the filter details for each filter type, with code examples. For example, you can apply different kinds of filters to a chapter in a dossier, either during execution or after a dashboard has been rendered. Provides examples on how to retrieve filters and apply each different type of filter.
+  Describes how to retrieve and apply filters for an embedded dashboard and shows the filter details for each filter type, with code examples. For example, you can apply different kinds of filters to a chapter in a dashboard, either during execution or after a dashboard has been rendered. Provides examples on how to retrieve filters and apply each different type of filter.
 
 - [Error handling](./error-handling.md)
 

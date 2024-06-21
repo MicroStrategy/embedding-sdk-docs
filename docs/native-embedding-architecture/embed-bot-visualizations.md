@@ -24,7 +24,7 @@ You must use the js bundle, `native-embedding-sdk.js`:
 
 ### Embed visualizations from one bot
 
-To embed multiple visualizations from one dossier, after referring `native-embedding-sdk.js`, use the code shown below:
+To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use the code shown below:
 (please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
