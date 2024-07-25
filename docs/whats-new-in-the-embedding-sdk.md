@@ -5,7 +5,7 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## 2024 Update 6
+## MicroStrategy ONE June 2024
 
 - [Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
   - Deprecate `botConsumption` object property `snapshot.enabled` to customize UI of the bot consumption page.
@@ -22,7 +22,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [New OAuth APIs for SAML and OIDC login.](./support-for-different-authentication-environments/new-authentication-apis.md)
   - You can call the new APIs to simplify the original SAML or OIDC workflow.
 
-## 2024 Update 3
+## MicroStrategy One March 2024
 
 - Rename 'dossier' into 'dashboard'.
 - [Embed Bot Visualizations with Native Embedding SDK.](./native-embedding-architecture/embed-bot-visualizations.md)
