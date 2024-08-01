@@ -337,6 +337,10 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
   - Disable the dashboard instance manipulation auto saving or not.
   - Default value: `false`.
 
+- `enablePageSelection`
+  - Enable dashoard page selection in the ToC panel.
+  - Default value: `false`.
+
 #### Sample
 
 ```js
@@ -349,6 +353,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
     dossierConsumption: {
       componentSelectionMode: "multipleSelection",
       disableManipulationsAutoSaving: false,
+      enablePageSelection: false,
     },
   },
 });
