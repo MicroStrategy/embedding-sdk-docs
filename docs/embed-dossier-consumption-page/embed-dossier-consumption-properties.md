@@ -334,6 +334,7 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
   - Default value: "noSelection".
 
 - `disableManipulationsAutoSaving`
+
   - Disable the dashboard instance manipulation auto saving or not.
   - Default value: `false`.
 

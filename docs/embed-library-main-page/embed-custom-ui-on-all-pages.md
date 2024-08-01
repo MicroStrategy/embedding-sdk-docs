@@ -75,7 +75,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
         dockedToC: {
           isOpen: false,
           isDocked: false,
-        }
+        },
       },
     },
     dossierAuthoring: {
