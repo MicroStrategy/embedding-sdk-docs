@@ -340,7 +340,7 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
 
 - `enablePageSelection`
 
-  - Enable dashoard page selection in the ToC panel.
+  - Enable dashoard page selection in the TOC panel.
   - Default value: `false`.
 
 #### Sample
