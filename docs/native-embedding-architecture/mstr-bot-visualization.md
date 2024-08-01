@@ -3,7 +3,7 @@ title: MstrBotVisualization class
 description: MstrBotVisualization class
 ---
 
-<Available since="2024 Update 3"/>
+<Available since="MicroStrategy One March 2024"/>
 
 The object returned from the `MstrBot.renderVisualization()` function, which allows access to the MicroStrategy bot visualization object.
 

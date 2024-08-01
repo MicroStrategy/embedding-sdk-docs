@@ -86,7 +86,7 @@ For more information, see [Chrome v80 Cookie Behavior and the Impact on MicroStr
 
 ## The Partitioned Cookie Change
 
-Before MicroStrategy 2024 Update 6, when the Library server and the client website are in different domains, the Embedding SDK requires third-party cookies to be allowed to work correctly. In the past, Chrome's default setting was only "Block third-party cookies in Incognito mode", so the customer can use Embedding SDK without changing the Chrome settings.
+Before MicroStrategy ONE June 2024, when the Library server and the client website are in different domains, the Embedding SDK requires third-party cookies to be allowed to work correctly. In the past, Chrome's default setting was only "Block third-party cookies in Incognito mode", so the customer can use Embedding SDK without changing the Chrome settings.
 
 ![The default Chrome preference](./images/chrome-preference.png)
 
@@ -96,4 +96,4 @@ To avoid the changes of third-party cookies default setting breaking the Embeddi
 
 ![The partitioned cookie setting](./images/partitioned-cookie.png)
 
-After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes, and the user need to do more to make it work. The details can be seen in [SAML or OIDC authentication after MicroStrategy 2024 Update 6](./support-for-different-authentication-environments/authentication-saml#for-microstrategy-2024-update-6-or-after).
+After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes, and the user need to do more to make it work. The details can be seen in [SAML or OIDC authentication after MicroStrategy ONE June 2024](./support-for-different-authentication-environments/authentication-saml.md#for-microstrategy-2024-update-6-or-after).
