@@ -72,6 +72,10 @@ microstrategy.embeddingContexts.embedLibraryPage({
         bookmark: true,
         undoRedo: true,
         edit: false,
+        dockedToC: {
+          isOpen: false,
+          isDocked: false,
+        }
       },
     },
     dossierAuthoring: {
@@ -267,6 +271,12 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
   - Default value: `true`.
 - `edit`
   - Show or hide the edit icon.
+  - Default value: `false`.
+- `dockedToC.isOpen`
+  - Open or close ToC panel.
+  - Default value: `false`.
+- `dockedToC.isDocked`
+  - Pin or unpin ToC panel.
   - Default value: `false`.
 
 #### Required?
