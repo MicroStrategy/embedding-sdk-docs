@@ -11,6 +11,8 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
   - Introduce `enablePageSelection` property to customize displaying page selectors in the TOC panel of Microstrategy dashboard consumption page.
 - [The customized UI settings in Embedding SDK.](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
   - Introduce `customUi` object property `dockedToc` to customize default values of `isOpen` and `isDocked` of the TOC panel in the UI of Microstrategy dashboard consumption page.
+- [Embed Dashboard Visualizations with Native Embedding SDK.](./native-embedding-architecture/mstr-dossier.md)
+  - Introduce `AbortController` support to cancel `MstrDossier.refresh()` calls.
 
 ## MicroStrategy ONE June 2024
 
