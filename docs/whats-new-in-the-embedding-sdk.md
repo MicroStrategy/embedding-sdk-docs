@@ -13,6 +13,10 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
   - Introduce `customUi` object property `dockedToc` to customize default values of `isOpen` and `isDocked` of the TOC panel in the UI of Microstrategy dashboard consumption page.
 - [Embed Dashboard Visualizations with Native Embedding SDK.](./native-embedding-architecture/mstr-dossier.md)
   - Introduce `AbortController` support to cancel `MstrDossier.refresh()` calls.
+- [Native Embedding MstrEnvironment Class](./native-embedding-architecture/mstr-environment.md)
+
+  - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and `MstrEnvironment.loadBot()`.
+  - Introduce `MstrEnvironment.getAuthToken()` function.
 
 ## MicroStrategy ONE June 2024
 
