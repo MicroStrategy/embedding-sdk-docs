@@ -16,8 +16,6 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [Native Embedding MstrEnvironment Class](./native-embedding-architecture/mstr-environment.md)
 
   - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and `MstrEnvironment.loadBot()`.
-
-- [Native Embedding MstrEnvironment Class](./native-embedding-architecture/mstr-environment.md)
   - Introduce `MstrEnvironment.getAuthToken()` function.
 
 ## MicroStrategy ONE June 2024
