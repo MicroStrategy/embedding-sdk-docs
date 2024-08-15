@@ -17,11 +17,12 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 #### Input Parameters
 
-| Parameter Name   | Data Type | Description                                                                                              | Is Required |
-| ---------------- | --------- | -------------------------------------------------------------------------------------------------------- | ----------- |
-| props.projectId  | String    | The project ID, which must be a GUID.                                                                    | true        |
-| props.objectId   | String    | The dashboard ID, which must be valid. If the ID is a document, report, or bot ID, an error is reported. | true        |
-| props.instanceId | String    | The dashboard instance ID, if it already exists.                                                         | false       |
+| Parameter Name      | Data Type | Description                                                                                              | Is Required |
+| ------------------- | --------- | -------------------------------------------------------------------------------------------------------- | ----------- |
+| props.projectId     | String    | The project ID, which must be a GUID.                                                                    | true        |
+| props.objectId      | String    | The dashboard ID, which must be valid. If the ID is a document, report, or bot ID, an error is reported. | true        |
+| props.instanceId    | String    | The dashboard instance ID, if it already exists.                                                         | false       |
+| props.applicationId | String    | the dashboard application ID, if not specified, the default application will be used                     | false       |
 
 The `projectId` + `objectId` is used as the dashboard identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
 
@@ -97,10 +98,11 @@ try {
 
 #### Input Parameters
 
-| Parameter Name  | Data Type | Description                                                                                             | Is Required |
-| --------------- | --------- | ------------------------------------------------------------------------------------------------------- | ----------- |
-| props.projectId | String    | The project ID, which must be a GUID.                                                                   | true        |
-| props.objectId  | String    | The bot ID, which must be valid. If the ID is a dashboard, document or report ID, an error is reported. | true        |
+| Parameter Name      | Data Type | Description                                                                                             | Is Required |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------------- | ----------- |
+| props.projectId     | String    | The project ID, which must be a GUID.                                                                   | true        |
+| props.objectId      | String    | The bot ID, which must be valid. If the ID is a dashboard, document or report ID, an error is reported. | true        |
+| props.applicationId | String    | the bot application ID, if not specified, the default application will be used                          | false       |
 
 The `projectId` + `objectId` is used as the bot identifier. If the function is called twice with the same parameter, the same `MstrBot` object is returned in the callback.
 
@@ -134,3 +136,30 @@ try {
 | ------------------------------------------ | -------------- | -------------------- | --------------------------------------------- |
 | The input parameter fails input validation | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
 | Other REST API errors                      | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object |
+
+### The get authToken API
+
+#### Function
+
+`getAuthToken()`
+
+#### Response
+
+This API returns the authentication token obtained by the MstrEnvironment.
+
+#### Example
+
+```js
+try {
+  const environment = await microstrategy.embeddingComponent.environments.create({
+    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+    getAuthToken: () => {
+      // Logic similar to the existing Native Embedding SDK.
+    },
+  });
+  // Get authentication token
+  const authToken = environment.getAuthToken();
+} catch (error) {
+  // Your own error handling logic
+}
+```
