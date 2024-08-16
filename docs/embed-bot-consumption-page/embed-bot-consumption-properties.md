@@ -484,3 +484,38 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
   },
 });
 ```
+
+### `settings`
+
+Specify the custom settings on the embedding pages. Including the non-UI settings of bot consumption page.
+
+#### Required?
+
+No
+
+#### Properties
+
+##### `botConsumption`
+
+Use the `botConsumption` object to customize the options on the bot consumption page. The detailed properties contain:
+
+- `disableManipulationsAutoSaving`
+
+  - Disable the bot instance manipulation auto saving or not.
+  - Default value: `false`.
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedBotConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  settings: {
+    botConsumption: {
+      disableManipulationsAutoSaving: true,
+    },
+  },
+});
+```
