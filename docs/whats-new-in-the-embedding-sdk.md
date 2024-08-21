@@ -18,6 +18,9 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
   - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and `MstrEnvironment.loadBot()`.
   - Introduce `MstrEnvironment.getAuthToken()` function.
 
+- [Properties for an embedded MicroStrategy Library home page.](./embed-library-main-page/embed-library-properties.md)
+  - Change the available values of `currentPage.key` according to the Library UI change and new API functionalities: Remove 'all', 'myContent', 'favorites' and 'recents'; add 'home' and 'contentDiscovery'.
+
 ## MicroStrategy ONE June 2024
 
 - [Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
