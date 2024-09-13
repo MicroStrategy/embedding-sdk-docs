@@ -31,9 +31,9 @@ You may encounter some difficulties in this workflow:
   - This might be caused by your strict CSP settings. If your [COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)(Cross-Origin-Opener-Policy) setting is [same-origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#same-origin), the MicroStrategy Library Web login page can't get the Client Application window so can't send messages to it.
   - In this case, you need to change your COOP setting to [unsafe-none](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#unsafe-none), which is the default value. Then the login process will work.
 
-## For MicroStrategy 2024 Update 6 or after
+## For MicroStrategy ONE June 2024 or after
 
-In MicroStrategy 2024 Update 6, we add the [partitioned cookie change](../config#the-partitioned-cookie-change) to enable the customer to use the Embedding SDK even if third-party cookies are blocked. But if third-party cookies are blocked, the old SAML or OIDC login process can't work.
+In MicroStrategy ONE June 2024, we add the [partitioned cookie change](../config#the-partitioned-cookie-change) to enable the customer to use the Embedding SDK even if third-party cookies are blocked. But if third-party cookies are blocked, the old SAML or OIDC login process can't work.
 
 You can unblock the third-party cookies manually to support the old workflow, but we recommend you use the new [embedding auth APIs](../support-for-different-authentication-environments/new-authentication-apis.md), which can work in the third-party cookies blocked case, and simplify the SAML or OIDC login logic. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g17). A simple code piece would be like this:
 
