@@ -45,6 +45,10 @@
     "react-dom": "^18.3.1",
     "yarn": "^1.22.22"
   },
+  "resolutions": {
+    "@docusaurus/core/webpack-bundle-analyzer/ws": "7.5.10",
+    "@docusaurus/core/webpack-dev-server/ws": "8.17.1"
+  },
   "devDependencies": {
     "@cmfcmf/docusaurus-search-local": "^1.1.0",
     "@docusaurus/eslint-plugin": "^3.3.2",
