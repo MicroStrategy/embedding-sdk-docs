@@ -368,7 +368,7 @@ Specifies the page on the sidebar entries that you want to embed.
 };
 ```
 
-- `currentPage.key`: This field specifies the key of the page that the user wants to embed. Its available values are the menu items in the sidebar, which could be in ['all', 'myContent', 'favorites', 'recents', 'insights', 'subscriptions', 'defaultGroups', 'myGroups'].
+- `currentPage.key`: This field specifies the key of the page that the user wants to embed. Its available values are the menu items in the sidebar, which could be in ['home', 'insights', 'subscriptions', 'defaultGroups', 'myGroups', 'contentDiscovery'].
 
 - `currentPage.targetGroup`: This field is only necessary when `currentPage.key` is 'defaultGroups' or 'myGroups', as on library home page the user can't select these 2 menu items but only could select the group items under them. It specifies which group item the user wants to select.
 

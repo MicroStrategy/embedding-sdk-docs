@@ -5,6 +5,22 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## MicroStrategy ONE September 2024
+
+- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - Introduce `enablePageSelection` property to customize displaying page selectors in the TOC panel of Microstrategy dashboard consumption page.
+- [The customized UI settings in Embedding SDK.](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
+  - Introduce `customUi` object property `dockedToc` to customize default values of `isOpen` and `isDocked` of the TOC panel in the UI of Microstrategy dashboard consumption page.
+- [Embed Dashboard Visualizations with Native Embedding SDK.](./native-embedding-architecture/mstr-dossier.md)
+  - Introduce `AbortController` support to cancel `MstrDossier.refresh()` calls.
+- [Native Embedding MstrEnvironment Class](./native-embedding-architecture/mstr-environment.md)
+
+  - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and `MstrEnvironment.loadBot()`.
+  - Introduce `MstrEnvironment.getAuthToken()` function.
+
+- [Properties for an embedded MicroStrategy Library home page.](./embed-library-main-page/embed-library-properties.md)
+  - Change the available values of `currentPage.key` according to the Library UI change and new API functionalities: Remove 'all', 'myContent', 'favorites' and 'recents'; add 'home' and 'contentDiscovery'.
+
 ## MicroStrategy ONE June 2024
 
 - [Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
