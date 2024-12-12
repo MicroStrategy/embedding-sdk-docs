@@ -343,6 +343,10 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
   - Enable dashoard page selection in the TOC panel.
   - Default value: `false`.
 
+- `disableGroupSelection`
+  - Disable group selection in the component selection mode.
+  - Default value: `false`.
+
 #### Sample
 
 ```js
@@ -356,6 +360,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
       componentSelectionMode: "multipleSelection",
       disableManipulationsAutoSaving: false,
       enablePageSelection: false,
+      disableGroupSelection: true,
     },
   },
 });

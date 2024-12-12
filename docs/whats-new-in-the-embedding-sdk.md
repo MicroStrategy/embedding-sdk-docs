@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## MicroStrategy ONE December 2024
+
+- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - Introduce `disableGroupSelection` property to disable group selection in the component selection mode on Microstrategy dashboard consumption page.
+
 ## MicroStrategy ONE September 2024
 
 - [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
