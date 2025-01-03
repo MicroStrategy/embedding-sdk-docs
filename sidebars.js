@@ -83,6 +83,15 @@ const sidebars = {
       type: "category",
       link: {
         type: "doc",
+        id: "embed-document-consumption-page/embed-document-consumption-page",
+      },
+      label: "Embed MicroStrategy document consumption page",
+      items: ["embed-document-consumption-page/embed-document-consumption-properties"],
+    },
+    {
+      type: "category",
+      link: {
+        type: "doc",
         id: "embed-bot-consumption-page/embed-bot-consumption-page",
       },
       label: "Embed MicroStrategy bot consumption page",
@@ -106,6 +115,7 @@ const sidebars = {
       label: "Embedding context",
       items: [
         "embedding-context/library-page-apis",
+        "embedding-context/document-consumption-page-apis",
         "embedding-context/dossier-consumption-page-apis",
         "embedding-context/bot-consumption-page-apis",
       ],

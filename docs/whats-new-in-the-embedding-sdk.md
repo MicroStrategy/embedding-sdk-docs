@@ -7,7 +7,8 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## MicroStrategy ONE March 2025
 
-- [Embed MicroStrategy document consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+- [Embed MicroStrategy document consumption page.](./embed-document-consumption-page/embed-document-consumption-page.md)
+  - Provide API to embed a document consumption page.
 
 ## MicroStrategy ONE December 2024
 
