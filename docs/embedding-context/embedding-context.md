@@ -27,6 +27,7 @@ This `embeddingContext` object could be used when the user navigates between dif
 
 - `libraryPage`: used for call the APIs that interact with the Library homepage. The detailed APIs could be seen in [Library page APIs](./library-page-apis.md)
 - `dossierConsumption`: used for call the APIs that interact with the dashboard consumption page. The detailed APIs could be seen in [Dashboard consumption page APIs](./dossier-consumption-page-apis.md)
+- `documentConsumption`: used for call the APIs that interact with the document consumption page. The detailed APIs could be seen in [Document consumption page APIs](./document-consumption-page-apis.md)
 - `botConsumptionService` used for call the APIs that interact withe the bot consumption page. The detailed APIs could be seen in [Bot consumption page APIs](./bot-consumption-page-apis.md)
 
 If the current embedded page is the Library homepage, and the user uses the manipulation object of the other pages, like `embeddingContext.dossierConsumption` to call the APIs of the other page, there would be an error.
