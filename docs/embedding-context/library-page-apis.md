@@ -1,11 +1,13 @@
 ---
 title: Library page APIs
-description: Describes which Embedding SDK APIs are available on the MicroStrategy Library home page.
+description: Describes which Embedding SDK APIs are available on the Strategy Library home page.
 ---
 
-The `LibraryPage` object is the manipulator of the MicroStrategy Library home page. It could be got by `embeddingContext.libraryPage`.
+The `LibraryPage` object is the manipulator of the Strategy Library home page. It could be got by
+`embeddingContext.libraryPage`.
 
-The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
+The details of the `embeddingContext` object could be seen in
+[Embedding context](./embedding-context.md).
 
 The APIs under Library page object are as below.
 
@@ -23,7 +25,8 @@ This API is used for getting all the group items under "My Groups".
 
 #### Return type
 
-This API would return a Promise object that resolves to an object that contains the information of all groups contained in “My Groups“ and “Default Groups“. Its serialized JSON string is as below:
+This API would return a Promise object that resolves to an object that contains the information of
+all groups contained in “My Groups“ and “Default Groups“. Its serialized JSON string is as below:
 
 ```json
 [
@@ -56,7 +59,8 @@ This API is used for getting all the group items under "Default Groups".
 
 #### Return type
 
-This API would return a Promise object that resolves to an object that contains the information of all groups contained in “My Groups“ and “Default Groups“. Its serialized JSON string is as below:
+This API would return a Promise object that resolves to an object that contains the information of
+all groups contained in “My Groups“ and “Default Groups“. Its serialized JSON string is as below:
 
 ```json
 [

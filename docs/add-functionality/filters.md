@@ -1,29 +1,40 @@
 ---
 title: Retrieve and apply filters
-description: Filters can be applied both during the execution of an embedded dashboard and after it has been rendered.
+description:
+  Filters can be applied both during the execution of an embedded dashboard and after it has been
+  rendered.
 ---
 
-Filters can be applied both during the execution of an embedded dashboard and after it has been rendered.
+Filters can be applied both during the execution of an embedded dashboard and after it has been
+rendered.
 
 - **Apply filters during execution**
 
-  You can pass filters as properties when an embedded dashboard is being executed. You use the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using the [filters](./methods-and-properties.md#filters) property.
+  You can pass filters as properties when an embedded dashboard is being executed. You use
+  the `dossier.create(props)` method in the Embedding SDK and define the filters to apply using
+  the [filters](./methods-and-properties.md#filters) property.
 
 - **Apply and retrieve filters after execution**
 
-  Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web page, you can use methods in the Embedding SDK to retrieve and apply filters.
+  Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web
+  page, you can use methods in the Embedding SDK to retrieve and apply filters.
 
   - [Retrieve filters after a dashboard is rendered](#retrieve-filters-after-a-dashboard-is-rendered)
 
-    After an embedded dashboard has been rendered, you can use the `getFilterList()` method of the `Dossier` class to retrieve information about filters that were applied to chapters in the dossier.
+    After an embedded dashboard has been rendered, you can use the `getFilterList()` method of
+    the `Dossier` class to retrieve information about filters that were applied to chapters in the
+    dossier.
 
   - [Apply filters after a dashboard is rendered](#apply-a-filter-after-the-dashboard-is-rendered)
 
-    After an embedded dashboard has been rendered, you can apply different kinds of filters to chapters in the dashboard using a number of different methods on the Embedding SDK. Chapter is the only filter type that is currently supported.
+    After an embedded dashboard has been rendered, you can apply different kinds of filters to
+    chapters in the dashboard using a number of different methods on the Embedding SDK. Chapter is
+    the only filter type that is currently supported.
 
   - [Apply multiple filters after a dashboard is rendered](#apply-multiple-filters-after-the-dashboard-is-rendered)
 
-    This section introduces how you can cache the results of several filters and apply them together.
+    This section introduces how you can cache the results of several filters and apply them
+    together.
 
 :::tip
 
@@ -42,7 +53,9 @@ To help you get started, we have provided a set of filter examples in the Embedd
 
 ## Retrieve filters after a dashboard is rendered
 
-After an embedded dashboard has been rendered, you can use the `getFilterList()` method of the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to chapters in the dossier.
+After an embedded dashboard has been rendered, you can use the `getFilterList()` method of
+the `Dossier` class in the Embedding SDK to retrieve information about filters that were applied to
+chapters in the dossier.
 
 | `getFilterList()` |                                                           |
 | ----------------- | --------------------------------------------------------- |
@@ -51,7 +64,8 @@ After an embedded dashboard has been rendered, you can use the `getFilterList()
 | Description       | Returns a list of filters defined in the current chapter. |
 | Example           | `dossier.getFilterList()`                                 |
 
-`getFilterList()` returns an array of JSON objects that each describe a specific filter. Each JSON filter object has the following fields:
+`getFilterList()` returns an array of JSON objects that each describe a specific filter. Each
+JSON filter object has the following fields:
 
 | Field          | Description                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -79,7 +93,8 @@ The sections below show the filter details for each filter type.
   }
   ```
 
-  If the filter operator is not "is null" or "is not null", the `filterDetail` will only have `operator`:
+  If the filter operator is not "is null" or "is not null", the `filterDetail` will only have
+  `operator`:
 
   ```json
   {
@@ -98,7 +113,10 @@ The sections below show the filter details for each filter type.
 
 - `operator`
 
-  A `string` that refers to a specific function type used by the metric qualifier filter. Only the `qualByValue` qualify type is supported. Possible values are "equals", "not equals", "greater", "greater equal", "less", "less equal", "between", "not between", "in", "not in", "is null", or "is not null".
+  A `string` that refers to a specific function type used by the metric qualifier filter. Only the
+  `qualByValue` qualify type is supported. Possible values are "equals", "not equals", "greater",
+  "greater equal", "less", "less equal", "between", "not between", "in", "not in", "is null", or "is
+  not null".
 
 #### `metricQualByRank`
 
@@ -108,25 +126,30 @@ The sections below show the filter details for each filter type.
 
 - `qualType`
 
-  A `string` that refers to a specific qualify type used by the metric qualifier filter. Qualify types include "highest", "lowest", "highest percent", "lowest percent".
+  A `string` that refers to a specific qualify type used by the metric qualifier filter. Qualify
+  types include "highest", "lowest", "highest percent", "lowest percent".
 
 #### `metricSliderByValue`
 
 - `max`
 
-  Maximum allowed value for the metric slider filter. If the user-inputted value is greater than this value, it will be set to max automatically.
+  Maximum allowed value for the metric slider filter. If the user-inputted value is greater than
+  this value, it will be set to max automatically.
 
 - `min`
 
-  Minimum allowed value for the metric slider filter. If the user-inputted value is less than this value, it will be set to min automatically.
+  Minimum allowed value for the metric slider filter. If the user-inputted value is less than this
+  value, it will be set to min automatically.
 
 - `from`
 
-  User-inputted value that specifies the beginning of the metric range used in the filter expression for the metric slider filter.
+  User-inputted value that specifies the beginning of the metric range used in the filter expression
+  for the metric slider filter.
 
 - `to`
 
-  User-inputted value that specifies the ending of the metric range used in the filter expression for the metric slider filter.
+  User-inputted value that specifies the ending of the metric range used in the filter expression
+  for the metric slider filter.
 
 - `indexInfo`
 
@@ -145,19 +168,23 @@ The sections below show the filter details for each filter type.
 
 - `max`
 
-  Maximum allowed value for the metric slider filter. If the user-inputted value is greater than this value, it will be set to max automatically.
+  Maximum allowed value for the metric slider filter. If the user-inputted value is greater than
+  this value, it will be set to max automatically.
 
 - `min`
 
-  Minimum allowed value for the metric slider filter. If the user-inputted value is less than this value, it will be set to min automatically.
+  Minimum allowed value for the metric slider filter. If the user-inputted value is less than this
+  value, it will be set to min automatically.
 
 - `value`
 
-  User-inputted value that specifies the rank used in the filter expression for the metric slider filter.
+  User-inputted value that specifies the rank used in the filter expression for the metric slider
+  filter.
 
 - `qualType`
 
-  Number that refers to a specific qualify type used by the metric qualifier filter. Qualify types include "highest", "lowest", "highest percent", "lowest percent".
+  Number that refers to a specific qualify type used by the metric qualifier filter. Qualify types
+  include "highest", "lowest", "highest percent", "lowest percent".
 
 - `indexInfo`
 
@@ -175,7 +202,8 @@ The sections below show the filter details for each filter type.
 
 - `supportMultiple`
 
-  Specifies whether multiple search selections can be applied to the metric slider filter. If it is not true, only one selection will be applied to the filter.
+  Specifies whether multiple search selections can be applied to the metric slider filter. If it is
+  not true, only one selection will be applied to the filter.
 
 - `items`
 
@@ -193,7 +221,8 @@ The sections below show the filter details for each filter type.
 
 - `supportMultiple`
 
-  Specifies whether multiple selections can be applied to the metric slider filter. If it is not true, only one selection will be applied to the filter.
+  Specifies whether multiple selections can be applied to the metric slider filter. If it is not
+  true, only one selection will be applied to the filter.
 
 - `items`
 
@@ -211,7 +240,8 @@ The sections below show the filter details for each filter type.
 
 - `supportMultiple`
 
-  Specifies whether multiple selections can be applied to the filter. If it is not true, only one selection will be applied to the filter.
+  Specifies whether multiple selections can be applied to the filter. If it is not true, only one
+  selection will be applied to the filter.
 
 - `indexInfo`
 
@@ -568,7 +598,9 @@ or
 
 ## Apply a filter after the dashboard is rendered
 
-After an embedded dashboard has been rendered, you can apply different kinds of filters to chapters in the dashboard using methods on the Embedding SDK. In this release, `getFilterList()` only exposes filters defined in the current chapter.
+After an embedded dashboard has been rendered, you can apply different kinds of filters to chapters
+in the dashboard using methods on the Embedding SDK. In this release, `getFilterList()` only exposes
+filters defined in the current chapter.
 
 ### Dossier.filterSelectAllAttributes(filterJson)
 
@@ -589,7 +621,9 @@ Select all the attributes for the filter with `key` and apply the change immedia
 
 Deselect all the attributes for the filter with `key` and save the change to client side.
 
-Since `holdSubmit` is set to true, this change is applied and rendered together with other cached changes in an "Apply Filter request" where `holdSubmit` has a falsy value, typically `filterApplyAll`.
+Since `holdSubmit` is set to true, this change is applied and rendered together with other cached
+changes in an "Apply Filter request" where `holdSubmit` has a falsy value, typically
+`filterApplyAll`.
 
 #### Example of `filterJson` parameter
 
@@ -608,7 +642,9 @@ Select single attributes for the filter with `key`.
 
 Use this API for filters that support single selection.
 
-Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get it from the `getFilterList` API. `name` should be the attribute element name, if you provide the name, it is converted to a value (ID).
+Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get
+it from the `getFilterList` API. `name` should be the attribute element name, if you provide the
+name, it is converted to a value (ID).
 
 #### Example of `filterJson` parameter
 
@@ -644,7 +680,9 @@ Select multiple attributes for the filter with `key`.
 
 Use this API for filters that support multiple selections.
 
-Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get it from the `getFilterList` API. `name` should be the attribute element name, if you provide the name, it is converted to a value (ID).
+Use either `name` or `value` to do the selection. `value` is the attribute element ID. You can get
+it from the `getFilterList` API. `name` should be the attribute element name, if you provide the
+name, it is converted to a value (ID).
 
 #### Example of `filterJson` parameter
 
@@ -748,7 +786,8 @@ Use this API for filters that support multiple selection.
 
 ### Dossier.filterAttributeSingleSlider(filterJson)
 
-Select single attributes for the filter with `key` using the slider style. Selection is the index of the attribute in the attributes items `getFilterInfos` result.
+Select single attributes for the filter with `key` using the slider style. Selection is the index of
+the attribute in the attributes items `getFilterInfos` result.
 
 Use this API for filters that support single selection.
 
@@ -766,7 +805,9 @@ Use this API for filters that support single selection.
 
 ### Dossier.filterAttributeMultiSlider(filterJson)
 
-Select multiple attributes for the filter with `key` using the slider style. The from and to values in `selections` refer to the starting and ending attribute indexes for attribute items in the `getFilterInfos` result.
+Select multiple attributes for the filter with `key` using the slider style. The from and to values
+in `selections` refer to the starting and ending attribute indexes for attribute items in the
+`getFilterInfos` result.
 
 Use this API for filters that support multiple selection.
 
@@ -790,7 +831,8 @@ If `from` is missing, the dataset start date is used.
 
 If `to` is missing, the dataset end date is used.
 
-The from and to strings should a format recognized by the `Date.parse()` method. This format should beIETF-compliant RFC 2822 or ISO8601.
+The from and to strings should a format recognized by the `Date.parse()` method. This format should
+beIETF-compliant RFC 2822 or ISO8601.
 
 #### Example of `filterJson` parameter
 
@@ -813,7 +855,8 @@ Apply a metric qualify by value filter.
 
 `key` - The filterKey
 
-`operator` - An enum of "equals", "not equals", "greater", "greater equal", "less", "less equal", "between", "not between", "in", "not in", "is null", or "is not null"
+`operator` - An enum of "equals", "not equals", "greater", "greater equal", "less", "less equal",
+"between", "not between", "in", "not in", "is null", or "is not null"
 
 `firstValue` – The number in the top input box
 
@@ -874,7 +917,8 @@ Example:
 
 The step items are: [0, 10, 20, 30, 40, 50]
 
-You enter a metric range of [13, 26], which is converted to the index of step items [1, 3]. This refers to the value range of 10~30.
+You enter a metric range of [13, 26], which is converted to the index of step items [1, 3]. This
+refers to the value range of 10~30.
 
 #### Example of `filterJson` parameter
 
@@ -976,7 +1020,8 @@ No parameters
 
 ## Apply multiple filters after the dashboard is rendered
 
-This section introduces how you can cache the results of several filters and apply them together. Let's say you have the following filters:
+This section introduces how you can cache the results of several filters and apply them together.
+Let's say you have the following filters:
 
 :::note
 
@@ -994,15 +1039,18 @@ The items in bold are selected.
 
 Take the following steps:
 
-1. Apply [`filterSelectMultiAttributes`](#dossierfilterselectmultiattributesfilterjson), set `selections` as `Books` and `Movies`, and set `holdSubmit` as `true`.
-1. Apply [`filterSelectSingleAttribute`](#dossierfilterselectsingleattributefilterjson), set `selection` as `Female`, and set `holdSubmit` as `true`.
+1. Apply [`filterSelectMultiAttributes`](#dossierfilterselectmultiattributesfilterjson),
+   set `selections` as `Books` and `Movies`, and set `holdSubmit` as `true`.
+1. Apply [`filterSelectSingleAttribute`](#dossierfilterselectsingleattributefilterjson),
+   set `selection` as `Female`, and set `holdSubmit` as `true`.
 1. Apply [`filterApplyAll`](#dossierfilterapplyall).
 
    The result returned from server is filtered by Books, Movies, and Female.
 
 ## Events
 
-There are two events that are fired on the embedded dashboard when a filter is applied after rendering.
+There are two events that are fired on the embedded dashboard when a filter is applied after
+rendering.
 
 - [onFilterUpdated](./add-event.md#onfilterupdated)
 - [onVisualizationElementsChanged](./add-event.md#onvisualizationelementschanged)

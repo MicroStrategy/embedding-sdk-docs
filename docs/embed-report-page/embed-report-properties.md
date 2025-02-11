@@ -1,26 +1,30 @@
 ---
-title: Properties for an embedded MicroStrategy report page
-description: Describes the properties that can be set for an embedded MicroStrategy report page.
+title: Properties for an embedded Strategy report page
+description: Describes the properties that can be set for an embedded Strategy report page.
 ---
 
-To embed a MicroStrategy report page into a web page, use the `embedReportPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+To embed a Strategy report page into a web page, use the `embedReportPage(props)` method under
+the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedReportPage(props)`
 
-This method creates an iFrame on the web page, in the location specified by the `placeholder` property, and inserts a link to the MicroStrategy report page URL. The report page URL is built using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+This method creates an iFrame on the web page, in the location specified by the `placeholder`
+property, and inserts a link to the Strategy report page URL. The report page URL is built using
+`serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy report page is loaded.
+This method returns a promise, which is resolved when the Strategy report page is loaded.
 
 The `props` parameter contains following required key-value pairs:
 
 - `serverUrl`, `projectId`, and `objectId` define the full report page URL.
-- `placeholder` specifies where the iFrame containing the MicroStrategy report page will be created.
+- `placeholder` specifies where the iFrame containing the Strategy report page will be created.
 
-It can also contain other optional key-value pairs to customize the UI, authentication, and custom error handler.
+It can also contain other optional key-value pairs to customize the UI, authentication, and custom
+error handler.
 
 The `props` parameter can contain the following key-value pairs:
 
@@ -44,8 +48,8 @@ N/A
 
 ### `serverUrl`,`projectId`,`objectId`, and `pageKey`
 
-These properties build the full report page URL to be embedded.
-The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+These properties build the full report page URL to be embedded. The Embedding SDK builds the URL
+using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Required?
 
@@ -140,7 +144,8 @@ N/A
 
 ### `customAuthenticationType`
 
-Specifies the token type returned by the `getLoginToken` function. There are two possible values, which can be provided by the `CustomAuthenticationType` enumeration.
+Specifies the token type returned by the `getLoginToken` function. There are two possible values,
+which can be provided by the `CustomAuthenticationType` enumeration.
 
 #### Required?
 
@@ -156,7 +161,9 @@ N/A
 
 ### `getLoginToken`
 
-Specifies a function that returns a promise, which is resolved with either an authorization (`authToken`) or identity (`identityToken`) token. The token type is specified by the `customAuthenticationType` property.
+Specifies a function that returns a promise, which is resolved with either an authorization
+(`authToken`) or identity (`identityToken`) token. The token type is specified by the
+`customAuthenticationType` property.
 
 #### Required?
 
@@ -168,9 +175,12 @@ See the sample code in the next column for the default implementation of this fu
 
 #### Sample
 
-When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do this using an `XMLHttpRequest`, if your browser does not support `fetch`.
+When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`, the following
+sample demonstrates how to send a fetch request to get `authToken` with your credentials. You can do
+this using an `XMLHttpRequest`, if your browser does not support `fetch`.
 
-The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
+The `getLoginToken` function can be found in
+[the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
 microstrategy.embeddingContexts.embedReportPage({
@@ -187,15 +197,22 @@ microstrategy.embeddingContexts.embedReportPage({
 });
 ```
 
-When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you must add a component to your web server. Refer to [Use Custom Authentication](../support-for-different-authentication-environments/seamless-login.md) for more information.
+When `customAuthenticationType` is set to `CustomAuthenticationType.IDENTITY_TOKEN`, you must add a
+component to your web server. Refer to
+[Use Custom Authentication](../support-for-different-authentication-environments/seamless-login.md)
+for more information.
 
 ### `disableCustomErrorHandlerOnCreate`
 
 To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to true.
 
-If this flag is set, all errors that occur in the initial loading process as the result of manual actions are handled by OOTB Library and an error dialog appears.
+If this flag is set, all errors that occur in the initial loading process as the result of manual
+actions are handled by OOTB Library and an error dialog appears.
 
-Refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in the `microstrategy.embeddingContexts.embedReportPage` function.
+Refer to
+[Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation)
+to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as
+in the `microstrategy.embeddingContexts.embedReportPage` function.
 
 #### Required?
 
@@ -219,9 +236,13 @@ microstrategy.embeddingContexts.embedReportPage({
 
 ### `errorHandler`
 
-The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has a `message` property, which contains the detailed error message.
+The custom error handler that executes when the error occurs in the initial loading process. It's a
+callback function that contains one parameter, `error`. The error object has a `message` property,
+which contains the detailed error message.
 
-When `errorHandler` is set, errors that occur inside the report page produce an error in the browser console. See the detailed behavior in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+When `errorHandler` is set, errors that occur inside the report page produce an error in the browser
+console. See the detailed behavior in
+[The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
 
 #### Required?
 
@@ -248,12 +269,17 @@ microstrategy.embeddingContexts.embedReportPage({
 
 ### `sessionErrorHandler`
 
-The custom error handler that executes when a session expiration error occurs. It's a callback function that contains one parameter, `error`. The error object has a `message` property that contains the detailed error message.
+The custom error handler that executes when a session expiration error occurs. It's a callback
+function that contains one parameter, `error`. The error object has a `message` property that
+contains the detailed error message.
 
 When the session expires:
 
 - If `sessionErrorHandler` is not set, the embedded page redirects to the OOTB Library login page.
-- If `sessionErrorHandler` is set, the session error handler is triggered and the embedded page does not change for one minute. If the error handler doesn't do anything after one minute, such as reauthentication and refreshing the page to renew the session, the embedded page redirects to the OOTB Library login page.
+- If `sessionErrorHandler` is set, the session error handler is triggered and the embedded page does
+  not change for one minute. If the error handler doesn't do anything after one minute, such as
+  reauthentication and refreshing the page to renew the session, the embedded page redirects to the
+  OOTB Library login page.
 
 #### Required?
 
@@ -282,10 +308,12 @@ microstrategy.embeddingContexts.embedReportPage({
 
 Specifies the application that the user wants to show in the embedded page.
 
-The application in MicroStrategy has two categories:
+The application in Strategy has two categories:
 
-- If the application selects the Library home page as its home screen, the Library home page is embedded with the application's configuration.
-- If the application selects a dashboard as its home screen, the embedding fails and an error occurs.
+- If the application selects the Library home page as its home screen, the Library home page is
+  embedded with the application's configuration.
+- If the application selects a dashboard as its home screen, the embedding fails and an error
+  occurs.
 
 #### Required?
 
@@ -301,29 +329,37 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including the MicroStrategy Library home, dashboard consumption，dashboard authoring, and report consumption pages.
+Specifies the custom UI settings on the embedded pages, including the Strategy Library home,
+dashboard consumption，dashboard authoring, and report consumption pages.
 
 #### Properties
 
-See all properties in [The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md).
+See all properties in
+[The customized UI settings in Embedding SDK](../embed-library-main-page/embed-custom-ui-on-all-pages.md).
 
 #### The navigation bar custom setting behavior
 
-The `customUi.reportConsumption.navigationBar.enabled` property affects the report page UI together with the navigation bar setting in the application settings. There are two related items in the MicroStrategy Workstation application settings:
+The `customUi.reportConsumption.navigationBar.enabled` property affects the report page UI together
+with the navigation bar setting in the application settings. There are two related items in the
+Strategy Workstation application settings:
 
 - Disable toolbar
 - Collapse toolbar by default
 
 The detailed embedding behavior is below:
 
-- If `customUi.reportConsumption.navigationBar.enabled` is false, the navigation bar is disabled by the Embedding SDK settings and it is not shown on the embedded report page.
+- If `customUi.reportConsumption.navigationBar.enabled` is false, the navigation bar is disabled by
+  the Embedding SDK settings and it is not shown on the embedded report page.
 
-- If `customUi.reportConsumption.navigationBar.enabled` is true, the setting is combined with the settings in the application, to determine the final visibility of the navigation bar:
+- If `customUi.reportConsumption.navigationBar.enabled` is true, the setting is combined with the
+  settings in the application, to determine the final visibility of the navigation bar:
 
   - If the current application disables the navigation bar, the navigation bar is not shown.
 
   - If the current application enables the navigation bar:
 
-    - If you choose "Collapse toolbar by default" in the application settings, the navigation bar is collapsed at the start and is only expanded/visible when the user expands it manually.
+    - If you choose "Collapse toolbar by default" in the application settings, the navigation bar is
+      collapsed at the start and is only expanded/visible when the user expands it manually.
 
-    - If you don't choose "Collapse toolbar by default", the navigation bar is shown on the embedded report page.
+    - If you don't choose "Collapse toolbar by default", the navigation bar is shown on the embedded
+      report page.

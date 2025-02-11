@@ -1,21 +1,38 @@
 ---
 title: Add event handling
-description: Events allow an embedded dashboard to communicate with the container page. You can listen for these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handling. For example, you can add code to capture selection events from one dashboard and apply them as a filter to a second dashboard.
+description:
+  Events allow an embedded dashboard to communicate with the container page. You can listen for
+  these events and provide event handler functions to respond to them. You use helper methods in the
+  Embedding SDK to add event handling. For example, you can add code to capture selection events
+  from one dashboard and apply them as a filter to a second dashboard.
 ---
 
-Events allow an embedded dashboard to communicate with the container page. You can listen to these events and provide event handler functions to respond to them. You use helper methods in the Embedding SDK to add event handlers. For example, you can add code to capture selection events from one dashboard and apply them as a filter to a second dashboard.
+Events allow an embedded dashboard to communicate with the container page. You can listen to these
+events and provide event handler functions to respond to them. You use helper methods in the
+Embedding SDK to add event handlers. For example, you can add code to capture selection events from
+one dashboard and apply them as a filter to a second dashboard.
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g5) that embeds a dashboard and adds event handling, as well as a description of [events](#events), [event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle additional events.
+To help you get started, we have provided an
+[example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g5)
+that embeds a dashboard and adds event handling, as well as a description of [events](#events),
+[event handlers](#event-handlers), and [wrapper functions](#wrapper-functions) you can use to handle
+additional events.
 
 :::
 
-Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web page, you can use the methods described below to communicate between the dashboard and the container page. You can register [event handlers](#event-handlers) for the [events](#events) that are automatically raised when a visualization is selected or when a page or filter is changed. [Wrapper functions](#wrapper-functions) are provided to make it easy to register event handlers for specific events.
+Once you have used the `dossier.create(props)` method to embed a dashboard into a third-party web
+page, you can use the methods described below to communicate between the dashboard and the container
+page. You can register [event handlers](#event-handlers) for the [events](#events) that are
+automatically raised when a visualization is selected or when a page or filter is changed.
+[Wrapper functions](#wrapper-functions) are provided to make it easy to register event handlers for
+specific events.
 
 ## Events
 
-Each supported event is described in the table below. You get the EventType from `microstrategy.dossier.EventType`.
+Each supported event is described in the table below. You get the EventType from
+`microstrategy.dossier.EventType`.
 
 ### onGraphicsSelected
 
@@ -25,7 +42,8 @@ Each supported event is described in the table below. You get the EventType from
 
 #### Description
 
-Raised when a graphic in the visualization is selected. This event is raised only if the visualization supports "use as filter".
+Raised when a graphic in the visualization is selected. This event is raised only if the
+visualization supports "use as filter".
 
 #### Content
 
@@ -659,7 +677,8 @@ The following wrapper functions make it easy to register event handlers for spec
 
 #### Description
 
-Wrapper function for `registerEventHandler` for `EventType.ON_GRAPHICS_SELECTED` on certain visualizations (whose node key is equal to `vizKey`).
+Wrapper function for `registerEventHandler` for `EventType.ON_GRAPHICS_SELECTED` on certain
+visualizations (whose node key is equal to `vizKey`).
 
 ### registerFilterUpdateHandler(handler)
 
@@ -685,7 +704,10 @@ Wrapper function for `registerEventHandler` for `EventType.ON_PAGE_SWITCHED`.
 
 Equal to `registerEventHandler(EventType.ON_PAGE_SWITCHED, pageSwitchedHandler)`.
 
-Because the Map visualization can have multiple map layers, the selected graphics can come from different map layers. As a result, the event raised for `EventType.ON_GRAPHICS_SELECTED` for the Map visualization is different from the event raised for other visualizations. See the following example.
+Because the Map visualization can have multiple map layers, the selected graphics can come from
+different map layers. As a result, the event raised for `EventType.ON_GRAPHICS_SELECTED` for the Map
+visualization is different from the event raised for other visualizations. See the following
+example.
 
 ```json
 {
@@ -737,4 +759,5 @@ Because the Map visualization can have multiple map layers, the selected graphic
 
 Wrapper function for `registerEventHandler` for `EventType.ON_DOSSIER_INSTANCE_ID_CHANGE`.
 
-Equal to `registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierInstanceIdChangeHandler)`.
+Equal to
+`registerEventHandler(EventType.ON_DOSSIER_INSTANCE_ID_CHANGE, dossierInstanceIdChangeHandler)`.

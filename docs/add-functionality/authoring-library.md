@@ -1,13 +1,22 @@
 ---
 title: Author an embedded dashboard
-description: To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+description:
+  To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the
+  authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 ---
 
-Embedding MicroStrategy content within critical business applications empowers users to make smarter decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the authoring mode, whether it is during the initial load or in the view mode of the dashboard.
+Embedding Strategy content within critical business applications empowers users to make smarter
+decisions by taking advantage of the dashboard development efforts that occur behind the scenes. To
+allow users to conveniently edit a dashboard, Embedding SDK allows embedding a dashboard in the
+authoring mode, whether it is during the initial load or in the view mode of the dashboard.
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g16) that will embed a dashboard in authoring mode along with an edit button that you can use to switch to authoring mode. You need to modify the environment url and dashboard url to use your dashboard and environment. See the steps to do this in [Introduction to Embedding SDK](../).
+To help you get started, we have provided an
+[example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g16)
+that will embed a dashboard in authoring mode along with an edit button that you can use to switch
+to authoring mode. You need to modify the environment url and dashboard url to use your dashboard
+and environment. See the steps to do this in [Introduction to Embedding SDK](../).
 
 :::
 
@@ -19,7 +28,8 @@ With the Authoring Library feature, the Embedding SDK could enable the users to 
 
   a. Enter the authoring Library page to edit a dashboard directly.
 
-  b. Hiding the Edit button in the navigation bar of the consumption Library page, to disable the user to edit the dashboard.
+  b. Hiding the Edit button in the navigation bar of the consumption Library page, to disable the
+  user to edit the dashboard.
 
 - Call the `Dossier.switchToMode` API to switch from view mode to authoring mode.
 
@@ -29,7 +39,8 @@ With the Authoring Library feature, the Embedding SDK could enable the users to 
 
 ### The availability of existing Embedding SDK APIs
 
-In authoring mode, most dossier-related APIs are disabled as they are designed for the consumption dashboard instance. The remaining APIs supported in authoring mode are shown below.
+In authoring mode, most dossier-related APIs are disabled as they are designed for the consumption
+dashboard instance. The remaining APIs supported in authoring mode are shown below.
 
 | Supported API                                   | Description                                                                                                       |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -48,23 +59,37 @@ In authoring mode, most dossier-related APIs are disabled as they are designed f
 | Dossier.removeSessionErrorhandler               | Handles the error handlers.                                                                                       |
 | Dossier.makeSureSessionAlive                    | Checks the session. If it is expired, you should refresh it.                                                      |
 
-The other APIs are disabled in authoring mode. If a disabled API is called in authoring mode, an error is returned with the message, "The API $\{funcName\} isn't supported in the authoring mode!"
+The other APIs are disabled in authoring mode. If a disabled API is called in authoring mode, an
+error is returned with the message, "The API $\{funcName\} isn't supported in the authoring mode!"
 
 ### Events
 
-To avoid unexpected events, except the newly added events (see the callback event API and example), you cannot receive Embedding SDK events in authoring mode as they are designed for consumption mode.
+To avoid unexpected events, except the newly added events (see the callback event API and example),
+you cannot receive Embedding SDK events in authoring mode as they are designed for consumption mode.
 
 ### Initial parameters
 
-The props parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The props parameter contains many fields. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
-The existing parameters can be roughly divided into three categories and their behaviors can be set with `dossierRenderingMode = authoring`.
+The existing parameters can be roughly divided into three categories and their behaviors can be set
+with `dossierRenderingMode = authoring`.
 
-- The parameters shared by both modes, for example, `URL`, `serverURL`, `applicationID`, `objectID`, and `placeholder`. These parameters only involve the embedding framework and are effective on both modes.
+- The parameters shared by both modes, for example, `URL`, `serverURL`, `applicationID`, `objectID`,
+  and `placeholder`. These parameters only involve the embedding framework and are effective on both
+  modes.
 
-- The parameters used for some UI customization in consumption mode, for example, navigationBar.enabled. You can still use these parameters with dossierRenderingMode = authoring, but their effects can only be seen when switching back to consumption mode.
+- The parameters used for some UI customization in consumption mode, for example,
+  navigationBar.enabled. You can still use these parameters with dossierRenderingMode = authoring,
+  but their effects can only be seen when switching back to consumption mode.
 
-- The parameters used for some extra dashboard instance manipulation, for example, filter and visualizationAppearances. These parameters are implementations of some embedding SDK APIs (for example, filter-related functions in the dashboard class and changeVisualizationSize) for the initial workflow. As these embedding SDK APIs are forbidden in authoring mode, you must also forbid these parameters in the initial parameter in authoring mode to keep the consistent behavior. A complete list of these parameters are shown below.
+- The parameters used for some extra dashboard instance manipulation, for example, filter and
+  visualizationAppearances. These parameters are implementations of some embedding SDK APIs (for
+  example, filter-related functions in the dashboard class and changeVisualizationSize) for the
+  initial workflow. As these embedding SDK APIs are forbidden in authoring mode, you must also
+  forbid these parameters in the initial parameter in authoring mode to keep the consistent
+  behavior. A complete list of these parameters are shown below.
 
 | Field Name                    | Description                                                                                   |
 | ----------------------------- | --------------------------------------------------------------------------------------------- |
@@ -72,7 +97,8 @@ The existing parameters can be roughly divided into three categories and their b
 | visualizationAppearances      | Applies visualization appearance manipulations to the dashboard instance in consumption mode. |
 | visualizationSelectedElements | Applies visualization element selections to the dashboard instance in consumption mode.       |
 
-If you have set values for these fields when setting `dossierRenderingMode = authoring`, a dialog appears with the error message:
+If you have set values for these fields when setting `dossierRenderingMode = authoring`, a dialog
+appears with the error message:
 
 ```text
 The fields ["filters", "visualizationAppearances", "visualizationSelectedElements"] are not allowed to be used when "dossierRenderingMode" is "authoring". Please remove these forbidden fields and try again.
@@ -88,7 +114,10 @@ The fields ["filters", "visualizationAppearances", "visualizationSelectedElement
 
 #### Input parameters
 
-An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3.
+The `props` parameter contains many fields. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 | Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
 | -------------------------- | --------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -105,7 +134,8 @@ microstrategy.dossier.create({
 
 #### Response
 
-This API returns a promise `dossier` object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a promise `dossier` object in the resolved case, which can be used to call other
+dossier-owned embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -122,7 +152,8 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                                                                                                                            | Error Category                        | Handling Module | Error Handling                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------- | --------------------------------------------- |
@@ -133,7 +164,9 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 ### API for switching to authoring mode
 
-This API, similar to the `Dossier.resizeVisualization` API, can ignore the restriction of the initial `navigationBar.edit` parameter. This means when `navigationBar.edit` is set to false, you cannot enter authoring mode via manual actions, but are able to via this API.
+This API, similar to the `Dossier.resizeVisualization` API, can ignore the restriction of the
+initial `navigationBar.edit` parameter. This means when `navigationBar.edit` is set to false, you
+cannot enter authoring mode via manual actions, but are able to via this API.
 
 #### Function
 
@@ -160,9 +193,11 @@ myDossier
   });
 ```
 
-Since additional feedback information is not required, the callback parameters for the resolve case are not necessary.
+Since additional feedback information is not required, the callback parameters for the resolve case
+are not necessary.
 
-Similar to the behavior of the existing `goToPage` API, the user's callback should be invoked when the editing page completes loading.
+Similar to the behavior of the existing `goToPage` API, the user's callback should be invoked when
+the editing page completes loading.
 
 | Parameter Name | Data Type    | Example                         | Comments                         |
 | -------------- | ------------ | ------------------------------- | -------------------------------- |
@@ -170,7 +205,8 @@ Similar to the behavior of the existing `goToPage` API, the user's callback shou
 
 #### Errors
 
-When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                       | Error Category   | Handling Module | Error Handling                               |
 | -------------------------------- | ---------------- | --------------- | -------------------------------------------- |
@@ -178,7 +214,8 @@ When an error occurs, the API returns a promise object that in turn returns an e
 
 ### Callback for monitoring when the dashboard is saved or closed
 
-When the Save or Close button is clicked in authoring mode, an event is raised that notifies your application.
+When the Save or Close button is clicked in authoring mode, an event is raised that notifies your
+application.
 
 #### Event name
 
@@ -211,7 +248,10 @@ myDossier.registerEventHandler(microstrategy.dossier.EventType.ON_DOSSIER_AUTHOR
 
 #### Input parameters
 
-An optional `props.navigationBar.edit` field has been added to the `props` object. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+An optional `props.navigationBar.edit` field has been added to the `props` object. The `props`
+parameter contains many fields. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 | Parameter Name           | Data Type | Default Value | Description                                                                                                                                                                          | Required? |
 | ------------------------ | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -228,11 +268,13 @@ microstrategy.dossier.create({
 });
 ```
 
-If you do not enter a value for `navigationBar`, the dashboard runs using the old behavior and the navigation bar is hidden.
+If you do not enter a value for `navigationBar`, the dashboard runs using the old behavior and the
+navigation bar is hidden.
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other
+dossier-owned embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -261,7 +303,9 @@ microstrategy.dossier
 | props.authoring.toolbar.tableOfContents.visible <br/>props.authoring.toolbar.undo.visible <br/>props.authoring.toolbar.redo.visible <br/>props.authoring.toolbar.refresh.visible <br/>props.authoring.toolbar.pauseDataRetrieval.visible <br/>props.authoring.toolbar.reprompt.visible <br/>props.authoring.toolbar.dividerLeft.visible <br/>props.authoring.toolbar.addData.visible <br/>props.authoring.toolbar.addChapter.visible <br/>props.authoring.toolbar.addPage.visible <br/>props.authoring.toolbar.insertVisualization.visible <br/>props.authoring.toolbar.insertFilter.visible <br/>props.authoring.toolbar.insertText.visible <br/>props.authoring.toolbar.insertImage.visible <br/>props.authoring.toolbar.insertHtml.visible <br/>props.authoring.toolbar.insertShape.visible <br/>props.authoring.toolbar.insertPanelStack.visible <br/>props.authoring.toolbar.insertInfoWindow.visible <br/>props.authoring.toolbar.save.visible <br/>props.authoring.toolbar.dividerRight.visible <br/>props.authoring.toolbar.more.visible <br/>props.authoring.toolbar.freeformLayout.visible <br/>props.authoring.toolbar.nlp.visible <br/>props.authoring.toolbar.responsiveViewEditor.visible <br/>props.authoring.toolbar.responsivePreview.visible | Boolean   | true          | Show or hide corresponding buttons on the toolbar in the authoring UI. | No        |
 | props.authoring.panelVisibility.contents <br/>props.authoring.panelVisibility.datasets <br/>props.authoring.panelVisibility.editor <br/>props.authoring.panelVisibility.filter <br/>props.authoring.panelVisibility.format <br/>props.authoring.panelVisibility.layers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Boolean   | true          | Show or hide corresponding authoring panels.                           | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 Example:
 
@@ -279,7 +323,8 @@ microstrategy.dossier.create({
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other
+dossier-owned embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -296,7 +341,8 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                        | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
@@ -315,7 +361,9 @@ When an error occurs, the API returns a promise object that in turn returns an e
 | ---------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | props.newDossier | Boolean   | false         | Use when creating a new dashboard from scratch. When set to `true`, a new dashboard instance is created from a blank dashboard template. In this case, the `instance`, `objectID`, or `url` parameters don't have to and shouldn't be provided. | No        |
 
-The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The `props` parameter contains many fields. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 Example:
 
@@ -329,7 +377,8 @@ microstrategy.dossier.create({
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other
+dossier-owned embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -346,7 +395,8 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, the API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, the API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                           | Error Category | Handling Module | Error Handling                                |
 | ---------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |

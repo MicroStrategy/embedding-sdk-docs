@@ -1,11 +1,13 @@
 ---
 title: Bot consumption page APIs
-description: Describes which Embedding SDK APIs are available on the MicroStrategy Bot consumption page.
+description: Describes which Embedding SDK APIs are available on the Strategy Bot consumption page.
 ---
 
-The `embedBotConsumptionPage` object is the manipulator of the MicroStrategy dashboard consumption page. It could be got by `embeddingContext.embedBotConsumptionPage`.
+The `embedBotConsumptionPage` object is the manipulator of the Strategy dashboard consumption page.
+It could be got by `embeddingContext.embedBotConsumptionPage`.
 
-The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
+The details of the `embeddingContext` object could be seen in
+[Embedding context](./embedding-context.md).
 
 The APIs under embed botConsumption page object are as below.
 
@@ -13,8 +15,8 @@ The APIs under embed botConsumption page object are as below.
 
 #### Description
 
-This API can be used to ask a question to a bot consumption page which is already loaded.
-If the bot consumption page is loading then the question will be triggered after it is initialized
+This API can be used to ask a question to a bot consumption page which is already loaded. If the bot
+consumption page is loading then the question will be triggered after it is initialized
 
 #### Class
 

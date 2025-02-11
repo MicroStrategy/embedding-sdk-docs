@@ -1,19 +1,23 @@
 ---
-title: Embed MicroStrategy bot consumption page
-description: The Embedding SDK allows you to quickly integrate a MicroStrategy bot consumption page into a web application in a responsive manner.
+title: Embed Strategy bot consumption page
+description:
+  The Embedding SDK allows you to quickly integrate a Strategy bot consumption page into a web
+  application in a responsive manner.
 ---
 
-The Embedding SDK allows you to quickly integrate a MicroStrategy bot consumption page into a web application in a responsive manner.
+The Embedding SDK allows you to quickly integrate a Strategy bot consumption page into a web
+application in a responsive manner.
 
-There are three basic steps for embedding a MicroStrategy bot consumption page.
+There are three basic steps for embedding a Strategy bot consumption page.
 
-1. In the initial page of your web application, add a link to the MicroStrategy JavaScript Embedding SDK.
+1. In the initial page of your web application, add a link to the Strategy JavaScript Embedding SDK.
 
    ```html
    <script src="{YOUR_LIBRARY_SERVER_URL}/javascript/embeddinglib.js"></script>
    ```
 
-   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
+   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual Strategy Library Server URL, e.g.,
+   [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
 
 1. Create a `<div>` as the placeholder where you want to embed the bot consumption page.
 
@@ -21,7 +25,8 @@ There are three basic steps for embedding a MicroStrategy bot consumption page.
    <div id="container"></div>
    ```
 
-1. Call the `microstrategy.embeddingContexts.embedBotConsumptionPage(props)` method to embed the bot consumption page in the container.
+1. Call the `microstrategy.embeddingContexts.embedBotConsumptionPage(props)` method to embed the bot
+   consumption page in the container.
 
    ```js
    microstrategy.embeddingContexts.embedBotConsumptionPage({
@@ -32,8 +37,9 @@ There are three basic steps for embedding a MicroStrategy bot consumption page.
    });
    ```
 
-To help you get started, we have provided a number of simple applications with sample code and explanations.
+To help you get started, we have provided a number of simple applications with sample code and
+explanations.
 
-- [Properties for an embedded MicroStrategy bot consumption page](./embed-bot-consumption-properties.md)
+- [Properties for an embedded Strategy bot consumption page](./embed-bot-consumption-properties.md)
 
-  Describes the properties that can be set for an embedded MicroStrategy bot consumption page.
+  Describes the properties that can be set for an embedded Strategy bot consumption page.

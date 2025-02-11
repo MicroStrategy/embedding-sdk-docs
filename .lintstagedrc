@@ -4,8 +4,5 @@
     "yarn prettier --list-different --config ./.prettiermarkdownrc",
     "yarn markdownlint"
   ],
-  "*.js": [
-    "yarn eslint --quiet",
-    "yarn prettier --list-different --config ./.prettierrc"
-  ]
+  "*.js": ["yarn eslint --quiet", "yarn prettier --list-different --config ./.prettierrc"]
 }

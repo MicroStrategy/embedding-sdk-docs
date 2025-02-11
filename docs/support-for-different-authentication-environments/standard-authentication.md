@@ -1,11 +1,17 @@
 ---
 title: Use standard or LDAP authentication
-description: The example in this topic illustrates how to seamlessly display an embedded dashboard using standard or LDAP authentication
+description:
+  The example in this topic illustrates how to seamlessly display an embedded dashboard using
+  standard or LDAP authentication
 ---
 
-The example in this topic showcases how to display an embedded dashboard using Standard or LDAP authentication
+The example in this topic showcases how to display an embedded dashboard using Standard or LDAP
+authentication
 
-To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g17) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dashboard and authenticate using Standard authentication.
+To help you get started, we have provided
+[a live example](https://microstrategy.github.io/playground/?example=g17) in the
+[Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this
+example only shows how to embed a dashboard and authenticate using Standard authentication.
 
 The workflow consists of:
 
@@ -17,13 +23,16 @@ The workflow consists of:
 
 ## Set up Library Server
 
-Enable Standard and optionally other authentication modes in MicroStrategy Library Admin.
+Enable Standard and optionally other authentication modes in Strategy Library Admin.
 
 ![MSTR Library Admin Guest Auth](../images/MstrLibraryAdmin_GuestAuth.png)
 
 ## Import Embedding SDK
 
-Import Embedding SDK from your Library Server to your HTML page. In the code sample below, the SDK is imported into the head section of the HTML file. You can replace the url, `https://demo.microstrategy.com/MicroStrategyLibraryInsights/javascript/embeddinglib.js`, with your own typically in the form `https://{env-url}/{libraryName}/javascript/embeddinglib.js`.
+Import Embedding SDK from your Library Server to your HTML page. In the code sample below, the SDK
+is imported into the head section of the HTML file. You can replace the url,
+`https://demo.microstrategy.com/MicroStrategyLibraryInsights/javascript/embeddinglib.js`, with your
+own typically in the form `https://{env-url}/{libraryName}/javascript/embeddinglib.js`.
 
 ```html
 <head>
@@ -36,14 +45,17 @@ Import Embedding SDK from your Library Server to your HTML page. In the code sam
 
 ## Embed dashboard with custom authentication properties
 
-The sample code below shows how to embed a sample dashboard with properties set to enable custom authentication mode where you have to provide the auth token to log in. Note: the `login` function will be implemented in the [next section](#authentication-through-rest-api-using-standard-or-ldap-authentication).
+The sample code below shows how to embed a sample dashboard with properties set to enable custom
+authentication mode where you have to provide the auth token to log in. Note: the `login` function
+will be implemented in the
+[next section](#authentication-through-rest-api-using-standard-or-ldap-authentication).
 
 ```html
 <body>
   <div id="embedding-dossier-container"></div>
   <script>
     let baseServerUrl = "https://demo.microstrategy.com";
-    let libraryName = "MicroStrategyLibraryInsights";
+    let libraryName = "StrategyLibraryInsights";
     // https://{env-url}/{libraryName}/app/{projectId}/{dossierId}
     let url =
       baseServerUrl +
@@ -95,11 +107,20 @@ The sample code below shows how to embed a sample dashboard with properties set 
 
 ## Authentication through REST API using Standard or LDAP authentication
 
-The `getAuthToken()` function will make a REST API call to see if there is an existing login session. The endpoint used is [GET /api/auth/token](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/getAuthToken).
+The `getAuthToken()` function will make a REST API call to see if there is an existing login
+session. The endpoint used is
+[GET /api/auth/token](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/getAuthToken).
 
-The `createAuthToken()` function will authenticate the user using Standard authentication. The endpoint used is [POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/postLogin). The main points are to change the `loginMode` to `1` for Standard authentication, to `16` for LDAP authentication, and to provide the `username` and `password` unlike Guest authentication.
+The `createAuthToken()` function will authenticate the user using Standard authentication. The
+endpoint used is
+[POST /api/auth/login](https://demo.microstrategy.com/MicroStrategyLibrary/api-docs/index.html#/Authentication/postLogin).
+The main points are to change the `loginMode` to `1` for Standard authentication, to `16` for LDAP
+authentication, and to provide the `username` and `password` unlike Guest authentication.
 
-The `login()` function should be used for [`getLoginToken`](../add-functionality/methods-and-properties#getlogintoken). This function return the existing auth token if it exists using `getAuthToken()` and create a new one to return if it doesn't exist using `createAuthToken()`.
+The `login()` function should be used for
+[`getLoginToken`](../add-functionality/methods-and-properties#getlogintoken). This function return
+the existing auth token if it exists using `getAuthToken()` and create a new one to return if it
+doesn't exist using `createAuthToken()`.
 
 ```html
 <script>
@@ -158,12 +179,12 @@ The `login()` function should be used for [`getLoginToken`](../add-functionality
 </script>
 ```
 
-`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
+`applicationType` must be unset or equal to `35`. Because the implementation of Embedding SDK is
+based on login as a Library user, which uses the param of `applicationType:35`.
 
 ## Putting it all together
 
-Here's how it would look if you follow the steps above.
-Adjust as needed.
+Here's how it would look if you follow the steps above. Adjust as needed.
 
 ```html
 <!doctype html>
@@ -180,7 +201,7 @@ Adjust as needed.
     <div id="embedding-dossier-container"></div>
     <script>
       let baseServerUrl = "https://demo.microstrategy.com";
-      let libraryName = "MicroStrategyLibraryInsights";
+      let libraryName = "StrategyLibraryInsights";
       // https://{env-url}/{libraryName}/app/{projectId}/{dossierId}
       let url =
         baseServerUrl +

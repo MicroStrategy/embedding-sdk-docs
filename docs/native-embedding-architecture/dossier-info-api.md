@@ -1,11 +1,16 @@
 ---
 title: Getting dashboard info via APIs
-description: You can get dashboard information, such as definition and visualization data, with Native Embedding SDK.
+description:
+  You can get dashboard information, such as definition and visualization data, with Native
+  Embedding SDK.
 ---
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to load the dashboard in a client's webpage, you can use the Native Embedding SDK to get the definition or data from the dashboard.
+Filters can be applied both during the execution of an embedded dashboard and after it has been
+rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to load the dashboard in a
+client's webpage, you can use the Native Embedding SDK to get the definition or data from the
+dashboard.
 
 Let's say you already have `MstrEnvironment` and `MstrDossier` objects:
 
@@ -29,7 +34,8 @@ try {
 
 ## Get dashboard definition
 
-You can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve the definition of the dashboard.
+You can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to
+retrieve the definition of the dashboard.
 
 | `getDossierDefinition()` |                                      |
 | ------------------------ | ------------------------------------ |
@@ -110,7 +116,8 @@ try {
 
 ## Get visualization data
 
-You can use the `MstrDossier.getVisualizationData()` function in the Native Embedding SDK to retrieve the data of a single visualization.
+You can use the `MstrDossier.getVisualizationData()` function in the Native Embedding SDK to
+retrieve the data of a single visualization.
 
 | `getVisualizationData()` |                                                          |
 | ------------------------ | -------------------------------------------------------- |

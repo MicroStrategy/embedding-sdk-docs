@@ -7,11 +7,15 @@ description: Embed multiple dossier visualizations on a page
 
 ## Purpose
 
-You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dashboard page.
+You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with
+high performance that is similar to loading one out-of-the-box Library dashboard page.
 
-Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
+Custom visualizations are also supported. To embed custom visualizations, you should deploy them on
+Strategy Library first. To deploy custom visualizations on Strategy Library, refer to
+[Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
-Here is a live demo for this in [Embedding Playground](https://microstrategy.github.io/playground/?example=g28).
+Here is a live demo for this in
+[Embedding Playground](https://microstrategy.github.io/playground/?example=g28).
 
 ## Requirements
 
@@ -30,8 +34,8 @@ The js bundle is also in the web-dossier war, in the same directory as `embeddin
 
 ### Embed visualizations from one dossier
 
-To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use the code shown below:
-(please use `<meta charset="UTF-8" />` character encoding tag)
+To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use
+the code shown below: (please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
 <!doctype html>
@@ -105,12 +109,14 @@ To embed multiple visualizations from one dashboard, after referring `native-emb
 </html>
 ```
 
-`applicationType` must be unset or equal to `35`. Because the implementation of Native Embedding SDK is based on login as a Library user, which uses the param of `applicationType:35`.
+`applicationType` must be unset or equal to `35`. Because the implementation of Native Embedding SDK
+is based on login as a Library user, which uses the param of `applicationType:35`.
 
 ### Display a loading bar during the entire visualization embedding process
 
-During the existing visualization embedding process, the Native Embedding SDK knows which container to use when you call the `dossier.refresh` API, and the loading bar appears at that time.
-If you want to see the loading bar during the entire embedding process, create an implementation like this:
+During the existing visualization embedding process, the Native Embedding SDK knows which container
+to use when you call the `dossier.refresh` API, and the loading bar appears at that time. If you
+want to see the loading bar during the entire embedding process, create an implementation like this:
 
 ```html
 <body>
@@ -143,10 +149,12 @@ If you want to see the loading bar during the entire embedding process, create a
 }
 ```
 
-You need to set the height and length with the container element.
-We haven't had a default height and length when we call `dossier.refresh` API to embed a viz. If the container element hasn't had the height and length, you can't see your embed visualization.
+You need to set the height and length with the container element. We haven't had a default height
+and length when we call `dossier.refresh` API to embed a viz. If the container element hasn't had
+the height and length, you can't see your embed visualization.
 
-Find the `getAuthToken` function in [the Native Embedding SDK doc](./embed-multiple-viz.md#example-code)
+Find the `getAuthToken` function in
+[the Native Embedding SDK doc](./embed-multiple-viz.md#example-code)
 
 ```js
 try {
@@ -196,7 +204,8 @@ try {
 
 ### Embed visualizations from multiple dossiers
 
-If you want to embed visualizations from multiple dossiers, you must turn on this functionality by setting the feature flag as shown below before calling the APIs:
+If you want to embed visualizations from multiple dossiers, you must turn on this functionality by
+setting the feature flag as shown below before calling the APIs:
 
 ```js
 window.microstrategy.nativeEmbedding.featureFlags.multipleDossiers = true;
@@ -280,7 +289,8 @@ After you embed multiple visualizations on a page, you can do some deeper manipu
 
 - [Visualization manipulation on graphics](vis-manipulation.md)
 
-  This introductory shows what kinds of manipulation can we do and some behavior in the Native Embedding SDK.
+  This introductory shows what kinds of manipulation can we do and some behavior in the Native
+  Embedding SDK.
 
 - [Add event handling](event-handling.md)
 
@@ -288,7 +298,8 @@ After you embed multiple visualizations on a page, you can do some deeper manipu
 
 - [Retrieve and apply filters](apply-filter.md)
 
-  You can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
+  You can manipulate the chapter-level filters, on-page selectors, and visualizations used as
+  filters via the Native Embedding SDK available since 2021 Update 9.
 
 - [Getting dashboard info via APIs](dossier-info-api.md)
 
@@ -304,8 +315,11 @@ This piece of code contains a function from the following namespace and classes:
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying `MstrDossier` objects.
+  This class is the object returned from the
+  `microstrategy.embeddingComponent.environments.create()` function, which is responsible for
+  creating and destroying `MstrDossier` objects.
 
 - [`MstrDossier`](mstr-dossier.md) Class
 
-  This class is returned from the `MstrEnvironment.loadDossier()` function, which is responsible for showing visualizations in containers.
+  This class is returned from the `MstrEnvironment.loadDossier()` function, which is responsible for
+  showing visualizations in containers.

@@ -1,49 +1,61 @@
 ---
 title: What's new in the Embedding SDK
-description: In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
+description: In each release, changes are made to make the Strategy SDK more powerful and easier to use.
 ---
 
-In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
+In each release, changes are made to make the Strategy SDK more powerful and easier to use.
 
-## MicroStrategy ONE December 2024
+## Strategy ONE December 2024
 
-- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
-  - Introduce `disableGroupSelection` property to disable group selection in the component selection mode on Microstrategy dashboard consumption page.
+- [Embed Strategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - Introduce `disableGroupSelection` property to disable group selection in the component selection
+    mode on Strategy dashboard consumption page.
 
-## MicroStrategy ONE September 2024
+## Strategy ONE September 2024
 
-- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
-  - Introduce `enablePageSelection` property to customize displaying page selectors in the TOC panel of Microstrategy dashboard consumption page.
+- [Embed Strategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - Introduce `enablePageSelection` property to customize displaying page selectors in the TOC panel
+    of Strategy dashboard consumption page.
 - [The customized UI settings in Embedding SDK.](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
-  - Introduce `customUi` object property `dockedToc` to customize default values of `isOpen` and `isDocked` of the TOC panel in the UI of Microstrategy dashboard consumption page.
+  - Introduce `customUi` object property `dockedToc` to customize default values of `isOpen` and
+    `isDocked` of the TOC panel in the UI of Strategy dashboard consumption page.
 - [Embed Dashboard Visualizations with Native Embedding SDK.](./native-embedding-architecture/mstr-dossier.md)
   - Introduce `AbortController` support to cancel `MstrDossier.refresh()` calls.
 - [Native Embedding MstrEnvironment Class](./native-embedding-architecture/mstr-environment.md)
 
-  - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and `MstrEnvironment.loadBot()`.
+  - Introduce optional `applicationId` input parameter for `MstrEnvironment.loadDossier()` and
+    `MstrEnvironment.loadBot()`.
   - Introduce `MstrEnvironment.getAuthToken()` function.
 
-- [Properties for an embedded MicroStrategy Library home page.](./embed-library-main-page/embed-library-properties.md)
-  - Change the available values of `currentPage.key` according to the Library UI change and new API functionalities: Remove 'all', 'myContent', 'favorites' and 'recents'; add 'home' and 'contentDiscovery'.
+- [Properties for an embedded Strategy Library home page.](./embed-library-main-page/embed-library-properties.md)
+  - Change the available values of `currentPage.key` according to the Library UI change and new API
+    functionalities: Remove 'all', 'myContent', 'favorites' and 'recents'; add 'home' and
+    'contentDiscovery'.
 
-## MicroStrategy ONE June 2024
+## Strategy ONE June 2024
 
-- [Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
-  - Deprecate `botConsumption` object property `snapshot.enabled` to customize UI of the bot consumption page.
-  - Deprecate `botConsumption` object property `topicsPanel.enabled` to customize UI of the bot consumption page.
+- [Embed Strategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+  - Deprecate `botConsumption` object property `snapshot.enabled` to customize UI of the bot
+    consumption page.
+  - Deprecate `botConsumption` object property `topicsPanel.enabled` to customize UI of the bot
+    consumption page.
   - Introduce `botConsumption` object property `aiBot` to customize UI of the bot consumption page.
-  - Introduce `customUi` object property `theme` to customize UI of Microstrategy Library including bot consumption page.
-  - Introduce `botConsumption` boolean property `disableHyper` to customize if you want to disable hyper extension highlight service in bot consumption page.
+  - Introduce `customUi` object property `theme` to customize UI of Strategy Library including bot
+    consumption page.
+  - Introduce `botConsumption` boolean property `disableHyper` to customize if you want to disable
+    hyper extension highlight service in bot consumption page.
 - [Bot consumption page APIs.](./embedding-context/bot-consumption-page-apis.md)
-  - You can call new APIs on the bot consumption page to interact with Microstrategy bot.
+  - You can call new APIs on the bot consumption page to interact with Strategy bot.
 - [New dashboard consumption page APIs.](./embedding-context/dossier-consumption-page-apis.md)
-  - You can call the [dashboard APIs](./add-functionality/add-functionality.md) via the `embeddingContext.dossierConsumption` object on a dashboard consumption page.
+  - You can call the [dashboard APIs](./add-functionality/add-functionality.md) via the
+    `embeddingContext.dossierConsumption` object on a dashboard consumption page.
 - [A new embedding context API.](./embedding-context/#gotopagepageinfo)
-  - You can call the new API `embeddingContext.goToPage(page)` to navigate to an arbitrary page on the OOTB Library.
+  - You can call the new API `embeddingContext.goToPage(page)` to navigate to an arbitrary page on
+    the OOTB Library.
 - [New OAuth APIs for SAML and OIDC login.](./support-for-different-authentication-environments/new-authentication-apis.md)
   - You can call the new APIs to simplify the original SAML or OIDC workflow.
 
-## MicroStrategy One March 2024
+## Strategy One March 2024
 
 - Rename 'dossier' into 'dashboard'.
 - [Embed Bot Visualizations with Native Embedding SDK.](./native-embedding-architecture/embed-bot-visualizations.md)
@@ -51,14 +63,16 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2021 Update 12
 
-[Embed MicroStrategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
+[Embed Strategy bot consumption page.](./embed-bot-consumption-page/embed-bot-consumption-page.md)
 
-- You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some UI customizations.
+- You can use a new Embedding SDK API to embed a bot consumption page. The user also could do some
+  UI customizations.
 
 ## 2021 Update 11
 
-- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
-  - You can use a new Embedding SDK API to embed a dashboard consumption page, in which we support the user to navigate between the dashboard and the homepage.
+- [Embed Strategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
+  - You can use a new Embedding SDK API to embed a dashboard consumption page, in which we support
+    the user to navigate between the dashboard and the homepage.
 - [Dashboard consumption page APIs.](./embedding-context/dossier-consumption-page-apis.md)
   - You can call new APIs on the dashboard consumption page to get and set the selected components.
 
@@ -66,23 +80,24 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 [The Native Embedding SDK.](./native-embedding-architecture/native-embedding-architecture.md)
 
-- You can use the Native Embedding SDK to embed visualizations from separate containers to improve performance.
+- You can use the Native Embedding SDK to embed visualizations from separate containers to improve
+  performance.
 - Users can interact with the embedded visualization.
 - Users can use APIs to perform manipulations such as filtering.
 
 ## 2021 Update 8
 
-- [Embed MicroStrategy report page.](./embed-report-page/embed-report-page.md)
-  - Users can embed MicroStrategy report consumption page.
+- [Embed Strategy report page.](./embed-report-page/embed-report-page.md)
+  - Users can embed Strategy report consumption page.
   - Users can control the visibility of the navigation bar of the report consumption page.
 - [Ability to customize dashboard pages from embedding Library home page](./embed-library-main-page/embed-custom-ui-on-all-pages.md)
 - [Ability to customize Library home page from embedding dashboard page](./add-functionality/methods-and-properties.md#customui)
 
 ## 2021 Update 7
 
-[Embed MicroStrategy Library home page.](./embed-library-main-page/embed-library-main-page.md)
+[Embed Strategy Library home page.](./embed-library-main-page/embed-library-main-page.md)
 
-- Users can embed MicroStrategy Library home page and use any child page accessed from the sidebar.
+- Users can embed Strategy Library home page and use any child page accessed from the sidebar.
 - Users can control the visibility of the navigation bar and the sidebar of the library home page.
 
 ## 2021 Update 4
@@ -115,19 +130,27 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 2
 
-A new method to [remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+A new method to
+[remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
 
 ## 2019
 
-A new property, [dossierFeature](./add-functionality/methods-and-properties.md#dossierfeature), allows you to customize dashboard features on the UI. Use the readOnly detailed property to enable or disable all context menus. This includes the visualization right-click context menu and the context menu on the top right of the visualization that includes such options as **Export**.
+A new property, [dossierFeature](./add-functionality/methods-and-properties.md#dossierfeature),
+allows you to customize dashboard features on the UI. Use the readOnly detailed property to enable
+or disable all context menus. This includes the visualization right-click context menu and the
+context menu on the top right of the visualization that includes such options as **Export**.
 
 ## 11.0
 
-- A new property allows you to [pass filters during dashboard execution](./add-functionality/methods-and-properties.md#filters).
-- New properties allow you to [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded dashboard.
+- A new property allows you to
+  [pass filters during dashboard execution](./add-functionality/methods-and-properties.md#filters).
+- New properties allow you to
+  [customize features and the UI](./add-functionality/methods-and-properties.md) for an embedded
+  dashboard.
 
 ## 10.9
 
 The Embedding SDK was introduced in 10.9.
 
-- This new SDK was added to the MicroStrategy Developer Library to support embedding MicroStrategy content in third-party web applications or portals.
+- This new SDK was added to the Strategy Developer Library to support embedding Strategy content in
+  third-party web applications or portals.

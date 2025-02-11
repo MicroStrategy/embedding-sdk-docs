@@ -1,11 +1,18 @@
 ---
 title: Retrieve and apply filters
-description: Filters can be applied both during the execution of an embedded dashboard and after it has been rendered.
+description:
+  Filters can be applied both during the execution of an embedded dashboard and after it has been
+  rendered.
 ---
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
+Filters can be applied both during the execution of an embedded dashboard and after it has been
+rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations
+in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and
+visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For
+chapter-level filters and on-page selectors, Strategy only supports attribute element list
+selectors.
 
 Let's say you already have the `MstrEnvironment` and `MstrDossier` objects:
 
@@ -35,7 +42,10 @@ try {
 
 ## Get available filter elements
 
-To apply filters to the dashboard, the client may need to get the list of available attribute elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()` function in the Native Embedding SDK to retrieve the available attribute elements of the filters or selectors.
+To apply filters to the dashboard, the client may need to get the list of available attribute
+elements of the filters or selectors. You can use the `MstrDossier.getFilterAvailableElements()`
+function in the Native Embedding SDK to retrieve the available attribute elements of the filters or
+selectors.
 
 | `getFilterAvailableElements()` |                                                          |
 | ------------------------------ | -------------------------------------------------------- |
@@ -76,11 +86,14 @@ Example of the attribute element list in the resolved value:
 
 ## Apply filters after embedded visualizations are rendered
 
-After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dashboard. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
+After embedded visualizations have been rendered, you can use
+the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve
+information about filters, selectors, and visualizations used as filters in the dashboard. After you
+have the key of the filter, selector, or visualization used as a filter, you can use the
+`MstrDossier.applyFilter()` function to manipulate it.
 
-:::note
-For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
-:::
+:::note For filters and selectors, we currently only support manipulating the selector type of the
+attribute element list. :::
 
 | `applyFilter()` |                                               |
 | --------------- | --------------------------------------------- |
@@ -96,7 +109,11 @@ The sections below show the filter details for each filter type.
 
 #### Chapter-level filters
 
-For the chapter-level filter with an `attribute_element_list` type, you can get its key and source attribute definition from the dashboard definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations on the same chapter as the filter are refreshed to reflect the latest data.
+For the chapter-level filter with an `attribute_element_list` type, you can get its key and source
+attribute definition from the dashboard definition with the `MstrDossier.getDossierDefinition()`
+function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as
+follows. After the function successfully returns, all embedded visualizations on the same chapter as
+the filter are refreshed to reflect the latest data.
 
 ```js
 try {
@@ -120,7 +137,11 @@ try {
 
 #### On-Page selectors
 
-For on-page selectors with an `attribute_element_list` type, you can get its key from the dashboard definition and source attribute definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After the function successfully returns, all embedded visualizations that are the targets of the selector are refreshed to reflect the latest data.
+For on-page selectors with an `attribute_element_list` type, you can get its key from the dashboard
+definition and source attribute definition with the `MstrDossier.getDossierDefinition()` function.
+Then you can manipulate the filter with the `MstrDossier.applyFilter()` function as follows. After
+the function successfully returns, all embedded visualizations that are the targets of the selector
+are refreshed to reflect the latest data.
 
 ```js
 try {
@@ -144,11 +165,17 @@ try {
 
 #### Visualizations used as filters
 
-For a visualization used as a filter, you need its key from the dashboard definition with the `MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization used as a filter with `MstrDossier.applyFilter()` function as follows. After the function successfully returns, the elements of the visualization used as a filter are highlighted accordingly, and all embedded visualizations that are the targets of the visualization as the filter are refreshed to reflect the latest data.
+For a visualization used as a filter, you need its key from the dashboard definition with the
+`MstrDossier.getDossierDefinition()` function. Then you can manipulate the visualization used as a
+filter with `MstrDossier.applyFilter()` function as follows. After the function successfully
+returns, the elements of the visualization used as a filter are highlighted accordingly, and all
+embedded visualizations that are the targets of the visualization as the filter are refreshed to
+reflect the latest data.
 
 - attribute element selection
 
-  To select multiple attribute elements in the visualizations used as filters, you can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple attribute elements in the visualizations used as filters, you can use
+  `MstrDossier.applyFilter()` with the following input:
 
   ```js
   try {
@@ -180,7 +207,10 @@ For a visualization used as a filter, you need its key from the dashboard defini
 
 - metric element selection
 
-  To select multiple metric elements in the visualizations used as filters, you need to provide the full list of attributes in the visualization and every metric element selection should be the combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()` with the following input:
+  To select multiple metric elements in the visualizations used as filters, you need to provide the
+  full list of attributes in the visualization and every metric element selection should be the
+  combination of attribute elements from every attribute. You can use `MstrDossier.applyFilter()`
+  with the following input:
 
   ```js
   try {
@@ -330,7 +360,8 @@ To apply selections to on-page selectors, use the same input as chapter-level fi
 
 - Select attribute elements of the visualization
 
-Select the `June, April` elements of the `Month of Year` attribute and the `2014` element of the `Year` attribute.
+Select the `June, April` elements of the `Month of Year` attribute and the `2014` element of the
+`Year` attribute.
 
 ```js
 try {
