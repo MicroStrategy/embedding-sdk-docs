@@ -7,7 +7,9 @@ description: Destroy visualizations on a page
 
 ## Purpose
 
-After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can also destroy them to clear your page, or embed the visualizations from another dossier.
+After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a
+client's webpage, you can also destroy them to clear your page, or embed the visualizations from
+another dossier.
 
 ## Example code
 
@@ -67,8 +69,11 @@ This piece of code contains a function from the following namespace and classes:
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying `MstrDossier` objects.
+  This class is the object returned from the
+  `microstrategy.embeddingComponent.environments.create()` function, which is responsible for
+  creating and destroying `MstrDossier` objects.
 
 - [`MstrDossier`](mstr-dossier.md) Class
 
-  This class is returned from the `MstrEnvironment.loadDossier()` function, which is responsible for showing visualizations in containers.
+  This class is returned from the `MstrEnvironment.loadDossier()` function, which is responsible for
+  showing visualizations in containers.

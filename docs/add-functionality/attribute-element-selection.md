@@ -1,15 +1,24 @@
 ---
 title: Enable the selection of attribute elements
-description: Attribute element selection within dossiers provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.
+description:
+  Attribute element selection within dossiers provides end-users with the ability to conveniently
+  select attribute elements in visualizations in an embedding way. To provide continuity with our
+  existing APIs and enable embedded applications to take advantage of this new design concept, we
+  have updated existing endpoints and provided new embedding SDK functions.
 ---
 
-The MicroStrategy 2021 Update 3 release exposes attribute element selection within dossiers. This provides end-users with the ability to conveniently select attribute elements in visualizations in an embedding way. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new embedding SDK functions.
+The Strategy 2021 Update 3 release exposes attribute element selection within dossiers. This
+provides end-users with the ability to conveniently select attribute elements in visualizations in
+an embedding way. To provide continuity with our existing APIs and enable embedded applications to
+take advantage of this new design concept, we have updated existing endpoints and provided new
+embedding SDK functions.
 
 ## Embedding SDK functionalities
 
 With the visualization element selection feature, the Embedding SDK could do the things below:
 
-- Support programmatic selecting of attribute elements in visualizations. This involves the following:
+- Support programmatic selecting of attribute elements in visualizations. This involves the
+  following:
 
   a. Select attribute elements from a single visualization after the dashboard is rendered.
 
@@ -17,7 +26,10 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 - Support programmatic retrieval of available elements in a visualization.
 
-- Enables the user to register an event handler to notify the parent application when the attribute element selection is changed. Incorporate the ability to register and unregister events for a callback. This enables the parent application to know when the attribute element selection is changed and provide information about the newly selected attribute elements.
+- Enables the user to register an event handler to notify the parent application when the attribute
+  element selection is changed. Incorporate the ability to register and unregister events for a
+  callback. This enables the parent application to know when the attribute element selection is
+  changed and provide information about the newly selected attribute elements.
 
 ## Embedding SDK APIs and examples
 
@@ -27,7 +39,9 @@ With the visualization element selection feature, the Embedding SDK could do the
 
 `Dossier.selectVizElement(props)`
 
-The Dossier object created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The Dossier object created using `microstrategy.dossier.create(props)`. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 #### Input parameters
 
@@ -94,7 +108,8 @@ myDossier
   });
 ```
 
-Since the target state is specified in the API parameters, the callback parameters for the resolve case are not necessary.
+Since the target state is specified in the API parameters, the callback parameters for the resolve
+case are not necessary.
 
 | Parameter Name | Data Type    | Example                         | Comments                         |
 | -------------- | ------------ | ------------------------------- | -------------------------------- |
@@ -102,7 +117,8 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Errors
 
-When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                                                                                | Error Category | Handling Module | Error Handling                               |
 | --------------------------------------------------------------------------------------------------------- | -------------- | --------------- | -------------------------------------------- |
@@ -121,7 +137,10 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 #### Input parameters
 
-An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3. This field is an array that contains objects for each visualization attribute element selection. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about the fields in the props input parameter.
+An optional visualizationSelectedElements field has been added to the props object in 2021 Update 3.
+This field is an array that contains objects for each visualization attribute element selection. See
+[Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information
+about the fields in the props input parameter.
 
 | Parameter Name                                          | Description                                      | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | ------------------------------------------------ | --------- | --------- | ------------- |
@@ -158,11 +177,13 @@ microstrategy.dossier.create({
 });
 ```
 
-If you do not enter a value for visualizationSelectedElements, the dashboard runs using the old behavior and no new attribute elements are selected in the visualization.
+If you do not enter a value for visualizationSelectedElements, the dashboard runs using the old
+behavior and no new attribute elements are selected in the visualization.
 
 #### Response
 
-This API returns a dossier promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
+This API returns a dossier promise object in the resolved case, which can be used to call other
+dossier-owned Embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -180,7 +201,8 @@ microstrategy.dossier
 
 #### Errors
 
-When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                                                                  | Error Category | Handling Module | Error Handling                                |
 | ------------------------------------------------------------------------------------------- | -------------- | --------------- | --------------------------------------------- |
@@ -235,7 +257,8 @@ The `availableElements` is an array representing all the available elements. Her
 
 #### Errors
 
-When an error occurs, this API returns a promise object that in turn returns an error object in rejected cases.
+When an error occurs, this API returns a promise object that in turn returns an error object in
+rejected cases.
 
 | Error Case                                                                                 | Error Category | Handling Module | Error Handling                               |
 | ------------------------------------------------------------------------------------------ | -------------- | --------------- | -------------------------------------------- |
@@ -243,7 +266,9 @@ When an error occurs, this API returns a promise object that in turn returns an 
 
 ### Callback for monitoring the changing of visualization elements
 
-In some instances, the available elements may change when visualization data is changed by a user’s manual actions. An onVisualizationElementsChanged event monitors this action and enables the user to update their available elements immediately when the data is changed.
+In some instances, the available elements may change when visualization data is changed by a user’s
+manual actions. An onVisualizationElementsChanged event monitors this action and enables the user to
+update their available elements immediately when the data is changed.
 
 #### Event name
 
@@ -289,7 +314,8 @@ The callback parameter's availableElements are shown below.
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other
+dossier-owned Embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");

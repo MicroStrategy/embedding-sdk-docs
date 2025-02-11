@@ -3,9 +3,10 @@ title: MstrBot class
 description: MstrBot class
 ---
 
-<Available since="MicroStrategy One March 2024"/>
+<Available since="Strategy One March 2024"/>
 
-The object returned from the `MstrEnvironment.loadBot()` function, which allows access to the MicroStrategy bot object.
+The object returned from the `MstrEnvironment.loadBot()` function, which allows access to the
+Strategy bot object.
 
 ## APIs
 
@@ -21,7 +22,8 @@ N/A
 
 #### Response
 
-This API returns a promise object that resolves to the result of GET `/api/bots/{botId}/questions` API. A data sample is like this:
+This API returns a promise object that resolves to the result of GET `/api/bots/{botId}/questions`
+API. A data sample is like this:
 
 <details>
   <summary>Example of the questions in the resolved value:</summary>

@@ -4,9 +4,9 @@ env:
   es2022: true
   node: true
 extends:
-  - 'airbnb-base'
-  - 'plugin:markdown/recommended'
-  - 'prettier'
+  - "airbnb-base"
+  - "plugin:markdown/recommended"
+  - "prettier"
 plugins:
   - markdown
   - prettier
@@ -15,10 +15,10 @@ parserOptions:
   ecmaVersion: 13
 overrides:
   - files:
-    - "**/*.md"
+      - "**/*.md"
     processor: "markdown/markdown"
   - files:
-      - '**/*.md/*.{js}'
+      - "**/*.md/*.{js}"
     parserOptions:
       ecmaFeatures:
         impliedStrict: true

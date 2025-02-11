@@ -1,21 +1,33 @@
 ---
 title: Embedding SDK Playground
-description: MicroStrategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
+description:
+  Strategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful,
+  interactive analytics experiences that integrate seamlessly with websites and applications.
 ---
 
-MicroStrategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful, interactive analytics experiences that integrate seamlessly with websites and applications.
+Strategy’s Embedding SDK Playground is the one-stop shop for developers to build impactful,
+interactive analytics experiences that integrate seamlessly with websites and applications.
 
-Just use the intuitive drag-and-drop interfaces to define the perfect user experience, test it out in real time, and then let the platform automatically generate the code for you. You’ll turn your application into platform for Intelligence Everywhere in no time.
+Just use the intuitive drag-and-drop interfaces to define the perfect user experience, test it out
+in real time, and then let the platform automatically generate the code for you. You’ll turn your
+application into platform for Intelligence Everywhere in no time.
 
-Start building your application using the [Embedding SDK Playground](https://microstrategy.github.io/playground/). The [Playground User Manual](https://github.com/MicroStrategy/playground) provides the instructions for how to get started.
+Start building your application using the
+[Embedding SDK Playground](https://microstrategy.github.io/playground/). The
+[Playground User Manual](https://github.com/MicroStrategy/playground) provides the instructions for
+how to get started.
 
 ![Embedding SDK Playground](./images/embedded-analytics-sandbox.png)
 
-There are four types of embedding use cases in [Embedding SDK Playground](https://microstrategy.github.io/playground/): Bot, Dashboard, Visualization, and Library. For each type, corresponding operations and examples are filtered and displayed when the embedding type is selected.
+There are four types of embedding use cases in
+[Embedding SDK Playground](https://microstrategy.github.io/playground/): Bot, Dashboard,
+Visualization, and Library. For each type, corresponding operations and examples are filtered and
+displayed when the embedding type is selected.
 
 ## Examples in playground
 
-You can view examples in the Embedding SDK Playground by opening the Examples Gallery from "Start Over" button. Please save your work before opening an example.
+You can view examples in the Embedding SDK Playground by opening the Examples Gallery from "Start
+Over" button. Please save your work before opening an example.
 
 Here are some examples in the gallery so far.
 

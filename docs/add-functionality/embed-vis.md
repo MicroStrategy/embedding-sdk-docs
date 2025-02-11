@@ -1,17 +1,22 @@
 ---
 title: Embed a single visualization
-description: You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
+description:
+  You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This
+  gives the appearance of embedding a single visualization onto a page.
 ---
 
-You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This gives the appearance of embedding a single visualization onto a page.
+You can use the Embedding SDK to embed a dashboard with a single visualization maximized. This gives
+the appearance of embedding a single visualization onto a page.
 
 This functionality allows you to:
 
-- Target between a maximized view of a single visualization or a normal view of the entire dashboard.
+- Target between a maximized view of a single visualization or a normal view of the entire
+  dashboard.
 - Add event handling so the parent portal is aware of the maximizing action performed by the user.
 - Select a single visualization to appear by default when the dashboard opens.
 - Hide the maximize button so viewers cannot view the entire dashboard.
-- Choose any visualization on the dashboard to appear by default, even if it's not on the current page.
+- Choose any visualization on the dashboard to appear by default, even if it's not on the current
+  page.
 
 Check out the video below to see how it's done!
 
@@ -23,13 +28,18 @@ Check out the video below to see how it's done!
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15) that will embed a dashboard with a single visualization maximized with options to switch between `Max Size` and `Normal Size`.
+To help you get started, we have provided an
+[example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g15)
+that will embed a dashboard with a single visualization maximized with options to switch between
+`Max Size` and `Normal Size`.
 
 :::
 
 ## Embedding workflow
 
-When initializing a dashboard page, you must specify which visualization will be maximized and the visibility of its resize button. When the visualization is resized, whether it's by a manual click or the Embedding SDK, the dashboard page raises an event to invoke a callback in your application.
+When initializing a dashboard page, you must specify which visualization will be maximized and the
+visibility of its resize button. When the visualization is resized, whether it's by a manual click
+or the Embedding SDK, the dashboard page raises an event to invoke a callback in your application.
 
 ![maximize_viz_workflow](../images/maximize_viz_workflow.png)
 
@@ -39,7 +49,9 @@ When initializing a dashboard page, you must specify which visualization will be
 
 `Dossier.changeVisualizationSize(props)`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`.
+See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 #### Input parameters
 
@@ -69,7 +81,8 @@ myDossier &&
     });
 ```
 
-Since the target state is specified in the API parameters, the callback parameters for the resolve case are not necessary.
+Since the target state is specified in the API parameters, the callback parameters for the resolve
+case are not necessary.
 
 | Parameter Name | Data Type    | Example                           | Comments                                            |
 | -------------- | ------------ | --------------------------------- | --------------------------------------------------- |
@@ -83,7 +96,10 @@ Since the target state is specified in the API parameters, the callback paramete
 
 #### Input parameters
 
-The `props` parameter contains several fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information about these fields. In the `props` object, you must add a new optional field called `visualizationAppearances`. The `props` object contains the fields shown below.
+The `props` parameter contains several fields.
+See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information about these fields. In the `props` object, you must add a new optional field
+called `visualizationAppearances`. The `props` object contains the fields shown below.
 
 | Parameter Name                                          | Description                                                                                                     | Data Type | Required? | Default Value |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------- | --------- | ------------- |
@@ -106,13 +122,16 @@ microstrategy.dossier.create({
 });
 ```
 
-If you don't enter values for `visualizationAppearances`, the dashboard runs using the default behavior.
+If you don't enter values for `visualizationAppearances`, the dashboard runs using the default
+behavior.
 
-Multiple visualizations are not supported. This is because `size` is coupled on different visualizations, in which only one visualization can be maximized.
+Multiple visualizations are not supported. This is because `size` is coupled on different
+visualizations, in which only one visualization can be maximized.
 
 #### Response
 
-This API returns a `dossier` promise object in the resolved case, which can be used to call other dossier-owned Embedding SDK APIs.
+This API returns a `dossier` promise object in the resolved case, which can be used to call other
+dossier-owned Embedding SDK APIs.
 
 ```js
 const placeholderDiv = document.getElementById("dossierContainer");
@@ -130,13 +149,16 @@ microstrategy.dossier
 
 ### 3. The resize visualization callback
 
-When a user manually clicks the resize button for a visualization, an event is raised that notifies your application.
+When a user manually clicks the resize button for a visualization, an event is raised that notifies
+your application.
 
 #### Event name
 
 `Dossier.onVisualizationResized`
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`.
+See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 #### Callback format
 
@@ -162,7 +184,9 @@ in which the `resizedVisualization` callback parameter uses the following form
 
 ---
 
-Since you cannot set the callback parameters, it's impossible for these parameters to produce errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in turn returns an error object in rejected cases. The possible errors are shown below.
+Since you cannot set the callback parameters, it's impossible for these parameters to produce
+errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in
+turn returns an error object in rejected cases. The possible errors are shown below.
 
 | Related APIs                                                                   | Error Case                                                                                                                                                    | Error Handler Callback Parameter | Error Message                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

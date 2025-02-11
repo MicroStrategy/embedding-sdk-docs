@@ -3,11 +3,12 @@ title: Embed multiple bot visualizations on a page
 description: Embed multiple bot visualizations on a page
 ---
 
-<Available since="MicroStrategy One March 2024"/>
+<Available since="Strategy One March 2024"/>
 
 ## Purpose
 
-You can use the Native Embedding SDK to embed multiple visualizations from a bot in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dashboard page.
+You can use the Native Embedding SDK to embed multiple visualizations from a bot in a client's
+webpage, with high performance that is similar to loading one out-of-the-box Library dashboard page.
 
 ## Requirements
 
@@ -24,8 +25,8 @@ You must use the js bundle, `native-embedding-sdk.js`:
 
 ### Embed visualizations from one bot
 
-To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use the code shown below:
-(please use `<meta charset="UTF-8" />` character encoding tag)
+To embed multiple visualizations from one dashboard, after referring `native-embedding-sdk.js`, use
+the code shown below: (please use `<meta charset="UTF-8" />` character encoding tag)
 
 ```html
 <!doctype html>
@@ -108,7 +109,8 @@ To embed multiple visualizations from one dashboard, after referring `native-emb
 
 ### Destroy one visualization
 
-You can destroy one of these visualizations by calling `MstrBotVisualization.destroy()` API. For example, if you want to destroy the first visualization in the above code:
+You can destroy one of these visualizations by calling `MstrBotVisualization.destroy()` API. For
+example, if you want to destroy the first visualization in the above code:
 
 ```js
 try {
@@ -142,8 +144,11 @@ This piece of code contains a function from the following namespace and classes:
 
 - [`MstrEnvironment`](mstr-environment.md) Class
 
-  This class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which is responsible for creating and destroying `MstrDossier` objects.
+  This class is the object returned from the
+  `microstrategy.embeddingComponent.environments.create()` function, which is responsible for
+  creating and destroying `MstrDossier` objects.
 
 - [`MstrBot`](mstr-bot.md) Class
 
-  This class is returned from the `MstrEnvironment.loadBot()` function, which is responsible for showing bot visualizations in containers.
+  This class is returned from the `MstrEnvironment.loadBot()` function, which is responsible for
+  showing bot visualizations in containers.

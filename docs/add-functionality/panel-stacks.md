@@ -1,32 +1,57 @@
 ---
 title: Interact with panel stacks
-description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
+description:
+  Panel stacks provide end users with the ability to conveniently reuse segments of space within a
+  dashboard to represent data in multiple ways. Strategy supports one level of nesting within panel
+  stacks. You can switch panel stacks by using a selector or the panel stack header. An application
+  can now develop external controls to paginate through the various displays within a panel stack.
+  In addition, if the panel stack is switched by a user's manual input, an event handler notifies
+  the parent application of this action, allowing it to perform filtering or any other desirable
+  action.
 ---
 
-The MicroStrategy 2021 Update 1 release exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm) within dossiers. This provides end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new Embedding SDK functions.
+The Strategy 2021 Update 1 release
+exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm)
+within dossiers. This provides end users with the ability to conveniently reuse segments of space
+within a dashboard to represent data in multiple ways. To provide continuity with our existing APIs
+and enable embedded applications to take advantage of this new design concept, we have updated
+existing endpoints and provided new Embedding SDK functions.
 
-MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header.
+Strategy supports one level of nesting within panel stacks. You can switch panel stacks by using a
+selector or the panel stack header.
 
 ![panel stacks](../images/panel_stacks.png)
 
-Similar to providing navigation capabilities through provided embedded SDK functions, an application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
+Similar to providing navigation capabilities through provided embedded SDK functions, an application
+can now develop external controls to paginate through the various displays within a panel stack. In
+addition, if the panel stack is switched by a user's manual input, an event handler notifies the
+parent application of this action, allowing it to perform filtering or any other desirable action.
 
 :::tip
 
-To help you get started, we have provided an [example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g23) that will embed a dashboard with a panel stack and the option to switch between panels.
+To help you get started, we have provided an
+[example in the Embedding SDK Playground](https://microstrategy.github.io/playground/?example=g23)
+that will embed a dashboard with a panel stack and the option to switch between panels.
 
 :::
 
 ## Embedding behavior details
 
-1. Develop a JavaScript function call to support programmatic pagination through a given panel stack. This approach is similar to what is currently done for page navigation. This involves the following:
+1. Develop a JavaScript function call to support programmatic pagination through a given panel
+   stack. This approach is similar to what is currently done for page navigation. This involves the
+   following:
    1. Go to a specific panel, based on the panel identifier (key)
    1. Get the current panel identifier
    1. Get the available panels
-1. Provide a JavaScript event handler to notify the parent application when the visible panel in a panel stack is changed. This approach should mimic the `pageSwitched` handler that currently exists for page navigation.
+1. Provide a JavaScript event handler to notify the parent application when the visible panel in a
+   panel stack is changed. This approach should mimic the `pageSwitched` handler that currently
+   exists for page navigation.
 
-1. Use hooks to interact or switch to the selected panel. This should work in both situations where a separate panel selector exists and when a normal panel selector exists in the panel header.
-1. Incorporate the ability to register and unregister events for callback. This enables the parent application to know when a panel stack is switched and provide information about the new panel stack.
+1. Use hooks to interact or switch to the selected panel. This should work in both situations where
+   a separate panel selector exists and when a normal panel selector exists in the panel header.
+1. Incorporate the ability to register and unregister events for callback. This enables the parent
+   application to know when a panel stack is switched and provide information about the new panel
+   stack.
 
 ## Embedding workflow
 
@@ -118,7 +143,8 @@ In which the callback parameters are:
 
   Error Message(`error.message`):
 
-  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again."
+  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not
+  ready. Please wait a few seconds to call this function again."
 
 ### 2. Switch panels on the current page
 
@@ -128,7 +154,9 @@ In which the callback parameters are:
 
 :::tip
 
-The `Dossier` object is created using `microstrategy.dossier.create(props)`. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
+The `Dossier` object is created using `microstrategy.dossier.create(props)`.
+See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more
+information.
 
 :::
 
@@ -204,11 +232,13 @@ in which the callback parameters are:
 
   Error Message(`error.message`):
 
-  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again."
+  "You couldn’t get the current page panel stacks or switch to a panel when the page data is not
+  ready. Please wait a few seconds to call this function again."
 
 ### 3. Raise a switch panel event
 
-If the panel is switched in an inner or outer window, it raises a switch panel event that enables you to listen for it. The event detail is shown below.
+If the panel is switched in an inner or outer window, it raises a switch panel event that enables
+you to listen for it. The event detail is shown below.
 
 ```json
 // event: onPanelSwitched
@@ -221,7 +251,8 @@ If the panel is switched in an inner or outer window, it raises a switch panel e
 
 ### 4. Modify the select visualization callback data
 
-You must also change the callback data of the existing `ON_VIZ_SELECTION_CHANGED` event. Before any changes, the data returned from the event is similar to that shown below.
+You must also change the callback data of the existing `ON_VIZ_SELECTION_CHANGED` event. Before any
+changes, the data returned from the event is similar to that shown below.
 
 ```json
 {
@@ -233,7 +264,8 @@ You must also change the callback data of the existing `ON_VIZ_SELECTION_CHANGED
 }
 ```
 
-This data only contains the selected visualization key and chapter key. If the visualization is inside a panel, you need to provide the panel and panel stack information for it.
+This data only contains the selected visualization key and chapter key. If the visualization is
+inside a panel, you need to provide the panel and panel stack information for it.
 
 You can add code to invoke the callback:
 
@@ -266,7 +298,9 @@ in which the data format of selectedVis is similar to:
 
 ## Embedding SDK errors
 
-Since you cannot set the callback parameters, it's impossible for these parameters to produce errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in turn returns an error object in rejected cases. The possible errors are shown below.
+Since you cannot set the callback parameters, it's impossible for these parameters to produce
+errors. When an error occurs for other reasons, the Embedding SDK returns a promise object that in
+turn returns an error object in rejected cases. The possible errors are shown below.
 
 ### Dossier.getCurrentPagePanelStacks()
 
@@ -278,7 +312,8 @@ Since you cannot set the callback parameters, it's impossible for these paramete
 
 ##### Error message
 
-You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready. Please wait a few seconds to call this function again.
+You couldn’t get the current page panel stacks or switch to a panel when the page data is not ready.
+Please wait a few seconds to call this function again.
 
 ### Dossier.switchPanel(panelKey)
 
@@ -300,7 +335,8 @@ N/A
 
 ##### Error message
 
-There isn’t a panel whose key is `${panelKey}` in the current page and selected panels. Please check whether your input parameter of `switchPanel` function is correct.
+There isn’t a panel whose key is `${panelKey}` in the current page and selected panels. Please check
+whether your input parameter of `switchPanel` function is correct.
 
 #### Error case: The API was called while the page was still loading and users cannot switch panels by manually clicking on them
 
@@ -320,4 +356,5 @@ N/A
 
 ##### Error message
 
-The manipulation API has encountered an error when switching to panel `${panelKey}`. Please try again later.
+The manipulation API has encountered an error when switching to panel `${panelKey}`. Please try
+again later.

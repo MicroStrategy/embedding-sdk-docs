@@ -64,7 +64,7 @@ const sidebars = {
         type: "doc",
         id: "embed-library-main-page/embed-library-main-page",
       },
-      label: "Embed MicroStrategy Library home page",
+      label: "Embed Strategy Library home page",
       items: [
         "embed-library-main-page/embed-library-properties",
         "embed-library-main-page/embed-custom-ui-on-all-pages",
@@ -76,7 +76,7 @@ const sidebars = {
         type: "doc",
         id: "embed-dossier-consumption-page/embed-dossier-consumption-page",
       },
-      label: "Embed MicroStrategy dashboard consumption page",
+      label: "Embed Strategy dashboard consumption page",
       items: ["embed-dossier-consumption-page/embed-dossier-consumption-properties"],
     },
     {
@@ -85,7 +85,7 @@ const sidebars = {
         type: "doc",
         id: "embed-bot-consumption-page/embed-bot-consumption-page",
       },
-      label: "Embed MicroStrategy bot consumption page",
+      label: "Embed Strategy bot consumption page",
       items: ["embed-bot-consumption-page/embed-bot-consumption-properties"],
     },
     {
@@ -94,7 +94,7 @@ const sidebars = {
         type: "doc",
         id: "embed-report-page/embed-report-page",
       },
-      label: "Embed MicroStrategy report page",
+      label: "Embed Strategy report page",
       items: ["embed-report-page/embed-report-properties"],
     },
     {

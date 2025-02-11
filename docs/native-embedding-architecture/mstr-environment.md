@@ -5,7 +5,10 @@ description: MstrEnvironment class
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-The instance of this class is the object returned from the `microstrategy.embeddingComponent.environments.create()` function, which allows access to the MicroStrategy application. `MstrEnvironment` class represents one MicroStrategy Library Application identified by a URL.
+The instance of this class is the object returned from the
+`microstrategy.embeddingComponent.environments.create()` function, which allows access to the
+Strategy application. `MstrEnvironment` class represents one Strategy Library Application identified
+by a URL.
 
 ## APIs
 
@@ -24,7 +27,8 @@ The instance of this class is the object returned from the `microstrategy.embedd
 | props.instanceId    | String    | The dashboard instance ID, if it already exists.                                                         | false       |
 | props.applicationId | String    | the dashboard application ID, if not specified, the default application will be used                     | false       |
 
-The `projectId` + `objectId` is used as the dashboard identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
+The `projectId` + `objectId` is used as the dashboard identifier. If the function is called twice
+with the same parameter, the same `MstrDossier` object is returned in the callback.
 
 #### Response
 
@@ -104,7 +108,8 @@ try {
 | props.objectId      | String    | The bot ID, which must be valid. If the ID is a dashboard, document or report ID, an error is reported. | true        |
 | props.applicationId | String    | the bot application ID, if not specified, the default application will be used                          | false       |
 
-The `projectId` + `objectId` is used as the bot identifier. If the function is called twice with the same parameter, the same `MstrBot` object is returned in the callback.
+The `projectId` + `objectId` is used as the bot identifier. If the function is called twice with the
+same parameter, the same `MstrBot` object is returned in the callback.
 
 #### Response
 
