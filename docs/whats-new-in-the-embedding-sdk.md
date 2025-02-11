@@ -126,7 +126,7 @@ In each release, changes are made to make the Strategy SDK more powerful and eas
 ## 2021
 
 - [More updates in error handling.](./add-functionality/error-handling.md)
-- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters)
+- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dashboard-is-rendered)
 - [Show or hide the `shareDossier` function.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2020 Update 3
@@ -136,7 +136,7 @@ In each release, changes are made to make the Strategy SDK more powerful and eas
 ## 2020 Update 2
 
 A new method to
-[remove an embedded dashboard](./add-functionality/methods-and-properties.md#destroy).
+[remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dashboard).
 
 ## 2019
 

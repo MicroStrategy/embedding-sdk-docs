@@ -74,7 +74,7 @@ See the identical function in
 #### Description
 
 See the identical function in
-[Custom error handling after dashboard creation](../add-functionality/error-handling#custom-error-handling-after-dossier-creation).
+[Custom error handling after dashboard creation](../add-functionality/error-handling#custom-error-handling-after-dashboard-creation).
 
 ### `removeCustomErrorHandler()`
 
@@ -85,7 +85,7 @@ See the identical function in
 #### Description
 
 See the identical function in
-[Custom error handling after dashboard creation](../add-functionality/error-handling#custom-error-handling-after-dossier-creation).
+[Custom error handling after dashboard creation](../add-functionality/error-handling#custom-error-handling-after-dashboard-creation).
 
 ### `addSessionErrorHandler(handler)`
 
