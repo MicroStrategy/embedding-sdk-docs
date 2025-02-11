@@ -75,7 +75,7 @@ If you are using Strategy 2021 Update 5 or before, make the following changes on
 instance.
 
 1. If `context.xml` doesn't already exist in the following folder location, create it:
-   `[Tomcat Folder]\webapps\StrategyLibrary\META-INF\context.xml`. Add the following to
+   `[Tomcat Folder]\webapps\MicroStrategyLibrary\META-INF\context.xml`. Add the following to
    `context.xml`:
 
    ```xml
@@ -84,7 +84,7 @@ instance.
    </Context>
    ```
 
-1. In `[Tomcat Folder]\webapps\StrategyLibrary\WEB-INF\web.xml`, change `sameSite` param-value blow
+1. In `[Tomcat Folder]\webapps\MicroStrategyLibrary\WEB-INF\web.xml`, change `sameSite` param-value blow
    to `NONE` to permit embedding.
 
    ```xml
