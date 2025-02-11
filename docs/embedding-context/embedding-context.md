@@ -96,7 +96,7 @@ See the identical function in
 #### Description
 
 See the identical function in
-[Session error handling after dashboard creation](../add-functionality/error-handling#session-error-handling-after-dossier-creation).
+[Session error handling after dashboard creation](../add-functionality/error-handling#session-error-handling-after-dashboard-creation).
 
 ### `removeSessionErrorhandler()`
 
@@ -107,7 +107,7 @@ See the identical function in
 #### Description
 
 See the identical function in
-[Session error handling after dashboard creation](../add-functionality/error-handling#session-error-handling-after-dossier-creation).
+[Session error handling after dashboard creation](../add-functionality/error-handling#session-error-handling-after-dashboard-creation).
 
 ### `goToPage(pageInfo)`
 
