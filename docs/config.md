@@ -130,4 +130,4 @@ needs to enable the partitioned cookie in the Library settings to use this solut
 After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party
 cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes,
 and the user need to do more to make it work. The details can be seen in
-[SAML or OIDC authentication after Strategy ONE June 2024](./support-for-different-authentication-environments/authentication-saml.md#for-microstrategy-2024-update-6-or-after).
+[SAML or OIDC authentication after Strategy ONE June 2024](./support-for-different-authentication-environments/authentication-saml.md#for-strategy-one-2024-update-6-or-after).
