@@ -210,7 +210,7 @@ If this flag is set, all errors that occur in the initial loading process as the
 actions are handled by OOTB Library and an error dialog appears.
 
 Refer to
-[Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation)
+[Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dashboard-creation)
 to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as
 in the `microstrategy.embeddingContexts.embedReportPage` function.
 

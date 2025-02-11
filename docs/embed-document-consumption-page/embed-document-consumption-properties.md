@@ -230,7 +230,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation).
+You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dashboard-creation).
 
 #### Required?
 
