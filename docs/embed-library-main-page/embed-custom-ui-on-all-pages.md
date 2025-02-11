@@ -11,6 +11,7 @@ page. To do this, you need to set the input parameters `props.customUi` in the f
 
 - `microstrategy.embeddingContexts.embedLibraryPage(props)`
 - `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
+- `microstrategy.embeddingContexts.embedDocumentConsumptionPage(props)`
 - `microstrategy.embeddingContexts.embedReportPage(props)`
 
 Here is an example:
@@ -433,6 +434,24 @@ below are `Boolean`.
   - Default value: `true`.
 - `account.enabled`
   - Show or hide the account icon.
+  - Default value: `true`.
+
+#### Required?
+
+No
+
+### `props.customUi.documentConsumption`
+
+This field is used to customize the UI components on the document consumption page. It has 1 property: `navigationBar`.
+
+#### Properties
+
+##### `navigationBar`
+
+Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
+
+- `gotoLibrary`
+  - Show or hide the gotoLibrary icon.
   - Default value: `true`.
 
 #### Required?

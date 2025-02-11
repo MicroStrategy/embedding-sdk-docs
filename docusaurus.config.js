@@ -105,7 +105,7 @@ const config = {
       },
       footer: {
         style: "light",
-        copyright: `Copyright © ${new Date().getFullYear()} MICROSTRATEGY INCORPORATED. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} STRATEGY INCORPORATED. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
