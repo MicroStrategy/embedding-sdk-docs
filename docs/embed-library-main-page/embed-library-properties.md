@@ -226,7 +226,7 @@ which contains the detailed error message.
 
 Whether `errorHandler` is set, the error occured inside the library home page would output an error
 in the browser console. The detailed behavior could be seen in
-[The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+[The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-strategy-library-error-behavior-in-embed-case).
 
 #### Required?
 
