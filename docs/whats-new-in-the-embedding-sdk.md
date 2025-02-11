@@ -5,6 +5,11 @@ description: In each release, changes are made to make the Strategy SDK more pow
 
 In each release, changes are made to make the Strategy SDK more powerful and easier to use.
 
+## Strategy ONE March 2025
+
+- [Embed Strategy document consumption page.](./embed-document-consumption-page/embed-document-consumption-page.md)
+  - Provide API to embed a document consumption page.
+
 ## Strategy ONE December 2024
 
 - [Embed Strategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)

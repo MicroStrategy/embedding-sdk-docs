@@ -58,8 +58,8 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 
 The required parameters in the dashboard URL.
 
-These properties build the full report page URL to be embedded. The Embedding SDK builds the URL
-using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+These properties build the full dashboard page URL to be embedded.
+The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
 
 #### Required?
 

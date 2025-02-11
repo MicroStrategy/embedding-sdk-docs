@@ -2,7 +2,7 @@ name: Linters Check
 
 on:
   pull_request:
-    branches: [ "public" ]
+    branches: ["public"]
 
 jobs:
   linting:

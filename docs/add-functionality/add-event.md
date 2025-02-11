@@ -31,8 +31,7 @@ specific events.
 
 ## Events
 
-Each supported event is described in the table below. You get the EventType from
-`microstrategy.dossier.EventType`.
+Each supported event is described in the table below. You get the EventType from `microstrategy.dossier.EventType` or `microstrategy.embeddingContexts.EventType`.
 
 ### onGraphicsSelected
 
@@ -409,7 +408,8 @@ embedDossier.registerEventHandler(EventType.ON_LIBRARY_ITEM_SELECTED, libraryIte
     "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
     "name": "Distribution Center & Brands",
     "type": 55,
-    "subtype": null
+    "subtype": null,
+    "isDocument": false
   }
 ]
 ```
@@ -588,6 +588,40 @@ embedDossier.registerEventHandler(EventType.ON_DOSSIER_INSTANCE_CHANGED, (conten
 }
 ```
 
+### onInstanceChanged
+
+#### Event enumeration
+
+`EventType.ON_INSTANCE_CHANGED`
+
+#### Description
+
+Raised when the a new object instance is created or destroyed. The object type could be a dashboard, document, report or bot.
+
+#### Content
+
+The event callback parameters contain the project id, object id, object type, object name, and the instance id.
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_INSTANCE_CHANGED, (content) => {
+  // Use the content here
+});
+```
+
+#### Content example
+
+```json
+{
+  "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  "objectId": "D9AB379D11EC92C1D9DC0080EFD415BB",
+  "objectName": "Dashboard Prompted on Category",
+  "objectType": "dossier",
+  "instanceId": "EC003BC7A046E75DE83373A254824F20"
+}
+```
+
 ### onComponentSelectionChanged
 
 #### Event enumeration
@@ -616,6 +650,8 @@ embedDossier.registerEventHandler(EventType.ON_COMPONENT_SELECTION_CHANGED, (con
 {
   "projectId": "B19DEDCC11D4E0EFC000EB9495D0F44F",
   "dossierId": "EC5441154009D3C39D5BD6AD75865EF4",
+  "objectId": "EC5441154009D3C39D5BD6AD75865EF4",
+  "objectType": "dossier",
   "selectedComponents": [
     {
       "key": "K52",
