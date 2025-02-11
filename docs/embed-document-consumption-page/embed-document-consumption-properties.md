@@ -248,7 +248,7 @@ N/A
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has the property `message`, which contains the detailed error message.
 
-`customErrorHandler` is similar as `errorHandler`(see [The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case)). However, `errorHandler` will be unregistered automatically when the initial loading finishes, but `customErrorHandler` will not.
+`customErrorHandler` is similar as `errorHandler`(see [The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-strategy-library-error-behavior-in-embed-case)). However, `errorHandler` will be unregistered automatically when the initial loading finishes, but `customErrorHandler` will not.
 
 #### Required?
 

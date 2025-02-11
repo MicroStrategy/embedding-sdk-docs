@@ -242,7 +242,7 @@ which contains the detailed error message.
 
 When `errorHandler` is set, errors that occur inside the report page produce an error in the browser
 console. See the detailed behavior in
-[The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+[The overall Strategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-strategy-library-error-behavior-in-embed-case).
 
 #### Required?
 
