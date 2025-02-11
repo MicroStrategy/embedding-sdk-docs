@@ -203,9 +203,7 @@ No
 ### `disableErrorPopupWindow`
 
 The `disableErrorPopupWindow` property specifies to disable the popup window caused by the alert
-which will show when error happens, and throw the error directly. The deatail of when the error will
-shown in alert, can be seen
-[at the error-handling page](error-handling.md#error-handling-before-starting-embed-page-to-library)
+which will show when error happens, and throw the error directly.
 
 #### Required?
 

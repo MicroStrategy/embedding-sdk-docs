@@ -246,7 +246,7 @@ If this flag is set, all the errors occur in the initial loading process and man
 handled by OOTB Library itself, an error dialog would pop up.
 
 You could also refer to
-[Custom error handling during bot creation](../add-functionality/error-handling.md#custom-error-handling-during-bot-creation).
+[Custom error handling during bot creation](../add-functionality/error-handling.md#custom-error-handling-during-dashboard-creation).
 
 #### Required?
 
