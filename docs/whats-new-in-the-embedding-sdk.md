@@ -111,7 +111,7 @@ In each release, changes are made to make the Strategy SDK more powerful and eas
   - Control the display of items in the authoring toolbar.
   - Control the display of authoring panels.
   - Support for creating a new dashboard.
-- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#methods-and-properties#sharefeature)
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2021 Update 3
 
@@ -126,7 +126,7 @@ In each release, changes are made to make the Strategy SDK more powerful and eas
 ## 2021
 
 - [More updates in error handling.](./add-functionality/error-handling.md)
-- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
+- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters)
 - [Show or hide the `shareDossier` function.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2020 Update 3
@@ -136,7 +136,7 @@ In each release, changes are made to make the Strategy SDK more powerful and eas
 ## 2020 Update 2
 
 A new method to
-[remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+[remove an embedded dashboard](./add-functionality/methods-and-properties.md#destroy).
 
 ## 2019
 
