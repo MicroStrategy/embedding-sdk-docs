@@ -17,7 +17,7 @@ The workflow consists of:
 
 ## Set up Library Server
 
-Enable Standard and optionally other authentication modes in MicroStrategy Library Admin.
+Enable Standard and optionally other authentication modes in Library Admin.
 
 ![MSTR Library Admin Guest Auth](../images/MstrLibraryAdmin_GuestAuth.png)
 

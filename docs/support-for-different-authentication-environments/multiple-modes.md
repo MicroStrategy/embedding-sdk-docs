@@ -7,7 +7,7 @@ The example in this topic illustrates how to seamlessly display an embedded dash
 
 ## Set up Library Server
 
-Enable Guest and other authentications in MicroStrategy Library Admin.
+Enable Guest and other authentications in Library Admin.
 
 ![MSTR Library Admin Guest Auth](../images/MstrLibraryAdmin_GuestAuth.png)
 

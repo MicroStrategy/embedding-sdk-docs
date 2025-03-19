@@ -1,11 +1,11 @@
 ---
 title: Interact with panel stacks
-description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
+description: Panel stacks provide end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. Strategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header. An application can now develop external controls to paginate through the various displays within a panel stack. In addition, if the panel stack is switched by a user's manual input, an event handler notifies the parent application of this action, allowing it to perform filtering or any other desirable action.
 ---
 
 The MicroStrategy 2021 Update 1 release exposed [panel stacks](https://www2.microstrategy.com/producthelp/2021/Workstation/WebHelp/Lang_1033/Content/panel_stacks.htm) within dossiers. This provides end users with the ability to conveniently reuse segments of space within a dashboard to represent data in multiple ways. To provide continuity with our existing APIs and enable embedded applications to take advantage of this new design concept, we have updated existing endpoints and provided new Embedding SDK functions.
 
-MicroStrategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header.
+Strategy supports one level of nesting within panel stacks. You can switch panel stacks by using a selector or the panel stack header.
 
 ![panel stacks](../images/panel_stacks.png)
 

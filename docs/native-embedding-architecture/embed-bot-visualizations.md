@@ -3,7 +3,7 @@ title: Embed multiple bot visualizations on a page
 description: Embed multiple bot visualizations on a page
 ---
 
-<Available since="MicroStrategy One March 2024"/>
+<Available since="Strategy One March 2024"/>
 
 ## Purpose
 

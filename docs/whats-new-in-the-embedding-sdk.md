@@ -5,6 +5,17 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## MicroStrategy ONE March 2025
+
+- [Embed MicroStrategy document consumption page.](./embed-document-consumption-page/embed-document-consumption-page.md)
+  - Provide API to embed a document consumption page.
+- [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-properties#dossierconsumption)
+  - Introduce `panelSelectionMode` to enable panel selection on a dashboard consumption page.
+- [Native Embedding SDK - Retrieve and apply filters](./native-embedding-architecture/apply-filter.md#mstrdossierapplyfilters-examples)
+  - Introduce `MstrDossier.applyFilters` to apply multiple filters in one API.
+- [A new embedding context API.](./embedding-context/dossier-consumption-page-apis#selectpanelspanelkeys)
+  - Introduce a new API, `selectPanels(panelKeys)`, to programmatically select panels on the dossier consumption page.
+
 ## MicroStrategy ONE December 2024
 
 - [Embed MicroStrategy dashboard consumption page.](./embed-dossier-consumption-page/embed-dossier-consumption-page.md)
@@ -43,7 +54,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 - [New OAuth APIs for SAML and OIDC login.](./support-for-different-authentication-environments/new-authentication-apis.md)
   - You can call the new APIs to simplify the original SAML or OIDC workflow.
 
-## MicroStrategy One March 2024
+## MicroStrategy ONE March 2024
 
 - Rename 'dossier' into 'dashboard'.
 - [Embed Bot Visualizations with Native Embedding SDK.](./native-embedding-architecture/embed-bot-visualizations.md)
@@ -91,7 +102,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
   - Control the display of items in the authoring toolbar.
   - Control the display of authoring panels.
   - Support for creating a new dashboard.
-- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#methods-and-properties#sharefeature)
+- [Show or hide all entries for a subscription.](./add-functionality/methods-and-properties.md#properties)
 
 ## 2021 Update 3
 
@@ -106,7 +117,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 ## 2021
 
 - [More updates in error handling.](./add-functionality/error-handling.md)
-- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dossier-is-rendered)
+- [Apply multiple filters after a dashboard is rendered.](./add-functionality/filters.md#apply-multiple-filters-after-the-dashboard-is-rendered)
 - [Show or hide the `shareDossier` function.](./add-functionality/methods-and-properties.md#sharefeature)
 
 ## 2020 Update 3
@@ -115,7 +126,7 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 
 ## 2020 Update 2
 
-A new method to [remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dossier).
+A new method to [remove an embedded dashboard](./add-functionality/methods-and-properties.md#method-for-removing-an-embedded-dashboard).
 
 ## 2019
 

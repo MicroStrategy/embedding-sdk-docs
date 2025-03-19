@@ -9,7 +9,7 @@ description: Embed multiple dossier visualizations on a page
 
 You can use the Native Embedding SDK to embed multiple visualizations in a client's webpage, with high performance that is similar to loading one out-of-the-box Library dashboard page.
 
-Custom visualizations are also supported. To embed custom visualizations, you should deploy them on MicroStrategy Library first. To deploy custom visualizations on MicroStrategy Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
+Custom visualizations are also supported. To embed custom visualizations, you should deploy them on Library first. To deploy custom visualizations on Library, refer to [Deploy a custom visualization](https://www2.microstrategy.com/producthelp/Current/VisSDK/Content/topics/HTML5/Deploying_a_custom_visualization.htm).
 
 Here is a live demo for this in [Embedding Playground](https://microstrategy.github.io/playground/?example=g28).
 

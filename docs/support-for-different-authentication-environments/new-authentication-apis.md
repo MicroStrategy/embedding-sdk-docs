@@ -38,7 +38,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
 This API would have the wrong behavior or report an error in the cases below:
 
 - When `serverUrl` is not a Library server that supports SAML login.
-- When the client application can't get the MicroStrategy login window because of [COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) setting is too strict.
+- When the client application can't get the Strategy login window because of [COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) setting is too strict.
 
 ### `microstrategy.auth.oidcLogin(serverUrl)`
 
@@ -71,4 +71,4 @@ microstrategy.embeddingContexts.embedLibraryPage({
 This API would have the wrong behavior or report an error in the cases below:
 
 - When `serverUrl` is not a Library server that supports OIDC login.
-- When the client application can't get the MicroStrategy login window because of [COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) setting is too strict.
+- When the client application can't get the Strategy login window because of [COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) setting is too strict.

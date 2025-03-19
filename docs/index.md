@@ -1,24 +1,24 @@
 ---
 title: Introduction to the Embedding SDK
 slug: /
-description: The Embedding SDK allows you to quickly integrate a MicroStrategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
+description: The Embedding SDK allows you to quickly integrate a Strategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 ---
 
-The Embedding SDK allows you to quickly integrate a MicroStrategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
+The Embedding SDK allows you to quickly integrate a Strategy dashboard into a web application in a responsive manner. It also provides resources to add functionality such as controlling navigation, retrieving and applying filters, setting properties, and managing events, and supports several different authentication environments.
 
 There are three basic steps for embedding a dashboard.
 
-1. In the initial page of your web application, add a link to the MicroStrategy JavaScript Embedding SDK.
+1. In the initial page of your web application, add a link to the Strategy JavaScript Embedding SDK.
 
    ```html
    <script src="{YOUR_LIBRARY_SERVER_URL}/javascript/embeddinglib.js"></script>
    ```
 
-   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual MicroStrategy Library Server URL, e.g., [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
+   Replace `{YOUR_LIBRARY_SERVER_URL}` with your actual Library Server URL, e.g., [https://demo.microstrategy.com/MicroStrategyLibrary](https://demo.microstrategy.com/MicroStrategyLibrary).
 
    :::tip
 
-   If the application server is different from the server running the MicroStrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](./config.md).
+   If the application server is different from the server running the StrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](./config.md).
 
    :::
 

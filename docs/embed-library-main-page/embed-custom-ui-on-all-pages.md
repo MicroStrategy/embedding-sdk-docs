@@ -1,12 +1,13 @@
 ---
 title: The customized UI settings in Embedding SDK
-description: The Embedding SDK enables you to customize the UI components of all embedded pages, like MicroStrategy home page, dashboard consumption page, dashboard authoring page, and report consumption page.
+description: The Embedding SDK enables you to customize the UI components of all embedded pages, like Strategy home page, dashboard consumption page, dashboard authoring page, and report consumption page.
 ---
 
-The Embedding SDK supports the user to customize the UI components of all embedded pages, including MicroStrategy home page, dashboard consumption page, dashboard authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
+The Embedding SDK supports the user to customize the UI components of all embedded pages, including Strategy home page, dashboard consumption page, dashboard authoring page, and report consumption page. To do this, you need to set the input parameters `props.customUi` in the functions below:
 
 - `microstrategy.embeddingContexts.embedLibraryPage(props)`
 - `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
+- `microstrategy.embeddingContexts.embedDocumentConsumptionPage(props)`
 - `microstrategy.embeddingContexts.embedReportPage(props)`
 
 Here is an example:
@@ -163,19 +164,19 @@ microstrategy.embeddingContexts.embedLibraryPage({
 });
 ```
 
-In the example above, the user uses `microstrategy.embeddingContexts.embedLibraryPage` to embed a MicroStrategy Library home page. After the embedded page is loaded, the user may click a dashboard in the dashboard list to go to a dashboard consumption page, or RMC the "Edit" menu to go to a dashboard authoring page. The user could use fields `props.customUi.dossierConsumption` and `props.customUi.dossierAuthoring` to show or hide the components in these 2 pages.
+In the example above, the user uses `microstrategy.embeddingContexts.embedLibraryPage` to embed a Library home page. After the embedded page is loaded, the user may click a dashboard in the dashboard list to go to a dashboard consumption page, or RMC the "Edit" menu to go to a dashboard authoring page. The user could use fields `props.customUi.dossierConsumption` and `props.customUi.dossierAuthoring` to show or hide the components in these 2 pages.
 
 The details of `props.customUi` are as below:
 
 ### `props.customUi.library`
 
-This field is used to customized the UI components on the MicroStrategy Library home page. It has 2 properties: `sidebar` and `navigationBar`.
+This field is used to customized the UI components on the Library home page. It has 2 properties: `sidebar` and `navigationBar`.
 
 #### Properties
 
 ##### `sidebar`
 
-Use the `sidebar` object to customize the sidebar on the MicroStrategy Library home page. All detailed properties below are `Boolean`.
+Use the `sidebar` object to customize the sidebar on the Library home page. All detailed properties below are `Boolean`.
 
 - `show`
   - Show the Library home page sidebar or not. If the sidebar is disabled in custom application, or `prop.customUi.library.sidebar.enabled` is false, the true value wouldn’t take effect.
@@ -186,7 +187,7 @@ Use the `sidebar` object to customize the sidebar on the MicroStrategy Library h
 
 ##### `navigationBar`
 
-Use the `navigationBar` object to customize navigation bar on the MicroStrategy Library home page. All detailed properties below are `Boolean`.
+Use the `navigationBar` object to customize navigation bar on the Library home page. All detailed properties below are `Boolean`.
 
 - `enabled`
   - Show the Library home page navigation bar or not. If the navigation bar is disabled in custom application, the true value wouldn’t take effect, which is the same as the original dashboard navigation bar icons behavior.
@@ -410,6 +411,24 @@ Use the `navigationBar` object to customize the navigation bar on the page. All 
   - Default value: `true`.
 - `account.enabled`
   - Show or hide the account icon.
+  - Default value: `true`.
+
+#### Required?
+
+No
+
+### `props.customUi.documentConsumption`
+
+This field is used to customize the UI components on the document consumption page. It has 1 property: `navigationBar`.
+
+#### Properties
+
+##### `navigationBar`
+
+Use the `navigationBar` object to customize the navigation bar on the page. All detailed properties below are `Boolean`.
+
+- `gotoLibrary`
+  - Show or hide the gotoLibrary icon.
   - Default value: `true`.
 
 #### Required?
