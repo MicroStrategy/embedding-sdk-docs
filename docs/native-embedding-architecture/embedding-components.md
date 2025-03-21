@@ -17,10 +17,10 @@ This is the entry point of the Native Embedding SDK.
 
 #### Input Parameters
 
-| Parameter Name     | Data Type | Description                                                                                                                                                                                                                                 | Is Required |
-| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| props.serverUrl    | String    | The base URL of the Library server                                                                                                                                                                                                          | true        |
-| props.getAuthToken | function  | The function for getting the login token. <br/>This function is similar to `getAuthToken` in `microstrategy.dossier.create`. <br />In 2021 Update 9, MicroStrategy only supports auth token. You can get the auth token with any auth mode. | true        |
+| Parameter Name     | Data Type | Description                                                                                                                                                                                                                            | Is Required |
+| ------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| props.serverUrl    | String    | The base URL of the Library server                                                                                                                                                                                                     | true        |
+| props.getAuthToken | function  | The function for getting the login token. <br/>This function is similar to `getAuthToken` in `microstrategy.dossier.create`. <br />In 2021 Update 9, Strategy only supports auth token. You can get the auth token with any auth mode. | true        |
 
 #### Response
 

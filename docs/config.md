@@ -1,9 +1,9 @@
 ---
 title: Configure Library Server for embedding
-description: If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please enable Cross-Origin Resource Sharing (CORS) and allow SameSite cookies.
+description: If you plan to use Embedding SDK on a different domain from your Strategy environment, please enable Cross-Origin Resource Sharing (CORS) and allow SameSite cookies.
 ---
 
-If you plan to use Embedding SDK on a different domain from your MicroStrategy environment, please also meet the following requirements.
+If you plan to use Embedding SDK on a different domain from your Strategy environment, please also meet the following requirements.
 
 ## Enable Cross-Origin Resource Sharing (CORS)
 
@@ -11,7 +11,7 @@ Cross-Origin Resource Sharing (CORS) provides a way for a web application runnin
 
 :::note
 
-Chrome Web Browser version 80 and above introduces new changes which may impact embedding. For more information, see [KB484005: Chrome v80 Cookie Behavior and the Impact on MicroStrategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-MicroStrategy-Deployments).
+Chrome Web Browser version 80 and above introduces new changes which may impact embedding. For more information, see [KB484005: Chrome v80 Cookie Behavior and the Impact on Strategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-Strategy-Deployments).
 
 :::
 
@@ -36,9 +36,9 @@ Using the Library Admin page is the easiest way to enable CORS for the REST Ser
 
    `security.allowedOrigins=http://example.com:port`
 
-1. Restart your MicroStrategy Library web application hosted on the application server.
+1. Restart your Library web application hosted on the application server.
 
-Alternatively, you can also configure this in MicroStrategy Workstation by [editing the properties of the environment](https://www2.microstrategy.com/producthelp/Current/Workstation/WebHelp/Lang_1033/Content/library_admin_settings.htm#View).
+Alternatively, you can also configure this in Workstation by [editing the properties of the environment](https://www2.microstrategy.com/producthelp/Current/Workstation/WebHelp/Lang_1033/Content/library_admin_settings.htm#View).
 
 ## Allow SameSite cookies
 
@@ -82,7 +82,7 @@ If you are using MicroStrategy 2021 Update 5 or before, make the following chang
 1. Ensure your Tomcat is configured to support HTTPS.
 1. Restart Tomcat.
 
-For more information, see [Chrome v80 Cookie Behavior and the Impact on MicroStrategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-MicroStrategy-Deployments?language=en_US).
+For more information, see [Chrome v80 Cookie Behavior and the Impact on Strategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-Strategy-Deployments?language=en_US).
 
 ## The Partitioned Cookie Change
 
@@ -96,4 +96,4 @@ To avoid the changes of third-party cookies default setting breaking the Embeddi
 
 ![The partitioned cookie setting](./images/partitioned-cookie.png)
 
-After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes, and the user need to do more to make it work. The details can be seen in [SAML or OIDC authentication after MicroStrategy ONE June 2024](./support-for-different-authentication-environments/authentication-saml.md#for-microstrategy-2024-update-6-or-after).
+After this change, the customer can use most of the Embedding SDK functionalities even if 3rd party cookies are blocked in the Chrome preference. But for the SAML/OIDC login, the old workflow changes, and the user need to do more to make it work. The details can be seen in [SAML or OIDC authentication after MicroStrategy ONE June 2024](./support-for-different-authentication-environments/authentication-saml.md#for-microstrategy-one-june-2024-or-after).

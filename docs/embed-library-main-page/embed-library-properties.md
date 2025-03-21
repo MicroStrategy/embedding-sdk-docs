@@ -1,21 +1,21 @@
 ---
-title: Properties for an embedded MicroStrategy Library home page
-description: Describes the properties that can be set for an embedded MicroStrategy Library home page.
+title: Properties for an embedded Library home page
+description: Describes the properties that can be set for an embedded Library home page.
 ---
 
-When you embed a MicroStrategy Library home page into a web page, you use the `embedLibraryPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+When you embed a Library home page into a web page, you use the `embedLibraryPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedLibraryPage(props)`
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the MicroStrategy Library home page URL (specified by the `serverUrl` property).
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Library home page URL (specified by the `serverUrl` property).
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy Library home page is loaded.
+This method returns a promise, which is resolved when the Library home page is loaded.
 
-The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the MicroStrategy Library home page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
+The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Library home page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
 
 The `props` parameter could contain the following key:value pairs:
 
@@ -39,7 +39,7 @@ N/A
 
 ### `serverUrl`
 
-`serverUrl` refers to the MicroStrategy Library server URL.
+`serverUrl` refers to the Library server URL.
 
 #### Required?
 
@@ -181,7 +181,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dossier-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
+You could also refer to [Custom error handling during dashboard creation](../add-functionality/error-handling.md#custom-error-handling-during-dashboard-creation) to see the usage of this parameter in `microstrategy.dossier.create`, which has the same effect as in `microstrategy.embeddingContexts.embedLibraryPage` function.
 
 #### Required?
 
@@ -205,7 +205,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has the property `message`, which contains the detailed error message.
 
-Whether `errorHandler` is set, the error occured inside the library home page would output an error in the browser console. The detailed behavior could be seen in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+Whether `errorHandler` is set, the error occured inside the library home page would output an error in the browser console. The detailed behavior could be seen in [The overall Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-library-error-behavior-in-embed-case).
 
 #### Required?
 
@@ -262,7 +262,7 @@ microstrategy.embeddingContexts.embedLibraryPage({
 
 Specifies the application that the user wants to show in the embedded page.
 
-The application in MicroStrategy has 2 categories:
+The application in Strategy has 2 categories:
 
 - If the application selects library home page as its home screen, the library home page would be embedded with the application's configuration.
 - If the application selects a dashboard as its home screen, the embedding would fail and an error would occur.
@@ -281,7 +281,7 @@ N/A
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, dashboard consumption page，dashboard authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including Library home page, dashboard consumption page，dashboard authoring page, and report consumption page.
 
 #### Properties
 
@@ -289,7 +289,7 @@ Please see all the properties in [The customized UI settings in Embedding SDK](.
 
 #### The navigation bar custom setting behavior
 
-The property `customUi.library.navigationBar.enabled` would affect the library home page UI together with the navigation bar setting in the application settings. There are 2 related item in the application settings in MicroStrategy Workstation:
+The property `customUi.library.navigationBar.enabled` would affect the library home page UI together with the navigation bar setting in the application settings. There are 2 related item in the application settings in Workstation:
 
 - Disable toolbar
 - Collapse toolbar by default

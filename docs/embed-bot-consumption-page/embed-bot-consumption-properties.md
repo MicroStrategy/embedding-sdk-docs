@@ -1,23 +1,23 @@
 ---
-title: Properties for an embedded MicroStrategy bot consumption page
-description: Describes the properties that can be set for an embedded MicroStrategy bot consumption page.
+title: Properties for an embedded Strategy bot consumption page
+description: Describes the properties that can be set for an embedded Strategy bot consumption page.
 ---
 
-When you embed a MicroStrategy bot consumption page into a web page, you use the `embedBotConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+When you embed a Strategy bot consumption page into a web page, you use the `embedBotConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedBotConsumptionPage(props)`
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the MicroStrategy bot consumption page URL (specified by the `serverUrl` property).
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Strategy bot consumption page URL (specified by the `serverUrl` property).
 
 #### Return value
 
-This method returns a promise, which is resolved when the MicroStrategy bot consumption page is loaded.
+This method returns a promise, which is resolved when the Strategy bot consumption page is loaded.
 
 #### Input parameters
 
-The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the MicroStrategy bot consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
+The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Strategy bot consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
 
 The `props` parameter could contain the following key:value pairs:
 
@@ -230,7 +230,7 @@ To disable the custom error handler, set `disableCustomErrorHandlerOnCreate` to 
 
 If this flag is set, all the errors occur in the initial loading process and manual actions would be handled by OOTB Library itself, an error dialog would pop up.
 
-You could also refer to [Custom error handling during bot creation](../add-functionality/error-handling.md#custom-error-handling-during-bot-creation).
+You could also refer to [Custom error handling during bot creation](../add-functionality/error-handling.md#custom-error-handling-during-dashboard-creation).
 
 #### Required?
 
@@ -248,7 +248,7 @@ N/A
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has the property `message`, which contains the detailed error message.
 
-Whether `errorHandler` is set, the error occured inside the embeded page would output an error in the browser console. The detailed behavior could be seen in [The overall MicroStrategy Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-microstrategy-library-error-behavior-in-embed-case).
+Whether `errorHandler` is set, the error occured inside the embeded page would output an error in the browser console. The detailed behavior could be seen in [The overall Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-library-error-behavior-in-embed-case).
 
 #### Required?
 
@@ -332,13 +332,13 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including MicroStrategy Library home page, bot consumption page，bot authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including Library home page, bot consumption page，bot authoring page, and report consumption page.
 
 #### Properties
 
 ##### `addToLibraryBanner`
 
-Use the `addToLibraryBanner` object to customize the "Add To Library" banner on the MicroStrategy bot consumption page. All detailed properties below are `Boolean`.
+Use the `addToLibraryBanner` object to customize the "Add To Library" banner on the Strategy bot consumption page. All detailed properties below are `Boolean`.
 
 - `enabled`
   - Enable the Library "Add To Library" banner or not. If the banner is disabled in custom application, the true value wouldn’t take effect.
@@ -347,7 +347,7 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
 #### `theme`
 
 <Available since="2024 Update6" />
-Use the `theme` object to customize the "theme" in the MicroStrategy Library including bot consumption page. All detailed properties below are `Boolean`.
+Use the `theme` object to customize the "theme" in the Library including bot consumption page. All detailed properties below are `Boolean`.
 
 - `enabled`
   - Enable the Library "theme" colors or not. The value can be true or false. If the value isn't defined, the default is true.

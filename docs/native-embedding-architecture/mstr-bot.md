@@ -3,9 +3,9 @@ title: MstrBot class
 description: MstrBot class
 ---
 
-<Available since="MicroStrategy One March 2024"/>
+<Available since="Strategy One March 2024"/>
 
-The object returned from the `MstrEnvironment.loadBot()` function, which allows access to the MicroStrategy bot object.
+The object returned from the `MstrEnvironment.loadBot()` function, which allows access to the Strategy bot object.
 
 ## APIs
 

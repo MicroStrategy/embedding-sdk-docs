@@ -1,23 +1,23 @@
 ---
-title: Properties for an embedded Strategy dashboard consumption page
-description: Describes the properties that can be set for an embedded Strategy dashboard consumption page.
+title: Properties for an embedded Strategy document consumption page
+description: Describes the properties that can be set for an embedded Strategy document consumption page.
 ---
 
-When you embed a Strategy dashboard consumption page into a web page, you use the `embedDossierConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+When you embed a Strategy document consumption page into a web page, you use the `embedDocumentConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
-### `microstrategy.embeddingContexts.embedDossierConsumptionPage(props)`
+### `microstrategy.embeddingContexts.embedDocumentConsumptionPage(props)`
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Strategy dashboard consumption page URL (specified by the `serverUrl` property).
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Strategy document consumption page URL (specified by the `serverUrl` property).
 
 #### Return value
 
-This method returns a promise, which is resolved when the Strategy dashboard consumption page is loaded.
+This method returns a promise, which is resolved when the Strategy document consumption page is loaded.
 
 #### Input parameters
 
-The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Strategy dashboard consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
+The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Strategy document consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
 
 The `props` parameter could contain the following key:value pairs:
 
@@ -38,7 +38,7 @@ N/A
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   placeholder: document.getElementById("container"),
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
@@ -48,10 +48,10 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 
 ### `serverUrl`, `projectId`, `objectId`
 
-The required parameters in the dashboard URL.
+The required parameters in the document URL.
 
-These properties build the full dashboard page URL to be embedded.
-The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+These properties build the full document page URL to be embedded.
+The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId`.
 
 #### Required?
 
@@ -64,7 +64,7 @@ N/A
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   placeholder: document.getElementById("container"),
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
@@ -72,13 +72,13 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 });
 ```
 
-### `customApplicationId`, `pageKey`
+### `customApplicationId`, `layoutKey`
 
-The optional parameters in the dashboard URL.
+The optional parameters in the document URL.
 
-Specifies the application and page that the user wants to show in the embedded page.
+Specifies the application and layout that the user wants to show in the embedded page.
 
-When these parameters are specified, the embeded page URL would become `serverUrl` + '/app/config/' + `customApplicationId` + '/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
+When these parameters are specified, the embeded page URL would become `serverUrl` + '/app/config/' + `customApplicationId` + '/' + `projectId` + '/' + `objectId` + '/' + `layoutKey`.
 
 #### Required?
 
@@ -97,7 +97,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
   customApplicationId: "2AAC5EA4C57449FE9C0F69FE751DCFDB",
-  pageKey: "K53--K46",
+  layoutKey: "K53",
 });
 ```
 
@@ -120,7 +120,7 @@ No
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   placeholder: document.getElementById("container"),
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
@@ -146,7 +146,7 @@ No
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   placeholder: document.getElementById("container"),
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
@@ -208,7 +208,7 @@ When `customAuthenticationType` is set to `CustomAuthenticationType.AUTH_TOKEN`,
 The `getLoginToken` function can be found in [the `getLoginToken` doc](../add-functionality/methods-and-properties#getlogintoken)
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   placeholder: document.getElementById("container"),
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
@@ -244,11 +244,11 @@ false
 
 N/A
 
-### `errorHandler`
+### `customErrorHandler`
 
 The custom error handler that executes when the error occurs in the initial loading process. It's a callback function that contains one parameter, `error`. The error object has the property `message`, which contains the detailed error message.
 
-Whether `errorHandler` is set, the error occured inside the embeded page would output an error in the browser console. The detailed behavior could be seen in [The overall Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-library-error-behavior-in-embed-case).
+`customErrorHandler` is similar as `errorHandler`(see [The overall Library error behavior in embed case](../add-functionality/error-handling.md#the-overall-library-error-behavior-in-embed-case)). However, `errorHandler` will be unregistered automatically when the initial loading finishes, but `customErrorHandler` will not.
 
 #### Required?
 
@@ -266,7 +266,7 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
   placeholder: document.getElementById("container"),
-  errorHandler: (error) => {
+  customErrorHandler: (error) => {
     console.log(`catch error during creation: ${error.message}`);
     // Do something to handle the error
   },
@@ -293,7 +293,7 @@ N/A
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
@@ -305,9 +305,67 @@ microstrategy.embeddingContexts.embedDossierConsumptionPage({
 });
 ```
 
+### `instance`
+
+Use this `instance` object to specify a document instance for the embedded document. If you would like to make some manipulation to the document before it is embedded, you can use this property, e.g., answering prompts. If the `instance` is used, the Embedding SDK will use it instead of creating a new document instance.
+
+- `mid` - This instance ID.
+
+#### Required?
+
+No
+
+#### Default value
+
+`null`
+
+#### Sample
+
+Passing existing instance:
+
+```js
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  instance: {
+    mid: "CC9F19A411EA1084548F0080EF05D751",
+  },
+});
+```
+
+### `dockedToc`
+
+Specify the docked properties of the TOC panel. The detailed properties contain:
+
+- `isDocked`
+
+  - Pin or unpin TOC panel.
+  - Default value: `false`.
+
+- `isOpen`
+  - Open or close TOC panel.
+  - Default value: `false`.
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  dockedToc: {
+    isDocked: true,
+    isOpen: true,
+  },
+});
+```
+
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including Library home page, dashboard consumption page，dashboard authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including Library home page, dashboard consumption page，dashboard authoring page, document consumption page, and report consumption page.
 
 #### Properties
 
@@ -315,7 +373,7 @@ Please see all the properties in [The customized UI settings in Embedding SDK](.
 
 ### `settings`
 
-Specify the custom settings on the embedding pages. Including the non-UI settings of dashboard consumption page.
+Specify the custom settings on the embedding pages. Including the non-UI settings of document consumption page.
 
 #### Required?
 
@@ -323,52 +381,36 @@ No
 
 #### Properties
 
-##### `dossierConsumption`
+##### `documentConsumption`
 
-Use the `dossierConsumption` object to customize the options on the dashboard consumption page. The detailed properties contain:
+Use the `documentConsumption` object to customize the options on the document consumption page. The detailed properties contain:
 
-- `componentSelectionMode`
+- `componentSelection.layout.enabled`
 
-  - To assign the selection mode of the visualizations or groups on the dashboard consumption page.
-  - Available values: ["noSelection", "singleSelection", "multipleSelection"]
-  - Default value: "noSelection".
+  - To assign whether the component selection mode is enabled.
+  - Default value: `true`.
 
-- `disableManipulationsAutoSaving`
+- `componentSelection.multipleSelections`
 
-  - Disable the dashboard instance manipulation auto saving or not.
+  - To assign whether using the multiple selection mode.
   - Default value: `false`.
-
-- `enablePageSelection`
-
-  - Enable dashoard page selection in the TOC panel.
-  - Default value: `false`.
-
-- `disableGroupSelection`
-
-  - Disable group selection in the component selection mode.
-  - Default value: `false`.
-
-- `panelSelectionMode`
-
-  - To assign the selection mode of panels on the dashboard consumption page.
-  - Available values: ["noSelection", "singleSelection", "multipleSelection"]
-  - Default value: "noSelection".
 
 #### Sample
 
 ```js
-microstrategy.embeddingContexts.embedDossierConsumptionPage({
+microstrategy.embeddingContexts.embedDocumentConsumptionPage({
   serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
   projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
   objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
   placeholder: document.getElementById("container"),
   settings: {
-    dossierConsumption: {
-      componentSelectionMode: "multipleSelection",
-      disableManipulationsAutoSaving: false,
-      enablePageSelection: false,
-      disableGroupSelection: true,
-      panelSelectionMode: "multipleSelection",
+    documentConsumption: {
+      componentSelection: {
+        layout: {
+          enabled: true,
+        },
+        multipleSelections: false,
+      },
     },
   },
 });

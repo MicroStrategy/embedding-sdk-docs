@@ -43,11 +43,11 @@ Once you have embedded a dashboard, you can use helper methods in the Embedding 
 
 :::tip
 
-If you plan to use Embedding SDK on a web page on a different domain from your MicroStrategy environment, please also meet the following requirements. More information in
+If you plan to use Embedding SDK on a web page on a different domain from your Strategy environment, please also meet the following requirements. More information in
 
 1. [Enable Cross-Origin Resource Sharing (CORS)](../config.md)
 1. [Allow SameSite cookies](../config.md#allow-samesite-cookies)
 
-If you plan to use Embedding SDK on the same domain as your MicroStrategy, the above changes are not required.
+If you plan to use Embedding SDK on the same domain as your Strategy, the above changes are not required.
 
 :::

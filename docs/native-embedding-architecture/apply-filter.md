@@ -5,7 +5,7 @@ description: Filters can be applied both during the execution of an embedded das
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, MicroStrategy only supports attribute element list selectors.
+Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, Strategy only supports attribute element list selectors.
 
 Let's say you already have the `MstrEnvironment` and `MstrDossier` objects:
 
@@ -440,3 +440,45 @@ try {
     // Your own error handling code
   }
   ```
+
+### `MstrDossier.applyFilters` examples
+
+The `MstrDossier.applyFilters(filters)` function is the batch version of `MstrDossier.applyFilter(filter)` API. Its parameter `filters` is an array of filters, whose types are totally equal to the [filter types](#filter-types-and-filter-details) above.
+
+An example is like this:
+
+```js
+try {
+  await mstrDossier.applyFilters([
+    {
+      key: "K46",
+      currentSelection: {
+        selectionStatus: "unfiltered",
+      },
+    },
+    {
+      key: "K52",
+      currentSelection: {
+        selectionStatus: "included",
+        type: "metric_element_list",
+        attributes: [
+          {
+            id: "8D679D4511D3E4981000E787EC6DE8A4",
+            name: "Month of Year",
+          },
+        ],
+        selections: [
+          [
+            {
+              id: "h6;8D679D4511D3E4981000E787EC6DE8A4",
+              name: "June",
+            },
+          ],
+        ],
+      },
+    },
+  ]);
+} catch (error) {
+  // Your own error handling code
+}
+```

@@ -1,9 +1,9 @@
 ---
 title: Bot consumption page APIs
-description: Describes which Embedding SDK APIs are available on the MicroStrategy Bot consumption page.
+description: Describes which Embedding SDK APIs are available on the Strategy Bot consumption page.
 ---
 
-The `embedBotConsumptionPage` object is the manipulator of the MicroStrategy dashboard consumption page. It could be got by `embeddingContext.embedBotConsumptionPage`.
+The `embedBotConsumptionPage` object is the manipulator of the Strategy dashboard consumption page. It could be got by `embeddingContext.embedBotConsumptionPage`.
 
 The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 

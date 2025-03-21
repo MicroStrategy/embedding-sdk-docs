@@ -1,9 +1,9 @@
 ---
 title: Dashboard consumption page APIs
-description: Describes which Embedding SDK APIs are available on the MicroStrategy dashboard consumption page.
+description: Describes which Embedding SDK APIs are available on the Strategy dashboard consumption page.
 ---
 
-The `dossierConsumption` object is the manipulator of the MicroStrategy dashboard consumption page. It could be got by `embeddingContext.dossierConsumption`.
+The `dossierConsumption` object is the manipulator of the Strategy dashboard consumption page. It could be got by `embeddingContext.dossierConsumption`.
 
 The details of the `embeddingContext` object could be seen in [Embedding context](./embedding-context.md).
 
@@ -178,6 +178,42 @@ try {
 } catch (err) {
   // The other error handling logic here
   console.error(err);
+}
+```
+
+### `selectPanels(panelKeys)`
+
+#### Description
+
+This API could be used to select panels on a dashboard consumption page.
+
+#### Class
+
+`DossierConsumption`
+
+#### Input Parameters
+
+- `panelKeys`:
+
+  **Data Type**
+
+  `array`
+
+  **Required?**
+
+  Yes
+
+#### Return type
+
+This API would return a Promise object that resolves to void. If it encounters an error in its executing process, the error would be thrown and could be caught.
+
+#### Example
+
+```js
+try {
+  const response = await embeddingContext.dossierConsumption.selectComponents(["W53"]);
+} catch (err) {
+  // The other error handling logic here
 }
 ```
 

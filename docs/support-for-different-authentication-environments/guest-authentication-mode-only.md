@@ -5,9 +5,9 @@ description: The example in this topic illustrates how to seamlessly display an 
 
 The Embedding SDK allows you to quickly integrate dossiers into a web application in a responsive manner. The code required for the dashboard to be displayed without requesting credentials depends on the how authentication is configured for the environment where the embedded dashboard is hosted. The example in this topic illustrates how to seamlessly display an embedded dashboard using Guest authentication when Guest is the only authentication mode that is enabled.
 
-To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g2) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dashboard and nothing else, and it embeds an existing dashboard from the MicroStrategy Library demo site, which has only Guest authentication enabled.
+To help you get started, we have provided [a live example](https://microstrategy.github.io/playground/?example=g2) in the [Embedding SDK Playground](https://microstrategy.github.io/playground/). By design, the code in this example only shows how to embed a dashboard and nothing else, and it embeds an existing dashboard from the Library demo site, which has only Guest authentication enabled.
 
-We have provided simple instructions and code snippets to help you configure the example to use a dashboard from your MicroStrategy Library Server. If you customize the example, however, you must configure your Library Server to support only Guest authentication.
+We have provided simple instructions and code snippets to help you configure the example to use a dashboard from your Library Server. If you customize the example, however, you must configure your Library Server to support only Guest authentication.
 
 Please also check out the examples in [Embedding SDK Playground](https://microstrategy.github.io/playground/) from the "Start over" button.
 
@@ -58,13 +58,13 @@ Because this simple embedding example uses a dashboard on the demo server, you a
 
 :::tip
 
-**To customize the example to use your MicroStrategy Library Server**:
+**To customize the example to use your Library Server**:
 
-1. Decide where you want to have the HTML page. If the domain is different from your MicroStrategy Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](../config.md).
+1. Decide where you want to have the HTML page. If the domain is different from your Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](../config.md).
 
 1. In an IDE, text editor or [Embedding SDK Playground](https://microstrategy.github.io/playground/), open the HTML file and configure it to reflect the values in your environment:
 
-   - Set the value of the `src` attribute in the first `<script>` node to the path to your MicroStrategy Library installation. Replace `demo.microstrategy.com` with your server path.
+   - Set the value of the `src` attribute in the first `<script>` node to the path to your Library installation. Replace `demo.microstrategy.com` with your server path.
 
      ```html
      <script
@@ -73,7 +73,7 @@ Because this simple embedding example uses a dashboard on the demo server, you a
      ></script>
      ```
 
-     The `embeddinglib.js` file, which contains the Embedding SDK, is included in the MicroStrategyLibrary web application.
+     The `embeddinglib.js` file, which contains the Embedding SDK, is included in the StrategyLibrary web application.
 
    - Set the value for url to reference a dashboard in a project in your environment. First, replace `demo.microstrategy.com` with your server path and then replace `B7CA92F04B9FAE8D941C3E9B7E0CD754` and `27D332AC6D43352E0928B9A1FCAF4AB0` with your Project ID and Dashboard ID.
 
@@ -84,7 +84,7 @@ Because this simple embedding example uses a dashboard on the demo server, you a
 
    :::tip
 
-   You can obtain the value of your Project ID and Dashboard ID by running a dashboard in MicroStrategy Library and copying the URL.
+   You can obtain the value of your Project ID and Dashboard ID by running a dashboard in Library and copying the URL.
 
    :::
 
