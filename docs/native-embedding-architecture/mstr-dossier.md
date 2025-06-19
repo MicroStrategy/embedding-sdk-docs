@@ -17,13 +17,15 @@ The object returned from the `MstrEnvironment.loadDossier()` function, which all
 
 #### Input Parameters
 
-| Parameter Name     | Data Type   | Description                                                                                                                                                                                                                                                                                                                                                              | Is Required |
-| ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| props              | Array       | This parameter cannot be empty. It describes the visualizations that must appear on the page. Each visualization must have a valid container. If you call `refresh()` for a second time, the visualizations rendered in the former `refresh()` call are destroyed first, then all the visualizations specified in the second `refresh()` call are shown on page by page. | true        |
-| props[i].key       | String      | The visualization key id.                                                                                                                                                                                                                                                                                                                                                | true        |
-| props[i].container | HTMLElement | The HTML element used for displaying the visualization. The HTML element must be in the current DOM tree of the client’s page. All elements must exist and cannot be in iframes. The `Node.contains()` function is used to determine this and is compatible with all browsers.                                                                                           | true        |
-| options            | Object      | An object containing optional parameters to control the behavior of the `refresh()` function.                                                                                                                                                                                                                                                                            | false       |
-| options.signal     | AbortSignal | An `AbortSignal` object that allows you to abort the refresh operation. This signal is typically created by an `AbortController` and can be used to cancel the operation by calling `AbortController.abort()` if needed.                                                                                                                                                 | false       |
+| Parameter Name             | Data Type   | Description                                                                                                                                                                                                                                                                                                                                                              | Is Required |
+| -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| props                      | Array       | This parameter cannot be empty. It describes the visualizations that must appear on the page. Each visualization must have a valid container. If you call `refresh()` for a second time, the visualizations rendered in the former `refresh()` call are destroyed first, then all the visualizations specified in the second `refresh()` call are shown on page by page. | true        |
+| props[i].key               | String      | The visualization key id.                                                                                                                                                                                                                                                                                                                                                | true        |
+| props[i].container         | HTMLElement | The HTML element used for displaying the visualization. The HTML element must be in the current DOM tree of the client's page. All elements must exist and cannot be in iframes. The `Node.contains()` function is used to determine this and is compatible with all browsers.                                                                                           | true        |
+| props[i].infoWindow        | Object      | An object that controls the information window behavior for the visualization.                                                                                                                                                                                                                                                                                           | false       |
+| props[i].infoWindow.enable | Boolean     | When set to `true`, enables the information window rendering for the visualization.                                                                                                                                                                                                                                                                                      | false       |
+| options                    | Object      | An object containing optional parameters to control the behavior of the `refresh()` function.                                                                                                                                                                                                                                                                            | false       |
+| options.signal             | AbortSignal | An `AbortSignal` object that allows you to abort the refresh operation. This signal is typically created by an `AbortController` and can be used to cancel the operation by calling `AbortController.abort()` if needed.                                                                                                                                                 | false       |
 
 #### Response
 
@@ -94,6 +96,37 @@ if (shouldAbortRefresh) {
 }
 ```
 
+With InfoWindow:
+
+```js
+try {
+  const environment = await microstrategy.embeddingComponent.environments.create({
+    serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+    getAuthToken: () => {
+      // Logic similar to the existing Native Embedding SDK.
+    },
+  });
+  const dossier = await environment.loadDossier({
+    projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+    objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  });
+  // Begin here
+  const containerHtmlElement = document.getElementById("containerA");
+  await dossier.refresh([
+    {
+      key: "K66",
+      container: containerHtmlElement,
+      infoWindow: {
+        enable: true,
+      },
+    },
+  ]);
+  // Your own code after the visualizations are all loaded
+} catch (error) {
+  // Add your own handling logic here
+}
+```
+
 #### API Errors
 
 | Error Case                                                                                               | Error Category | Handling Module      | Error Handling                                                                                                                 |
@@ -107,6 +140,7 @@ if (shouldAbortRefresh) {
 | A container is occupied by other dossiers                                                                | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | Other REST API errors                                                                                    | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 | The key is the visualization key of the visualization in the panel                                       | Invalid input  | Native Embedding SDK | console err message in console "The visualization `${VisualizationKey}` is a visualization in a panel, which isn't supported." |
+| Info window is not found for the specified visualization key                                             | Invalid input  | Native Embedding SDK | Console error message: `Info window is not found for visualization key:${vizKey}.`                                             |
 | Object you pass to AbortController.abort(), or `AbortError: signal is aborted without reason` otherwise. | Abort Error    | Native Embedding SDK | Caught by the `catch()` of the promise object                                                                                  |
 
 ### The get information API

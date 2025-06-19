@@ -5,7 +5,17 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
-## MicroStrategy ONE March 2025
+## Strategy ONE June 2025
+
+- [Information Window](./native-embedding-architecture/information-window.md)
+  - Introduce the Information Window feature to enhance data visualization interactivity by providing contextual details in a dynamic overlay.
+
+## Strategy ONE April 2025
+
+- [Properties for an embedded Library home page.](./embed-library-main-page/embed-library-properties.md#settings)
+  - Introduce `settings.filter.projects` to filter the library to display content from a specific project.
+
+## Strategy ONE March 2025
 
 - [Embed MicroStrategy document consumption page.](./embed-document-consumption-page/embed-document-consumption-page.md)
   - Provide API to embed a document consumption page.

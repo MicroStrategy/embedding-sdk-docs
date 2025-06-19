@@ -73,6 +73,8 @@ The `url` property refers to the full URL of the dashboard to be embedded. There
 1. Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties.
 1. If the `configAppId` property is not provided, embedding SDK will build the URL using: `serverURL` + '/app/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
 1. Otherwise the URL will be: `serverURL` + '/app/' + 'config/' + `configAppId` + '/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
+1. The `configAppId` refers to the application Id of the embeded dashboard.
+1. The `applicationID` refers to the project Id of the embeded dashboard.
 
 #### Required?
 
