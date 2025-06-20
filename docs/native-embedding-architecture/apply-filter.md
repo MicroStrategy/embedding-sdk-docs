@@ -274,7 +274,9 @@ Here are some examples for the filter object in the `MstrDossier.applyFilter()`
 
 #### On-Page selectors
 
-To apply selections to on-page selectors, use the same input as chapter-level filters.
+##### Attribute Element Filter
+
+To apply selections on Attribute Element filter inside a page, use the same input as chapter-level filters.
 
 - Select the element list of the selector
 
@@ -304,6 +306,45 @@ To apply selections to on-page selectors, use the same input as chapter-level fi
       key: "W76",
       currentSelection: {
         allSelected: true,
+      },
+    });
+  } catch (error) {
+    // Your own error handling code
+  }
+  ```
+
+- Unset the selection of the selector
+
+  ```js
+  try {
+    await mstrDossier.applyFilter({
+      key: "W76",
+      currentSelection: {
+        selectionStatus: "unfiltered",
+      },
+    });
+  } catch (error) {
+    // Your own error handling code
+  }
+  ```
+
+##### Attribute/Metric Selector
+
+To apply selections on an Attribute/Metric selector inside a page, you can use the following input:
+
+- Select the object list of the selector
+
+  ```js
+  try {
+    await mstrDossier.applyFilter({
+      key: "W76",
+      currentSelection: {
+        objectItems: [
+          {
+            id: "<string>",
+            name: "<string>",
+          },
+        ],
       },
     });
   } catch (error) {

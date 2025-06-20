@@ -8,7 +8,9 @@ In each release, changes are made to make the MicroStrategy SDK more powerful an
 ## Strategy ONE June 2025
 
 - [Information Window](./native-embedding-architecture/information-window.md)
-  - Introduce the Information Window feature to enhance data visualization interactivity by providing contextual details in a dynamic overlay.
+  - Introduce the Information Window feature in Native Embedding SDK to enhance data visualization interactivity by providing contextual details in a dynamic overlay.
+- [Retrieve and apply filters](./native-embedding-architecture/apply-filter#attributemetric-selector)
+  - Support the Attribute/Metric selector in `MstrDossier.applyFilter()` and `MstrDossier.applyFilters()` in Native Embedding SDK.
 
 ## Strategy ONE April 2025
 
