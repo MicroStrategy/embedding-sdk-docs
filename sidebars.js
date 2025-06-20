@@ -36,6 +36,7 @@ const sidebars = {
         "support-for-different-authentication-environments/authentication-saml",
         "support-for-different-authentication-environments/new-authentication-apis",
         "support-for-different-authentication-environments/seamless-login",
+        "support-for-different-authentication-environments/oauth2-apis",
       ],
     },
     {
@@ -140,6 +141,7 @@ const sidebars = {
         "native-embedding-architecture/dossier-info-api",
         "native-embedding-architecture/apply-filter",
         "native-embedding-architecture/event-handling",
+        "native-embedding-architecture/information-window",
       ],
     },
     "samples",

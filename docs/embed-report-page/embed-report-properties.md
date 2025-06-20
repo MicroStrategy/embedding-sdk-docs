@@ -327,3 +327,36 @@ The detailed embedding behavior is below:
     - If you choose "Collapse toolbar by default" in the application settings, the navigation bar is collapsed at the start and is only expanded/visible when the user expands it manually.
 
     - If you don't choose "Collapse toolbar by default", the navigation bar is shown on the embedded report page.
+
+### `settings`
+
+#### Required?
+
+No
+
+#### Properties
+
+##### `reportConsumption`
+
+Use the `reportConsumption` object to customize the options on the report consumption page. The detailed properties contain:
+
+- `disableManipulationsAutoSaving`
+
+  - Disable the report instance manipulation auto saving or not.
+  - Default value: `false`.
+
+### `instance`
+
+Use this `instance` object to specify a report based dashboard instance for the embedded report. If you would like to make some manipulation to the report based dashboard instance before it is embedded, you can use this property, e.g., sorting a column. If the `instance` is used, the Embedding SDK will use it instead of creating a new report based dashboard instance.
+
+#### Required?
+
+No
+
+#### Properties
+
+- `mid` - This instance ID.
+
+#### Default value
+
+`null`
