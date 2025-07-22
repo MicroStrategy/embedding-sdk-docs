@@ -142,6 +142,7 @@ const sidebars = {
         "native-embedding-architecture/apply-filter",
         "native-embedding-architecture/event-handling",
         "native-embedding-architecture/information-window",
+        "native-embedding-architecture/feature-flags",
       ],
     },
     "samples",
