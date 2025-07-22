@@ -108,6 +108,29 @@ try {
 
 </details>
 
+## Get dashboard instance Id
+
+You can use the `MstrDossier.getDossierInstanceId()` function in the Native Embedding SDK to retrieve the dashboard instance Id.
+
+| `getDossierDefinition()` |                                |
+| ------------------------ | ------------------------------ |
+| Class                    | `MstrDossier`                  |
+| Return Type              | `string`                       |
+| Description              | Get the dashboard instance Id. |
+
+### `MstrDossier.getDossierInstanceId` examples
+
+```js
+try {
+  const instanceId = mstrDossier.getDossierInstanceId();
+  // Your own code
+} catch (error) {
+  // Your own error handling code
+}
+```
+
+The returned `instanceId` is a GUID string.
+
 ## Get visualization data
 
 You can use the `MstrDossier.getVisualizationData()` function in the Native Embedding SDK to retrieve the data of a single visualization.

@@ -5,6 +5,15 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE July 2025
+
+- [Get the dashboard instance ID](./native-embedding-architecture/dossier-info-api#get-dashboard-instance-id)
+  - Support to get the dashboard instance id via the new API `MstrDossier.getDossierInstanceId()` in Native Embedding SDK.
+- [Add a new parameter to improve performance](./native-embedding-architecture/embedding-components)
+  - Add `suppressAutoRecovery` parameter in `microstrategy.embeddingComponent.environments.create()` function to improve the initial load performance.
+- [Add a new feature flag to get performance profiles](./native-embedding-architecture/feature-flags#enable_profile)
+  - Add a new feature flag `window.microstrategy.nativeEmbedding.featureFlags.enableProfile` to record the performance profiles in Native Embedding SDK.
+
 ## Strategy ONE June 2025
 
 - [Information Window](./native-embedding-architecture/information-window.md)

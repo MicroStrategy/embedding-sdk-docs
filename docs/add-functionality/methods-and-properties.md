@@ -943,6 +943,42 @@ No
 
 No visualization needs to be maximized or restored during initial loading.
 
+### `raiseSilentError`
+
+Some errors are ignored by the Library, meaning the error handler registered through the embedding SDK will not catch them. To capture these errors, use the raiseSilentError object to enable them to be raised to the error handler.
+
+Currently, silent errors only include refresh errors that occur during dashboard auto-refresh.
+
+- `enabled` - Whether to raise silent errors.
+
+#### Required?
+
+No
+
+#### Default value
+
+`null`
+
+Silent errors are not raised.
+
+#### Sample
+
+Capture silent errors using a custom error handler. Ensure the error handler is registered with showErrorPopup set to false, as no popup will be displayed for silent errors.
+
+```js
+const dossier = await microstrategy.dossier.create({
+  placeholder: placeholderDiv,
+  url: "http://{host}:{port}/{Library}/app/{ProjectID}/{DossierID}",
+  raiseSilentError: {
+    enabled: true,
+  },
+});
+dossier.addCustomErrorHandler((error) => {
+  console.log(`catch error: ${error.message}`);
+  // Do something to handle the error
+}, false);
+```
+
 ### `authoring`
 
 The `authoring` object controls the dashboard interface in authoring mode. See [Author an embedded dashboard](./authoring-library.md#api-for-controlling-the-authoring-ui) for details.
