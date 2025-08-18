@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE August 2025
+
+- [Support Dashboard Instance Id in goToPage()](./embedding-context/#gotopagepageinfo)
+  - Support to input the dashboard instance id in the API `EmbeddingContext.goToPage()` in iframe Embedding SDK.
+
 ## Strategy ONE July 2025
 
 - [Get the dashboard instance ID](./native-embedding-architecture/dossier-info-api#get-dashboard-instance-id)
