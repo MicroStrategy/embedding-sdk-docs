@@ -108,13 +108,14 @@ This API could be used to navigate to an arbitrary page on the OOTB Library.
 
 #### Input Parameters
 
-| Parameter Name         | Data Type | Description                                     | Is Required |
-| ---------------------- | --------- | ----------------------------------------------- | ----------- |
-| pageInfo.applicationId | string    | The application ID, which must be a GUID.       | false       |
-| pageInfo.projectId     | string    | The project ID, which must be a GUID.           | false       |
-| pageInfo.objectId      | string    | The object ID, which must be a valid object id. | false       |
-| pageInfo.pageKey       | string    | The page key.                                   | false       |
-| pageInfo.isAuthoring   | boolean   | Go to the authoring page or not.                | false       |
+| Parameter Name         | Data Type | Description                                                  | Is Required |
+| ---------------------- | --------- | ------------------------------------------------------------ | ----------- |
+| pageInfo.applicationId | string    | The application ID, which must be a GUID.                    | false       |
+| pageInfo.projectId     | string    | The project ID, which must be a GUID.                        | false       |
+| pageInfo.objectId      | string    | The object ID, which must be a valid object id.              | false       |
+| pageInfo.pageKey       | string    | The page key.                                                | false       |
+| pageInfo.isAuthoring   | boolean   | Go to the authoring page or not.                             | false       |
+| pageInfo.instanceId    | string    | The instance id, which must be a valid dashboard instanceId. | false       |
 
 The API call like `embeddingContext.goToPage()` will navigate to the homepage.
 
@@ -142,6 +143,7 @@ try {
     objectId: "EC70648611E7A2F962E90080EFD58751",
     pageKey: "W69",
     isAuthoring: false,
+    instanceId: "A3B45ED63F49EE11FE53CA946299FC7C",
   });
 } catch (err) {
   // The other error handling logic here
@@ -160,4 +162,4 @@ The case "the input parameter fails input validation" contains:
 
 - The field value's data type isn't right
 - `objectId` and `projectId` don't exist at the same time
-- `pageKey`, `isAuthoring` appears when `objectId` and `projectId` don't exist
+- `pageKey`, `isAuthoring`, `instanceId` appears when `objectId` and `projectId` don't exist
