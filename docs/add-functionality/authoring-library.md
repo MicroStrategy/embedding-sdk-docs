@@ -90,9 +90,12 @@ The fields ["filters", "visualizationAppearances", "visualizationSelectedElement
 
 An optional `props.dossierRenderingMode` field has been added to the props object in 2021 Update 3. The `props` parameter contains many fields. See [Methods and properties for an embedded dashboard](./methods-and-properties.md) for more information.
 
-| Parameter Name             | Data Type | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
-| -------------------------- | --------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| props.dossierRenderingMode | String    | consumption   | ["consumption", "authoring"] | The value is either `consumption` or `authoring`. <br/> If it is `authoring` and the configuration `feature.dossier.authoring` isn't set, or its value isn't `true`, then an error is returned. | No        |
+| Parameter Name             | Data Type       | Default Value | Available Values             | Description                                                                                                                                                                                     | Required? |
+| -------------------------- | --------------- | ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| props.dossierRenderingMode | string          | consumption   | ["consumption", "authoring"] | The value is either `consumption` or `authoring`. <br/> If it is `authoring` and the configuration `feature.dossier.authoring` isn't set, or its value isn't `true`, then an error is returned. | No        |
+| props.newDossier           | boolean         | false         | [true, false]                | If the value is true, the Embedding SDK will embed a new dossier authoring page.                                                                                                                | No        |
+| props.newDossierDatasetIds | Array\<string\> | N/A           | The valid dataset IDs        | When `newDossier` is `true`, the user can use this parameter to specify the datasets that are used to create the new dossier.                                                                   | No        |
+| props.authoringPauseMode   | boolean         | false         | [true, false]                | If the value is true, the Embedding SDK will embed a dossier authoring page on pause mode.                                                                                                      | No        |
 
 Example:
 
@@ -100,6 +103,9 @@ Example:
 microstrategy.dossier.create({
   // ...
   dossierRenderingMode: "authoring",
+  newDossier: true,
+  newDossierDatasetIds: ["E26BF608B14F1EA61086F3A61034AE21"],
+  authoringPauseMode: false,
 });
 ```
 

@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE September 2025
+
+- [Support dataset ids and pause mode in embedded authoring](./add-functionality/authoring-library#api-for-entering-authoring-mode-or-disabling-authoring-mode-in-the-initial-loading)
+  - Support to input dataset ids when embedding a new dossier authoring page, and set pause mode in the API `microstrategy.dossier.create()` in iframe Embedding SDK.
+
 ## Strategy ONE August 2025
 
 - [Support Dashboard Instance Id in goToPage()](./embedding-context/#gotopagepageinfo)
