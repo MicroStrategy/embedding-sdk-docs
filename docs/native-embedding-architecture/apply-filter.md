@@ -76,10 +76,10 @@ Example of the attribute element list in the resolved value:
 
 ## Apply filters after embedded visualizations are rendered
 
-After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dashboard. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` function to manipulate it.
+After embedded visualizations have been rendered, you can use the `MstrDossier.getDossierDefinition()` function in the Native Embedding SDK to retrieve information about filters, selectors, and visualizations used as filters in the dashboard. After you have the key of the filter, selector, or visualization used as a filter, you can use the `MstrDossier.applyFilter()` or `MstrDossier.applyFilters()` function to manipulate it.
 
 :::note
-For filters and selectors, we currently only support manipulating the selector type of the attribute element list.
+The `applyFilter()` or `applyFilters()` functions will first call REST API to apply filter on the current dossier instance, then **refresh the affected visualizations automatically**.
 :::
 
 | `applyFilter()` |                                               |
