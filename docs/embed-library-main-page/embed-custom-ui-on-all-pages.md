@@ -294,9 +294,6 @@ This field is used to customized the UI components on the dashboard authoring pa
 
 Use the `toolbar` object to customize the visibilities of the toolbar icons on the dashboard authoring page. All detailed properties below are `Boolean`.
 
-- `tableOfContents.visible`
-  - Show the TOC button on the dashboard authoring page toolbar or not.
-  - Default value: `true`.
 - `undo.visible`
   - Show the undo button on the dashboard authoring page toolbar or not.
   - Default value: `true`.
