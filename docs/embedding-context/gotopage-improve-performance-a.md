@@ -1,5 +1,5 @@
 ---
-title: Improve embedding dossier page's performance
+title: Improve embedding dossier page's performance - Case 1
 description: Describes how to use goToPage() API to enhance the performance in some specific scenarios.
 ---
 

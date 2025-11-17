@@ -69,12 +69,15 @@ No
 
 The `url` property refers to the full URL of the dashboard to be embedded. There are two ways to configure the URL to embed a dossier:
 
-1. Use the `url` property to specify a full URL.
-1. Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties.
-1. If the `configAppId` property is not provided, embedding SDK will build the URL using: `serverURL` + '/app/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
-1. Otherwise the URL will be: `serverURL` + '/app/' + 'config/' + `configAppId` + '/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
-1. The `configAppId` refers to the application Id of the embeded dashboard.
-1. The `applicationID` refers to the project Id of the embeded dashboard.
+- Use the `url` property to specify a full URL.
+  - If you do like this, you need to input all the necessary parameters in `url`. The project and object ID are must-have items, and `url` can also contain application ID and page key.
+- Use `serverURL`, `configAppId`, `applicationID`, `objectID`, and `pageKey` properties. The Embedding SDK will compose all these parameters to a full url inside its workflow.
+  - If the `configAppId` property is not provided, embedding SDK will build the URL using: `serverURL` + '/app/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
+  - Otherwise the URL will be: `serverURL` + '/app/' + 'config/' + `configAppId` + '/' + `applicationID` + '/' + `objectID` + '/' + `pageKey`.
+  - The `configAppId` refers to the application Id of the embedded dashboard.
+  - The `applicationID` refers to the project Id of the embedded dashboard.
+
+The user only needs to input 1 type of parameter. If the user inputs both `url` and the `serverURL` group parameters, the Embedding SDK will only use `url`.
 
 #### Required?
 
