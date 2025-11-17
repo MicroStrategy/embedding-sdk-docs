@@ -119,7 +119,8 @@ const sidebars = {
         "embedding-context/document-consumption-page-apis",
         "embedding-context/dossier-consumption-page-apis",
         "embedding-context/bot-consumption-page-apis",
-        "embedding-context/gotopage-improve-performance",
+        "embedding-context/gotopage-improve-performance-a",
+        "embedding-context/gotopage-improve-performance-b",
       ],
     },
     {
