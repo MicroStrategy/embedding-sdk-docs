@@ -13,18 +13,24 @@ The instance of this class is the object returned from the `microstrategy.embedd
 
 #### Function
 
-`async loadDossier(props)`
+`async loadDossier(props, options)`
 
 #### Input Parameters
 
-| Parameter Name      | Data Type | Description                                                                                              | Is Required |
-| ------------------- | --------- | -------------------------------------------------------------------------------------------------------- | ----------- |
-| props.projectId     | String    | The project ID, which must be a GUID.                                                                    | true        |
-| props.objectId      | String    | The dashboard ID, which must be valid. If the ID is a document, report, or bot ID, an error is reported. | true        |
-| props.instanceId    | String    | The dashboard instance ID, if it already exists.                                                         | false       |
-| props.applicationId | String    | the dashboard application ID, if not specified, the default application will be used                     | false       |
+| Parameter Name                 | Data Type | Description                                                                                                                  | Is Required |
+| ------------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| props.projectId                | String    | The project ID, which must be a GUID.                                                                                        | true        |
+| props.objectId                 | String    | The dashboard ID, which must be valid. If the ID is a document, report, or bot ID, an error is reported.                     | true        |
+| props.instanceId               | String    | The dashboard instance ID, if it already exists.                                                                             | false       |
+| props.bookmarkId               | String    | The ID of a bookmark that is owned by this dossier, if it is provided.                                                       | false       |
+| props.applicationId            | String    | the dashboard application ID, if not specified, the default application will be used                                         | false       |
+| options.forceCreateNewInstance | Boolean   | Whether to create a new dossier instance forcefully if the other MstrDossier object is already created based on this dossier | false       |
 
-The `projectId` + `objectId` is used as the dashboard identifier. If the function is called twice with the same parameter, the same `MstrDossier` object is returned in the callback.
+The `projectId` + `objectId` is used as the dashboard identifier.
+If the function is called twice with the same the dashboard identifier:
+
+- If `options.forceCreateNewInstance` is not set or false, the same `MstrDossier` object is returned in the callback.
+- If `options.forceCreateNewInstance` is true, a new `MstrDossier` object that holds a new instance is returned in the callback.
 
 #### Response
 
@@ -41,10 +47,15 @@ try {
     },
   });
   // Begin here
-  const dossier = await environment.loadDossier({
-    projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
-    objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
-  });
+  const dossier = await environment.loadDossier(
+    {
+      projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+      objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+    },
+    {
+      forceCreateNewInstance: true,
+    }
+  );
 } catch (error) {
   // Your own error handling logic
 }

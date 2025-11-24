@@ -367,6 +367,25 @@ To apply selections on an Attribute/Metric selector inside a page, you can use t
   }
   ```
 
+##### Value parameter filter
+
+To apply values for a value parameter filter, you can use the following input:
+
+```js
+try {
+  await mstrDossier.applyFilter({
+    key: "W76",
+    currentSelection: {
+      value: "Profit",
+    },
+  });
+} catch (error) {
+  // Your own error handling code
+}
+```
+
+Then the value parameter's value changes, which affects all the visualizations that use the related value parameter.
+
 #### Visualizations used as filters
 
 - Select attribute elements of the visualization
