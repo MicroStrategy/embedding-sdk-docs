@@ -5,6 +5,16 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE December 2025
+
+- [Support multiple instances for one dashboard](./native-embedding-architecture/multiple-instances-for-one-dossier)
+  - Use the new `forceCreateNewInstance` parameter in the [MstrEnvironment.loadDossier()](./native-embedding-architecture/mstr-environment#the-load-dashboard-api) API to support creating multiple instances for one dashboard in Native Embedding SDK.
+- [Support using bookmarks to show multiple copies of one visualization](./native-embedding-architecture/use-bookmark)
+  - Support to use bookmark APIs to create, delete, and get bookmarks;
+  - Support using `bookmarkId` to load a `MstrDossier` object based on a bookmark in the [MstrEnvironment.loadDossier()](./native-embedding-architecture/mstr-environment#the-load-dashboard-api) API.
+- [Support applying values for value parameter filter](./native-embedding-architecture/apply-filter#value-parameter-filter)
+  - Support the value parameter filter in the `MstrDossier.applyFilter()` and `MstrDossier.applyFilters()` API.
+
 ## Strategy ONE September 2025
 
 - [Support dataset ids and pause mode in embedded authoring](./add-functionality/authoring-library#api-for-entering-authoring-mode-or-disabling-authoring-mode-in-the-initial-loading)

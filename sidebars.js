@@ -144,6 +144,8 @@ const sidebars = {
         "native-embedding-architecture/apply-filter",
         "native-embedding-architecture/event-handling",
         "native-embedding-architecture/information-window",
+        "native-embedding-architecture/use-bookmark",
+        "native-embedding-architecture/multiple-instances-for-one-dossier",
         "native-embedding-architecture/feature-flags",
       ],
     },
