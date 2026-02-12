@@ -66,6 +66,44 @@ const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
 });
 ```
 
+### `serverUrlParams`
+
+Additional query parameters to append to the server URL. This property accepts an object where the keys are parameter names and the values can be strings, numbers, or booleans. All parameter values will be URL-encoded before being appended to the server URL.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+const embeddingContext = await microstrategy.embeddingContexts.embedReportPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "A409D6EC2245D4417C4FBEA5CD87D3A1",
+  placeholder: document.getElementById("embedding-report-container"),
+  serverUrlParams: {
+    token: "abc",
+    sessionMode: "stateless",
+    debug: true,
+    timeout: 3000,
+  },
+});
+```
+
+In the example above, the parameters will be URL-encoded and appended to the server URL, resulting in a URL like:
+`https://demo.microstrategy.com/MicroStrategyLibrary/app/B19DEDCC11D4E0EFC000EB9495D0F44F/A409D6EC2245D4417C4FBEA5CD87D3A1?token=abc&sessionMode=stateless&debug=true&timeout=3000`
+
+:::note
+
+- Parameter names must start with a letter and can contain letters, numbers, dots (.), underscores (\_), and hyphens (-).
+- All parameter values are automatically URL-encoded for safe transmission.
+  :::
+
 ### `containerHeight`
 
 Sets the height of the placeholder.

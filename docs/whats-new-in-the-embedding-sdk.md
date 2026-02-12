@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE January 2026
+
+- [Support metric qualification filter](./native-embedding-architecture/apply-filter#metric-qualification-filter)
+  - The user can apply filter for the metric qualification filter in Native Embedding SDK.
+
 ## Strategy ONE December 2025
 
 - [Support multiple instances for one dashboard](./native-embedding-architecture/multiple-instances-for-one-dossier)

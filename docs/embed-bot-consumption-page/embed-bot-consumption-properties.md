@@ -101,6 +101,45 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 });
 ```
 
+### `serverUrlParams`
+
+Additional query parameters to append to the server URL. This property accepts an object where the keys are parameter names and the values can be strings, numbers, or booleans. All parameter values will be URL-encoded before being appended to the server URL.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedBotConsumptionPage({
+  placeholder: document.getElementById("container"),
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  pageKey: "K53--K46",
+  serverUrlParams: {
+    token: "abc",
+    sessionMode: "stateless",
+    debug: true,
+    timeout: 3000,
+  },
+});
+```
+
+In the example above, the parameters will be URL-encoded and appended to the server URL, resulting in a URL like:
+`https://demo.microstrategy.com/MicroStrategyLibrary/app/B19DEDCC11D4E0EFC000EB9495D0F44F/D9AB379D11EC92C1D9DC0080EFD415BB/K53--K46?token=abc&sessionMode=stateless&debug=true&timeout=3000`
+
+:::note
+
+- Parameter names must start with a letter and can contain letters, numbers, dots (.), underscores (\_), and hyphens (-).
+- All parameter values are automatically URL-encoded for safe transmission.
+  :::
+
 ### `containerHeight`
 
 Sets the height of the placeholder.
