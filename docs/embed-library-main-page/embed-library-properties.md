@@ -63,6 +63,42 @@ microstrategy.embeddingContexts.embedLibraryPage({
 });
 ```
 
+### `serverUrlParams`
+
+Additional query parameters to append to the server URL. This property accepts an object where the keys are parameter names and the values can be strings, numbers, or booleans. All parameter values will be URL-encoded before being appended to the server URL.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedLibraryPage({
+  placeholder: placeholderDiv,
+  serverUrl: "http://{host}:{port}/{Library}",
+  serverUrlParams: {
+    token: "abc",
+    sessionMode: "stateless",
+    debug: true,
+    timeout: 3000,
+  },
+});
+```
+
+In the example above, the parameters will be URL-encoded and appended to the server URL, resulting in a URL like:
+`http://{host}:{port}/{Library}/app?token=abc&sessionMode=stateless&debug=true&timeout=3000`
+
+:::note
+
+- Parameter names must start with a letter and can contain letters, numbers, dots (.), underscores (\_), and hyphens (-).
+- All parameter values are automatically URL-encoded for safe transmission.
+  :::
+
 ### `containerHeight`
 
 Sets the height of the placeholder.
@@ -130,6 +166,28 @@ User needs to log in from the default login page.
 #### Sample
 
 N/A
+
+### `embeddingHostPortal`
+
+Specifies the URL of the host portal that embeds the page. This replaces the host in shared dashboard links, with the actual dashboard link passed as the `mstrLibraryLink` query parameter.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedLibraryPage({
+  placeholder: placeholderDiv,
+  serverUrl: "http://{host}:{port}/{Library}",
+  embeddingHostPortal: "https://example.com",
+});
+```
 
 ### `customAuthenticationType`
 

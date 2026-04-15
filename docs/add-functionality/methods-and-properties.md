@@ -358,6 +358,28 @@ microstrategy.dossier.create({
 });
 ```
 
+### `embeddingHostPortal`
+
+Specifies the URL of the host portal that embeds the page. This replaces the host in shared dashboard links, with the actual dashboard link passed as the `mstrLibraryLink` query parameter.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.dossier.create({
+  placeholder: placeholderDiv,
+  url: "https://demo.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/27D332AC6D43352E0928B9A1FCAF4AB0",
+  embeddingHostPortal: "https://example.com",
+});
+```
+
 ### `enableCustomAuthentication`
 
 The `enableCustomAuthentication` property specifies whether custom authentication is used.

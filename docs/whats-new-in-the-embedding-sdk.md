@@ -5,6 +5,15 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE April 2026
+
+- [New property `embeddingHostPortal`](./add-functionality/methods-and-properties.md#embeddinghostportal)
+  - Add the `embeddingHostPortal` property to all embedding APIs to replace the host in shared dashboard links, with the actual dashboard link passed as the `mstrLibraryLink` query parameter.
+- [Support embedding panel stacks](./native-embedding-architecture/embed-panel-stacks)
+  - The user can embed a panel stack as a single component in Native Embedding SDK.
+- [New feature flag ENABLE_REST_API_CACHE](./native-embedding-architecture/feature-flags#enable_rest_api_cache)
+  - Add a feature flag to control whether REST API results are cached to improve performance.
+
 ## Strategy ONE January 2026
 
 - [Support metric qualification filter](./native-embedding-architecture/apply-filter#metric-qualification-filter)
