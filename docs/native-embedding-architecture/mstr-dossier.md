@@ -146,3 +146,76 @@ try {
 ### The get information API
 
 You can see the API at the [Getting dashboard info via APIs document](dossier-info-api)
+
+### The apply manipulation actions API
+
+#### Function
+
+`async applyManipulations(manipulations)`
+
+#### Input Parameters
+
+| Parameter Name                    | Data Type | Description                                                                                                                               | Is Required |
+| --------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| manipulations                     | Array     | An array of manipulation actions to apply in a batch operation. Each manipulation can be either a filter action or a panel switch action. | true        |
+| manipulations[i].action           | String    | The type of manipulation action. Supported values: `'setFilter'`, `'setCurrentPanel'`                                                     | true        |
+| manipulations[i].filterKey        | String    | (Required for 'setFilter' action) The filter key to apply the selection to                                                                | false       |
+| manipulations[i].currentSelection | Object    | (Required for 'setFilter' action) The filter selection object                                                                             | false       |
+| manipulations[i].panelKey         | String    | (Required for 'setCurrentPanel' action) The panel key to switch to                                                                        | false       |
+
+#### Response
+
+This API returns a promise object that resolves to an array of validated manipulations.
+
+#### Example
+
+Apply filter and switch panel in a single batch operation:
+
+```js
+try {
+  await mstrDossier.applyManipulations([
+    {
+      action: "setFilter",
+      filterKey: "K46",
+      currentSelection: {
+        selectionStatus: "included",
+        elements: [{ id: "h2014;8D679D5111D3E4981000E787EC6DE8A4", name: "2014" }],
+      },
+    },
+    {
+      action: "setCurrentPanel",
+      panelKey: "W63",
+    },
+  ]);
+} catch (error) {
+  // Your error handling code
+}
+```
+
+Switch panel only:
+
+```js
+try {
+  await mstrDossier.applyManipulations([
+    {
+      action: "setCurrentPanel",
+      panelKey: "W63",
+    },
+  ]);
+} catch (error) {
+  // Your error handling code
+}
+```
+
+#### API Errors
+
+| Error Case                        | Error Category | Handling Module      | Error Handling                                |
+| --------------------------------- | -------------- | -------------------- | --------------------------------------------- |
+| Invalid action type               | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Invalid filter key                | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Invalid panel key                 | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Panel is inside an info window    | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Panel stack is not a generic type | Invalid input  | Native Embedding SDK | Caught by the `catch()` of the promise object |
+| Other REST API errors             | Other          | Native Embedding SDK | Caught by the `catch()` of the promise object |
+
+For more information about embedding panel stacks and using manipulation actions, see [Embed panel stacks](embed-panel-stacks.md).

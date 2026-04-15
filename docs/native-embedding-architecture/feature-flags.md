@@ -19,6 +19,16 @@ window.microstrategy.nativeEmbedding.featureFlags.multipleDossiers = true;
 
 A full example can be seen in [Embed multiple dossier visualizations on a page](http://localhost:3000/native-embedding-architecture/embed-multiple-viz#embed-visualizations-from-multiple-dossiers)
 
+### ENABLE_REST_API_CACHE
+
+This feature flag is `true` by default. When set to `false`, the Native Embedding SDK will not cache REST API results for reuse on subsequent page reloads while the session is active.
+
+This feature flag can be set by:
+
+```js
+window.microstrategy.nativeEmbedding.featureFlags.enableRestApiCache = false;
+```
+
 ### ENABLE_PROFILE
 
 When this feature flag is set to `true`, the Native Embedding SDK will generate a detailed performance profile in the global variable `window.mstrEmbedProfile`.

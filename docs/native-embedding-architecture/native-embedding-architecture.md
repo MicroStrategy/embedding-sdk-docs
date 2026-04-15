@@ -14,3 +14,9 @@ To improve performance when embedding multiple visualizations, use the Native Em
 - [Destroy visualizations on a page](destroy-multiple-viz.md)
 
   This introductory sample shows how to destroy the current visualizations before embedding a new set of visualizations.
+
+- [Embed panel stacks](embed-panel-stacks.md)
+
+  <Available since="Strategy ONE April 2026" inline />
+
+  Embed panel stacks as single embedding components in Native Embedding SDK.
