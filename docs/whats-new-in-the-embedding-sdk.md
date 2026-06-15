@@ -5,6 +5,11 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy ONE June 2026
+
+- [Support native incremental rendering](./native-embedding-architecture/incremental-rendering)
+  - Use the new `MstrDossier.addWidgets()` API to enable incremental rendering on an existing `MstrDossier` instance.
+
 ## Strategy ONE April 2026
 
 - [New property `embeddingHostPortal`](./add-functionality/methods-and-properties.md#embeddinghostportal)
