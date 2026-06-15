@@ -161,6 +161,48 @@ None
 embedDossier.registerEventHandler(EventType.ON_PAGE_LOADED, onPageLoadedHandler);
 ```
 
+### onEmbedPageLoaded
+
+#### Event enumeration
+
+`EventType.ON_EMBED_PAGE_LOADED`
+
+#### Description
+
+Raised every time the embedded page changes, for example, from the library page to dashboard pages or on dashboard pages switched.
+
+#### Content
+
+Object containing only one field, `pageType`, which indicates the embedded page type.
+
+Possible values for `pageType`:
+
+```js
+const PAGE_TYPE = {
+  LIBRARY: "library",
+  DOSSIER: "dossier",
+  DOSSIER_CONSUMPTION: "dossierConsumption",
+  REPORT: "report",
+  REPORT_AUTHORING: "reportAuthoring",
+  BOT_CONSUMPTION: "botConsumption",
+  DOCUMENT_CONSUMPTION: "documentConsumption",
+};
+```
+
+#### Code example
+
+```js
+embedDossier.registerEventHandler(EventType.ON_EMBED_PAGE_LOADED, onEmbedPageLoadedHandler);
+```
+
+#### Content example
+
+```json
+{
+  "pageType": "dossier"
+}
+```
+
 ### onLayoutChanged
 
 #### Event enumeration

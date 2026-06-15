@@ -1,23 +1,23 @@
 ---
-title: Properties for an embedded Strategy bot consumption page
-description: Describes the properties that can be set for an embedded Strategy bot consumption page.
+title: Properties for an embedded Strategy agent consumption page
+description: Describes the properties that can be set for an embedded Strategy agent consumption page.
 ---
 
-When you embed a Strategy bot consumption page into a web page, you use the `embedBotConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
+When you embed a Strategy agent consumption page into a web page, you use the `embedBotConsumptionPage(props)` method under the `microstrategy.embeddingContexts` namespace.
 
 ## Method
 
 ### `microstrategy.embeddingContexts.embedBotConsumptionPage(props)`
 
-This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Strategy bot consumption page URL (specified by the `serverUrl` property).
+This method creates an iFrame on the web page (in the location specified by the `placeholder` property) and inserts a link to the Strategy agent consumption page URL (specified by the `serverUrl` property).
 
 #### Return value
 
-This method returns a promise, which is resolved when the Strategy bot consumption page is loaded.
+This method returns a promise, which is resolved when the Strategy agent consumption page is loaded.
 
 #### Input parameters
 
-The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Strategy bot consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
+The `props` parameter contains required key:value pairs that defines the Library Server URL and the `<div>` placeholder where the iFrame containing the Strategy agent consumption page will be created. It can also contain other optional key:value pairs to customize the UI, authentication and custom error handler.
 
 The `props` parameter could contain the following key:value pairs:
 
@@ -48,7 +48,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `serverUrl`, `projectId`, `objectId`
 
-The required parameters in the bot URL.
+The required parameters in the agent URL.
 
 These properties build the full report page URL to be embedded.
 The Embedding SDK builds the URL using `serverUrl` + '/app/' + `projectId` + '/' + `objectId` + '/' + `pageKey`.
@@ -74,7 +74,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `customApplicationId`, `pageKey`
 
-The optional parameters in the bot URL.
+The optional parameters in the agent URL.
 
 Specifies the application and page that the user wants to show in the embedded page.
 
@@ -368,10 +368,38 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 });
 ```
 
+### `onBeforeSubmit`
+
+Use `onBeforeSubmit` to preprocess the question text before submitting it to the agent.
+
+#### Required?
+
+No
+
+#### Default value
+
+N/A
+
+#### Sample
+
+```js
+microstrategy.embeddingContexts.embedBotConsumptionPage({
+  serverUrl: "https://demo.microstrategy.com/MicroStrategyLibrary",
+  projectId: "B19DEDCC11D4E0EFC000EB9495D0F44F",
+  objectId: "D9AB379D11EC92C1D9DC0080EFD415BB",
+  placeholder: document.getElementById("container"),
+  onBeforeSubmit: async ({ text, conversationId }) => {
+    /* Add any functionality before submitting the question */
+    const updatedText = text; // Modify the text as needed.
+    return { text: updatedText };
+  },
+});
+```
+
 ### `disableHyper`
 
 <Available since="2024 Update6" />
-Use the `disableHyper` boolean value to decide if the hyper extension should highlight the bot consumption page or not
+Use the `disableHyper` boolean value to decide if the hyper extension should highlight the agent consumption page or not
 
 #### Required?
 
@@ -395,13 +423,13 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `customUi`
 
-Specifies the custom UI settings on the embedded pages, including Library home page, bot consumption page，bot authoring page, and report consumption page.
+Specifies the custom UI settings on the embedded pages, including Library home page, agent consumption page, agent authoring page, and report consumption page.
 
 #### Properties
 
 ##### `addToLibraryBanner`
 
-Use the `addToLibraryBanner` object to customize the "Add To Library" banner on the Strategy bot consumption page. All detailed properties below are `Boolean`.
+Use the `addToLibraryBanner` object to customize the "Add To Library" banner on the Strategy agent consumption page. All detailed properties below are `Boolean`.
 
 - `enabled`
   - Enable the Library "Add To Library" banner or not. If the banner is disabled in custom application, the true value wouldn’t take effect.
@@ -410,33 +438,33 @@ Use the `addToLibraryBanner` object to customize the "Add To Library" banner on 
 #### `theme`
 
 <Available since="2024 Update6" />
-Use the `theme` object to customize the "theme" in the Library including bot consumption page. All detailed properties below are `Boolean`.
+Use the `theme` object to customize the "theme" in the Library including agent consumption page. All detailed properties below are `Boolean`.
 
 - `enabled`
   - Enable the Library "theme" colors or not. The value can be true or false. If the value isn't defined, the default is true.
 
 ##### `botConsumption`
 
-Use the `botConsumption` object to customize UI of the bot consumption page. All detailed properties below are `Boolean`.
+Use the `botConsumption` object to customize UI of the agent consumption page. All detailed properties below are `Boolean`.
 
 - `snapshot.enabled` <Deprecated since="2024 Update6" />
 
-  - Enable the snapshot panel on the bot consumption page or not.
+  - Enable the snapshot panel on the agent consumption page or not.
   - Default value: `true`.
 
 - `topicsPanel.enabled` <Deprecated since="2024 Update6" />
 
-  - Enable the topics panel on the bot consumption page or not.
+  - Enable the topics panel on the agent consumption page or not.
   - Default value is undefined, which falls back to true.
 
 - `navigationBar.enabled`
 
-  - Enable the navigation bar on the bot consumption page or not.
+  - Enable the navigation bar on the agent consumption page or not.
   - Default value: `false`.
 
 - `aiBot` <Available since="2024 Update6" />
 
-  - Enable title bars, the snapshot panel, topics panel, chat panel(show clear history, show give topics, show welcome page bot image, should load history, should save to history) on the bot consumption page or not.
+  - Enable title bars, the snapshot panel, topics panel, chat panel(show clear history, show give topics, show welcome page agent image, should load history, should save to history) on the agent consumption page or not.
   - Default value is undefined, which falls back to the following:
 
   ```javascript
@@ -462,16 +490,16 @@ Use the `botConsumption` object to customize UI of the bot consumption page. All
     }
   ```
 
-- `aiBot.titleBar.enabled`: This field specifies whether to enable the title bar of chat panel, snapshot panel and topic panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true. However, it's ignored when the field isn't defined or defined as true. Only when the value is false, the title bars of panels are hidden.
-- `aiBot.snapshotPanel.enabled`: This field specifies whether to enable the snapshot panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.topicsPanel.enabled`: This field specifies whether to enable the topic panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.showClearHistory`: This field specifies whether to show clear history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.showGiveTopics`: This field specifies whether to show give topics in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.showWelcomePageBotImg`: This field specifies whether to show bot image in the welcome page of the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.showCopyBtn`: This field specifies whether to show copy button in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.titleBar.enabled`: This field specifies whether to enable the title bar of chat panel, snapshot panel and topic panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true. However, it's ignored when the field isn't defined or defined as true. Only when the value is false, the title bars of panels are hidden.
+- `aiBot.snapshotPanel.enabled`: This field specifies whether to enable the snapshot panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.topicsPanel.enabled`: This field specifies whether to enable the topic panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showClearHistory`: This field specifies whether to show clear history in the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showGiveTopics`: This field specifies whether to show give topics in the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showWelcomePageBotImg`: This field specifies whether to show agent image in the welcome page of the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.showCopyBtn`: This field specifies whether to show copy button in the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 - `aiBot.chatPanel.shouldExpandRelatedSuggestionsOnInit`: This field specifies whether to show the related suggestions list in the chat panel as expanded or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.shouldLoadHistory`: This field specifies whether to load chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
-- `aiBot.chatPanel.shouldSaveToHistory`: This field specifies whether to save chat history in the chat panel on the bot consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.shouldLoadHistory`: This field specifies whether to load chat history in the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
+- `aiBot.chatPanel.shouldSaveToHistory`: This field specifies whether to save chat history in the chat panel on the agent consumption page or not. The value can be true or false. If this field isn't defined, the default is true.
 
 #### Sample
 
@@ -518,7 +546,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `permissions`
 
-Specify the permissions on the embedded bot consumption page.
+Specify the permissions on the embedded agent consumption page.
 
 #### Required?
 
@@ -528,7 +556,7 @@ No
 
 ##### `allowClipboardWrite`
 
-To grant the "ClipboardWrite" permission or not. Could be used to enable the copy functionality on a bot message or not. It's worthy note that the copy functionality also requires the Library server to be HTTPS. If it's an HTTP server, the copy functionality would be disabled, regardless of the value of this flag.
+To grant the "ClipboardWrite" permission or not. Could be used to enable the copy functionality on an agent message or not. It's worth noting that the copy functionality also requires the Library server to be HTTPS. If it's an HTTP server, the copy functionality would be disabled, regardless of the value of this flag.
 
 ##### Default value
 
@@ -550,7 +578,7 @@ microstrategy.embeddingContexts.embedBotConsumptionPage({
 
 ### `settings`
 
-Specify the custom settings on the embedding pages. Including the non-UI settings of bot consumption page.
+Specify the custom settings on the embedding pages. Including the non-UI settings of agent consumption page.
 
 #### Required?
 
@@ -560,11 +588,11 @@ No
 
 ##### `botConsumption`
 
-Use the `botConsumption` object to customize the options on the bot consumption page. The detailed properties contain:
+Use the `botConsumption` object to customize the options on the agent consumption page. The detailed properties contain:
 
 - `disableManipulationsAutoSaving`
 
-  - Disable the bot instance manipulation auto saving or not.
+  - Disable the agent instance manipulation auto saving or not.
   - Default value: `false`.
 
 #### Sample

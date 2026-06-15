@@ -95,8 +95,11 @@ const sidebars = {
         type: "doc",
         id: "embed-bot-consumption-page/embed-bot-consumption-page",
       },
-      label: "Embed Strategy bot consumption page",
-      items: ["embed-bot-consumption-page/embed-bot-consumption-properties"],
+      label: "Embed Strategy agent consumption page",
+      items: [
+        "embed-bot-consumption-page/embed-bot-consumption-properties",
+        "embed-bot-consumption-page/add-agent-event",
+      ],
     },
     {
       type: "category",
@@ -148,6 +151,7 @@ const sidebars = {
         "native-embedding-architecture/use-bookmark",
         "native-embedding-architecture/multiple-instances-for-one-dossier",
         "native-embedding-architecture/feature-flags",
+        "native-embedding-architecture/incremental-rendering",
       ],
     },
     "samples",
