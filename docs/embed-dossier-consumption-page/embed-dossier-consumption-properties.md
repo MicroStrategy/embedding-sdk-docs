@@ -402,8 +402,9 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
 
 - `enablePageSelection`
 
-  - Enable dashoard page selection in the TOC panel.
+  - Enable dashboard page selection in the TOC panel.
   - Default value: `false`.
+  - **Note:** This property is deprecated. Use `pageSelectionMode` instead for more granular control over page selection behavior.
 
 - `disableGroupSelection`
 
@@ -415,6 +416,13 @@ Use the `dossierConsumption` object to customize the options on the dashboard co
   - To assign the selection mode of panels on the dashboard consumption page.
   - Available values: ["noSelection", "singleSelection", "multipleSelection"]
   - Default value: "noSelection".
+
+- `pageSelectionMode`
+
+  - Assigns the selection mode of pages on the dashboard consumption page.
+  - Available values: ["noSelection", "singleSelection", "multipleSelection"]
+  - Default value: "noSelection".
+  - **Important:** This is an enhancement to `enablePageSelection`. Do not use this with `enablePageSelection`. If both are provided, `pageSelectionMode` takes precedence.
 
 #### Sample
 

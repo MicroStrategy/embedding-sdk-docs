@@ -11,7 +11,7 @@ Cross-Origin Resource Sharing (CORS) provides a way for a web application runnin
 
 :::note
 
-Chrome Web Browser version 80 and above introduces new changes which may impact embedding. For more information, see [KB484005: Chrome v80 Cookie Behavior and the Impact on Strategy Deployments](https://community.microstrategy.com/s/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-Strategy-Deployments).
+Chrome Web Browser version 80 and above introduces new changes which may impact embedding. For more information, see [KB484005: Chrome v80 Cookie Behavior and the Impact on Strategy Deployments](https://community.strategy.com/article/Chrome-v80-Cookie-Behavior-and-the-impact-on-MicroStrategy-Deployments).
 
 :::
 
