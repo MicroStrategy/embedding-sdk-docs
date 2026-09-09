@@ -5,6 +5,20 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy September 2026
+
+- [Support `currentPage.targetFolder` for embedded Library page](./embed-library-main-page/embed-library-properties.md#currentpage)
+  - Navigate directly to a specific folder on the Content Discovery page when embedding the Library home page.
+
+## Strategy August 2026
+
+- Introduce `pageSelectionMode` to enable page selection on a dashboard consumption page.
+
+## Strategy ONE July 2026
+
+- [Support attribute qualification filter](./native-embedding-architecture/apply-filter#attribute-qualification-filter)
+  - Users can apply an attribute qualification filter in the Native Embedding SDK.
+
 ## Strategy ONE June 2026
 
 - [Support native incremental rendering](./native-embedding-architecture/incremental-rendering)

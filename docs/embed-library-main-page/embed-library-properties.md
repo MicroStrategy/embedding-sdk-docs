@@ -466,6 +466,10 @@ Specifies the page on the sidebar entries that you want to embed.
   targetGroup: {
     id: "string",
     name: "string",
+  },
+  targetFolder: {
+    projectId: "string",
+    folderId: "string",
   }
 };
 ```
@@ -484,6 +488,13 @@ Specifies the page on the sidebar entries that you want to embed.
 
 - `currentPage.targetGroup.name`: The name of the group the user wants to select.
 
+- `currentPage.targetFolder`: This field is only applicable when `currentPage.key` is
+  'contentDiscovery'. It navigates the embedded Library page directly to the specified folder.
+
+- `currentPage.targetFolder.projectId`: The ID of the project that contains the target folder.
+
+- `currentPage.targetFolder.folderId`: The ID of the folder to navigate to.
+
 #### Required?
 
 - `currentPage`: Not required
@@ -491,6 +502,8 @@ Specifies the page on the sidebar entries that you want to embed.
 - `currentPage.targetGroup.id` and `currentPage.targetGroup.name`: The user must at least provide
   one of them. When both of them are provided, `currentPage.targetGroup.id` would have higher
   priority.
+- `currentPage.targetFolder.projectId` and `currentPage.targetFolder.folderId`: Both are required
+  when `targetFolder` is provided.
 
 #### Default value
 
@@ -507,6 +520,22 @@ microstrategy.embeddingContexts.embedLibraryPage({
     targetGroup: {
       id: "0A88CE2CF43C4242A86A5439850C3EAA",
       name: "GroupA",
+    },
+  },
+});
+```
+
+To navigate directly to a specific folder on the Content Discovery page:
+
+```js
+microstrategy.embeddingContexts.embedLibraryPage({
+  serverUrl: url,
+  placeholder: container,
+  currentPage: {
+    key: "contentDiscovery",
+    targetFolder: {
+      projectId: "B7CA92F04B9FAE8D941C3E9B7E0CD754",
+      folderId: "8A1831FF494F9B8100C2A0B76041F1F0",
     },
   },
 });

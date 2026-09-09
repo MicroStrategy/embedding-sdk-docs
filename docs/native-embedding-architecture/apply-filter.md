@@ -5,7 +5,7 @@ description: Filters can be applied both during the execution of an embedded das
 
 <Available since="2021 Update 9 (May 2023)"/>
 
-Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9. For chapter-level filters and on-page selectors, Strategy only supports attribute element list selectors.
+Filters can be applied both during the execution of an embedded dashboard and after it has been rendered. After using [Native Embedding SDK](embed-multiple-viz.md) to embed multiple visualizations in a client's webpage, you can manipulate the chapter-level filters, on-page selectors, and visualizations used as filters via the Native Embedding SDK available since 2021 Update 9.
 
 Let's say you already have the `MstrEnvironment` and `MstrDossier` objects:
 
@@ -125,11 +125,12 @@ The filter has different types below:
 
 - Attribute element filter
 - Metric qualification filter
+- Attribute qualification filter
 - Object replacement selector
 - Value parameter filter
 - Visualizations as filters
 
-So we have 5 different filter types in together. For all those filters, you can get its filter key(or visualization key for visualization as filters) from the dashboard definition with the `MstrDossier.getDossierDefinition()` function.
+So there are 6 different filter types in total. For all those filters, you can get the filter key (or visualization key for visualizations used as filters) from the dashboard definition with the `MstrDossier.getDossierDefinition()` function.
 
 The sections below show the input details for each filter type.
 
@@ -257,6 +258,87 @@ Some examples:
               type: "constant",
               dataType: "Real",
               value: "5",
+            },
+          ],
+        },
+      },
+    });
+  } catch (error) {
+    // Your own error handling code
+  }
+  ```
+
+- Unset the selection of the selector
+
+  ```js
+  try {
+    await mstrDossier.applyFilter({
+      key: "W76",
+      currentSelection: {
+        selectionStatus: "unfiltered",
+      },
+    });
+  } catch (error) {
+    // Your own error handling code
+  }
+  ```
+
+### Attribute qualification filter
+
+To apply selections on an attribute qualification filter, you can use the following input:
+
+```js
+try {
+  await mstrDossier.applyFilter({
+    key: `${filterKey}`, // Required
+    currentSelection: {
+      selectionStatus: "<string>", // optional, values: ['included', 'unfiltered'], default: 'included'
+      expression: {
+        operator: "<string>", // The attribute qualification operator/function
+        operands: "<array>", // The attribute qualification operation nodes
+      },
+    },
+  });
+} catch (error) {
+  // Your own error handling code
+}
+```
+
+For attribute qualification filters, `currentSelection.expression` is required when `selectionStatus` is not `unfiltered`.
+
+Some examples:
+
+- Apply an attribute qualification
+
+  ```js
+  try {
+    await mstrDossier.applyFilter({
+      key: "W76", // Required
+      currentSelection: {
+        selectionStatus: "included",
+        expression: {
+          operator: "Between",
+          operands: [
+            {
+              type: "form",
+              attribute: {
+                id: "96ED3EC811D5B117C000E78A4CC5F24F",
+                name: "Daytime",
+              },
+              form: {
+                id: "45C11FA478E745FEA08D781CEA190FE5",
+                name: "ID",
+              },
+            },
+            {
+              type: "constant",
+              dataType: "TimeStamp",
+              value: "1/1/2016 12:00:14 AM",
+            },
+            {
+              type: "constant",
+              dataType: "TimeStamp",
+              value: "12/31/2016 11:59:59 PM",
             },
           ],
         },
