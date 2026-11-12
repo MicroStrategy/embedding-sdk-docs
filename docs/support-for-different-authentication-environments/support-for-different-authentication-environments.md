@@ -29,8 +29,8 @@ When you embed a dashboard in an application, you want it to display as easily a
 
 If you plan to use Embedding SDK on a web page on a different domain from your Strategy environment, please also meet the following requirements. More information in
 
-1. [Enable Cross-Origin Resource Sharing (CORS)](../config.md)
-1. [Allow SameSite cookies](../config.md#allow-samesite-cookies)
+1. [Enable Cross-Origin Resource Sharing (CORS)](../configure-library-server/enable-cors.md)
+1. [Allow SameSite cookies](../configure-library-server/enable-cors.md#allow-samesite-cookies)
 
 If you plan to use Embedding SDK on the same domain as your Strategy, the above changes are not required.
 

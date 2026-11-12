@@ -20,7 +20,19 @@ const sidebars = {
   tutorialSidebar: [
     "index",
     "whats-new-in-the-embedding-sdk",
-    "config",
+    {
+      type: "category",
+      link: {
+        type: "doc",
+        id: "configure-library-server/configure-library-server",
+      },
+      label: "Configure Library Server for embedding",
+      items: [
+        "configure-library-server/enable-cors",
+        "configure-library-server/hide-irrelevant-allowed-origins",
+        "configure-library-server/client-telemetry",
+      ],
+    },
     "playground",
     {
       type: "category",
