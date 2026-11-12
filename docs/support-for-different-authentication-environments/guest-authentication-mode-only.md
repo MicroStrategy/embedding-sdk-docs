@@ -60,7 +60,7 @@ Because this simple embedding example uses a dashboard on the demo server, you a
 
 **To customize the example to use your Library Server**:
 
-1. Decide where you want to have the HTML page. If the domain is different from your Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](../config.md).
+1. Decide where you want to have the HTML page. If the domain is different from your Library Server's domain, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](../configure-library-server/enable-cors.md).
 
 1. In an IDE, text editor or [Embedding SDK Playground](https://microstrategy.github.io/playground/), open the HTML file and configure it to reflect the values in your environment:
 

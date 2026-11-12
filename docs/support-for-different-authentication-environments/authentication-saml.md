@@ -33,7 +33,7 @@ You may encounter some difficulties in this workflow:
 
 ## For MicroStrategy ONE June 2024 or after
 
-In MicroStrategy ONE June 2024, we add the [partitioned cookie change](../config#the-partitioned-cookie-change) to enable the customer to use the Embedding SDK even if third-party cookies are blocked. But if third-party cookies are blocked, the old SAML or OIDC login process can't work.
+In MicroStrategy ONE June 2024, we add the [partitioned cookie change](../configure-library-server/enable-cors#the-partitioned-cookie-change) to enable the customer to use the Embedding SDK even if third-party cookies are blocked. But if third-party cookies are blocked, the old SAML or OIDC login process can't work.
 
 You can unblock the third-party cookies manually to support the old workflow, but we recommend you use the new [embedding auth APIs](../support-for-different-authentication-environments/new-authentication-apis.md), which can work in the third-party cookies blocked case, and simplify the SAML or OIDC login logic. You can see the examples in the [playground](https://microstrategy.github.io/playground/?example=g17). A simple code piece would be like this:
 

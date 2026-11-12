@@ -5,6 +5,13 @@ description: In each release, changes are made to make the MicroStrategy SDK mor
 
 In each release, changes are made to make the MicroStrategy SDK more powerful and easier to use.
 
+## Strategy November 2026
+
+- [Track embedded usage with client telemetry](./configure-library-server/client-telemetry.md)
+  - Enable the `features.telemetry.embedEnabled` feature flag on the Library server so that usage of your embedded dashboards and widgets is recorded in Platform Analytics, separate from standard Library usage.
+- [Hide irrelevant allowed origins in the CSP response header](./configure-library-server/hide-irrelevant-allowed-origins.md)
+  - Enable the `features.hideIrrelevantAllowOrigins` feature flag on the Library server and use wildcard allowed origins, so that the `Content-Security-Policy` response header only exposes the allowed origins relevant to the current requester.
+
 ## Strategy September 2026
 
 - [Support `currentPage.targetFolder` for embedded Library page](./embed-library-main-page/embed-library-properties.md#currentpage)

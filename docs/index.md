@@ -18,7 +18,7 @@ There are three basic steps for embedding a dashboard.
 
    :::tip
 
-   If the application server is different from the server running the StrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](./config.md).
+   If the application server is different from the server running the StrategyLibrary application, you may need to [perform additional configuration to support Cross-Origin Resource Sharing (CORS)](./configure-library-server/enable-cors.md).
 
    :::
 
